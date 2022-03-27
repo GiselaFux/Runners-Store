@@ -7,7 +7,7 @@ En *Nombre del e-commerce* creemos que no hay límite de edad para ejercitarnos,
 
 Integrantes del grupo:
 
-•	Julieta Paredes:
+•	Julieta Paredes: Personal civil de la Policía de Ciudad (actualmente trabajando en la Dirección General de Violencia de Género). Me gusta mucho diseñar y proyectar cosas.
 
 •	Gisela Fux: Acompañante terapéutica en discapacidad y comerciante. Me gusta aprender cosas nuevas.
 

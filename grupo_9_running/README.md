@@ -14,7 +14,7 @@ En *Nombre del e-commerce* creemos que no hay límite de edad para ejercitarse, 
 
 •	Ezequiel Brunori:
 
-•	Patricio Contartese:
+•	Patricio Contartese: Estudiante de profesorado de educacion fisica y desarrollo web, fanatico del deporte y jugador de futbol. Me gusta mucho trabajar en equipo.
 
  *Sitios de referencias e inspiración:*
  

@@ -35,3 +35,6 @@ Otro sitio que implementa el efecto hover en su portada, y además brinda bastan
 
 _FILA_ (https://tienda.fila.com.ar/)
 No solo se destaca con los colores en sus productos, sino en la gama de colores armoniosa en su página web, dejando que sus productos sean los protagonistas. Además, es muy simple de usar, y brinda la información justa y necesaria al cliente.
+
+
+_ACCESO A TABLERO TRELLO https://trello.com/invite/b/u0Un7fJP/5373f3e7d1a4173f21b4a8bd33d5ea04/runners-store-dh_

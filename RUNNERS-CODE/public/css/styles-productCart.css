@@ -1,0 +1,306 @@
+main {
+    margin: 0 5px;
+}
+
+body {
+    font-family: "Roboto";
+    margin: .3rem;
+}
+
+header {
+    background-color: #c21d17;
+    filter: drop-shadow(0 0 0.75rem #330807);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.promos-bancarias {
+    background-color: #160812;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 35px;
+    font-size: small;
+    color: white;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: 1;
+}
+
+.logo {
+    margin: 0px auto;
+    width: 7rem;
+    order: 1;
+}
+
+.search-bar {
+    display: none;
+}
+
+.icon-right {
+    order: 2;
+    margin: 0 25px;
+}
+
+.bars-icon {
+    margin: 0 25px;
+}
+
+
+.icon {
+    color: #160812;
+    font-size: 18px;
+}
+
+.carrito {
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;
+}
+
+.productos-nros {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.productos-carrito {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+    border: solid 2px #e8e8e7;
+    border-radius: 15px;
+    margin: 3%;
+}
+
+.c-producto {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.prod-detail {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.cant {
+    display: flex;
+    flex-direction: column;
+    margin: 3%;
+}
+
+select {
+    width: 70%;
+    align-self: center;
+}
+
+.box-nros {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.costo-envio {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 8px 0;
+}
+
+.button-1 {
+    position: absolute;
+    right: -15px;
+    top: 23px;
+    width: 125px;
+}
+
+.cod-promo {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 8px 0;
+}
+
+.button-2 {
+    position: absolute;
+    right: -15px;
+    top: 23px;
+    width: 125px;
+}
+
+button {
+    background-color: #c21d17;
+    border: 2px solid #c21d17;
+    filter: drop-shadow(0 0 0.2rem #330807);
+    border-radius: 20px;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.in-button {
+    padding: 10px;
+    width: 180px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+button:hover {
+    background-color: #e8e8e7;
+    color: #c21d17;
+}
+
+.importes-compra {
+    display: flex;
+}
+
+.total {
+    font-weight: bold;
+}
+
+button.pagar {
+    width: 270px;
+    font-size: 18px;
+    margin: 25px 0;
+}
+
+footer {
+    background-color: #e8e8e7;
+    filter: drop-shadow(0 0 0.75rem #5c5c5a);
+    display: flex;
+    align-items: center;
+}
+
+.link-foot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 70%;
+    font-size: small;
+}
+
+.links-footer {
+    color: #160812;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.footer-icon {
+    color: #160812;
+    size: 2em;
+    margin: 2em;
+    width: 10%;
+}
+
+.arrow {
+    position: fixed;
+    color: #160812;
+    filter: drop-shadow(0 0 0.75rem #5c5c5a);
+    font-size: 22px;
+    right: 25px;
+    bottom: 150px;
+}
+
+@media (min-width: 760px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 9rem;
+        order: 0;
+        margin: 0 15px;
+    }
+
+    .bars-icon {
+        display: none;
+    }
+
+    .search-bar {
+        display: flex;
+        align-items: center;
+        justify-content: stretch;
+        margin: 0px auto;
+        position: relative;
+    }
+
+    .buscador {
+        display: flex;
+        background-color: #e8e8e7;
+        padding: 10px;
+        border-radius: 5px;
+        width: 300px;
+        border: solid #160812 2px;
+    }
+
+    .icon-glass {
+        position: absolute;
+        color: #c21d17;
+        align-self: center;
+        right: 8px;
+        padding-left: 8px;
+        font-size: 19px;
+        border-left: solid 2px #160812;
+    }
+
+    .icon-right {
+        font-size: 35px;
+    }
+
+    .productos-nros {
+        flex-direction: row;
+        width: 98%;
+    }
+
+    .link-foot {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .arrow {
+        font-size: 25px;
+        right: 15px;
+        bottom: 160px;
+    }
+
+    footer {
+        margin-top: 100px;
+    }
+
+}
+
+@media (min-width: 1500px) {
+    .logo {
+        width: 12rem;
+        margin-left: 90px;
+    }
+
+    main {
+        font-size: 18px;
+    }
+
+    .buscador {
+        width: 700px;
+    }
+
+    .carrito-header {
+        margin-left: 50px;
+    }
+
+    .links-footer {
+        margin: 0 80px;
+    }
+
+    footer {
+        margin-top: 230px;
+    }
+}

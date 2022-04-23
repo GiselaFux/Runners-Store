@@ -1,245 +1,252 @@
-                    * {
-                        box-sizing: border-box;
-                        margin: 0px;
-                        padding: 0px;
-                    }
-                    
-                    header {
-                        position: fixed;
-                        top: 0px;
-                    }
-                    
-                    h5 {
-                        background-color: #160812;
-                        color: white;
-                        padding: 0.5vh 20vw 0.5vh 20vw;
-                    }
-                    
-                    i {
-                        color: #160812;
-                    }
-                    
-                    #encabezado {
-                        width: 100vw;
-                        background-color: #c21d17;
-                        display: flex;
-                        justify-content: space-around;
-                        align-items: center;
-                    }
-                    
-                    #logo {
-                        width: 15vw;
-                        height: 12vh;
-                        margin-top: 1vh;
-                        margin-bottom: 1vh;
-                    }
-                    
-                    #barra {
-                        margin-left: 5vw;
-                    }
-                    
-                    #menu {
-                        width: 2rem;
-                    }
-                    
-                    #botonRegistro {
-                        background-color: #c21d17;
-                        margin-right: 20px;
-                    }
-                    /* al display meni li lo puse en none porque todavía no estamos usando con js*/
-                    
-                    #menu li {
-                        display: none;
-                    }
-                    
-                    li:hover {
-                        display: block;
-                        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-                    }
-                    
-                    li a {
-                        text-decoration: none;
-                        color: #160812;
-                    }
-                    
-                    .nuevaTemporada {
-                        width: 90%;
-                        box-sizing: border-box;
-                        background-color: #e6e7e9;
-                        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-                        margin: 5% 5% 0% 5%;
-                        display: flex;
-                        flex-direction: row;
-                        flex-wrap: nowrap;
-                    }
-                    
-                    #pelotasPaddle {
-                        margin-top: 2.5vh;
-                    }
-                    
-                    .imgNuevaTemp {
-                        box-sizing: border-box;
-                        display: inline-block;
-                        flex-wrap: nowrap;
-                        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-                        width: 15vw;
-                    }
-                    
-                    p {
-                        font-size: 0.35rem;
-                    }
-                    
-                    .prodNuevaTemp {
-                        box-sizing: border-box;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: space-between;
-                        width: 25vw;
-                        margin: 1rem;
-                    }
-                    
-                    .carrusel {
-                        box-sizing: border-box;
-                        width: 90vw;
-                    }
-                    
-                    #carr1 {
-                        margin-top: 20.45vh;
-                    }
-                    
-                    .imgCarrusel {
-                        width: 80vw;
-                        margin: 5vh 10vw;
-                        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-                    }
-                    
-                    .botones {
-                        box-sizing: border-box;
-                        background-color: #e5e7e9;
-                        width: 80%;
-                        display: flex;
-                        flex-direction: row;
-                        margin: 3% 10%;
-                        padding: 0.3rem 30%;
-                    }
-                    
-                    .boton {
-                        background-color: #160812;
-                        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-                        width: 0.5rem;
-                        height: 0.5rem;
-                        border-radius: 50%;
-                        margin: 0.3rem;
-                    }
-                    
-                    h3 {
-                        padding: 0% 26%;
-                    }
-                    
-                    h4.carrOfertas {
-                        margin: 1rem;
-                        padding-left: 20vw;
-                    }
-                    
-                    .calzaOferta {
-                        width: 35vw;
-                    }
-                    
-                    .tachado {
-                        text-decoration: line-through;
-                    }
-                    
-                    .colorRojo {
-                        color: #c21d17;
-                    }
-                    
-                    .suscripcion {
-                        box-sizing: border-box;
-                        width: 85vw;
-                        padding: 1rem;
-                        background-color: #e5e7e9;
-                        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-                        display: flex;
-                        flex-direction: row;
-                        margin: 0vh 5vw 0vh 5vw;
-                    }
-                    
-                    .form {
-                        display: flex;
-                        flex-direction: column;
-                        width: 48vw;
-                        padding-right: 0.5rem;
-                    }
-                    
-                    .explicacionSuscripcion {
-                        width: 48vw;
-                        font-weight: 400;
-                    }
-                    /* el texto del footer*/
-                    
-                    span {
-                        text-decoration: underline;
-                    }
-                    
-                    .fa-brands {
-                        font-size: 2rem;
-                    }
-                    
-                    .footerGeneral {
-                        display: flex;
-                        flex-direction: row;
-                        padding: 2rem;
-                        background-color: #e5e7e9;
-                        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-                        width: 85vw;
-                        margin: 1rem 5vw 1rem 5vw;
-                    }
-                    
-                    .redes li {
-                        list-style: none;
-                    }
-                    
-                    .redes {
-                        margin: 0.5rem;
-                        padding: 0.25rem 0rem;
-                    }
-                    
-                    .formFoot {
-                        font-size: 0.60rem;
-                        margin: 0.50rem 0.70rem;
-                    }
-                    
-                    #privacidad {
-                        background-color: red;
-                    }
-                    
-                    footer {
-                        background-color: #e8e8e7
-                    }
-                    
-                    @media(min-width:760px) {
-                        nav #barra {
-                            display: none;
-                        }
-                        .prodPorGenero {
-                            width: 60vw;
-                            margin-left: 25vw;
-                            margin-bottom: 0.1vh;
-                        }
-                        #menu li {
-                            display: inline-block;
-                            flex-direction: row;
-                            align-self: flex-end;
-                            border: 1px solid #160812;
-                        }
-                        #menu li:hover {
-                            box-shadow: 0px 0px 10px rgb(100, 100, 100);
-                        }
-                        #logo {
-                            margin-right: 51vw;
-                        }
-                        .lupa {
-                            align-self: flex-start;
-                        }
-                    }
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+}
+
+h5 {
+    background-color: #160812;
+    color: white;
+    padding: 0.5vh 20vw 0.5vh 20vw;
+}
+
+i {
+    color: #160812;
+}
+
+#encabezado {
+    width: 100vw;
+    background-color: #c21d17;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logo {
+    width: 15vw;
+    height: 12vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+#barra {
+    margin-left: 5vw;
+}
+
+#menu {
+    width: 2rem;
+}
+
+#botonRegistro {
+    background-color: #c21d17;
+    margin-right: 20px;
+}
+
+/* al display meni li lo puse en none porque todavía no estamos usando con js*/
+
+#menu li {
+    display: none;
+}
+
+li:hover {
+    display: block;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+li a {
+    text-decoration: none;
+    color: #160812;
+}
+
+.nuevaTemporada {
+    width: 90%;
+    box-sizing: border-box;
+    background-color: #e6e7e9;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    margin: 5% 5% 0% 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#pelotasPaddle {
+    margin-top: 2.5vh;
+}
+
+.imgNuevaTemp {
+    box-sizing: border-box;
+    display: inline-block;
+    flex-wrap: nowrap;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    width: 15vw;
+}
+
+p {
+    font-size: 0.35rem;
+}
+
+.prodNuevaTemp {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 25vw;
+    margin: 1rem;
+}
+
+.carrusel {
+    box-sizing: border-box;
+    width: 90vw;
+}
+
+#carr1 {
+    margin-top: 20.45vh;
+}
+
+.imgCarrusel {
+    width: 80vw;
+    margin: 5vh 10vw;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.botones {
+    box-sizing: border-box;
+    background-color: #e5e7e9;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    margin: 3% 10%;
+    padding: 0.3rem 30%;
+}
+
+.boton {
+    background-color: #160812;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    margin: 0.3rem;
+}
+
+h3 {
+    padding: 0% 26%;
+}
+
+h4.carrOfertas {
+    margin: 1rem;
+    padding-left: 20vw;
+}
+
+.calzaOferta {
+    width: 35vw;
+}
+
+.tachado {
+    text-decoration: line-through;
+}
+
+.colorRojo {
+    color: #c21d17;
+}
+
+.suscripcion {
+    box-sizing: border-box;
+    width: 85vw;
+    padding: 1rem;
+    background-color: #e5e7e9;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    display: flex;
+    flex-direction: row;
+    margin: 0vh 5vw 0vh 5vw;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 48vw;
+    padding-right: 0.5rem;
+}
+
+.explicacionSuscripcion {
+    width: 48vw;
+    font-weight: 400;
+}
+
+/* el texto del footer*/
+
+span {
+    text-decoration: underline;
+}
+
+.fa-brands {
+    font-size: 2rem;
+}
+
+.footerGeneral {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    background-color: #e5e7e9;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    width: 85vw;
+    margin: 1rem 5vw 1rem 5vw;
+}
+
+.redes li {
+    list-style: none;
+}
+
+.redes {
+    margin: 0.5rem;
+    padding: 0.25rem 0rem;
+}
+
+.formFoot {
+    font-size: 0.60rem;
+    margin: 0.50rem 0.70rem;
+}
+
+#privacidad {
+    background-color: red;
+}
+
+footer {
+    background-color: #e8e8e7
+}
+
+@media(min-width:760px) {
+    nav #barra {
+        display: none;
+    }
+
+    .prodPorGenero {
+        width: 60vw;
+        margin-left: 25vw;
+        margin-bottom: 0.1vh;
+    }
+
+    #menu li {
+        display: inline-block;
+        flex-direction: row;
+        align-self: flex-end;
+        border: 1px solid #160812;
+    }
+
+    #menu li:hover {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    #logo {
+        margin-right: 51vw;
+    }
+
+    .lupa {
+        align-self: flex-start;
+    }
+}

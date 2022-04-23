@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle de producto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2ebee31417.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles-productDetail.css">
+</head>
+<body>
+    <header>
+        <div class="promo-contenedor" >
+            <ul>
+                <li>3 cuotas sin interes</li>
+                <li>Envío gratis</li>
+            </ul>     
+        </div>
+        <div  class="main-header-top-bar">
+            <div class="hamburguer-main" style="width: 10%;">
+                <a href="#" class="hamburguer-button">
+                <i class="fa fa-bars burger" style="margin-left: 10px"></i>
+                </a>
+            </div>
+            <div style="width: 70%; text-align: center;">
+                <img src="img/LOGO-RUNNERS-STORE.png" class="logo" alt="Logo de runners store">
+            </div>
+            <div class="search"> <input type="search" placeholder="Buscar productos, marcas y más" class="input"><i class="submit fa fa-search"></i>                
+            </div>
+            <nav class="main-navbar">
+                <ul>
+                    <li><a href="#">Hombre</a></li>
+                    <li><a href="#">Mujer</a></li>
+                    <li><a href="#">Unisex</a></li>
+                    <li><a href="#">Accesorios</a></li>
+                    <li><a href="#">Marcas</a></li>
+                </ul>
+            </nav>
+            <div class="trolley">
+            <div style="width: 33%;">
+                <i class="fa fa-search"></i>
+            </div>
+            <div style="width: 33%;">
+                <a href="/login"><i class="fa-solid fa-circle-user"></i></a>
+            </div>
+            <div style="width: 33%;">
+                <a href="/productCart"><i class="fa-solid fa-cart-arrow-down"></i></a>
+            </div>
+            </div>                   
+        </div>
+    </header>
+<main>    
+    <section class="main-picture">
+        <div>
+            <img src="img/adidas.jpg" class="product_img">
+    </section>
+    <section>
+        <ul class="galeria">
+            <li><a href="#img1"><img src="img/adidas.jpg"></a></li>
+            <li><a href="#img2"><img src="img/adidas1.png"></a></li>
+            <li><a href="#img3"><img src="img/adidas2.jpg"></a></li>
+        </ul>
+        <div class="modal" id="img1">
+            <h3>Foto1</h3>
+            <div class="imagen">
+                <a href="#img3">&#60;</a>
+                <a href="#img2"><img src="img/adidas.jpg" class="imagen-dos"></a>
+                <a href="#img2">></a>
+            </div>
+                <a class="cerrar" href="">X</a>
+            </div>
+            <div class="modal" id="img2">
+                <h3>Foto2</h3>
+                <div class="imagen">
+                    <a href="#img1">&#60;</a>
+                    <a href="#img3"><img src="img/adidas1.png" class="imagen-dos"></a>
+                    <a href="#img3">></a>
+                </div>
+                <a class="cerrar" href="">X</a>
+            </div>
+            <div class="modal" id="img3">
+                <h3>Foto3</h3>
+                <div class="imagen">
+                    <a href="#img2">&#60;</a>
+                    <a href="#img1"><img src="img/adidas2.jpg" class="imagen-dos"></a>
+                    <a href="#img1">></a>
+                </div>
+                <a class="cerrar" href="">X</a>
+            </div> 
+        </section> 
+        <section class="product-details">
+            <div class="product">
+                <div class="product-head">
+                    <h3 class="product-name">Adidas Forum Low</h3>
+                    <p class="price">$25.999</p>
+                </div>
+            </div>    
+            <details>
+                <summary>Descripción del producto</summary> 
+                    <p class="product-description">ipsum dolor sit amet consectetur adipisicing elit. Minima voluptates unde ipsa nesciunt debitis quidem eligendi, praesentium laboriosam atque sed quaerat libero molestiae, dignissimos nisi blanditiis, expedita amet eum sunt!</p>
+            </details>
+            <div class="color-head">
+                <form action="#" method="get">
+                    <h4>Color:</h4>
+                        <select class="color" name="color">
+                            <option value="#fdfefe">Blanco</option>
+                            <option value="#17202a">Negro</option>
+                            <option value=" #1b4f72">Azul</option>
+                        </select> 
+                </form>
+                <form action="#" method="get">
+                    <h4>Talle:</h4>
+                    <select class="talle" name="talle">
+                        <option value="38">38</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>                            
+                    </select> 
+                </form>
+                <form action="#" method="get">
+                    <input type="button" name="add-trolley" value="AGREGAR AL CARRITO" class="add-trolley">
+                </form>
+            </div>
+    </section>
+
+</main>
+<footer>
+    <div class="footerGeneral">
+        <div class="icon-top">
+            <a href="https://www.facebook.com/" class="icon"><i class="fa-brands fa-facebook" style="color: blue;"></i></a>
+            <a href="https://www.instagram.com" class="icon"><img src="https://ci6.googleusercontent.com/proxy/Cijk8ZQhXp7yspMng7dcz-DWf6-dxBuh3rGsjVBgsMwVezGpZKuK0r2I4nsHx625CbvZ6LvvMlVtgffAGQS8XBtpn9SbckltoK6XBSDh08Yd-mpifvyOAS3QnjA=s0-d-e1-ft#https://app2.dopplerfiles.com/MSEditor/images/color_rounded_instagram.png" alt="Instagram" style="width: 16px; height: 16px;">
+            <a href="https://www.whatsapp.com" class="icon"><i class="fab fa-whatsapp-square" style="color: green;"></i></a>
+            <a href="https://www.google.com/" class="icon"><i class="fas fa-envelope" style="color: lightseagreen;"></i></a>
+        </div>
+        <div class="main-footer-text">
+            <div>
+            <a href="#" class="footer-text">
+                <div style="padding: 5px;">Términos y condiciones</div>
+            </a>
+            </div>
+            <div>
+            <a href="#" class="footer-text">
+                <div style="padding: 5px;">Reclamos</div>
+            </a>
+            </div>
+            <div>
+            <a href="#" class="footer-text">
+                <div style="padding: 5px;">Políticas de privacidad</div>
+            </a>
+            </div>
+            <div>
+            <a href="#" class="footer-text">
+                <div style="padding: 5px;">Políticas de cookies</div>
+            </a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

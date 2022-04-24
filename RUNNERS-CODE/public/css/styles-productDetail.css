@@ -9,6 +9,38 @@ body {
 
 }
 
+header {
+    background-color: #c21d17;
+    filter: drop-shadow(0 0 0.75rem #330807);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    margin: 0px auto;
+    width: 7rem;
+    order: 1;
+}
+
+.bars-icon {
+    margin: 0 25px;
+}
+
+.search-bar {
+    display: none;
+}
+
+.icon-right {
+    order: 2;
+    margin: 0 25px;
+}
+
+.icon {
+    color: #160812;
+    font-size: 18px;
+}
+
 /* animación promo */
 
 .promo-contenedor {
@@ -356,44 +388,41 @@ h4 {
 /* Estilo de Footer */
 
 footer {
-    display: flex;
-}
-
-.footerGeneral {
     background-color: #e8e8e7;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    width: 100%;
+    filter: drop-shadow(0 0 0.75rem #5c5c5a);
     display: flex;
-    margin: 5px 0;
-}
-
-.icon-top {
-    display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    margin: 10px 0 10px 10px;
 }
 
-.icon {
-    width: 50%;
-    padding-left: 5px;
-}
-
-.main-footer-text {
+.link-foot {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 85%;
-    align-items: center;
-    margin: 10px;
+    width: 70%;
+    font-size: small;
 }
 
-.footer-text {
-    text-decoration: none;
+.links-footer {
     color: #160812;
-    font-size: 0.7rem;
+    text-decoration: none;
+    margin: 0 8px;
 }
 
+.footer-icon {
+    color: #160812;
+    size: 2em;
+    margin: 2em;
+    width: 10%;
+}
+
+.arrow {
+    position: fixed;
+    color: #160812;
+    filter: drop-shadow(0 0 0.75rem #5c5c5a);
+    font-size: 22px;
+    right: 25px;
+    bottom: 150px;
+}
 
 /* hacemos el header fijo */
 
@@ -451,22 +480,50 @@ main {
         justify-content: center;
     }
 
-    .hamburguer-main {
-        opacity: 0;
+
+    .bars-icon {
+        display: none;
     }
 
     .logo {
-        position: absolute;
-        top: 0;
-        left: 10px;
+        width: 9rem;
+        order: 0;
+        margin: 0 15px;
     }
 
     .fa-search {
         display: none;
     }
 
-    .search {
-        display: block;
+    .search-bar {
+        display: flex;
+        align-items: center;
+        justify-content: stretch;
+        margin: 0px auto;
+        position: relative;
+    }
+
+    .buscador {
+        display: flex;
+        background-color: #e8e8e7;
+        padding: 10px;
+        border-radius: 5px;
+        width: 300px;
+        border: solid #160812 2px;
+    }
+
+    .icon-glass {
+        position: absolute;
+        color: #c21d17;
+        align-self: center;
+        right: 8px;
+        padding-left: 8px;
+        font-size: 19px;
+        border-left: solid 2px #160812;
+    }
+
+    .icon-right {
+        font-size: 35px;
     }
 
     .input {
@@ -520,5 +577,30 @@ main {
 
     .main-navbar ul li a:hover {
         font-weight: bold;
+    }
+
+
+    footer {
+        margin-top: 100px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .logo {
+        width: 12rem;
+        margin-left: 90px;
+    }
+
+    .buscador {
+        width: 700px;
+    }
+
+
+    .links-footer {
+        margin: 0 80px;
+    }
+
+    footer {
+        margin-top: 230px;
     }
 }

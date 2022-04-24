@@ -16,16 +16,6 @@ header {
     justify-content: center;
 }
 
-/* hacemos el header fijo */
-
-header {
-    position: fixed;
-    top: 1;
-}
-
-main {
-    margin-top: 100px;
-}
 
 .promos-bancarias {
     background-color: #160812;
@@ -38,18 +28,6 @@ main {
     align-items: center;
     justify-content: center;
     display: flex;
-    position: 1;
-    position: fixed;
-    top: 0;
-}
-
-header {
-    position: fixed;
-    top: 0;
-}
-
-main {
-    margin-top: 100px;
 }
 
 .logo {

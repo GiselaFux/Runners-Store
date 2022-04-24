@@ -1,7 +1,9 @@
 * {
-    box-sizing: border-box;
     margin: 0px;
-    padding: 0px;
+}
+
+body {
+    font-family: "Roboto";
 }
 
 header {
@@ -11,17 +13,6 @@ header {
     width: 100%;
     align-items: center;
     justify-content: center;
-}
-
-/* hacemos el header fijo */
-
-header {
-    position: fixed;
-    top: 0;
-}
-
-main {
-    margin-top: 100px;
 }
 
 .promos-bancarias {
@@ -35,23 +26,12 @@ main {
     align-items: center;
     justify-content: center;
     display: flex;
-    position: 1;
 }
 
 .logo {
     margin: 0px auto;
     width: 7rem;
     order: 1;
-}
-
-h5 {
-    background-color: #160812;
-    color: white;
-    padding: 0.5vh 20vw 0.5vh 20vw;
-}
-
-i {
-    color: #160812;
 }
 
 .bars-icon {
@@ -65,6 +45,7 @@ i {
 .icon-right {
     order: 2;
     margin: 0 25px;
+    color: #160812;
 }
 
 /* dropdown*/
@@ -132,55 +113,47 @@ i {
     transform: translateY(0px);
 }
 
-.nuevaTemporada {
-    width: 90%;
-    box-sizing: border-box;
-    background-color: #e6e7e9;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    margin: 5% 5% 0% 5%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+.nuevaTemporada h3 {
+    text-align: center;
 }
 
-#pelotasPaddle {
-    margin-top: 2.5vh;
+.productosNuevos {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    margin: 10px;
+    width: 90%;
+    background-color: #e6e7e9;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
 .imgNuevaTemp {
-    box-sizing: border-box;
-    display: inline-block;
-    flex-wrap: nowrap;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    width: 15vw;
+    width: 70px;
+    align-items: center;
 }
 
-p {
-    font-size: 0.35rem;
+.prodNuevaTem {
+    display: flex;
+    text-align: center;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    background-color: #e6e7e9;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
-.prodNuevaTemp {
-    box-sizing: border-box;
+.prodNuevaTem p {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 25vw;
-    margin: 1rem;
-}
-
-.carrusel {
-    box-sizing: border-box;
-    width: 90vw;
-}
-
-#carr1 {
-    margin-top: 20.45vh;
+    margin: 5px 0;
 }
 
 .imgCarrusel {
-    width: 80vw;
-    margin: 5vh 10vw;
+    width: 470px;
+    margin: 30px 45px;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
@@ -201,10 +174,6 @@ p {
     height: 0.5rem;
     border-radius: 50%;
     margin: 0.3rem;
-}
-
-h3 {
-    padding: 0% 26%;
 }
 
 h4.carrOfertas {
@@ -248,15 +217,6 @@ h4.carrOfertas {
 }
 
 /* el texto del footer*/
-
-span {
-    text-decoration: underline;
-}
-
-.fa-brands {
-    font-size: 2rem;
-}
-
 footer {
     background-color: #e8e8e7;
     filter: drop-shadow(0 0 0.75rem #5c5c5a);
@@ -293,11 +253,6 @@ footer {
     right: 25px;
     bottom: 150px;
 }
-
-#privacidad {
-    background-color: red;
-}
-
 
 @media(min-width:760px) {
 

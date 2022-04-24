@@ -52,6 +52,8 @@ header {
     justify-content: center;
     color: #f6f5f5;
     overflow: hidden;
+    position: fixed;
+    top: 0;
 }
 
 .promo-contenedor ul {

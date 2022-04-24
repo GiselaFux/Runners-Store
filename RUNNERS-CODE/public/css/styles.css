@@ -2,6 +2,11 @@
     margin: 0px;
 }
 
+main {
+    margin: 0 5px;
+    text-align: center;
+}
+
 body {
     font-family: "Roboto";
 }
@@ -45,6 +50,10 @@ header {
 .icon-right {
     order: 2;
     margin: 0 25px;
+    color: #160812;
+}
+
+.icon-right a {
     color: #160812;
 }
 
@@ -152,8 +161,8 @@ header {
 }
 
 .imgCarrusel {
-    width: 470px;
-    margin: 30px 45px;
+    width: 90%;
+    margin: 15px 15px;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
@@ -176,44 +185,49 @@ header {
     margin: 0.3rem;
 }
 
-h4.carrOfertas {
-    margin: 1rem;
-    padding-left: 20vw;
+.prodOfertas {
+    margin: 50px 45px;
+    background-color: #e5e7e9;
+    text-align: center;
+
 }
 
-.calzaOferta {
-    width: 35vw;
+.prodOfertas h4 {
+    text-align: center;
 }
 
-.tachado {
-    text-decoration: line-through;
+.prodOfertas p {
+    text-align: center;
 }
 
-.colorRojo {
-    color: #c21d17;
+.img {
+    width: 220px;
+    margin: 15px 5px;
 }
 
 .suscripcion {
-    box-sizing: border-box;
-    width: 85vw;
-    padding: 1rem;
-    background-color: #e5e7e9;
+    font-weight: bold;
+    background-color: #c21d17;
+    opacity: 95%;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     display: flex;
     flex-direction: row;
-    margin: 0vh 5vw 0vh 5vw;
+    height: 65px;
+    padding: 10px;
+    margin: 30px;
+    align-items: center;
 }
 
-.form {
-    display: flex;
-    flex-direction: column;
-    width: 48vw;
-    padding-right: 0.5rem;
+form {
+    text-align: center;
+    width: 65%;
+    margin-right: 5%;
 }
 
-.explicacionSuscripcion {
-    width: 48vw;
-    font-weight: 400;
+.suscripcion h6 {
+    text-align: center;
+    width: 30%;
+    font-weight: bolder;
 }
 
 /* el texto del footer*/
@@ -300,7 +314,6 @@ footer {
     .dropdown {
         display: none;
     }
-
 
     footer {
         margin-top: 100px;

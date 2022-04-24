@@ -11,8 +11,20 @@ header {
     background-color: #c21d17;
     filter: drop-shadow(0 0 0.75rem #330807);
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: center;
+}
+
+/* hacemos el header fijo */
+
+header {
+    position: fixed;
+    top: 1;
+}
+
+main {
+    margin-top: 100px;
 }
 
 .promos-bancarias {
@@ -27,6 +39,17 @@ header {
     justify-content: center;
     display: flex;
     position: 1;
+    position: fixed;
+    top: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+}
+
+main {
+    margin-top: 100px;
 }
 
 .logo {

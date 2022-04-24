@@ -49,6 +49,71 @@ header {
     margin: 0 25px;
 }
 
+/* dropdown*/
+
+.dropdown {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.bars button {
+    background: none;
+    border: none;
+    color: #160812;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.bars ul {
+    position: absolute;
+    background-color: #e8e8e7;
+    margin-top: 10px;
+    padding-left: 0;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+}
+
+.bars a {
+    color: #160812;
+    text-decoration: none;
+}
+
+.bars li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bars li:hover {
+    background-color: #c21d17;
+}
+
+
+.dropdown button:hover {
+    color: #c21d17;
+}
+
+.bars button:focus+ul {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0px);
+}
+
 
 .icon {
     color: #160812;

@@ -1,5 +1,5 @@
 main {
-    margin: 0 5px;
+    margin: 30vh 5px 0px 5px;
 }
 
 body {
@@ -16,6 +16,12 @@ header {
     justify-content: center;
 }
 
+.contenedorHeader {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
 
 .promos-bancarias {
     background-color: #160812;
@@ -48,6 +54,11 @@ header {
 .bars-icon {
     margin: 0 25px;
 }
+
+.navegadorHorizonal {
+    display: none;
+}
+
 
 /* dropdown*/
 
@@ -103,7 +114,6 @@ header {
     background-color: #c21d17;
 }
 
-
 .dropdown button:hover {
     color: #c21d17;
 }
@@ -113,7 +123,6 @@ header {
     pointer-events: all;
     transform: translateY(0px);
 }
-
 
 .icon {
     color: #160812;
@@ -280,21 +289,17 @@ footer {
     header {
         justify-content: space-between;
     }
-
     .logo {
         width: 9rem;
         order: 0;
         margin: 0 15px;
     }
-
     .bars-icon {
         display: none;
     }
-
     .dropdown {
         display: none;
     }
-
     .search-bar {
         display: flex;
         align-items: center;
@@ -302,7 +307,6 @@ footer {
         margin: 0px auto;
         position: relative;
     }
-
     .buscador {
         display: flex;
         background-color: #e8e8e7;
@@ -311,7 +315,6 @@ footer {
         width: 300px;
         border: solid #160812 2px;
     }
-
     .icon-glass {
         position: absolute;
         color: #c21d17;
@@ -321,31 +324,50 @@ footer {
         font-size: 19px;
         border-left: solid 2px #160812;
     }
-
     .icon-right {
         font-size: 35px;
     }
-
     .productos-nros {
         flex-direction: row;
         width: 98%;
     }
-
     .link-foot {
         flex-direction: row;
         justify-content: center;
     }
-
     .arrow {
         font-size: 25px;
         right: 15px;
         bottom: 160px;
     }
-
     footer {
         margin-top: 100px;
     }
-
+    /* el navegador horizontal */
+    .navegadorHorizonal {
+        width: 70vw;
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        bottom: 15px;
+        justify-content: center;
+    }
+    .ulHorizonatal {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+    }
+    .liHorizontal a {
+        margin: 0.5rem 1rem;
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+    }
+    .liHorizontal:hover {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        color: white;
+        transition: 0.5s
+    }
 }
 
 @media (min-width: 1500px) {
@@ -353,23 +375,18 @@ footer {
         width: 12rem;
         margin-left: 90px;
     }
-
     main {
         font-size: 18px;
     }
-
     .buscador {
         width: 700px;
     }
-
     .carrito-header {
         margin-left: 50px;
     }
-
     .links-footer {
         margin: 0 80px;
     }
-
     footer {
         margin-top: 230px;
     }

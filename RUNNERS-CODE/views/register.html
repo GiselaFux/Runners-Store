@@ -11,72 +11,93 @@
 </head>
 
 <body>
-    <div class="promos-bancarias">Promociones bancarias + envío gratis</div>
-    <header>
-        <img src="img/LOGO RUNNERS STORE.png" class="logo">
-        <nav>
-            <div class="dropdown">
-                <div class="bars">
-                    <button><i class="fa-solid fa-bars bars-icon"></i></button>
-                    <ul>
-                        <li><a href="#">Mujer</a></li>
-                        <li><a href="#">Hombre</a></li>
-                        <li><a href="#">Zapatillas</a></li>
-                        <li><a href="#">Accesorios</a></li>
-                        <li><a href="#">Marcas</a></li>
-                    </ul>
+    <div class="contenedorHeader">
+        <div class="promos-bancarias">Promociones bancarias + envío gratis</div>
+        <header>
+
+            <a href="/"><img src="img/LOGO RUNNERS STORE.png" class="logo"></a>
+            <nav>
+                <div class="dropdown">
+                    <div class="bars">
+                        <button><i class="fa-solid fa-bars bars-icon"></i></button>
+                        <ul>
+                            <li><a href="#">Mujer</a></li>
+                            <li><a href="#">Hombre</a></li>
+                            <li><a href="#">Zapatillas</a></li>
+                            <li><a href="#">Accesorios</a></li>
+                            <li><a href="#">Marcas</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
-        <h3 class="search-bar"><input type="search" placeholder="   Buscar" class="buscador"><i
-                class="fa-solid fa-magnifying-glass icon-glass"></i>
-        </h3>
-        <p class="icon-right"><a href="/productCart"><i class="fa-solid fa-cart-shopping icon"></i></a>
-            <a href="/login"><i class="fa-solid fa-circle-user icon"></i></a>
-        <p>
-    </header>
+            </nav>
+            <h3 class="search-bar"><input type="search" placeholder="   Buscar" class="buscador"><i
+                    class="fa-solid fa-magnifying-glass icon-glass"></i>
+            </h3>
+            <p class="icon-right"><a href="/productCart"><i class="fa-solid fa-cart-shopping icon"></i></a>
+                <a href="/login"><i class="fa-solid fa-circle-user icon"></i></a>
+            <p>
+        </header>
+        <div class="navegadorHorizonal">
+            <button><a href="#" style="text-decoration:none">Mujer</a></button>
+            <button><a href="#" style="text-decoration:none">Hombre</a></button>
+            <button><a href="#" style="text-decoration:none">Zapatillas</a></button>
+            <button><a href="#" style="text-decoration:none">Accesorios</a></button>
+            <button><a href="#" style="text-decoration:none">Marcas</a></button>
+        </div>
+    </div>
     <main>
-        <form action="/register" method="post">
-            <div class="datos">
-                <h3>Datos personales</h3>
-                <br>
-                <input type="text" name="nombre" id="nombre" placeholder="NOMBRE">
-                <input type="text" name="apellido" id="apellido" placeholder="APELLIDO">
-                <br>
-                <label>Fecha de nacimiento</label>
-                <input type="date" name="birth_date" id="birth_date">
-                <br>
-                <label>Tipo*</label>
-                <select>
-                    <option>DNI</option>
-                </select>
-                <label>Numero de documento*</label>
-                <input type="text" name="numero-doc" id="numero-doc">
-                <br>
-                <label>Género</label>
-                <select>
-                    <option>Masculino</option>
-                    <option>Femenino</option>
-                </select>
-                <br>
-                <label>Número de telefono</label>
-                <input type="text" name="Num-telefono" id="Num-telefono">
-            </div>
-            <div class="datos-cuenta">
-                <h3>Datos de cuenta</h3>
-                <label>Email</label>
-                <input type="text" name="email" id="email">
-                <br>
-                <label>Confirmar email*</label>
-                <input type="text" name="email" id="email">
-                <br>
-                <label>Contraseña</label>
-                <input type="password" name="contraseña" id="contraseña">
-                <br>
-                <label>Confirmar contraseña*</label>
-                <input type="password" name="contraseña" id="contraseña">
-            </div>
-        </form>
+     <div class="cuadro">
+            <h1>Registrarme</h1>
+             <div class="butt-group">
+                  <button class="disabled">Iniciar Sesión</button>
+                 <button>Registrarme</button>
+             </div>
+          <form action="/register" method="post">
+               <div class="datos">
+                  <h3>Datos personales</h3>
+                  <br>
+                  <input type="text" name="nombre" id="nombre" placeholder="NOMBRE" required class="placeholder">
+                  <input type="text" name="apellido" id="apellido" placeholder="APELLIDO" required class="placeholder">
+                  <br>
+                  <label>Fecha de nacimiento</label>
+                  <input type="date" name="birth_date" id="birth_date" required class="placeholder">
+                  <br>
+                   <label>Tipo*</label>
+                   <select required class="placeholder">
+                     <option>DNI</option>
+                  </select>
+                  <label>Numero de documento*</label>
+                  <input type="text" name="numero-doc" id="numero-doc" required class="placeholder">
+                  <br>
+                   <label>Género</label>
+                  <select required class="placeholder">
+                      <option>Masculino</option>
+                      <option>Femenino</option>
+                 </select>
+                 <br>
+                 <label>Número de telefono</label>
+                 <input type="text" name="Num-telefono" id="Num-telefono" required class="placeholder">
+              </div>
+              <div class="datos-cuenta">
+                  <h3>Datos de cuenta</h3>
+                  <label>Email</label>
+                  <input type="text" name="email" id="email" required class="placeholder">
+                  <br>
+                  <label>Confirmar email*</label>
+                  <input type="text" name="email" id="email" required class="placeholder">
+                  <br>
+                  <label>Contraseña</label>
+                  <input type="password" name="contraseña" id="contraseña" required class="placeholder">
+                  <br>
+                  <label>Confirmar contraseña*</label>
+                  <input type="password" name="contraseña" id="contraseña" required class="placeholder">
+             </div>
+             <br>
+             <label><input type="checkbox" id="cbox1" value="first_checkbox"> Acepto las políticas de privacidad, los terminos y condiciones </label>
+             <br>
+             <button class="registrarme">CREAR MI CUENTA</button>
+     </div>
+            </form>
     </main>
     <footer>
         <div class="footer-icon">

@@ -1,3 +1,21 @@
+/* header */
+header {
+    background-color: #c21d17;
+    filter: drop-shadow(0 0 0.75rem #330807);
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorHeader {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    filter: drop-shadow(0 0 0.75rem #330807);
+}
+
 .promos-bancarias {
     background-color: #160812;
     margin-top: 0;
@@ -18,16 +36,7 @@
 }
 
 .search-bar {
-    display: flexbox;
-}
-
-header {
-    background-color: #c21d17;
-    filter: drop-shadow(0 0 0.75rem #330807);
     display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
 }
 
 .icon-right {
@@ -39,6 +48,9 @@ header {
     margin: 0 25px;
 }
 
+.navegadorHorizonal {
+    display: none;
+}
 .dropdown {
     display: flex;
     justify-content: space-around;
@@ -91,7 +103,6 @@ header {
     background-color: #c21d17;
 }
 
-
 .dropdown button:hover {
     color: #c21d17;
 }
@@ -102,42 +113,118 @@ header {
     transform: translateY(0px);
 }
 
-
 .icon {
     color: #160812;
     font-size: 18px;
 }
-
+body {
+    font-family: "Roboto";
+    margin: .3rem;
+}
+/*Formulario */
 main form {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin: 30vh 5px 0px 5px;
+    font-size: 14px;
 }
 
 
+h3{
+    font-size: x-large;
+}
 
+h1{
+     display: block;
+        font-size: 2em;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+    }
+    .butt-group button {
+        background-color: #c21d17;
+        border: 1px #c21d17 solid;
+        color: white;
+        padding: 10px 25px;
+        cursor: pointer;
+        float: left;
+    }
+    
+    .butt-group button:not(:last-child) {
+        border-right: none;
+    }
+    
+    .butt-group::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
+    .butt-group button:hover {
+        background-color: #e8e8e7;
+        color: #c21d17;
+    }
+    
+    .disabled {
+        opacity: 0.4;
+    }
+    .placeholder {
+        padding: 10px;
+        width: 250px;
+        border-radius: 5px;
+        margin: 5px 0;
+    }
 
 .datos {
-    background-color: #80801e;
-    height: 2em auto;
+    border: #160812 50px;
+    
+
+   
 
 
 
-
-
+}
+.cuadro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    border: solid 2px #e8e8e7;
+    border-radius: 15px;
+    margin: 35px 10px;
+    
 }
 
 .datos-cuenta {
-    background-color: aqua;
-    height: 2em auto;
-    width: 50%;
+    border: #160812 12px;
+    
 
 
 
 
 }
+.registrarme{
+    background-color: #c21d17;
+    border: 1px #c21d17 solid;
+    filter: drop-shadow(0 0 0.2rem #330807);
+    border-radius: 20px;
+    padding: 10px 25px;
+    color: white;
+    width: 270px;
+    font-size: 18px;
+    margin: 25px 0;
+}
 
+.registrarme:hover {
+    background-color: #e8e8e7;
+    color: #c21d17;
+}
+/* footer */
 footer {
     background-color: #e8e8e7;
     filter: drop-shadow(0 0 0.75rem #5c5c5a);

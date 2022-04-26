@@ -10,6 +10,7 @@
     justify-content: center;
     display: flex;
 }
+
 .logo {
     margin: 0px auto;
     width: 7rem;
@@ -17,8 +18,9 @@
 }
 
 .search-bar {
-    display:flexbox;
+    display: flexbox;
 }
+
 header {
     background-color: #c21d17;
     filter: drop-shadow(0 0 0.75rem #330807);
@@ -27,6 +29,7 @@ header {
     align-items: center;
     justify-content: center;
 }
+
 .icon-right {
     order: 2;
     margin: 0 25px;
@@ -35,6 +38,7 @@ header {
 .bars-icon {
     margin: 0 25px;
 }
+
 .dropdown {
     display: flex;
     justify-content: space-around;
@@ -103,42 +107,46 @@ header {
     color: #160812;
     font-size: 18px;
 }
-main {
+
+main form {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-    
 
 
-.datos{
+
+.datos {
     background-color: #80801e;
-height: 2em auto;
+    height: 2em auto;
 
 
 
 
 
 }
-.datos-cuenta{
+
+.datos-cuenta {
     background-color: aqua;
     height: 2em auto;
     width: 50%;
-    
-    
-    
+
+
+
 
 }
+
 footer {
     background-color: #e8e8e7;
     filter: drop-shadow(0 0 0.75rem #5c5c5a);
     display: flex;
     align-items: center;
     margin-top: 90px;
-    
+
 }
+
 .link-foot {
     display: flex;
     flex-wrap: wrap;
@@ -168,6 +176,7 @@ footer {
     right: 25px;
     bottom: 150px;
 }
+
 footer {
     margin-top: 100px;
 }

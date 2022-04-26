@@ -22,6 +22,7 @@ header {
     position: fixed;
     top: 0;
     z-index: 100;
+    filter: drop-shadow(0 0 0.75rem #330807);
 }
 
 .promos-bancarias {
@@ -249,14 +250,17 @@ p {
     header {
         justify-content: space-between;
     }
+
     .logo {
         width: 9rem;
         order: 0;
         margin: 0 15px;
     }
+
     .bars-icon {
         display: none;
     }
+
     .search-bar {
         display: flex;
         align-items: center;
@@ -264,6 +268,7 @@ p {
         margin: 0px auto;
         position: relative;
     }
+
     .buscador {
         display: flex;
         background-color: #e8e8e7;
@@ -272,6 +277,7 @@ p {
         width: 300px;
         border: solid #160812 2px;
     }
+
     .icon-glass {
         position: absolute;
         color: #c21d17;
@@ -281,59 +287,81 @@ p {
         font-size: 19px;
         border-left: solid 2px #160812;
     }
+
     .icon-right {
         font-size: 35px;
     }
+
     .cuadro-ppal {
         font-size: 16px;
         margin: 35px 55px;
     }
+
     .check {
         display: flex;
         flex-direction: row;
         align-items: center;
         font-size: small;
     }
+
     p {
         text-align: left;
         margin-right: 25px;
     }
+
     .link-foot {
         flex-direction: row;
         justify-content: center;
     }
+
     .arrow {
         font-size: 25px;
         right: 15px;
         bottom: 160px;
     }
+
     footer {
         margin-top: 100px;
     }
+
     /* el navegador horizontal */
+    div .navegadorHorizonal {
+        background-color: #c21d17;
+        opacity: 85%;
+        width: 100%;
+    }
+
     .navegadorHorizonal {
-        width: 70vw;
         display: flex;
         flex-direction: row;
-        position: absolute;
-        bottom: 15px;
         justify-content: center;
+        align-items: center;
     }
-    .ulHorizonatal {
-        display: flex;
-        flex-direction: row;
-        list-style: none;
+
+    .navegadorHorizonal button a {
+        color: #e8e8e7;
+        font-weight: 18px;
+        font-weight: bold;
     }
-    .liHorizontal a {
-        margin: 0.5rem 1rem;
-        text-decoration: none;
-        color: black;
-        font-weight: 600;
+
+    .navegadorHorizonal button {
+        background-color: #c21d17;
+        padding: 8px;
+        width: 90px;
+        float: left;
+        border: 1px solid #160812;
+        border-top: none;
+        border-bottom: none;
     }
-    .liHorizontal:hover {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-        color: white;
-        transition: 0.5s
+
+    .navegadorHorizonal button:hover {
+        background-color: #e8e8e7;
+        border: 1px solid #c21d17;
+    }
+
+    .navegadorHorizonal button a:hover {
+        color: #c21d17;
+        font-weight: 18px;
     }
 }
 
@@ -342,26 +370,40 @@ p {
         width: 12rem;
         margin-left: 90px;
     }
+
     main {
         font-size: 18px;
     }
+
     .buscador {
         width: 700px;
     }
+
+    .navegadorHorizonal button {
+        padding: 10px;
+        width: 150px;
+        border: 1px solid #160812;
+        border-top: none;
+        border-bottom: none;
+    }
+
     .cuadro-ppal {
         font-size: 16px;
         margin: 35px 300px;
     }
+
     .check {
         display: flex;
         flex-direction: row;
         align-items: center;
         font-size: medium;
     }
+
     .links-footer {
         margin: 0 80px;
         font-size: 13px;
     }
+
     footer {
         margin-top: 230px;
     }

@@ -1,4 +1,13 @@
-/* header */
+main {
+    margin: 30vh 5px 0px 5px;
+    font-size: 14px;
+}
+
+body {
+    font-family: "Roboto";
+    margin: .3rem;
+}
+
 header {
     background-color: #c21d17;
     filter: drop-shadow(0 0 0.75rem #330807);
@@ -32,15 +41,13 @@ header {
 .logo {
     margin: 0px auto;
     width: 7rem;
-    order: 1;
 }
 
 .search-bar {
-    display: flex;
+    display: none;
 }
 
 .icon-right {
-    order: 2;
     margin: 0 25px;
 }
 
@@ -51,6 +58,10 @@ header {
 .navegadorHorizonal {
     display: none;
 }
+
+
+/* dropdown*/
+
 .dropdown {
     display: flex;
     justify-content: space-around;
@@ -65,6 +76,7 @@ header {
     color: #160812;
     font-size: 18px;
     cursor: pointer;
+    order: 1;
 }
 
 .bars ul {
@@ -117,78 +129,8 @@ header {
     color: #160812;
     font-size: 18px;
 }
-body {
-    font-family: "Roboto";
-    margin: .3rem;
-}
-/*Formulario */
-main form {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 30vh 5px 0px 5px;
-    font-size: 14px;
-}
 
-
-h3{
-    font-size: x-large;
-}
-
-h1{
-     display: block;
-        font-size: 2em;
-        margin-block-start: 0.67em;
-        margin-block-end: 0.67em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        font-weight: bold;
-    }
-    .butt-group button {
-        background-color: #c21d17;
-        border: 1px #c21d17 solid;
-        color: white;
-        padding: 10px 25px;
-        cursor: pointer;
-        float: left;
-    }
-    
-    .butt-group button:not(:last-child) {
-        border-right: none;
-    }
-    
-    .butt-group::after {
-        content: "";
-        clear: both;
-        display: table;
-    }
-    
-    .butt-group button:hover {
-        background-color: #e8e8e7;
-        color: #c21d17;
-    }
-    
-    .disabled {
-        opacity: 0.4;
-    }
-    .placeholder {
-        padding: 10px;
-        width: 250px;
-        border-radius: 5px;
-        margin: 5px 0;
-    }
-
-.datos {
-    border: #160812 50px;
-    
-
-   
-
-
-
-}
-.cuadro{
+.cuadro-ppal {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -197,18 +139,45 @@ h1{
     border: solid 2px #e8e8e7;
     border-radius: 15px;
     margin: 35px 10px;
-    
 }
 
-.datos-cuenta {
-    border: #160812 12px;
-    
-
-
-
-
+.butt-group button {
+    background-color: #c21d17;
+    border: 1px #c21d17 solid;
+    color: white;
+    padding: 10px 25px;
+    cursor: pointer;
+    float: left;
 }
-.registrarme{
+
+.butt-group button:not(:last-child) {
+    border-right: none;
+}
+
+.butt-group::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.butt-group button:hover {
+    background-color: #e8e8e7;
+    color: #c21d17;
+}
+
+.disabled {
+    opacity: 0.4;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    width: 100%;
+}
+
+.registrarme {
     background-color: #c21d17;
     border: 1px #c21d17 solid;
     filter: drop-shadow(0 0 0.2rem #330807);
@@ -224,14 +193,20 @@ h1{
     background-color: #e8e8e7;
     color: #c21d17;
 }
-/* footer */
+
+.placeholder {
+    padding: 10px;
+    width: auto;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
 footer {
     background-color: #e8e8e7;
     filter: drop-shadow(0 0 0.75rem #5c5c5a);
     display: flex;
     align-items: center;
     margin-top: 90px;
-
 }
 
 .link-foot {
@@ -264,6 +239,168 @@ footer {
     bottom: 150px;
 }
 
-footer {
-    margin-top: 100px;
+p {
+    text-align: center;
+}
+
+@media (min-width: 760px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 9rem;
+        order: 0;
+        margin: 0 15px;
+    }
+
+    .bars button {
+        display: none;
+    }
+
+    .search-bar {
+        display: flex;
+        align-items: center;
+        justify-content: stretch;
+        margin: 0px auto;
+        position: relative;
+    }
+
+    .buscador {
+        display: flex;
+        background-color: #e8e8e7;
+        padding: 10px;
+        border-radius: 5px;
+        width: 300px;
+        border: solid #160812 2px;
+    }
+
+    .icon-glass {
+        position: absolute;
+        color: #c21d17;
+        align-self: center;
+        right: 8px;
+        padding-left: 8px;
+        font-size: 19px;
+        border-left: solid 2px #160812;
+    }
+
+    .icon-right {
+        font-size: 35px;
+    }
+
+    .cuadro-ppal {
+        font-size: 16px;
+        margin: 35px 55px;
+    }
+
+    main form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    .datos {
+        margin-right: 50px;
+    }
+
+    p {
+        text-align: left;
+        margin-right: 25px;
+    }
+
+    .link-foot {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .arrow {
+        font-size: 25px;
+        right: 15px;
+        bottom: 160px;
+    }
+
+    footer {
+        margin-top: 100px;
+    }
+
+    /* el navegador horizontal */
+    div .navegadorHorizonal {
+        background-color: #c21d17;
+        opacity: 85%;
+        width: 100%;
+    }
+
+    .navegadorHorizonal {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navegadorHorizonal button a {
+        color: #e8e8e7;
+        font-weight: 18px;
+        font-weight: bold;
+    }
+
+    .navegadorHorizonal button {
+        background-color: #c21d17;
+        padding: 8px;
+        width: 90px;
+        float: left;
+        border: 1px solid #160812;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    .navegadorHorizonal button:hover {
+        background-color: #e8e8e7;
+        border: 1px solid #c21d17;
+    }
+
+    .navegadorHorizonal button a:hover {
+        color: #c21d17;
+        font-weight: 18px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .logo {
+        width: 12rem;
+        margin-left: 90px;
+    }
+
+    main {
+        font-size: 18px;
+    }
+
+    .buscador {
+        width: 700px;
+    }
+
+    .navegadorHorizonal button {
+        padding: 10px;
+        width: 150px;
+        border: 1px solid #160812;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    .cuadro-ppal {
+        font-size: 16px;
+        margin: 35px 300px;
+    }
+
+    .links-footer {
+        margin: 0 80px;
+        font-size: 13px;
+    }
+
+    footer {
+        margin-top: 230px;
+    }
 }

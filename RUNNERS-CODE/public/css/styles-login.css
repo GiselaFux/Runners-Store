@@ -187,10 +187,6 @@ header {
     color: #c21d17;
 }
 
-.em-pass {
-    display: flex;
-    flex-direction: column;
-}
 
 .placeholder {
     padding: 10px;

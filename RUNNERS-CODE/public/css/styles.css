@@ -1,22 +1,23 @@
+/*Estilos generales*/
 * {
     margin: 0px;
-}
-
-main {
-    margin: 30vh 5px 0px 5px;
-    text-align: center;
 }
 
 body {
     font-family: "Roboto";
 }
 
+main {
+    margin: 180px auto 0px;
+    text-align: center;
+}
+
+/*Estilos header*/
 header {
     background-color: #c21d17;
     display: flex;
-    width: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .contenedorHeader {
@@ -40,27 +41,16 @@ header {
 }
 
 .logo {
-    margin: 0px auto;
     width: 7rem;
-    order: 1;
-}
-
-.bars-icon {
-    margin: 0 25px;
 }
 
 .search-bar {
     display: none;
 }
 
-.icon-right {
-    order: 2;
-    margin: 0 25px;
-    color: #160812;
-}
-
 .icon-right a {
     color: #160812;
+    font-size: 25px;
 }
 
 .navegadorHorizonal {
@@ -69,19 +59,21 @@ header {
 
 /* dropdown*/
 
+body header nav {
+    order: -1;
+}
+
 .dropdown {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 80%;
-    margin: auto;
 }
 
 .bars button {
     background: none;
     border: none;
     color: #160812;
-    font-size: 18px;
+    font-size: 25px;
     cursor: pointer;
 }
 
@@ -123,6 +115,8 @@ header {
 
 .dropdown button:hover {
     color: #c21d17;
+    background-color: #e8e8e7;
+    border-radius: 5px;
 }
 
 .bars button:focus+ul {
@@ -131,50 +125,8 @@ header {
     transform: translateY(0px);
 }
 
-.nuevaTemporada h3 {
-    text-align: center;
-}
-
-.productosNuevos {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    align-content: center;
-    justify-content: center;
-    margin: 10px;
-    width: 90%;
-    background-color: #e6e7e9;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-}
-
-.imgNuevaTemp {
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    width: 70px;
-    align-items: center;
-}
-
-.imgNuevaTemp:hover {
-    box-shadow: 0px 0px 10px rgb(154, 22, 22);
-    width: 80px;
-    transition: 0.5s;
-}
-
-.prodNuevaTem {
-    display: flex;
-    text-align: center;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: space-around;
-    background-color: #e6e7e9;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-}
-
-.prodNuevaTem p {
-    display: flex;
-    flex-direction: column;
-    margin: 5px 0;
-}
-
+/*Estilo main*/
+/*Carrusel ppal*/
 .imgCarrusel {
     width: 90%;
     margin: 15px 15px;
@@ -200,14 +152,54 @@ header {
     margin: 0.3rem;
 }
 
+/*Prod. nueva temporada*/
+.nuevaTemporada h3 {
+    text-align: center;
+}
+
+.prodNuevaTem {
+    display: flex;
+    text-align: center;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    background-color: #e6e7e9;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.prodNuevaTem p {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+}
+
+.imgNuevaTemp {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    width: 70px;
+    align-items: center;
+}
+
+.imgNuevaTemp:hover {
+    box-shadow: 0px 0px 10px rgb(154, 22, 22);
+    width: 80px;
+    transition: 0.5s;
+}
+
+/*Sección ofertas*/
+
+.prodOfertas h4 {
+    text-align: center;
+}
+
 .prodOfertas {
     margin: 50px 45px;
     background-color: #e5e7e9;
     text-align: center;
 }
 
-.prodOfertas h4 {
-    text-align: center;
+.img {
+    width: 220px;
+    margin: 15px 5px;
 }
 
 .prodOfertas p {
@@ -224,11 +216,8 @@ header {
     font-weight: 700;
 }
 
-.img {
-    width: 220px;
-    margin: 15px 5px;
-}
 
+/*Box suscribirse*/
 .suscripcion {
     font-weight: bold;
     background-color: #c21d17;
@@ -254,27 +243,27 @@ form {
     font-weight: bolder;
 }
 
-/* el texto del footer*/
+/*Estilo Footer*/
 
 footer {
     background-color: #e8e8e7;
     filter: drop-shadow(0 0 0.75rem #5c5c5a);
     display: flex;
     align-items: center;
+    margin-top: auto;
 }
 
 .link-foot {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: row;
     width: 70%;
-    font-size: small;
+    font-size: 12px;
+    justify-content: space-evenly;
 }
 
 .links-footer {
     color: #160812;
     text-decoration: none;
-    margin: 0 8px;
 }
 
 .footer-icon {
@@ -284,28 +273,42 @@ footer {
     width: 10%;
 }
 
-.arrow {
-    position: fixed;
+.fa-circle-arrow-up {
+    padding: 20px;
     color: #160812;
     filter: drop-shadow(0 0 0.75rem #5c5c5a);
     font-size: 22px;
-    right: 25px;
-    bottom: 150px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    opacity: 65%;
 }
 
 @media(min-width:760px) {
+
+    header {
+        position: relative;
+    }
+
+    main {
+        margin: 225px auto 0px;
+    }
+
     .logo {
         width: 9rem;
-        order: 0;
-        margin: 0 15px;
+        margin-left: 20px;
     }
 
     .search-bar {
         display: flex;
         align-items: center;
-        justify-content: stretch;
         margin: 0px auto;
         position: relative;
+    }
+
+    .bars button {
+        display: none;
     }
 
     .buscador {
@@ -313,8 +316,9 @@ footer {
         background-color: #e8e8e7;
         padding: 10px;
         border-radius: 5px;
-        width: 300px;
+        width: 370px;
         border: solid #160812 2px;
+        margin-left: -50px;
     }
 
     .icon-glass {
@@ -327,24 +331,12 @@ footer {
         border-left: solid 2px #160812;
     }
 
-    .bars-icon {
-        display: none;
-    }
-
-    .icon-right {
+    .icon-right a {
         font-size: 35px;
     }
 
-    .dropdown {
-        display: none;
-    }
-
-    footer {
-        margin-top: 100px;
-    }
-
-    header {
-        position: relative;
+    .icon-right {
+        margin-right: 20px;
     }
 
     div .navegadorHorizonal {
@@ -383,19 +375,53 @@ footer {
 
     .navegadorHorizonal button a:hover {
         color: #c21d17;
-        font-weight: 18px;
+        font-weight: 20px;
+    }
 
+    .botones {
+        justify-content: center;
+    }
+
+    .link-foot div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .link-foot {
+        width: 90%;
+    }
+
+    .links-footer {
+        margin: 0 10px;
+        font-size: medium;
+    }
+
+    .footer-icon {
+        color: #160812;
+        font-size: 30px;
+        margin: 10px;
+        width: 10%;
     }
 }
 
 @media (min-width: 1500px) {
+
+    main {
+        margin: 280px auto 0px;
+    }
+
     .logo {
         width: 12rem;
-        margin-left: 90px;
     }
 
     .buscador {
         width: 700px;
+        margin-left: -90px;
+    }
+
+    .icon-right a {
+        font-size: 45px;
     }
 
     .navegadorHorizonal button {
@@ -410,7 +436,4 @@ footer {
         margin: 0 80px;
     }
 
-    footer {
-        margin-top: 230px;
-    }
 }

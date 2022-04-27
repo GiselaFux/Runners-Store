@@ -1,27 +1,30 @@
-main {
-    margin: 30vh 5px 0px 5px;
-    font-size: 14px;
+/*Estilos generales*/
+* {
+    margin: 0px;
 }
 
 body {
     font-family: "Roboto";
-    margin: .3rem;
 }
+
+main {
+    margin: 180px auto 0px;
+    text-align: center;
+}
+
+/*Estilos header*/
 
 header {
     background-color: #c21d17;
-    filter: drop-shadow(0 0 0.75rem #330807);
     display: flex;
-    width: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .contenedorHeader {
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 100;
     filter: drop-shadow(0 0 0.75rem #330807);
 }
 
@@ -39,7 +42,6 @@ header {
 }
 
 .logo {
-    margin: 0px auto;
     width: 7rem;
 }
 
@@ -47,12 +49,9 @@ header {
     display: none;
 }
 
-.icon-right {
-    margin: 0 25px;
-}
-
-.bars-icon {
-    margin: 0 25px;
+.icon-right a {
+    color: #160812;
+    font-size: 25px;
 }
 
 .navegadorHorizonal {
@@ -62,21 +61,22 @@ header {
 
 /* dropdown*/
 
+body header nav {
+    order: -1;
+}
+
 .dropdown {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 80%;
-    margin: auto;
 }
 
 .bars button {
     background: none;
     border: none;
     color: #160812;
-    font-size: 18px;
+    font-size: 25px;
     cursor: pointer;
-    order: 1;
 }
 
 .bars ul {
@@ -117,6 +117,8 @@ header {
 
 .dropdown button:hover {
     color: #c21d17;
+    background-color: #e8e8e7;
+    border-radius: 5px;
 }
 
 .bars button:focus+ul {
@@ -125,10 +127,7 @@ header {
     transform: translateY(0px);
 }
 
-.icon {
-    color: #160812;
-    font-size: 18px;
-}
+/*Estilo main*/
 
 .cuadro-ppal {
     display: flex;
@@ -169,14 +168,6 @@ header {
     opacity: 0.4;
 }
 
-main form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 14px;
-    width: 100%;
-}
-
 .registrarme {
     background-color: #c21d17;
     border: 1px #c21d17 solid;
@@ -199,28 +190,30 @@ main form {
     width: auto;
     border-radius: 5px;
     margin: 5px 0;
+    border: 1px solid #160812;
 }
+
+/*Estilo footer*/
 
 footer {
     background-color: #e8e8e7;
     filter: drop-shadow(0 0 0.75rem #5c5c5a);
     display: flex;
     align-items: center;
-    margin-top: 90px;
+    margin-top: 200px;
 }
 
 .link-foot {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: row;
     width: 70%;
     font-size: 12px;
+    justify-content: space-evenly;
 }
 
 .links-footer {
     color: #160812;
     text-decoration: none;
-    margin: 0 8px;
 }
 
 .footer-icon {
@@ -230,13 +223,16 @@ footer {
     width: 10%;
 }
 
-.arrow {
-    position: fixed;
+.fa-circle-arrow-up {
+    padding: 20px;
     color: #160812;
     filter: drop-shadow(0 0 0.75rem #5c5c5a);
     font-size: 22px;
-    right: 25px;
-    bottom: 150px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    opacity: 65%;
 }
 
 p {
@@ -245,23 +241,29 @@ p {
 
 @media (min-width: 760px) {
     header {
-        justify-content: space-between;
+        position: relative;
+    }
+
+    main {
+        margin: 225px auto 0px;
     }
 
     .logo {
         width: 9rem;
-        order: 0;
-        margin: 0 15px;
+        margin-left: 20px;
     }
 
     .bars button {
         display: none;
     }
 
+    .dropdown {
+        display: none;
+    }
+
     .search-bar {
         display: flex;
         align-items: center;
-        justify-content: stretch;
         margin: 0px auto;
         position: relative;
     }
@@ -271,8 +273,9 @@ p {
         background-color: #e8e8e7;
         padding: 10px;
         border-radius: 5px;
-        width: 300px;
+        width: 370px;
         border: solid #160812 2px;
+        margin-left: -50px;
     }
 
     .icon-glass {
@@ -285,46 +288,52 @@ p {
         border-left: solid 2px #160812;
     }
 
-    .icon-right {
+    .icon-right a {
         font-size: 35px;
     }
 
-    .cuadro-ppal {
-        font-size: 16px;
-        margin: 35px 55px;
+    .icon-right {
+        margin-right: 20px;
     }
 
     main form {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         font-size: 14px;
     }
 
     .datos {
-        margin-right: 50px;
+        margin-left: 25px;
     }
 
     p {
         text-align: left;
-        margin-right: 25px;
     }
 
-    .link-foot {
+
+    .link-foot div {
+        display: flex;
         flex-direction: row;
         justify-content: center;
     }
 
-    .arrow {
-        font-size: 25px;
-        right: 15px;
-        bottom: 160px;
+    .link-foot {
+        width: 90%;
     }
 
-    footer {
-        margin-top: 100px;
+    .links-footer {
+        margin: 0 10px;
+        font-size: medium;
+    }
+
+
+    .footer-icon {
+        color: #160812;
+        font-size: 30px;
+        margin: 10px;
+        width: 10%;
     }
 
     /* el navegador horizontal */
@@ -364,22 +373,28 @@ p {
 
     .navegadorHorizonal button a:hover {
         color: #c21d17;
-        font-weight: 18px;
+        font-weight: 20px;
     }
 }
 
 @media (min-width: 1500px) {
-    .logo {
-        width: 12rem;
-        margin-left: 90px;
-    }
 
     main {
-        font-size: 18px;
+        margin: 280px auto 0px;
     }
+
+    .logo {
+        width: 12rem;
+    }
+
 
     .buscador {
         width: 700px;
+        margin-left: -90px;
+    }
+
+    .icon-right a {
+        font-size: 45px;
     }
 
     .navegadorHorizonal button {
@@ -397,10 +412,6 @@ p {
 
     .links-footer {
         margin: 0 80px;
-        font-size: 13px;
     }
 
-    footer {
-        margin-top: 230px;
-    }
 }

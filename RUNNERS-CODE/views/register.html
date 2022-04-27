@@ -48,8 +48,8 @@
         <div class="cuadro-ppal">
             <h1>Registrarme</h1>
             <div class="butt-group">
-                <button class="disabled">Iniciar Sesión</button>
-                <button>Registrarme</button>
+                <a href="/login"> <button class="disabled">Iniciar Sesión</button></a>
+                <a href="/register"> <button>Registrarme</button></a>
             </div>
             <form action="/register" method="post">
                 <div class="datos">
@@ -59,11 +59,11 @@
                         <input type="text" name="apellido" id="apellido" placeholder="APELLIDO" required
                             class="placeholder">
                     </p>
-                   
-                        <p><label>Fecha de nacimiento</label>
-                            <input type="date" name="birth_date" id="birth_date" required class="placeholder">
-                        </p>
-                    
+
+                    <p><label>Fecha de nacimiento</label>
+                        <input type="date" name="birth_date" id="birth_date" required class="placeholder">
+                    </p>
+
                     <div style="display:flex">
 
                         <p><label>Tipo*</label>

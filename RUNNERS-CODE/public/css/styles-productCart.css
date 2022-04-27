@@ -7,6 +7,7 @@ body {
     margin: .3rem;
 }
 
+/*Estilos Header*/
 header {
     background-color: #c21d17;
     display: flex;
@@ -129,6 +130,7 @@ header {
     font-size: 18px;
 }
 
+/*Estilos body*/
 .carrito {
     display: flex;
     align-items: flex-end;
@@ -244,8 +246,6 @@ select {
     font-size: 16px;
 }
 
-
-
 .in-button {
     padding: 10px;
     width: 180px;
@@ -272,6 +272,8 @@ button.pagar {
     margin: 25px 0;
 }
 
+
+/*Estilos Footer*/
 footer {
     background-color: #e8e8e7;
     filter: drop-shadow(0 0 0.75rem #5c5c5a);
@@ -308,6 +310,8 @@ footer {
     right: 25px;
     bottom: 150px;
 }
+
+/*Media queries*/
 
 @media (min-width: 760px) {
     header {

@@ -8,7 +8,7 @@ body {
 }
 
 main {
-    margin: 50px auto 0px;
+    margin: 200px auto 0px;
     text-align: center;
 }
 
@@ -25,6 +25,7 @@ header {
     position: fixed;
     top: 0;
     filter: drop-shadow(0 0 0.75rem #330807);
+    z-index: 1;
 }
 
 .logo {

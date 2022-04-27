@@ -25,6 +25,7 @@ header {
     position: fixed;
     top: 0;
     filter: drop-shadow(0 0 0.75rem #330807);
+    z-index: 1;
 }
 
 .promos-bancarias {

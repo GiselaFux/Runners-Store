@@ -1,4 +1,5 @@
 /*Estilos generales*/
+
 * {
     margin: 0px;
 }
@@ -12,7 +13,9 @@ main {
     text-align: center;
 }
 
+
 /*Estilos header*/
+
 header {
     background-color: #c21d17;
     display: flex;
@@ -56,6 +59,7 @@ header {
 .navegadorHorizonal {
     display: none;
 }
+
 
 /* dropdown*/
 
@@ -125,7 +129,9 @@ body header nav {
     transform: translateY(0px);
 }
 
+
 /*Estilo main*/
+
 .cuadro-ppal {
     display: flex;
     flex-direction: column;
@@ -182,7 +188,6 @@ body header nav {
     color: #c21d17;
 }
 
-
 .placeholder {
     padding: 10px;
     width: 250px;
@@ -195,6 +200,7 @@ body header nav {
     display: flex;
     flex-direction: column;
 }
+
 
 /*Estilo footer*/
 
@@ -252,27 +258,22 @@ p {
     header {
         position: relative;
     }
-
     main {
         margin: 225px auto 0px;
     }
-
     .logo {
         width: 9rem;
         margin-left: 20px;
     }
-
     .bars-icon {
         display: none;
     }
-
     .search-bar {
         display: flex;
         align-items: center;
         margin: 0px auto;
         position: relative;
     }
-
     .buscador {
         display: flex;
         background-color: #e8e8e7;
@@ -282,7 +283,6 @@ p {
         border: solid #160812 2px;
         margin-left: -50px;
     }
-
     .icon-glass {
         position: absolute;
         color: #c21d17;
@@ -292,34 +292,28 @@ p {
         font-size: 19px;
         border-left: solid 2px #160812;
     }
-
     .icon-right a {
         font-size: 35px;
     }
-
     .icon-right {
         margin-right: 20px;
     }
-
     div .navegadorHorizonal {
         background-color: #c21d17;
         opacity: 85%;
         width: 100%;
     }
-
     .navegadorHorizonal {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
     }
-
     .navegadorHorizonal button a {
         color: #e8e8e7;
         font-weight: 18px;
         font-weight: bold;
     }
-
     .navegadorHorizonal button {
         background-color: #c21d17;
         padding: 8px;
@@ -329,44 +323,36 @@ p {
         border-top: none;
         border-bottom: none;
     }
-
     .navegadorHorizonal button:hover {
         background-color: #e8e8e7;
         border: 1px solid #c21d17;
     }
-
     /* el navegador horizontal */
-    .navegadorHorizonal button a:hover {
+    .navegadorHorizonal button:hover a {
         color: #c21d17;
         font-weight: 18px;
     }
-
     .cuadro-ppal {
         font-size: 16px;
         margin: 35px 200px;
     }
-
     .check {
         display: flex;
         flex-direction: row;
         align-items: center;
         font-size: small;
     }
-
     p {
         text-align: left;
         margin-right: 25px;
     }
-
     .link-foot {
         width: 90%;
     }
-
     .links-footer {
         margin: 0 10px;
         font-size: medium;
     }
-
     .footer-icon {
         color: #160812;
         font-size: 30px;
@@ -376,24 +362,19 @@ p {
 }
 
 @media (min-width: 1500px) {
-
     main {
         margin: 350px auto 0px;
     }
-
     .logo {
         width: 12rem;
     }
-
     .buscador {
         width: 700px;
         margin-left: -90px;
     }
-
     .icon-right a {
         font-size: 45px;
     }
-
     .navegadorHorizonal button {
         padding: 10px;
         width: 150px;
@@ -401,27 +382,21 @@ p {
         border-top: none;
         border-bottom: none;
     }
-
     .cuadro-ppal {
         font-size: 16px;
         margin: 35px 300px;
     }
-
     .placeholder {
         display: flex;
         flex-direction: column;
     }
-
     .check {
         display: flex;
         flex-direction: row;
         align-items: center;
         font-size: medium;
     }
-
-
     .links-footer {
         margin: 0 80px;
     }
-
 }

@@ -12,142 +12,92 @@
 </head>
 
 <body>
-    <div class="contenedorHeader">
-        <div class="promos-bancarias">Promociones bancarias + envío gratis</div>
-        <header>
-            <a href="/"><img src="img/LOGO RUNNERS STORE.png" class="logo"></a>
-            <nav>
-                <div class="dropdown">
-                    <div class="bars">
-                        <button><i class="fa-solid fa-bars bars-icon"></i></button>
-                        <ul>
-                            <li><a href="#">Mujer</a></li>
-                            <li><a href="#">Hombre</a></li>
-                            <li><a href="#">Zapatillas</a></li>
-                            <li><a href="#">Accesorios</a></li>
-                            <li><a href="#">Marcas</a></li>
-                        </ul>
+    <%- include('../partials/header') %>
+        <main>
+            <section class="main-picture">
+                <div>
+                    <img src="img/adidas3.jpg" class="product_img">
+            </section>
+            <section>
+                <ul class="galeria">
+                    <li>
+                        <a href="#img1"><img src="img/adidas.jpg"></a>
+                    </li>
+                    <li>
+                        <a href="#img2"><img src="img/adidas1.png"></a>
+                    </li>
+                    <li>
+                        <a href="#img3"><img src="img/adidas2.jpg"></a>
+                    </li>
+                </ul>
+                <div class="modal" id="img1">
+                    <h3>Foto1</h3>
+                    <div class="imagen">
+                        <a href="#img3">&#60;</a>
+                        <a href="#img2"><img src="img/adidas.jpg" class="imagen-dos"></a>
+                        <a href="#img2">></a>
+                    </div>
+                    <a class="cerrar" href="">X</a>
+                </div>
+                <div class="modal" id="img2">
+                    <h3>Foto2</h3>
+                    <div class="imagen">
+                        <a href="#img1">&#60;</a>
+                        <a href="#img3"><img src="img/adidas1.png" class="imagen-dos"></a>
+                        <a href="#img3">></a>
+                    </div>
+                    <a class="cerrar" href="">X</a>
+                </div>
+                <div class="modal" id="img3">
+                    <h3>Foto3</h3>
+                    <div class="imagen">
+                        <a href="#img2">&#60;</a>
+                        <a href="#img1"><img src="img/adidas2.jpg" class="imagen-dos"></a>
+                        <a href="#img1">></a>
+                    </div>
+                    <a class="cerrar" href="">X</a>
+                </div>
+            </section>
+            <section class="product-details">
+                <div class="product">
+                    <div class="product-head">
+                        <h3 class="product-name">Adidas Forum Low</h3>
+                        <p class="price">$25.999</p>
                     </div>
                 </div>
-            </nav>
-            <h3 class="search-bar"><input type="search" placeholder="   Buscar" class="buscador"><i class="fa-solid fa-magnifying-glass icon-glass"></i>
-            </h3>
-            <p class="icon-right"><a href="/productCart"><i class="fa-solid fa-cart-shopping icon"></i></a>
-                <a href="/login"><i class="fa-solid fa-circle-user icon"></i></a>
-            </p>
-
-        </header>
-        <div class="navegadorHorizonal">
-            <button><a href="#" style="text-decoration:none">Mujer</a></button>
-            <button><a href="#" style="text-decoration:none">Hombre</a></button>
-            <button><a href="#" style="text-decoration:none">Zapatillas</a></button>
-            <button><a href="#" style="text-decoration:none">Accesorios</a></button>
-            <button><a href="#" style="text-decoration:none">Marcas</a></button>
-        </div>
-    </div>
-
-    <main>
-        <section class="main-picture">
-            <div>
-                <img src="img/adidas3.jpg" class="product_img">
-        </section>
-        <section>
-            <ul class="galeria">
-                <li>
-                    <a href="#img1"><img src="img/adidas.jpg"></a>
-                </li>
-                <li>
-                    <a href="#img2"><img src="img/adidas1.png"></a>
-                </li>
-                <li>
-                    <a href="#img3"><img src="img/adidas2.jpg"></a>
-                </li>
-            </ul>
-            <div class="modal" id="img1">
-                <h3>Foto1</h3>
-                <div class="imagen">
-                    <a href="#img3">&#60;</a>
-                    <a href="#img2"><img src="img/adidas.jpg" class="imagen-dos"></a>
-                    <a href="#img2">></a>
-                </div>
-                <a class="cerrar" href="">X</a>
-            </div>
-            <div class="modal" id="img2">
-                <h3>Foto2</h3>
-                <div class="imagen">
-                    <a href="#img1">&#60;</a>
-                    <a href="#img3"><img src="img/adidas1.png" class="imagen-dos"></a>
-                    <a href="#img3">></a>
-                </div>
-                <a class="cerrar" href="">X</a>
-            </div>
-            <div class="modal" id="img3">
-                <h3>Foto3</h3>
-                <div class="imagen">
-                    <a href="#img2">&#60;</a>
-                    <a href="#img1"><img src="img/adidas2.jpg" class="imagen-dos"></a>
-                    <a href="#img1">></a>
-                </div>
-                <a class="cerrar" href="">X</a>
-            </div>
-        </section>
-        <section class="product-details">
-            <div class="product">
-                <div class="product-head">
-                    <h3 class="product-name">Adidas Forum Low</h3>
-                    <p class="price">$25.999</p>
-                </div>
-            </div>
-            <details>
-                <summary>Descripción del producto</summary>
-                <p class="product-description">ipsum dolor sit amet consectetur adipisicing elit. Minima voluptates unde ipsa nesciunt debitis quidem eligendi, praesentium laboriosam atque sed quaerat libero molestiae, dignissimos nisi blanditiis, expedita amet eum sunt!</p>
-            </details>
-            <div class="color-head">
-                <form action="#" method="get">
-                    <h4>Color:</h4>
-                    <select class="color" name="color">
+                <details>
+                    <summary>Descripción del producto</summary>
+                    <p class="product-description">ipsum dolor sit amet consectetur adipisicing elit. Minima voluptates unde ipsa nesciunt debitis quidem eligendi, praesentium laboriosam atque sed quaerat libero molestiae, dignissimos nisi blanditiis, expedita amet eum sunt!</p>
+                </details>
+                <div class="color-head">
+                    <form action="#" method="get">
+                        <h4>Color:</h4>
+                        <select class="color" name="color">
                         <option value="#fdfefe">Blanco</option>
                         <option value="#17202a">Negro</option>
                         <option value=" #1b4f72">Azul</option>
                     </select>
-                </form>
-                <form action="#" method="get">
-                    <h4>Talle:</h4>
-                    <select class="talle" name="talle">
+                    </form>
+                    <form action="#" method="get">
+                        <h4>Talle:</h4>
+                        <select class="talle" name="talle">
                         <option value="38">38</option>
                         <option value="40">40</option>
                         <option value="41">41</option>
                         <option value="42">42</option>
                         <option value="43">43</option>
                     </select>
-                </form>
-                <form action="#" method="get">
-                    <a href="/productCart"><input type="button" name="add-trolley" value="AGREGAR AL CARRITO" class="add-trolley"></a>
-                </form>
-            </div>
-        </section>
+                    </form>
+                    <form action="#" method="get">
+                        <a href="/productCart"><input type="button" name="add-trolley" value="AGREGAR AL CARRITO" class="add-trolley"></a>
+                    </form>
+                </div>
+            </section>
 
-    </main>
-    <span class="fa-solid fa-circle-arrow-up">
+        </main>
+        <span class="fa-solid fa-circle-arrow-up">
     </span>
-    <footer>
-        <div class="footer-icon">
-            <i class="fa-brands fa-facebook-square"></i>
-            <i class="fa-brands fa-instagram-square"></i>
-            <i class="fa-brands fa-whatsapp-square"></i>
-            <i class="fa-solid fa-envelope"></i>
-        </div>
-        <div class="link-foot">
-            <div class="div1">
-                <li type="none"><a href="#" class="links-footer">Términos y condiciones </a></li>
-                <li type="none"><a href="#" class="links-footer">Reclamos</a></li>
-            </div>
-            <div>
-                <li type="none"><a href="#" class="links-footer">Políticas de Privacidad</a></li>
-                <li type="none"><a href="#" class="links-footer">Políticas de Cookies </a></li>
-            </div>
-        </div>
-    </footer>
+        <%- include('../partials/footer') %>
 </body>
 
 </html>

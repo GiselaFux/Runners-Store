@@ -1,4 +1,5 @@
 /*Estilos generales*/
+
 * {
     margin: 0px;
 }
@@ -12,7 +13,9 @@ main {
     text-align: center;
 }
 
+
 /*Estilos header*/
+
 header {
     background-color: #c21d17;
     display: flex;
@@ -57,6 +60,7 @@ header {
 .navegadorHorizonal {
     display: none;
 }
+
 
 /* dropdown*/
 
@@ -126,8 +130,12 @@ body header nav {
     transform: translateY(0px);
 }
 
+
 /*Estilo main*/
+
+
 /*Carrusel ppal*/
+
 .imgCarrusel {
     width: 90%;
     margin: 15px 15px;
@@ -153,7 +161,9 @@ body header nav {
     margin: 0.3rem;
 }
 
+
 /*Prod. nueva temporada*/
+
 .nuevaTemporada h3 {
     text-align: center;
 }
@@ -185,6 +195,7 @@ body header nav {
     width: 80px;
     transition: 0.5s;
 }
+
 
 /*Sección ofertas*/
 
@@ -219,6 +230,7 @@ body header nav {
 
 
 /*Box suscribirse*/
+
 .suscripcion {
     font-weight: bold;
     background-color: #c21d17;
@@ -243,6 +255,7 @@ form {
     width: 30%;
     font-weight: bolder;
 }
+
 
 /*Estilo Footer*/
 
@@ -287,31 +300,25 @@ footer {
 }
 
 @media(min-width:760px) {
-
     header {
         position: relative;
     }
-
     main {
         margin: 225px auto 0px;
     }
-
     .logo {
         width: 9rem;
         margin-left: 20px;
     }
-
     .search-bar {
         display: flex;
         align-items: center;
         margin: 0px auto;
         position: relative;
     }
-
     .bars button {
         display: none;
     }
-
     .buscador {
         display: flex;
         background-color: #e8e8e7;
@@ -321,7 +328,6 @@ footer {
         border: solid #160812 2px;
         margin-left: -50px;
     }
-
     .icon-glass {
         position: absolute;
         color: #c21d17;
@@ -331,34 +337,28 @@ footer {
         font-size: 19px;
         border-left: solid 2px #160812;
     }
-
     .icon-right a {
         font-size: 35px;
     }
-
     .icon-right {
         margin-right: 20px;
     }
-
     div .navegadorHorizonal {
         background-color: #c21d17;
         opacity: 85%;
         width: 100%;
     }
-
     .navegadorHorizonal {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
     }
-
     .navegadorHorizonal button a {
         color: #e8e8e7;
         font-weight: 18px;
         font-weight: bold;
     }
-
     .navegadorHorizonal button {
         background-color: #c21d17;
         padding: 8px;
@@ -368,36 +368,29 @@ footer {
         border-top: none;
         border-bottom: none;
     }
-
     .navegadorHorizonal button:hover {
         background-color: #e8e8e7;
         border: 1px solid #c21d17;
     }
-
-    .navegadorHorizonal button a:hover {
+    .navegadorHorizonal button:hover a {
         color: #c21d17;
         font-weight: 20px;
     }
-
     .botones {
         justify-content: center;
     }
-
     .link-foot div {
         display: flex;
         flex-direction: row;
         justify-content: center;
     }
-
     .link-foot {
         width: 90%;
     }
-
     .links-footer {
         margin: 0 10px;
         font-size: medium;
     }
-
     .footer-icon {
         color: #160812;
         font-size: 30px;
@@ -407,24 +400,19 @@ footer {
 }
 
 @media (min-width: 1500px) {
-
     main {
         margin: 280px auto 0px;
     }
-
     .logo {
         width: 12rem;
     }
-
     .buscador {
         width: 700px;
         margin-left: -90px;
     }
-
     .icon-right a {
         font-size: 45px;
     }
-
     .navegadorHorizonal button {
         padding: 10px;
         width: 150px;
@@ -432,9 +420,7 @@ footer {
         border-top: none;
         border-bottom: none;
     }
-
     .links-footer {
         margin: 0 80px;
     }
-
 }

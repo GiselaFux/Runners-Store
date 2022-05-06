@@ -13,122 +13,74 @@
 </head>
 
 <body>
-    <div class="contenedorHeader">
-        <div class="promos-bancarias">Promociones bancarias + envío gratis</div>
-        <header>
-            <a href="/"><img src="img/LOGO RUNNERS STORE.png" class="logo"></a>
-            <nav>
-                <div class="dropdown">
-                    <div class="bars">
-                        <button><i class="fa-solid fa-bars bars-icon"></i></button>
-                        <ul>
-                            <li><a href="#">Mujer</a></li>
-                            <li><a href="#">Hombre</a></li>
-                            <li><a href="#">Zapatillas</a></li>
-                            <li><a href="#">Accesorios</a></li>
-                            <li><a href="#">Marcas</a></li>
-                        </ul>
-                    </div>
+    <%- include('../partials/header') %>
+
+        <main>
+            <div class="cuadro-ppal">
+                <h1>Registrarme</h1>
+                <div class="butt-group">
+                    <a href="/login"> <button class="disabled">Iniciar Sesión</button></a>
+                    <a href="/register"> <button>Registrarme</button></a>
                 </div>
-            </nav>
-            <h3 class="search-bar"><input type="search" placeholder="   Buscar" class="buscador"><i class="fa-solid fa-magnifying-glass icon-glass"></i>
-            </h3>
-            <p class="icon-right"><a href="/productCart"><i class="fa-solid fa-cart-shopping icon"></i></a>
-                <a href="/login"><i class="fa-solid fa-circle-user icon"></i></a>
-            </p>
-        </header>
-        <div class="navegadorHorizonal">
-            <button><a href="#" style="text-decoration:none">Mujer</a></button>
-            <button><a href="#" style="text-decoration:none">Hombre</a></button>
-            <button><a href="#" style="text-decoration:none">Zapatillas</a></button>
-            <button><a href="#" style="text-decoration:none">Accesorios</a></button>
-            <button><a href="#" style="text-decoration:none">Marcas</a></button>
-        </div>
-    </div>
-    <main>
-        <div class="cuadro-ppal">
-            <h1>Registrarme</h1>
-            <div class="butt-group">
-                <a href="/login"> <button class="disabled">Iniciar Sesión</button></a>
-                <a href="/register"> <button>Registrarme</button></a>
-            </div>
-            <form action="/register" method="post">
-                <div class="datos">
-                    <h3>Datos personales</h3>
-                    <p>
-                        <input type="text" name="nombre" id="nombre" placeholder="NOMBRE" required class="placeholder">
-                        <input type="text" name="apellido" id="apellido" placeholder="APELLIDO" required class="placeholder">
-                    </p>
+                <form action="/register" method="post">
+                    <div class="datos">
+                        <h3>Datos personales</h3>
+                        <p>
+                            <input type="text" name="nombre" id="nombre" placeholder="NOMBRE" required class="placeholder">
+                            <input type="text" name="apellido" id="apellido" placeholder="APELLIDO" required class="placeholder">
+                        </p>
 
-                    <p><label>Fecha de nacimiento</label>
-                        <input type="date" name="birth_date" id="birth_date" required class="placeholder">
-                    </p>
+                        <p><label>Fecha de nacimiento</label>
+                            <input type="date" name="birth_date" id="birth_date" required class="placeholder">
+                        </p>
 
-                    <div style="display:flex">
+                        <div style="display:flex">
 
-                        <p><label>Tipo*</label>
-                            <select required class="placeholder" style="width:fit-content">
+                            <p><label>Tipo*</label>
+                                <select required class="placeholder" style="width:fit-content">
                                 <option>DNI</option>
                             </select>
-                        </p>
-                        <p><label>Numero de documento*</label>
-                            <input type="text" name="numero-doc" id="numero-doc" required class="placeholder">
-                        </p>
-                    </div>
-                    <p><label>Género</label></p>
-                    <p><select required class="placeholder">
+                            </p>
+                            <p><label>Numero de documento*</label>
+                                <input type="text" name="numero-doc" id="numero-doc" required class="placeholder">
+                            </p>
+                        </div>
+                        <p><label>Género</label></p>
+                        <p><select required class="placeholder">
                             <option>Masculino</option>
                             <option>Femenino</option>
                         </select></p>
 
-                    <p> <label>Número de telefono</label></p>
-                    <p><input type="text" name="Num-telefono" id="Num-telefono" required class="placeholder"></p>
-                </div>
-                <div class="datos-cuenta">
-                    <h3>Datos de cuenta</h3>
-                    <label></label>
-                    <input type="text" name="email" id="email" required class="placeholder" placeholder="Email*">
-                    <br>
-                    <label></label>
-                    <input type="text" name="email" id="email" required class="placeholder" placeholder="Confirmar email*">
-                    <br>
-                    <label></label>
-                    <input type="password" name="contraseña" id="contraseña" required class="placeholder" placeholder="Contraseña*">
-                    <br>
-                    <label></label>
-                    <input type="password" name="contraseña" id="contraseña" required class="placeholder" placeholder="Confirmar contraseña*">
+                        <p> <label>Número de telefono</label></p>
+                        <p><input type="text" name="Num-telefono" id="Num-telefono" required class="placeholder"></p>
+                    </div>
+                    <div class="datos-cuenta">
+                        <h3>Datos de cuenta</h3>
+                        <label></label>
+                        <input type="text" name="email" id="email" required class="placeholder" placeholder="Email*">
+                        <br>
+                        <label></label>
+                        <input type="text" name="email" id="email" required class="placeholder" placeholder="Confirmar email*">
+                        <br>
+                        <label></label>
+                        <input type="password" name="contraseña" id="contraseña" required class="placeholder" placeholder="Contraseña*">
+                        <br>
+                        <label></label>
+                        <input type="password" name="contraseña" id="contraseña" required class="placeholder" placeholder="Confirmar contraseña*">
 
-                    <br>
-                    <label><input type="checkbox" id="cbox1" value="first_checkbox"> Acepto las políticas de privacidad,
+                        <br>
+                        <label><input type="checkbox" id="cbox1" value="first_checkbox"> Acepto las políticas de privacidad,
                         los
                         terminos y condiciones </label>
-                    <br>
-                    <button class="registrarme">CREAR MI CUENTA</button>
-                </div>
-            </form>
-        </div>
-
-    </main>
-    <span class="fa-solid fa-circle-arrow-up"> </span>
-    <footer>
-        <div class="footer-icon">
-            <i class="fa-brands fa-facebook-square"></i>
-            <i class="fa-brands fa-instagram-square"></i>
-            <i class="fa-brands fa-whatsapp-square"></i>
-            <i class="fa-solid fa-envelope"></i>
-        </div>
-        <div class="link-foot">
-            <div class="div1">
-                <li type="none"><a href="#" class="links-footer">Términos y condiciones </a></li>
-                <li type="none"><a href="#" class="links-footer">Reclamos</a></li>
+                        <br>
+                        <button class="registrarme">CREAR MI CUENTA</button>
+                    </div>
+                </form>
             </div>
-            <div>
-                <li type="none"><a href="#" class="links-footer">Políticas de Privacidad</a></li>
-                <li type="none"><a href="#" class="links-footer">Políticas de Cookies </a></li>
-            </div>
-        </div>
-    </footer>
 
+        </main>
+        <span class="fa-solid fa-circle-arrow-up"> </span>
+        <%- include('../partials/footer') %>
 </body>
 
 </html>

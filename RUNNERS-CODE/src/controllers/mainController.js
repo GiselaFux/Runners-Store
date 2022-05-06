@@ -4,16 +4,16 @@ mainController = {
         res.render(path.join(__dirname, '../views/index'))
     },
     login: function(req, res) {
-        res.render(path.join(__dirname, '../views/login'))
+        res.render(path.join(__dirname, '../views/users/login'))
     },
     productCart: function(req, res) {
-        res.render(path.join(__dirname, '../views/productCart'))
+        res.render(path.join(__dirname, '../views/products/productCart'))
     },
     productDetail: function(req, res) {
-        res.render(path.join(__dirname, '../views/productDeatail'))
+        res.render(path.join(__dirname, '../views/products/productDetail'))
     },
     register: function(req, res) {
-        res.render(path.join(__dirname, '/views/register'))
+        res.render(path.join(__dirname, '../views/users/register'))
     }
 };
 module.exports = mainController;

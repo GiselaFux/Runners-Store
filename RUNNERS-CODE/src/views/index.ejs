@@ -13,122 +13,70 @@
     <link rel="stylesheet" href="/css/styles.css">
 
 </head>
+<%- include('partials/header') %>
 
-<body>
-    <div class="contenedorHeader">
-        <div class="promos-bancarias">Promociones bancarias + envío gratis</div>
-        <header>
-            <a href="/"><img src="img/LOGO RUNNERS STORE.png" class="logo"></a>
-            <nav>
-                <div class="dropdown">
-                    <div class="bars">
-                        <button><i class="fa-solid fa-bars"></i></button>
-                        <ul>
-                            <li><a href="#">Mujer</a></li>
-                            <li><a href="#">Hombre</a></li>
-                            <li><a href="#">Zapatillas</a></li>
-                            <li><a href="#">Accesorios</a></li>
-                            <li><a href="#">Marcas</a></li>
-                        </ul>
-                    </div>
+    <body>
+        <main>
+            <img src="img/logo.png" alt="logo" id="carr1" class="imgCarrusel">
+
+            <div class="botones">
+                <div class="boton"></div>
+                <div class="boton"></div>
+                <div class="boton"></div>
+                <div class="boton"></div>
+            </div>
+            <div class="nuevaTemporada">
+                <h3>NUEVA TEMPORADA</h3>
+                <div class="prodNuevaTem">
+                    <p>
+                        <a href="/productDetail"><img src="img/pelotasPaddle.jpg" alt="imagen1" class="imgNuevaTemp"></a>
+                        Pelotas De Paddle
+                    </p>
+
+                    <p>
+                        <a href="/productDetail"><img src=" img/remera.jpg" alt="imagen2" class="imgNuevaTemp"></a>
+                        Remera Adidas Hombre
+                    </p>
+
+                    <p>
+                        <a href="/productDetail"><img src="img/calzaNegraM3.jpg" alt="imagen3" class="imgNuevaTemp"></a>
+                        Calza Reebok Mujer
+                    </p>
+
+                    <p>
+                        <a href="/productDetail"><img src="img/adidas3.jpg " alt="imagen4 " class="imgNuevaTemp "></a>
+                        Zapatillas Adidas Hombre
+                    </p>
                 </div>
-            </nav>
-            <h3 class="search-bar"><input type="search" placeholder="   Buscar" class="buscador"><i class="fa-solid fa-magnifying-glass icon-glass"></i>
-            </h3>
-            <p class="icon-right"><a href="/productCart"><i class="fa-solid fa-cart-shopping icon"></i></a>
-                <a href="/login"><i class="fa-solid fa-circle-user icon"></i></a>
-            </p>
 
-        </header>
-        <div class="navegadorHorizonal">
-            <button><a href="#" style="text-decoration:none">Mujer</a></button>
-            <button><a href="#" style="text-decoration:none">Hombre</a></button>
-            <button><a href="#" style="text-decoration:none">Zapatillas</a></button>
-            <button><a href="#" style="text-decoration:none">Accesorios</a></button>
-            <button><a href="#" style="text-decoration:none">Marcas</a></button>
-        </div>
-    </div>
-
-
-
-    <main>
-        <img src="img/logo.png" alt="logo" id="carr1" class="imgCarrusel">
-
-        <div class="botones">
-            <div class="boton"></div>
-            <div class="boton"></div>
-            <div class="boton"></div>
-            <div class="boton"></div>
-        </div>
-        <div class="nuevaTemporada">
-            <h3>NUEVA TEMPORADA</h3>
-            <div class="prodNuevaTem">
-                <p>
-                    <a href="/productDetail"><img src="img/pelotasPaddle.jpg" alt="imagen1" class="imgNuevaTemp"></a>
-                    Pelotas De Paddle
-                </p>
-
-                <p>
-                    <a href="/productDetail"><img src=" img/remera.jpg" alt="imagen2" class="imgNuevaTemp"></a>
-                    Remera Adidas Hombre
-                </p>
-
-                <p>
-                    <a href="/productDetail"><img src="img/calzaNegraM3.jpg" alt="imagen3" class="imgNuevaTemp"></a>
-                    Calza Reebok Mujer
-                </p>
-
-                <p>
-                    <a href="/productDetail"><img src="img/adidas3.jpg " alt="imagen4 " class="imgNuevaTemp "></a>
-                    Zapatillas Adidas Hombre
-                </p>
             </div>
-
-        </div>
-        <div class="prodOfertas ">
-            <h4>PRODUCTOS DE PROMOCIÓN</h4>
-            <div>
-                <img src="img/CalzaOfertaAdidas2.jpg " alt="calzaOferta " class="img ">
-                <p>Calza Adidas 3/4 Climacool</p>
-                <p>Antes<span style="text-decoration:line-through ">$8000</span> Ahora
-                    <span class="promoPrecio ">$6400</span>
-                </p>
+            <div class="prodOfertas ">
+                <h4>PRODUCTOS DE PROMOCIÓN</h4>
+                <div>
+                    <img src="img/CalzaOfertaAdidas2.jpg " alt="calzaOferta " class="img ">
+                    <p>Calza Adidas 3/4 Climacool</p>
+                    <p>Antes<span style="text-decoration:line-through ">$8000</span> Ahora
+                        <span class="promoPrecio ">$6400</span>
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class=" suscripcion ">
-            <form>
-                <label for="email ">Suscríbete al Newsletter</label>
-                <input type="email " name="email " id="name ">
-            </form>
-            <p>
-                <h6>Recibí las últimas novedades y obtén el 15% de descuento en tu<span type="text-decoration: underline ">
+            <div class=" suscripcion ">
+                <form>
+                    <label for="email ">Suscríbete al Newsletter</label>
+                    <input type="email " name="email " id="name ">
+                </form>
+                <p>
+                    <h6>Recibí las últimas novedades y obtén el 15% de descuento en tu<span type="text-decoration: underline ">
                     próxima
                     compra!</span></h6>
-            </p>
-        </div>
+                </p>
+            </div>
 
 
-    </main>
-    <span class="fa-solid fa-circle-arrow-up">
+        </main>
+        <span class="fa-solid fa-circle-arrow-up">
     </span>
-    <footer>
-        <div class="footer-icon">
-            <i class="fa-brands fa-facebook-square"></i>
-            <i class="fa-brands fa-instagram-square"></i>
-            <i class="fa-brands fa-whatsapp-square"></i>
-            <i class="fa-solid fa-envelope"></i>
-        </div>
-        <div class="link-foot">
-            <div class="div1">
-                <li type="none"><a href="#" class="links-footer">Términos y condiciones </a></li>
-                <li type="none"><a href="#" class="links-footer">Reclamos</a></li>
-            </div>
-            <div>
-                <li type="none"><a href="#" class="links-footer">Políticas de Privacidad</a></li>
-                <li type="none"><a href="#" class="links-footer">Políticas de Cookies </a></li>
-            </div>
-        </div>
-    </footer>
-</body>
+        <%- include('partials/footer') %>
+    </body>
 
 </html>

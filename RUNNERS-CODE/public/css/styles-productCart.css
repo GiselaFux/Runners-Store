@@ -329,7 +329,7 @@ footer {
         width: 9rem;
         margin-left: 20px;
     }
-    .bars-icon {
+    .bars button {
         display: none;
     }
     .dropdown {

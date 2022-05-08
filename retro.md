@@ -1,60 +1,60 @@
-Retrospectiva del string 1: ‘RUNNERS STORE’
+# **RETROSPECTIVA - EQUIPO _"RUNNERS STORE"_**
 
-           	Cosas que deberíamos comenzar a hacer:
+## _SPRINT 1_
 
-•	Dos encuentros semanales cortos para informar como vamos y elegir posibles cambios
-•	Organizarnos para dividirnos las tareas.
-•	Más comunicación sobre cómo vamos avanzando en las tareas(podrá ser por reuniones virtuales o por wsp)
+### Comenzar a hacer:
 
-            Qué hacer más:
+* Dos encuentros semanales cortos para informar cómo vamos y elegir posibles cambios.
+* Organizarnos para dividirnos las tareas.
+* Más comunicación sobre cómo vamos avanzando en las tareas(podría ser por reuniones virtuales o vía WhatsApp).
 
+### Hacer más:
 
-•	Encuentros cortos más seguidos.
-•	Por lo menos una reunión virtual a la semana.
-•	Corrección cruzada de código
+* Encuentros cortos más seguidos.
+* Por lo menos una reunión virtual a la semana.
+* Corrección cruzada de código (para ver qué se puede mejorar o cómo se podría optimizar).
 
-        	Cosas que deberíamos seguir haciendo:
+###	Continuar haciendo:
 
+* Seguir intercambiando opiniones.
+* El trabajo colaborativo.
+* Cumplir con las tareas solicitadas en tiempo y forma.
 
-•	Seguir intercambiando opiniones.
-•	El trabajo colaborativo.
-•	Cumplir con las tareas solicitadas en tiempo y forma.
+### Hacer menos:
 
-           Qué deberíamos hacer menos:
+* No comunicarnos.
 
-•	No comunicarnos
+### Dejar de hacer:
 
-        	Qué deberíamos dejar de hacer:
-
-•   No encontramos situaciones para plantear aquí.           
-git
-
-Retrospectiva del String 2: 'RUNNERS STORE'
-
-* Nos hemos sentido contentos y deberíamos continuar haciendo:
-
--Haber podido organizado desde el comienzo.
--La buena comunicación que mantuvimos.
--La buena voluntad del grupo.
--La colaboración.
--Las tareas realizadas.
-
-* Los puntos que no nos hicieron sentir satisfechos, que deberíamos comenzar a hacer  :
-
--La falta de reuniones.
--Los desencuentros virtuales.
--Por la falta de tiempo, no logramos realizar detalles que queríamos lograr.
-
-* Lo que nos hizo sentir un poco confundidos:
-
--Revisar código
--El no saber cómo manejarnos por la falta de experiencia.
-
-* Hacer menos:
-
--Comunicar cosas o dudas a último momento.
+* No encontramos situaciones para plantear aquí.    
 
 
-* Dejar de hacer:
 
--No encontramos qué poner.
+
+## _SPRINT 2_
+
+### Comenzar a hacer:
+
+* Más reuniones.
+
+### Continuar haciendo:
+
+* Organización desde el cominezo del Sprint.
+* Mantener buena comunicación.
+* Tener buena voluntad grupal.
+* Ser colaborativos.
+
+### Hacer menos:
+
+* Desencuentros virtuales.
+
+### Dejar de hacer:
+
+* Comunicar cosas o dudas a último momento.
+* Organizarse mal con los tiempos de cada tarea.
+
+### Nos hizo sentir un poco confundidos:
+
+* Revisar código
+* El no saber cómo manejarnos por la falta de experiencia.
+

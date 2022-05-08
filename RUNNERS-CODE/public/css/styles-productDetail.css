@@ -142,9 +142,10 @@ details summary {
     font-size: 11px;
 }
 
-.detail-color-head form {
+form.detail-color-head {
     display: flex;
     flex-direction: column;
+    justify-items: center;
     margin: 10px;
 }
 

@@ -6,12 +6,12 @@
 <body>
     <%- include('../partials/header') %>
         <main>
-            <section class="main-picture">
+            <section class="detail-main-picture">
                 <div>
-                    <img src="img/adidas3.jpg" class="product_img">
+                    <img src="img/adidas3.jpg" class="detail-product_img">
             </section>
             <section>
-                <ul class="galeria">
+                <ul class="detail-galeria">
                     <li>
                         <a href="#img1"><img src="img/adidas.jpg"></a>
                     </li>
@@ -22,59 +22,59 @@
                         <a href="#img3"><img src="img/adidas2.jpg"></a>
                     </li>
                 </ul>
-                <div class="modal" id="img1">
+                <div class="detail-modal" id="img1">
                     <h3>Foto1</h3>
-                    <div class="imagen">
+                    <div class="detail-imagen">
                         <a href="#img3">&#60;</a>
-                        <a href="#img2"><img src="img/adidas.jpg" class="imagen-dos"></a>
+                        <a href="#img2"><img src="img/adidas.jpg" class="detail-imagen-dos"></a>
                         <a href="#img2">></a>
                     </div>
-                    <a class="cerrar" href="">X</a>
+                    <a class="detail-cerrar" href="">X</a>
                 </div>
-                <div class="modal" id="img2">
+                <div class="detail-modal" id="img2">
                     <h3>Foto2</h3>
-                    <div class="imagen">
+                    <div class="detail-imagen">
                         <a href="#img1">&#60;</a>
-                        <a href="#img3"><img src="img/adidas1.png" class="imagen-dos"></a>
+                        <a href="#img3"><img src="img/adidas1.png" class="detail-imagen-dos"></a>
                         <a href="#img3">></a>
                     </div>
-                    <a class="cerrar" href="">X</a>
+                    <a class="detail-cerrar" href="">X</a>
                 </div>
-                <div class="modal" id="img3">
+                <div class="detail-modal" id="img3">
                     <h3>Foto3</h3>
-                    <div class="imagen">
+                    <div class="detail-imagen">
                         <a href="#img2">&#60;</a>
-                        <a href="#img1"><img src="img/adidas2.jpg" class="imagen-dos"></a>
+                        <a href="#img1"><img src="img/adidas2.jpg" class="detail-imagen-dos"></a>
                         <a href="#img1">></a>
                     </div>
-                    <a class="cerrar" href="">X</a>
+                    <a class="detail-cerrar" href="">X</a>
                 </div>
             </section>
-            <section class="product-details">
-                <div class="product">
-                    <div class="product-head">
-                        <h3 class="product-name">Adidas Forum Low</h3>
-                        <p class="price">$25.999</p>
+            <section>
+                <div class="detail-product">
+                    <div class="detail-product-head">
+                        <h3 class="detail-product-name">Adidas Forum Low</h3>
+                        <p class="detail-price">$25.999</p>
                     </div>
                 </div>
                 <details>
                     <summary>Descripción del producto</summary>
-                    <p class="product-description">ipsum dolor sit amet consectetur adipisicing elit. Minima voluptates
+                    <p class="detail-product-description">ipsum dolor sit amet consectetur adipisicing elit. Minima voluptates
                         unde ipsa nesciunt debitis quidem eligendi, praesentium laboriosam atque sed quaerat libero
                         molestiae, dignissimos nisi blanditiis, expedita amet eum sunt!</p>
                 </details>
-                <div class="color-head">
+                <div class="detail-color-head">
                     <form action="#" method="get">
-                        <h4>Color:</h4>
-                        <select class="color" name="color">
+                        <h4 class="detail-h4">Color:</h4>
+                        <select class="detail-color" name="color">
                             <option value="#fdfefe">Blanco</option>
                             <option value="#17202a">Negro</option>
                             <option value=" #1b4f72">Azul</option>
                         </select>
                     </form>
                     <form action="#" method="get">
-                        <h4>Talle:</h4>
-                        <select class="talle" name="talle">
+                        <h4 class="detail-h4">Talle:</h4>
+                        <select class="detail-talle" name="talle">
                             <option value="38">38</option>
                             <option value="40">40</option>
                             <option value="41">41</option>
@@ -84,14 +84,12 @@
                     </form>
                     <form action="#" method="get">
                         <a href="/productCart"><input type="button" name="add-trolley" value="AGREGAR AL CARRITO"
-                                class="add-trolley"></a>
+                                class="detail-add-trolley"></a>
                     </form>
                 </div>
             </section>
 
         </main>
-        <span class="fa-solid fa-circle-arrow-up">
-        </span>
         <%- include('../partials/footer') %>
 </body>
 

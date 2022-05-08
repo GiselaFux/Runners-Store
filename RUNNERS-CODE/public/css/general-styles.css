@@ -1,0 +1,321 @@
+/*Estilos generales*/
+
+* {
+    margin: 0px;
+}
+
+body {
+    font-family: "Roboto";
+}
+
+main {
+    margin: 180px auto 0px;
+    text-align: center;
+}
+
+
+/*Estilos header*/
+
+header {
+    background-color: #c21d17;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contenedorHeader {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    filter: drop-shadow(0 0 0.75rem #330807);
+    z-index: 1;
+}
+
+.promos-bancarias {
+    background-color: #160812;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 35px;
+    font-size: small;
+    color: white;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.logo {
+    width: 7rem;
+}
+
+.search-bar {
+    display: none;
+}
+
+.icon-right a {
+    color: #160812;
+    font-size: 25px;
+}
+
+.navegadorHorizonal {
+    display: none;
+}
+
+
+/* dropdown*/
+
+body header nav {
+    order: -1;
+}
+
+.dropdown {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bars button {
+    background: none;
+    border: none;
+    color: #160812;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.bars ul {
+    position: absolute;
+    background-color: #e8e8e7;
+    margin-top: 10px;
+    padding-left: 0;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+}
+
+.bars a {
+    color: #160812;
+    text-decoration: none;
+}
+
+.bars li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bars li:hover {
+    background-color: #c21d17;
+}
+
+.dropdown button:hover {
+    color: #c21d17;
+    background-color: #e8e8e7;
+    border-radius: 5px;
+}
+
+.bars button:focus+ul {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0px);
+}
+
+
+/*Estilo Footer*/
+
+footer {
+    background-color: #e8e8e7;
+    filter: drop-shadow(0 0 0.75rem #5c5c5a);
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+}
+
+.link-foot {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    font-size: 12px;
+    justify-content: space-evenly;
+}
+
+.links-footer {
+    color: #160812;
+    text-decoration: none;
+}
+
+.footer-icon {
+    color: #160812;
+    size: 2em;
+    margin: 2em;
+    width: 10%;
+}
+
+.fa-circle-arrow-up {
+    padding: 20px;
+    color: #160812;
+    filter: drop-shadow(0 0 0.75rem #5c5c5a);
+    font-size: 22px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    opacity: 65%;
+}
+
+@media(min-width:760px) {
+    header {
+        position: relative;
+    }
+
+    main {
+        margin: 225px auto 0px;
+    }
+
+    .logo {
+        width: 9rem;
+        margin-left: 20px;
+    }
+
+    .search-bar {
+        display: flex;
+        align-items: center;
+        margin: 0px auto;
+        position: relative;
+    }
+
+    .bars button {
+        display: none;
+    }
+
+    .buscador {
+        display: flex;
+        background-color: #e8e8e7;
+        padding: 10px;
+        border-radius: 5px;
+        width: 370px;
+        border: solid #160812 2px;
+        margin-left: -50px;
+    }
+
+
+    .icon-glass {
+        position: absolute;
+        color: #c21d17;
+        align-self: center;
+        right: 8px;
+        padding-left: 8px;
+        font-size: 19px;
+        border-left: solid 2px #160812;
+    }
+
+    .icon-right a {
+        font-size: 35px;
+    }
+
+    .icon-right {
+        margin-right: 20px;
+    }
+
+    div .navegadorHorizonal {
+        background-color: #c21d17;
+        opacity: 85%;
+        width: 100%;
+    }
+
+    .navegadorHorizonal {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navegadorHorizonal button a {
+        color: #e8e8e7;
+        font-weight: 18px;
+        font-weight: bold;
+    }
+
+    .navegadorHorizonal button {
+        background-color: #c21d17;
+        padding: 8px;
+        width: 90px;
+        float: left;
+        border: 1px solid #160812;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    .navegadorHorizonal button:hover {
+        background-color: #e8e8e7;
+        border: 1px solid #c21d17;
+    }
+
+    .navegadorHorizonal button:hover a {
+        color: #c21d17;
+        font-weight: 20px;
+    }
+
+    .link-foot div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .link-foot {
+        width: 90%;
+    }
+
+    .links-footer {
+        margin: 0 10px;
+        font-size: medium;
+    }
+
+    .footer-icon {
+        color: #160812;
+        font-size: 30px;
+        margin: 10px;
+        width: 10%;
+    }
+}
+
+@media (min-width: 1500px) {
+    main {
+        margin: 280px auto 0px;
+    }
+
+    .logo {
+        width: 12rem;
+    }
+
+    .buscador {
+        width: 700px;
+        margin-left: -90px;
+    }
+
+    .icon-right a {
+        font-size: 45px;
+    }
+
+    .navegadorHorizonal button {
+        padding: 10px;
+        width: 150px;
+        border: 1px solid #160812;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    .links-footer {
+        margin: 0 80px;
+    }
+}

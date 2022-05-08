@@ -3,13 +3,13 @@
 
 /*Carrusel ppal*/
 
-.imgCarrusel {
+.index-imgCarrusel {
     width: 90%;
     margin: 15px 15px;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
-.botones {
+.index-botones {
     box-sizing: border-box;
     background-color: #e5e7e9;
     width: 80%;
@@ -19,7 +19,7 @@
     padding: 0.3rem 30%;
 }
 
-.boton {
+.index-boton {
     background-color: #160812;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     width: 0.5rem;
@@ -31,11 +31,11 @@
 
 /*Prod. nueva temporada*/
 
-.nuevaTemporada h3 {
+.index-nuevaTemporada h3 {
     text-align: center;
 }
 
-.prodNuevaTem {
+.index-prodNuevaTem {
     display: flex;
     text-align: center;
     flex-wrap: nowrap;
@@ -45,19 +45,19 @@
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
-.prodNuevaTem p {
+.index-prodNuevaTem p {
     display: flex;
     flex-direction: column;
     margin: 5px 0;
 }
 
-.imgNuevaTemp {
+.index-imgNuevaTemp {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     width: 70px;
     align-items: center;
 }
 
-.imgNuevaTemp:hover {
+.index-imgNuevaTemp:hover {
     box-shadow: 0px 0px 10px rgb(154, 22, 22);
     width: 80px;
     transition: 0.5s;
@@ -66,30 +66,30 @@
 
 /*Sección ofertas*/
 
-.prodOfertas h4 {
+.index-prodOfertas h4 {
     text-align: center;
 }
 
-.prodOfertas {
+.index-prodOfertas {
     margin: 50px 45px;
     background-color: #e5e7e9;
     text-align: center;
 }
 
-.img {
+.index-img {
     width: 220px;
     margin: 15px 5px;
 }
 
-.prodOfertas p {
+.index-prodOfertas p {
     text-align: center;
 }
 
-.promoPrecio {
+.index-promoPrecio {
     color: red;
 }
 
-.promoPrecio:hover {
+.index-promoPrecio:hover {
     color: rgb(237, 19, 19);
     font-size: larger;
     font-weight: 700;
@@ -98,7 +98,7 @@
 
 /*Box suscribirse*/
 
-.suscripcion {
+.index-suscripcion {
     font-weight: bold;
     background-color: #c21d17;
     opacity: 95%;
@@ -111,13 +111,13 @@
     align-items: center;
 }
 
-form {
+.index-form {
     text-align: center;
     width: 65%;
     margin-right: 5%;
 }
 
-.suscripcion h6 {
+.index-suscripcion h6 {
     text-align: center;
     width: 30%;
     font-weight: bolder;
@@ -126,7 +126,7 @@ form {
 
 @media(min-width:760px) {
 
-    .botones {
+    .index-botones {
         justify-content: center;
     }
 }

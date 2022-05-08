@@ -1,6 +1,6 @@
 /*Estilo main*/
 
-.cuadro-ppal {
+.login-cuadro-ppal {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,7 +11,7 @@
     margin: 35px 10px;
 }
 
-.butt-group button {
+.login-butt-group button {
     background-color: #c21d17;
     border: 1px #c21d17 solid;
     color: white;
@@ -20,22 +20,22 @@
     float: left;
 }
 
-.butt-group button:not(:last-child) {
+.login-butt-group button:not(:last-child) {
     border-right: none;
 }
 
-.butt-group::after {
+.login-butt-group::after {
     content: "";
     clear: both;
     display: table;
 }
 
-.butt-group button:hover {
+.login-butt-group button:hover {
     background-color: #e8e8e7;
     color: #c21d17;
 }
 
-.disabled {
+.login-disabled {
     opacity: 0.4;
 }
 
@@ -56,7 +56,7 @@
     color: #c21d17;
 }
 
-.placeholder {
+.login-placeholder {
     padding: 10px;
     width: 250px;
     border-radius: 5px;
@@ -64,19 +64,19 @@
     margin: 5px 0;
 }
 
-.check {
+.login-check {
     display: flex;
     flex-direction: column;
 }
 
 
 @media (min-width: 760px) {
-    .cuadro-ppal {
+    .login-cuadro-ppal {
         font-size: 16px;
         margin: 35px 200px;
     }
 
-    .check {
+    .login-check {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -88,17 +88,17 @@
 
 @media (min-width: 1500px) {
 
-    .cuadro-ppal {
+    .login-cuadro-ppal {
         font-size: 16px;
         margin: 35px 300px;
     }
 
-    .placeholder {
+    .login-placeholder {
         display: flex;
         flex-direction: column;
     }
 
-    .check {
+    .login-check {
         display: flex;
         flex-direction: row;
         align-items: center;

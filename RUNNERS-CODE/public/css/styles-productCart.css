@@ -10,7 +10,7 @@
     justify-content: left;
 }
 
-.productos-nros {
+.carrito-productos-nros {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -28,65 +28,55 @@
     margin: 3%;
 }
 
-.c-producto {
+.carrito-c-producto {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 5px 0;
 }
 
-.prod-detail {
+.carrito-prod-detail {
     display: flex;
     flex-direction: column;
     width: 40%;
 }
 
-.cant {
+.carrito-cant {
     display: flex;
     flex-direction: column;
     margin: 3%;
 }
 
-select {
+.carrito-select {
     width: 70%;
     align-self: center;
 }
 
-.box-nros {
+.carrito-box-nros {
     display: flex;
     flex-direction: column;
     margin-top: 10px;
 }
 
-.costo-envio {
+.carrito-costo-envio,
+.carrito-cod-promo {
     display: flex;
     flex-direction: column;
     position: relative;
     margin: 8px 0;
 }
 
-.button-1 {
+.carrito-button-1,
+.carrito-button-2 {
     position: absolute;
     right: -15px;
     top: 23px;
     width: 125px;
 }
 
-.cod-promo {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    margin: 8px 0;
-}
-
-.button-2 {
-    position: absolute;
-    right: -15px;
-    top: 23px;
-    width: 125px;
-}
-
-.costo-envio button {
+.carrito-costo-envio button,
+.carrito-cod-promo button,
+.carrito-pay-but button {
     background-color: #c21d17;
     border: 2px solid #c21d17;
     filter: drop-shadow(0 0 0.2rem #330807);
@@ -97,29 +87,7 @@ select {
     font-size: 16px;
 }
 
-.cod-promo button {
-    background-color: #c21d17;
-    border: 2px solid #c21d17;
-    filter: drop-shadow(0 0 0.2rem #330807);
-    border-radius: 20px;
-    color: white;
-    padding: 10px 25px;
-    text-align: center;
-    font-size: 16px;
-}
-
-.pay-but button {
-    background-color: #c21d17;
-    border: 2px solid #c21d17;
-    filter: drop-shadow(0 0 0.2rem #330807);
-    border-radius: 20px;
-    color: white;
-    padding: 10px 25px;
-    text-align: center;
-    font-size: 16px;
-}
-
-.in-button {
+.carrito-in-button {
     padding: 10px;
     width: 180px;
     border-radius: 5px;
@@ -132,15 +100,15 @@ button:hover {
     color: #c21d17;
 }
 
-.importes-compra {
+.carrito-importes-compra {
     display: flex;
 }
 
-.total {
+.carrito-total {
     font-weight: bold;
 }
 
-button.pagar {
+button.carrito-pagar {
     width: 270px;
     font-size: 18px;
     margin: 25px 0;
@@ -149,7 +117,7 @@ button.pagar {
 /*Media queries*/
 
 @media (min-width: 760px) {
-    .productos-nros {
+    .carrito-productos-nros {
         flex-direction: row;
         width: 98%;
     }

@@ -1,6 +1,6 @@
 /*Estilo main*/
 
-.cuadro-ppal {
+.register-cuadro-ppal {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,7 +11,7 @@
     margin: 35px 10px;
 }
 
-.butt-group button {
+.register-butt-group button {
     background-color: #c21d17;
     border: 1px #c21d17 solid;
     color: white;
@@ -20,26 +20,26 @@
     float: left;
 }
 
-.butt-group button:not(:last-child) {
+.register-butt-group button:not(:last-child) {
     border-right: none;
 }
 
-.butt-group::after {
+.register-butt-group::after {
     content: "";
     clear: both;
     display: table;
 }
 
-.butt-group button:hover {
+.register-butt-group button:hover {
     background-color: #e8e8e7;
     color: #c21d17;
 }
 
-.disabled {
+.register-disabled {
     opacity: 0.4;
 }
 
-.registrarme {
+.register-registrarme {
     background-color: #c21d17;
     border: 1px #c21d17 solid;
     filter: drop-shadow(0 0 0.2rem #330807);
@@ -51,12 +51,12 @@
     margin: 25px 0;
 }
 
-.registrarme:hover {
+.register-registrarme:hover {
     background-color: #e8e8e7;
     color: #c21d17;
 }
 
-.placeholder {
+.register-placeholder {
     padding: 10px;
     width: auto;
     border-radius: 5px;
@@ -67,7 +67,7 @@
 
 @media (min-width: 760px) {
 
-    main form {
+    .register-form {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -75,18 +75,18 @@
         font-size: 14px;
     }
 
-    .datos {
+    .register-datos {
         margin-left: 25px;
     }
 
-    p {
+    .register-p {
         text-align: left;
     }
 
 }
 
 @media (min-width: 1500px) {
-    .cuadro-ppal {
+    .register-cuadro-ppal {
         font-size: 16px;
         margin: 35px 300px;
     }

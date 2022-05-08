@@ -7,61 +7,61 @@
     <%- include('../partials/header') %>
 
         <main>
-            <div class="cuadro-ppal">
+            <div class="register-cuadro-ppal">
                 <h1>Registrarme</h1>
-                <div class="butt-group">
-                    <a href="/login"> <button class="disabled">Iniciar Sesión</button></a>
+                <div class="register-butt-group">
+                    <a href="/login"> <button class="register-disabled">Iniciar Sesión</button></a>
                     <a href="/register"> <button>Registrarme</button></a>
                 </div>
-                <form action="/register" method="post">
-                    <div class="datos">
+                <form class="register-form" action="/register" method="post">
+                    <div class="register-datos">
                         <h3>Datos personales</h3>
-                        <p>
+                        <p class="register-p">
                             <input type="text" name="nombre" id="nombre" placeholder="NOMBRE" required
-                                class="placeholder">
+                                class="register-placeholder">
                             <input type="text" name="apellido" id="apellido" placeholder="APELLIDO" required
-                                class="placeholder">
+                                class="register-placeholder">
                         </p>
 
-                        <p><label>Fecha de nacimiento</label>
-                            <input type="date" name="birth_date" id="birth_date" required class="placeholder">
+                        <p class="register-p"><label>Fecha de nacimiento</label>
+                            <input type="date" name="birth_date" id="birth_date" required class="register-placeholder">
                         </p>
 
                         <div style="display:flex">
 
-                            <p><label>Tipo*</label>
-                                <select required class="placeholder" style="width:fit-content">
+                            <p class="register-p"><label>Tipo*</label>
+                                <select required class="register-placeholder" style="width:fit-content">
                                     <option>DNI</option>
                                 </select>
                             </p>
-                            <p><label>Numero de documento*</label>
-                                <input type="text" name="numero-doc" id="numero-doc" required class="placeholder">
+                            <p class="register-p"><label>Numero de documento*</label>
+                                <input type="text" name="numero-doc" id="numero-doc" required class="register-placeholder">
                             </p>
                         </div>
-                        <p><label>Género</label></p>
-                        <p><select required class="placeholder">
+                        <p class="register-p"><label>Género</label></p>
+                        <p class="register-p"><select required class="register-placeholder">
                                 <option>Masculino</option>
                                 <option>Femenino</option>
                             </select></p>
 
-                        <p> <label>Número de telefono</label></p>
-                        <p><input type="text" name="Num-telefono" id="Num-telefono" required class="placeholder"></p>
+                        <p class="register-p"> <label>Número de telefono</label></p>
+                        <p class="register-p"><input type="text" name="Num-telefono" id="Num-telefono" required class="register-placeholder"></p>
                     </div>
-                    <div class="datos-cuenta">
+                    <div>
                         <h3>Datos de cuenta</h3>
                         <label></label>
-                        <input type="text" name="email" id="email" required class="placeholder" placeholder="Email*">
+                        <input type="text" name="email" id="email" required class="register-placeholder" placeholder="Email*">
                         <br>
                         <label></label>
-                        <input type="text" name="email" id="email" required class="placeholder"
+                        <input type="text" name="email" id="email" required class="register-placeholder"
                             placeholder="Confirmar email*">
                         <br>
                         <label></label>
-                        <input type="password" name="contraseña" id="contraseña" required class="placeholder"
+                        <input type="password" name="contraseña" id="contraseña" required class="register-placeholder"
                             placeholder="Contraseña*">
                         <br>
                         <label></label>
-                        <input type="password" name="contraseña" id="contraseña" required class="placeholder"
+                        <input type="password" name="contraseña" id="contraseña" required class="register-placeholder"
                             placeholder="Confirmar contraseña*">
 
                         <br>
@@ -70,13 +70,12 @@
                             los
                             terminos y condiciones </label>
                         <br>
-                        <button class="registrarme">CREAR MI CUENTA</button>
+                        <button class="register-registrarme">CREAR MI CUENTA</button>
                     </div>
                 </form>
             </div>
 
         </main>
-        <span class="fa-solid fa-circle-arrow-up"> </span>
         <%- include('../partials/footer') %>
 </body>
 

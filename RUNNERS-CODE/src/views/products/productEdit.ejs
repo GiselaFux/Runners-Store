@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <%- include('../partials/head') %>
+
+<body>
+
+    <%- include('../partials/header') %>
+
+    <main>
+        <form action="/productEdit" method="post"  class="edit-product">
+           <div class="create-control-formulario">
+              <label for="CambioNombre">Cambio de nombre</label>
+              <input type="text" name="CambioNombre" id="CambioNombre" placeholder="Nombre actual del producto">
+              <input type="text" name="CambioNombre" id="CambioNombre" placeholder="Nombre nuevo del producto">
+           </div>
+           <div class="cambios">
+              <label for="CambioDesc">Cambio de descripcion</label>
+              <input type="text" name="CambioDesc" id="CambioDesc" placeholder="Descripcion actual del producto">
+              <input type="text" name="CambioDesc" id="CambioDesc" placeholder="Descripcion nueva del producto">
+           </div>
+           <div class="cambios">
+              <label for="CambioImagen">Cambio de imagen</label>
+              <input type="file" name="fotos" accept=".png, .jpeg, .jpg" multiple>
+           </div>
+           <div class="cambios">
+              <label for="CambioCategoria">Cambio de categoria</label>
+              <input type="text" name="CambioCategoria" id="CambioCategoria" placeholder="Categoria actual del producto">
+              <input type="text" name="CambioCategoria" id="CambioCategoria" placeholder="Categoria nueva del producto">
+           </div>
+           <div class="cambios">
+              <label for="CambioNombre">Talles disponibles</label>
+              <input type="text" name="Talles" id="Talles" placeholder="Talles disponibles del producto">
+           </div>
+           <div class="cambios">
+              <label for="CambioNombre">Cambio de precio</label>
+              <input type="text" name="CambioPrecio" id="CambioPrecio" placeholder="Precio actual del producto">
+              <input type="text" name="CambioPrecio" id="CambioPrecio" placeholder="Precio nuevo del producto">
+           </div>
+           <div>
+            <button type="submit">Editar producto</button>
+           </div>
+
+
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>

@@ -1,0 +1,15 @@
+*{
+    margin: 0%;
+}
+
+.edit-product {
+    padding: 20px 15px;
+    background-color: #8080802e;
+    width: 70%;
+    margin: 15px auto;
+    border: 2px solid;
+    text-align: left;
+}
+.cambios {
+    margin-bottom: 15px;
+}

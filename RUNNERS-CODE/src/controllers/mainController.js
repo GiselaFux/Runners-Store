@@ -17,7 +17,10 @@ mainController = {
     },
     productCreate: function(req, res) {
         res.render(path.join(__dirname, '../views/products/productCreate'))
-    }   
+    },
+    productEdit: function(req, res) {
+        res.render(path.join(__dirname, '../views/products/productEdit'))
+    }      
 };
 
 module.exports = mainController;

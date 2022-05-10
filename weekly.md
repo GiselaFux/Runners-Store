@@ -47,3 +47,17 @@
 - Se modifica formato de archivo _retro.md_.
 
 - Se agrega información sobre reuniones en archivo weekly, y tareas realizadas.
+
+### 08 de mayo de 2022
+
+### Patricio Contartese
+
+-Se crea el archivo productEdit.ejs dentro de la carpeta products, con el respectivo formulario para que el administrador pueda editar sus productos.
+
+-Se agrega la ruta hacia el archivo productEdit.ejs dentro de routers con su controlador.
+
+-En el mainController.js se crea el objeto productEdit.
+
+### 09 de mayo de 2022
+
+-Actualizo pagina de edicion de producto para el administrador

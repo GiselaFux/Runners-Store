@@ -2,9 +2,13 @@
 
 ## _SPRINT 3_
 
+### Gisela Fux
+
+Instaló el ejs, armado de carpetas que faltaban y archivo weekly.
+
 ### 04 de Mayo de 2022
 
-- Al bajar repositorio, faltaba crear la carpeta controllers y routers (Gisela ya lo tenía hecho, entonces lo subió).
+- Al bajar repositorio, faltaba crear la carpeta controllers y routers (Gisela ya lo tenía hecho, entonces lo subió)
 
 - Había problemas con la página register, aparecía error al acceder a la misma. Durante el meeting se descubrió que era por un problema de rutas, por lo que se modificaron las rutas y se solucionó el problema.
 

@@ -9,7 +9,9 @@
     margin: 15px auto;
     border: 2px solid;
     text-align: left;
+    height: 550px;
 }
 .cambios {
-    margin-bottom: 15px;
+    margin: 40px;
+    margin-left: 0px;
 }

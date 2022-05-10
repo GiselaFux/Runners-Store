@@ -22,6 +22,11 @@
 
 - Surgen dudas sobre la unificación de estilos generales, del header y del footer. Al hablar con Natalia, nos recomendó un método con el que podríamos solucionarlo. Luego, llegamos al acuerdo que ibamos a llevar a cabo la sugerencia de Natalia para poder unificarlos.
 
+### 06 de Mayo de 2022
+
+### Gisela Fux
+Realiza los partials y los inserta en los archivos .ejs
+
 ### 07 de Mayo de 2022
 
 #### Ezequiel Brunori

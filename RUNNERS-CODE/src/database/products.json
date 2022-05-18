@@ -1,0 +1,58 @@
+[{
+        "id": 1,
+        "name": "Pelotas de paddle",
+        "description": "Tubo con tres pelotas de alta calidad",
+        "imagen": "image",
+        "category": "accesorios",
+        "colours": "amarillo",
+        "size": "normal",
+        "price": 300,
+        "discount": 0
+    }, {
+        "id": 2,
+        "name": "Remera",
+        "description": "Remera de hombre dry-fit Adidas",
+        "imagen": "image",
+        "category": "Hombre",
+        "colours": "negro",
+        "size": "L",
+        "price": 3000,
+        "discount": 0
+    },
+
+    {
+        "id": 3,
+        "name": "Calza Reebok",
+        "description": "Calza 7/8 running Reebok climacool",
+        "imagen": "image",
+        "category": "Mujer",
+        "colours": "negro",
+        "size": "xs",
+        "price": 7000,
+        "discount": 0
+    },
+
+    {
+        "id": 4,
+        "name": "Zapatillas Adidas",
+        "description": "Zapatillas Adidas blancas con tiras en azul",
+        "imagen": "image",
+        "category": "Hombre",
+        "colours": "blanco-azul",
+        "size": 42,
+        "price": 23000,
+        "discount": 0
+    },
+
+    {
+        "id": 5,
+        "name": "Calza",
+        "description": "Calza Adidas 3/4 Climacool",
+        "imagen": "image",
+        "category": "Mujer",
+        "colours": "rojo",
+        "size": "normal",
+        "price": 8000,
+        "discount": 1600
+    }
+]

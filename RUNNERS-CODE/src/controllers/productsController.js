@@ -17,6 +17,7 @@ const productsController = {
         let idProduct = req.params.id;
         let product = products.find((product) => product.id == idProduct);
         res.render('productDetail', { product })
+        console.log(product.imagen.length)
     },
 
     // Create - Form to create
@@ -29,8 +30,22 @@ const productsController = {
     },
     // Create -  Method to store
     store: (req, res) => {
-
+        let image;
+        if (req.file != undefined) {
+            image = req.file.filename;
+        } else {
+            image = "default-image.png";
+        }
+        let newProduct = {
+            id: products[products.length - 1].id + 1,
+            ...req.body,
+            image: image,
+        }
+        products.push(newProduct);
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+        res.redirect('products');
     },
+
 
     // Update - Form to edit
     edit: (req, res) => {

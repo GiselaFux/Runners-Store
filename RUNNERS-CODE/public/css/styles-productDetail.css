@@ -32,7 +32,7 @@
 }
 
 .detail-galeria img {
-    width: 40px;
+    width: 110px;
 }
 
 .detail-modal {
@@ -116,30 +116,30 @@
 .detail-product-name {
     font-weight: bold;
     width: 50%;
+    font-size: 24px;
 }
 
 .detail-price {
-    text-align: end;
+    text-align: center;
     font-weight: bold;
     width: 50%;
+    font-size: 24px;
 }
 
 .detail-product-description {
-    font-size: 12px;
-    margin: 0 10px;
+    font-size: 18px;
+    margin: 0 15%;
+    text-align: initial;
 }
 
 details summary {
     border-top: 1px solid #160812;
     border-bottom: 1px solid #160812;
     margin: 0 12px;
-    font-size: 12px;
-}
-
-.detail-product-description {
-    text-align: justify;
-    margin: 10px;
-    font-size: 11px;
+    font-size: 18px;
+    font-weight: bold;
+    width: 70%;
+    margin: auto;
 }
 
 form.detail-color-head {
@@ -150,26 +150,28 @@ form.detail-color-head {
 }
 
 .detail-color {
-    width: 30%;
+    width: 15%;
     background-color: #f8f9f9;
 }
 
 .detail-talle {
-    width: 30%;
+    width: 15%;
     background-color: #f8f9f9;
 }
 
 .detail-h4 {
     margin-bottom: 5px;
-    font-size: 15px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .detail-add-trolley {
-    width: 60%;
+    height: 40px;
     border-radius: 30px;
     border: solid 1px #808b96;
     text-align: center;
-    margin: auto;
+    margin: 15px auto;
     padding: 5px;
     color: #f6f5f5;
     font-weight: bold;
@@ -180,4 +182,24 @@ form.detail-color-head {
 
 .detail-add-trolley:hover {
     background-color: #160812;
+}
+
+@media(min-width:760px) {
+    .detail-product-name {
+        font-size: 36px;
+    }
+    
+    .detail-price {
+        font-size: 36px;
+    }
+    .detail-h4 {
+        font-size: 24px;
+    }
+    details summary {
+        font-size: 24px;
+    }
+    .detail-add-trolley {
+        width: 30%;
+        font-size: 20px;
+    }
 }

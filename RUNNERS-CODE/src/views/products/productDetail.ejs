@@ -8,58 +8,61 @@
             <main>
                 <section class="detail-main-picture">
                     <div>
-                        <img src="img/adidas3.jpg" class="detail-product_img">
+                        <img src="/img/<%= product.imagen[0] %>" class="detail-product_img">
                 </section>
                 <section>
                     <ul class="detail-galeria">
+                    <% product.imagen.forEach((image,i) => {
+                        if (i != 0) { %>
                         <li>
-                            <a href="#img1"><img src="img/adidas.jpg"></a>
-                        </li>
-                        <li>
-                            <a href="#img2"><img src="img/adidas1.png"></a>
-                        </li>
-                        <li>
-                            <a href="#img3"><img src="img/adidas2.jpg"></a>
-                        </li>
+                            <a href= #<%= i %> ><img src="/img/<%= image %>"></a>
+                        </li>  
+                        <% }}) %>                     
                     </ul>
-                    <div class="detail-modal" id="img1">
+                    <% product.imagen.forEach((image,i) => {
+                        if (i != 0) { %>
+                    <div class="detail-modal" id=<%= i %>>
                         <h3>Foto1</h3>
                         <div class="detail-imagen">
-                            <a href="#img3">&#60;</a>
-                            <a href="#img2"><img src="img/adidas.jpg" class="detail-imagen-dos"></a>
-                            <a href="#img2">></a>
+                            <a href= #<%= (i - 1) <= 0 ? product.imagen.length - 1 : i - 1 %> >&#60;</a>
+                            <a href= #<%= (i + 1) > (product.imagen.length) - 1? 1 : i + 1 %> ><img src="/img/<%= image %>" class="detail-imagen-dos"></a>
+                            <a href= #<%= (i + 1) > (product.imagen.length) - 1? 1 : i + 1 %> >></a>
+                            
                         </div>
                         <a class="detail-cerrar" href="">X</a>
                     </div>
-                    <div class="detail-modal" id="img2">
+                    <% }}) %>
+<!--                    <div class="detail-modal" id="2">
                         <h3>Foto2</h3>
                         <div class="detail-imagen">
-                            <a href="#img1">&#60;</a>
-                            <a href="#img3"><img src="img/adidas1.png" class="detail-imagen-dos"></a>
-                            <a href="#img3">></a>
+                            <a href="#1">&#60;</a>
+                            <a href="#3"><img src="/img/<%= product.imagen[2] %>" class="detail-imagen-dos"></a>
+                            <a href="#3">></a>
                         </div>
                         <a class="detail-cerrar" href="">X</a>
                     </div>
-                    <div class="detail-modal" id="img3">
+                    <div class="detail-modal" id="3">
                         <h3>Foto3</h3>
                         <div class="detail-imagen">
-                            <a href="#img2">&#60;</a>
-                            <a href="#img1"><img src="img/adidas2.jpg" class="detail-imagen-dos"></a>
-                            <a href="#img1">></a>
+                            <a href="#2">&#60;</a>
+                            <a href="#1"><img src="/img/<%= product.imagen[3] %>" class="detail-imagen-dos"></a>
+                            <a href="#1">></a>
                         </div>
                         <a class="detail-cerrar" href="">X</a>
                     </div>
+                    -->
+
                 </section>
                 <section>
                     <div class="detail-product">
                         <div class="detail-product-head">
-                            <h3 class="detail-product-name">Adidas Forum Low</h3>
-                            <p class="detail-price">$25.999</p>
+                            <h3 class="detail-product-name"><%= product.name %></h3>
+                            <p class="detail-price">$<%= product.price %></p>
                         </div>
                     </div>
                     <details>
                         <summary>Descripción del producto</summary>
-                        <p class="detail-product-description">ipsum dolor sit amet consectetur adipisicing elit. Minima voluptates unde ipsa nesciunt debitis quidem eligendi, praesentium laboriosam atque sed quaerat libero molestiae, dignissimos nisi blanditiis, expedita amet eum sunt!</p>
+                        <p class="detail-product-description"><%= product.description %></p>
                     </details>
                     <div class="detail-color-head">
                         <form action="#" method="get">

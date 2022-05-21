@@ -16,10 +16,6 @@ const mainController = require('../controllers/mainController')
 router.get('/', mainController.index)
 router.get('/login', mainController.login)
 router.get('/register', mainController.register)
-    /*deberían eliminarse porque ya estan  en products.js 
-router.get('/productCart', mainController.productCart)
-router.get('/productDetail', mainController.productDetail)
-router.get('/productCreate', mainController.productCreate);
-router.get('/productEdit', mainController.productEdit);*/
+
 
 module.exports = router;

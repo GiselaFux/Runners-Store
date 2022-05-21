@@ -8,8 +8,9 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 const productsController = {
 
     // Root - Show all products
-    index: (req, res) => {
-        res.render('products', { products })
+    indexProducts: (req, res) => {
+        console.log(products);
+        res.render('/productsAll', { products: products })
     },
 
     // Detail - Detail from one product
@@ -43,22 +44,49 @@ const productsController = {
         }
         products.push(newProduct);
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-        res.redirect('products');
+        res.redirect('productsAll');
     },
 
 
     // Update - Form to edit
     edit: (req, res) => {
-
+        let id = req.params.id;
+        let productToEdit = products.find((product) => product.id == id);
+        res.render("productEdit", { productToEdit });
     },
     // Update - Method to update
     update: (req, res) => {
-
+        let id = req.params.id;
+        let productToEdit = products.find(product => product.id == id)
+        let image;
+        if (req.files[0] != undefined) {
+            image = req.file[0].filename
+        } else {
+            image = productToEdit.image
+        }
+        productToEdit = {
+            id: productToEdit.id,
+            ...req.body,
+            image: image
+        };
+        let newProducts = products.map(product => {
+            if (product.id == productToEdit.id) {
+                return product = {...productToEdit };
+            }
+            return product
+        })
+        fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '))
+        res.redirect('/productsAll');
     },
+
+
 
     // Delete - Delete one product from DB
     destroy: (req, res) => {
-
+        let id = req.params.id;
+        let finalProducts = products.filter(product => product.id != id)
+        fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '))
+        res.redirect('/productsAll');
     },
     //carrito de productos
     productCart: (req, res) => {}
@@ -66,7 +94,5 @@ const productsController = {
 };
 
 
-
-module.exports = productsController;
 
 module.exports = productsController;

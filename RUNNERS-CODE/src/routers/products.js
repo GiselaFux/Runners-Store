@@ -7,11 +7,6 @@ const path = require("path");
 // requerir controller
 const productsController = require("../controllers/productsController");
 
-
-
-//todos los productos
-router.get("/", productsController.index);
-
 /***agrego la variable */
 let storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -24,7 +19,8 @@ let storage = multer.diskStorage({
 const upload = multer({ storage })
 
 
-
+//todos los productos
+router.get("/productsAll", productsController.indexProducts);
 /**creación de un producto y almacenado*/
 router.get("/create", productsController.create);
 router.post("/", upload.any('fotos'), productsController.store);

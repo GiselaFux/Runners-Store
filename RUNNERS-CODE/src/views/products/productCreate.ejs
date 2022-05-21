@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html>
 
-    <%- include('../partials/head') %>
+<%- include('../partials/head') %>
 
-<body>
-    <%- include('../partials/header') %>
-        <main>
-            <form action="/productCreate" method="POST" class="create-product">
-                <div class="create-control-formulario">
-                    <label for="nombre" class="create-label">Nombre producto: </label>
-                    <input type="text" name="name" class="create-control" required>
-                </div>
-                <div class="create-control-formulario">
-                    <label for="descripcion-product" style="display: block; margin-bottom: 10px;" class="create-label">Descripción del producto: </label>
-                    <textarea style="width: 90%;" name="description" rows="10" cols="50"></textarea>
-                </div>
-                <div class="create-control-formulario">
-                    <label for="fotos" style="display: block; margin-bottom: 10px;" class="create-label">Imagenes Productos:</label>
-                    <input type="file" name="imagen" accept=".png, .jpeg, .jpg" multiple>
-                </div>  
-                <div class="create-control-formulario">
-                    <label for="categoria" style="margin-bottom: 10px; display: block;" class="create-label">Categoría producto:</label>
-                    <div>
-                    <input type="radio" name="category" value="mujer"><label style="margin-left: 10px;"> Mujer</label>
+    <body>
+        <%- include('../partials/header') %>
+            <main>
+                <form action="/productCreate" method="POST" class="create-product" enctype="multipart/form-data">
+                    <div class="create-control-formulario">
+                        <label for="nombre" class="create-label">Nombre producto: </label>
+                        <input type="text" name="name" class="create-control" required>
                     </div>
-                    <div>
-                    <input type="radio" name="category" value="hombre"><label style="margin-left: 10px;"> Hombre</label>
+                    <div class="create-control-formulario">
+                        <label for="descripcion-product" style="display: block; margin-bottom: 10px;" class="create-label">Descripción del producto: </label>
+                        <textarea style="width: 90%;" name="description" rows="10" cols="50"></textarea>
                     </div>
-                    <div>
-                    <input type="radio" name="category" value="zapatillas"><label style="margin-left: 10px;"> Zapatillas</label>
+                    <div class="create-control-formulario">
+                        <label for="fotos" style="display: block; margin-bottom: 10px;" class="create-label">Imagenes Productos:</label>
+                        <input type="file" name="imagen" accept=".png, .jpeg, .jpg" multiple>
                     </div>
-                    <div>
-                    <input type="radio" name="category" value="accesorios"><label style="margin-left: 10px;"> Accesorios</label>
+                    <div class="create-control-formulario">
+                        <label for="categoria" style="margin-bottom: 10px; display: block;" class="create-label">Categoría producto:</label>
+                        <div>
+                            <input type="radio" name="category" value="mujer"><label style="margin-left: 10px;"> Mujer</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="category" value="hombre"><label style="margin-left: 10px;"> Hombre</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="category" value="zapatillas"><label style="margin-left: 10px;"> Zapatillas</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="category" value="accesorios"><label style="margin-left: 10px;"> Accesorios</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="category" value="marcas"><label style="margin-left: 10px;"> Marcas</label>
+                        </div>
                     </div>
-                    <div>
-                    <input type="radio" name="category" value="marcas"><label style="margin-left: 10px;"> Marcas</label>
+                    <div class="create-control-formulario">
+                        <label for="color-product" class="create-label">Color del producto:</label>
+                        <input type="color" name="colours">
                     </div>
-                </div>                              
-                <div class="create-control-formulario">
-                    <label for="color-product" class="create-label">Color del producto:</label>
-                    <input type="color" name="colours">
-                </div>
-                <div class="create-control-formulario">
-                    <label for="talle" class="create-label">Talle producto: </label>
-                    <select name="size">                
+                    <div class="create-control-formulario">
+                        <label for="talle" class="create-label">Talle producto: </label>
+                        <select name="size">                
                       <option>xs</option>                
                       <option>s</option>                
                       <option>m</option>                
@@ -58,21 +58,21 @@
                       <option>42</option>                
                       <option>43</option>                                                 
                     </select>
-                </div>
-                <div class="create-control-formulario">
-                    <label for="precio-product" class="create-label">Precio del producto:</label>
-                    <input type="number" name="price">
-                </div>
-                <div class="create-control-formulario">
-                    <label for="precio-product" class="create-label">Precio del producto:</label>
-                    <input type="number" name="discount">
-                </div>                 
-                <div>
-                    <button type="reset">Borrar</button>
-                    <button type="submit">Guardar producto</button>
-                </div>
-            </form>    
-        <%- include('../partials/footer') %>
-</body>
+                    </div>
+                    <div class="create-control-formulario">
+                        <label for="precio-product" class="create-label">Precio del producto:</label>
+                        <input type="number" name="price">
+                    </div>
+                    <div class="create-control-formulario">
+                        <label for="precio-product" class="create-label">Precio del producto:</label>
+                        <input type="number" name="discount">
+                    </div>
+                    <div>
+                        <button type="reset">Borrar</button>
+                        <button type="submit">Guardar producto</button>
+                    </div>
+                </form>
+                <%- include('../partials/footer') %>
+    </body>
 
 </html>

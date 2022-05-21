@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+
+    <body>
+        node
+        <app class="js"></app>
+        <%- include('../partials/header') %>
+            <main>
+                <h2><strong>Mujer</strong></h2>
+                <section class="productos">
+                    <% mujer.forEach(function(product){ %>
+                        < % let finalPrice=( product.price * ((100 - product.discount) / 100)) %>
+                            <article>
+                                <img src="/img/<%= product.imagen %>" class="imagen" alt="calza Negra">
+                                <div class="datosArticulo">
+                                    <i class="fas fa-truck" class="fa-truck"></i>
+                                    <div class="precioDesc">
+                                        <h4 class="precio">
+                                            <%= product.price %>
+                                        </h4>
+                                        <h4 class="aclaracion">
+                                            <%= product.discount %>% off</4>
+                                    </div>
+
+                                    <p class="aclaracion">
+                                        <%= product.name %>
+                                    </p>
+                                </div>
+                            </article>
+                            <article>
+                                <img src="/img/<%= product.imagen %>" class="imagen" alt="calzaOferta">
+                                <div class="datosArticulo">
+                                    <i class="fas fa-truck"></i>
+                                    <div class="precioDesc">
+                                        <h4 class="precio">
+                                            <%= product.price %>
+                                        </h4>
+                                        <h4 class="aclaracion">
+                                            <%= product.discount %>% off</4>
+                                        </h4>
+                                    </div>
+                                    <p class="aclaracion">
+                                        <%= product.name %>
+                                    </p>
+                                </div>
+                            </article>
+                </section>
+                <h2>Hombre</h2>
+                <section class="productos">
+                    <article>
+                        <% hombre.forEach(function(product){ 
+                            let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
+                        %>
+                            <img src=" /img/<%=p roduct.imagen %>" class="imagen" alt="remera Hombre">
+                            <div class="datosArticulo">
+                                <i class="fas fa-truck"></i>
+                                <div class="precioDesc">
+                                    <h4 class="precio">
+                                        <%= product.price %>
+                                    </h4>
+                                    <h4 class="aclaracion">
+                                        <%= product.discount %>% off</4>
+                                </div>
+                                <p class="aclaracion">
+                                    <%= product.name %>
+                                </p>
+                            </div>
+                    </article>
+                    <article>
+                        <img src="/img/<%= product.imagen %>" class="imagen" alt="ZapatillasHombre">
+                        <div class="datosArticulo">
+                            <i class="fas fa-truck"></i>
+                            <div class="precioDesc">
+                                <h4 class="precio">
+                                    <%= product.price %>
+                                </h4>
+                                <h4 class="aclaracion">
+                                    <%= product.discount %>% off</4>
+                            </div>
+                            <p class="aclaracion">
+                                <%= product.name %>
+                            </p>
+                        </div>
+                    </article>
+
+                </section>
+                <h2><strong>Accesorios</strong></h2>
+                <section class="productos">
+                    <article>
+                        <% accesorios.forEach(function(product){ 
+                            let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
+                        %>
+                            <img src="/img/<%= product.imagen %>" class="imagen" alt="pelotasPaddle">
+                            <div class="datosArticulo">
+                                <i class="fas fa-truck"></i>
+                                <div class="precioDesc">
+                                    <h4 class="precio">
+                                        <%= product.price %>
+                                    </h4>
+                                    <h4 class="aclaracion">
+                                        <%= product.discount %>% off</4>
+                                </div>
+                                <p class="aclaracion" id="tuboPelotasPaddle">
+                                    <%= product.name %>
+                                </p>
+                            </div>
+                    </article>
+                </section>
+                <h2>Zapatillas</h2>
+                <section class="productos">
+                    <article>
+                        <% hombre.forEach(function(product){ 
+                            let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
+                        %>
+                            <img src="/img/<%= product.imagen %>" class="imagen" id="zapatillas" alt="Zapatillas">
+                            <div class="datosArticulo">
+                                <i class="fas fa-truck"></i>
+                                <div class="precioDesc">
+                                    <h4 class="precio">
+                                        <%= product.price %>
+                                    </h4>
+                                    <h4 class="aclaracion">
+                                        <%= product.discount %>% off</4>
+                                </div>
+                                <p class="aclaracion">
+                                    <%= product.name %>
+                                </p>
+                            </div>
+                    </article>
+                    <article>
+                        <img src="/img/<%= product.imagen %>" class="imagen" id="zapaAdidasHombre1" alt="zapaAdidasHombre1 ">
+                        <div class="datosArticulo">
+                            <i class="fas fa-truck"></i>
+                            <div class="precioDesc">
+                                <h4 class="precio">
+                                    <%= product.price %>
+                                </h4>
+                                <h4 class="aclaracion">10% off</4>
+                            </div>
+                            <p class="aclaracion">
+                                <%= product.name %>
+                            </p>
+                        </div>
+                    </article>
+                </section>
+
+                </section>-->
+            </main>
+            <%- include('../partials/footer') %>
+    </body>
+
+</html>

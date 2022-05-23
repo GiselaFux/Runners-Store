@@ -10,7 +10,7 @@ const productsController = {
     // Root - Show all products
     indexProducts: (req, res) => {
         console.log(products);
-        res.render('/productsAll', { products: products })
+        res.render('productsAll', { products: products })
     },
 
     // Detail - Detail from one product
@@ -23,6 +23,7 @@ const productsController = {
 
     // Create - Form to create
     create: (req, res) => {
+        res.render('productCreate')
 
     },
     // Update - Form to edit
@@ -76,7 +77,7 @@ const productsController = {
             return product
         })
         fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '))
-        res.redirect('/productsAll');
+        res.redirect('productsAll');
     },
 
 
@@ -86,7 +87,7 @@ const productsController = {
         let id = req.params.id;
         let finalProducts = products.filter(product => product.id != id)
         fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '))
-        res.redirect('/productsAll');
+        res.redirect('productsAll');
     },
     //carrito de productos
     productCart: (req, res) => {}

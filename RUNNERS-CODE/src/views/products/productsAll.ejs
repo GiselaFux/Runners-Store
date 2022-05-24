@@ -6,13 +6,13 @@
         <%- include('../partials/header') %>;
             <h2> hola</h2>
             <main>
-                <h2><strong>Mujer</strong></h2>
+                <h2><strong>Mujer y Hombre</strong></h2>
                 <section class="productos">
                     <article>
                         <% products.forEach(function(product){ %>
                             <% let precioDisc=( product.price*product.discount)/100; 
                         let precioFinal=product.price - precioDisc; %>
-                                <img src="/img/<%= product.imagen %>" class="imagen" alt="calza Negra">
+                                <img src="/img/<%= product.imagen[0] %>" class="imagen" alt="calza Negra">
                                 <div class="datosArticulo">
                                     <i class="fas fa-truck" class="fa-truck"></i>
                                     <div class="precioDesc">
@@ -29,15 +29,13 @@
                                 <% }) %>
                     </article>
 
-                </section>
-                <h2>Hombre</h2>
 
-                <section class="productos">
+
                     <article>
                         <% products.forEach(function(product){ %>
-                            <% let precioDisc= (product.price*product.discount)/100;
-						let precioFinal= product.price - precioDisc; %>
-                                <img src="/img/<%= product.imagen %>" class=" imagen" id="remeraHombre" alt="remera Hombre">
+                            <% let precioDisc=( product.price*product.discount)/100;
+                                 let precioFinal=product.price - precioDisc; %>
+                                <img src="/img/<%= product.imagen[0] %>" class=" imagen" id="remeraHombre" alt="remera Hombre">
                                 <div class="datosArticulo">
                                     <i class="fas fa-truck"></i>
                                     <div class="precioDesc">
@@ -54,13 +52,13 @@
                                 <% }) %>
                     </article>
                 </section>
-                <h2><strong>Accesorios</strong></h2>
+                <h2><strong>Accesorios y zapatillas</strong></h2>
                 <section class="productos">
                     <article>
                         <% products.forEach(function(product){ %>
                             <% let precioDisc= (product.price*product.discount)/100;
 						let precioFinal= product.price - precioDisc; %>
-                                <img src="../img/<%=product.imagen %>" class="imagen" alt="pelotasPaddle">
+                                <img src="/img/<%= product.imagen[2] %>" class="imagen" alt="pelotasPaddle">
                                 <div class="datosArticulo">
                                     <i class="fas fa-truck"></i>
                                     <div class="precioDesc">
@@ -77,14 +75,13 @@
                                 </div>
                                 <% }) %>
                     </article>
-                </section>
-                <h2>Zapatillas</h2>
-                <section class="productos">
+
                     <article>
                         <% products.forEach(function(product){ %>
                             <% let precioDisc= (product.price*product.discount)/100;
                              let precioFinal= product.price - precioDisc; %>
-                                <img src="/img/<%= product.imagen %>" class="imagen" id="zapatillas" alt="Zapatillas">
+
+                                <img src="/img/<%= product.imagen[1] %>" class="imagen" id="zapatillas" alt="Zapatillas">
                                 <div class="datosArticulo">
                                     <i class="fas fa-truck"></i>
                                     <div class="precioDesc">
@@ -101,7 +98,7 @@
                                 </div>
                                 <% }) %>
                     </article>
-                </section>-
+                </section>
             </main>
             <%- include('../partials/footer') %>
     </body>

@@ -6,7 +6,7 @@
     <body>
         <%- include('../partials/header') %>
             <main>
-                <form action="/productCreate" method="POST" class="create-product" enctype="multipart/form-data">
+                <form action="/products" method="POST" class="create-product" enctype="multipart/form-data">
                     <div class="create-control-formulario">
                         <label for="nombre" class="create-label">Nombre producto: </label>
                         <input type="text" name="name" class="create-control" required>
@@ -64,7 +64,7 @@
                         <input type="number" name="price">
                     </div>
                     <div class="create-control-formulario">
-                        <label for="precio-product" class="create-label">Precio del producto:</label>
+                        <label for="discount-product" class="create-label">Descuento del producto:</label>
                         <input type="number" name="discount">
                     </div>
                     <div>

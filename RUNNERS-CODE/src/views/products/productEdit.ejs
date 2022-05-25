@@ -9,46 +9,61 @@
         <%- include('../partials/header') %>
 
             <main>
-                <form action="/productEdit" method="post" enctype="multipart/form-data" class="edit-product">
+                <form action="edit/<%= productToEdit.id %>?_method=PATCH" method="post" enctype="multipart/form-data" class="edit-product">
                     <div class="create-control-formulario">
                         <label for="CambioNombre">Cambio de nombre</label>
-                        <input type="text" name="CambioNombre" id="CambioNombre" placeholder="Nombre actual del producto">
-                        <input type="text" name="CambioNombre" id="CambioNombre" placeholder="Nombre nuevo del producto">
+                        <input type="text" name="name-old" id="name-old" value="<%= productToEdit.name %>" placeholder="Nombre actual del producto">
+                        <input type="text" name="name" id="name" placeholder="Nombre nuevo del producto">
                     </div>
                     <div class="cambios">
                         <label for="CambioDesc">Cambio de descripcion</label>
-                        <input type="text" name="CambioDesc" id="CambioDesc" placeholder="Descripcion actual del producto" style="width:400px">
-                        <input type="text" name="CambioDesc" id="CambioDesc" placeholder="Descripcion nueva del producto" style="width:400px">
+                        <input type="text" name="description-old" id="description-old" value="<%= productToEdit.description %>" placeholder="Descripcion actual del producto" style="width:400px">
+                        <input type="text" name="description" id="description" placeholder="Descripcion nueva del producto" style="width:400px">
                     </div>
                     <div class="cambios">
                         <label for="CambioImagen">Cambio de imagen</label>
-                        <input type="file" name="fotos" accept=".png, .jpeg, .jpg" multiple>
+                        <input type="file" name="imagen" accept=".png, .jpeg, .jpg" multiple>
                     </div>
                     <div class="cambios">
                         <label for="CambioCategoria">Cambio de categoria</label>
-                        <input type="text" name="CambioCategoria" id="CambioCategoria" placeholder="Categoria actual del producto">
-                        <input type="text" name="CambioCategoria" id="CambioCategoria" placeholder="Categoria nueva del producto">
+                        <input type="text" name="category-old" id="category-old" value="<%= productToEdit.category %>" placeholder="Categoria actual del producto">
+                            <div>
+                                <input type="radio" name="category" value="mujer"><label style="margin-left: 10px;"> Mujer</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="category" value="hombre"><label style="margin-left: 10px;"> Hombre</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="category" value="zapatillas"><label style="margin-left: 10px;"> Zapatillas</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="category" value="accesorios"><label style="margin-left: 10px;"> Accesorios</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="category" value="marcas"><label style="margin-left: 10px;"> Marcas</label>
+                            </div>
                     </div>
                     <div class="cambios">
-                        <label for="CambioNombre">Talles disponibles</label>
-                        <input type="checkbox" name="talle" value="xs">XS
-                        <input type="checkbox" name="talle" value="s">S
-                        <input type="checkbox" name="talle" value="m">M
-                        <input type="checkbox" name="talle" value="l">L
-                        <input type="checkbox" name="talle" value="xl">XL
-                        <input type="checkbox" name="talle" value="36">36
-                        <input type="checkbox" name="talle" value="37">37
-                        <input type="checkbox" name="talle" value="38">38
-                        <input type="checkbox" name="talle" value="39">39
-                        <input type="checkbox" name="talle" value="40">40
-                        <input type="checkbox" name="talle" value="41">41
-                        <input type="checkbox" name="talle" value="42">42
-                        <input type="checkbox" name="talle" value="43">43
+                        <label for="CambioTalles">Talles disponibles</label>
+                        <input type="text" name="size-old" id="size-old" value="<%= productToEdit.size %>" placeholder="Talle actual del producto">
+                        <input type="checkbox" name="size" value="xs">XS
+                        <input type="checkbox" name="size" value="s">S
+                        <input type="checkbox" name="size" value="m">M
+                        <input type="checkbox" name="size" value="l">L
+                        <input type="checkbox" name="size" value="xl">XL
+                        <input type="checkbox" name="size" value="36">36
+                        <input type="checkbox" name="size" value="37">37
+                        <input type="checkbox" name="size" value="38">38
+                        <input type="checkbox" name="size" value="39">39
+                        <input type="checkbox" name="size" value="40">40
+                        <input type="checkbox" name="size" value="41">41
+                        <input type="checkbox" name="size" value="42">42
+                        <input type="checkbox" name="size" value="43">43
                     </div>
                     <div class="cambios">
-                        <label for="CambioNombre">Cambio de precio</label>
-                        <input type="text" name="CambioPrecio" id="CambioPrecio" placeholder="Precio actual del producto">
-                        <input type="text" name="CambioPrecio" id="CambioPrecio" placeholder="Precio nuevo del producto">
+                        <label for="CambioPrecio">Cambio de precio</label>
+                        <input type="text" name="price-old" id="price-old" value="<%= productToEdit.price %>" placeholder="Precio actual del producto">
+                        <input type="text" name="price" id="price" placeholder="Precio nuevo del producto">
                     </div>
                     <div class="cambios">
                         <label>Fecha de actualizacion del producto</label>

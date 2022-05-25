@@ -1,60 +1,90 @@
-[{
-        "id": 1,
-        "name": "Pelotas de paddle",
-        "description": "Tubo con tres pelotas de alta calidad",
-        "imagen": ["pelotasPaddle.jpg", "pelotasPaddle.jpg", "pelotasPaddle.jpg", "pelotasPaddle.jpg"],
-        "category": "accesorios",
-        "colours": "amarillo",
-        "size": "normal",
-        "price": 300,
-        "discount": 0
-    },
-
-    {
-        "id": 2,
-        "name": "Remera",
-        "description": "Remera de hombre dry-fit Adidas",
-        "imagen": ["remera.jpg", "remeraHNegra2.jpg"],
-        "category": "hombre",
-        "colours": "negro",
-        "size": "L",
-        "price": 3000,
-        "discount": 0
-    },
-
-    {
-        "id": 3,
-        "name": "Calza Reebok",
-        "description": "Calza 7/8 running Reebok climacool",
-        "imagen": "adidas2.jpg",
-        "category": "mujer",
-        "colours": "negro",
-        "size": "xs",
-        "price": 7000,
-        "discount": 0
-    },
-
-    {
-        "id": 4,
-        "name": "Zapatillas Adidas",
-        "description": "Zapatillas Adidas blancas con tiras en azul",
-        "imagen": ["adidas3.jpg", "adidas.jpg", "adidas2.jpg", "adidas1.png"],
-        "category": "hombre",
-        "colours": "blanco-azul",
-        "size": 42,
-        "price": 23000,
-        "discount": 0
-    },
-
-    {
-        "id": 5,
-        "name": "Calza",
-        "description": "Calza Adidas 3/4 Climacool",
-        "imagen": ["calzaNegraM1.jpg", "calzaNegraM2.jpg", "calzaNegraM3.jpg", "calzaNegraM1.jpg"],
-        "category": "mujer",
-        "colours": "rojo",
-        "size": "normal",
-        "price": 8000,
-        "discount": 16
-    }
+[
+ {
+  "id": 1,
+  "name": "Pelotas de paddle",
+  "description": "Tubo con tres pelotas de alta calidad",
+  "category": "accesorios",
+  "colours": "amarillo",
+  "size": "normal",
+  "price": 300,
+  "discount": 0,
+  "imagen": [
+   "pelotasPaddle.jpg",
+   "pelotasPaddle.jpg",
+   "pelotasPaddle.jpg",
+   "pelotasPaddle.jpg"
+  ]
+ },
+ {
+  "id": 2,
+  "name": "Remera",
+  "description": "Remera de hombre dry-fit Adidas",
+  "category": "hombre",
+  "colours": "negro",
+  "size": "L",
+  "price": 3000,
+  "discount": 0,
+  "imagen": [
+   "remera.jpg",
+   "remeraHNegra2.jpg"
+  ]
+ },
+ {
+  "id": 3,
+  "name": "Calza Reebok",
+  "description": "Calza 7/8 running Reebok climacool",
+  "category": "mujer",
+  "colours": "negro",
+  "size": "xs",
+  "price": 7000,
+  "discount": 0,
+  "imagen": [
+   "CalzaReebook.jpg"
+  ]
+ },
+ {
+  "id": 4,
+  "name": "Zapatillas Adidas",
+  "description": "Zapatillas Adidas blancas con tiras en azul",
+  "category": "hombre",
+  "colours": "blanco-azul",
+  "size": 42,
+  "price": 23000,
+  "discount": 0,
+  "imagen": [
+   "adidas3.jpg",
+   "adidas.jpg",
+   "adidas2.jpg",
+   "adidas1.png"
+  ]
+ },
+ {
+  "id": 5,
+  "name": "Calza Adidas",
+  "description": "Calza Adidas 3/4 Climacool",
+  "category": "mujer",
+  "colours": "rojo",
+  "size": "normal",
+  "price": 8000,
+  "discount": 16,
+  "imagen": [
+   "calzaNegraM1.jpg",
+   "calzaNegraM2.jpg",
+   "calzaNegraM3.jpg",
+   "calzaNegraM1.jpg"
+  ]
+ },
+ {
+  "id": 6,
+  "name": "Short de River",
+  "description": "Pantalon de futbol",
+  "category": "hombre",
+  "colours": "#000000",
+  "size": "l",
+  "price": "8000",
+  "discount": "",
+  "imagen": [
+   "imagen-1653501074525.jpg"
+  ]
+ }
 ]

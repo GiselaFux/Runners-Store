@@ -13,24 +13,27 @@ let storage = multer.diskStorage({
         let folder = path.join(__dirname, "../../public/img")
         cb(null, folder)
     },
-    filename: (req, file, cb) =>
-        cb(null, file.filename + ',' + Date.now() + path.extname(file.originalname))
+    filename: (req, file, cb) => {
+        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+    }
 })
 const upload = multer({ storage })
 
 
+
+
 //todos los productos
-router.get("/productsAll", productsController.indexProducts);
+router.get("/", productsController.indexProducts);
 /**creación de un producto y almacenado*/
 router.get("/create", productsController.create);
-router.post("/", upload.any('fotos'), productsController.store);
+router.post("/", upload.single('imagen'), productsController.store);
 
 /*detalle de un producto */
-router.get("/detail/:id", productsController.detail);
+router.get("/:id", productsController.detail);
 
 /*edición de un producto */
-router.get("/edit/:id", productsController.edit);
-router.put("/edit/:id", productsController.update);
+router.get("/:id/edit", productsController.edit);
+router.patch("/:id", productsController.update);
 
 /*borrar un producto*/
 router.delete("/delete/:id", productsController.destroy);

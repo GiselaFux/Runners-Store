@@ -58,3 +58,25 @@
 * Revisar código
 * El no saber cómo manejarnos por la falta de experiencia.
 
+## _SPRINT 4_
+### Comenzar a hacer:
+
+* Más reuniones.
+* Más organizados.
+
+### Continuar haciendo:
+
+* Mantener buena comunicación.
+* Tener buena voluntad grupal.
+* Ser colaborativos.
+
+### Hacer menos:
+
+* Desencuentros virtuales.
+
+### Dejar de hacer:
+
+* Comunicar cosas o dudas a último momento.
+
+
+

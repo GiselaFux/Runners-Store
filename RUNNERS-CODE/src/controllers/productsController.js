@@ -16,7 +16,7 @@ const productsController = {
         let productHombre = products.filter((product) => product.category == "hombre");
         let productAccesorios = products.filter((product) => product.category == "accesorios");
 
-        res.render('products', { products, productMujer, productHombre, productAccesorios , toThousand })
+        res.render('products', { products, productMujer, productHombre, productAccesorios, toThousand })
         console.log(productMujer)
     },
 
@@ -50,7 +50,7 @@ const productsController = {
         }
         products.push(newProduct);
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-        res.redirect('products');
+        res.redirect('/products');
     },
 
 
@@ -82,7 +82,7 @@ const productsController = {
             return product
         })
         fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '))
-        res.redirect('products');
+        res.redirect('/products');
     },
 
 

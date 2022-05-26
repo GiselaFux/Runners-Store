@@ -86,5 +86,37 @@
   "imagen": [
    "imagen-1653501074525.jpg"
   ]
+ },
+ {
+  "id": 7,
+  "name": "vdg",
+  "description": "fggd",
+  "colours": "#000000",
+  "size": "xs",
+  "price": "",
+  "discount": "",
+  "imagen": "imagen-1653519608058.jpg"
+ },
+ {
+  "id": 8,
+  "name": "vdg",
+  "description": "fggd",
+  "category": "accesorios",
+  "colours": "#000000",
+  "size": "xs",
+  "price": "454",
+  "discount": "454",
+  "imagen": "imagen-1653519996576.jpg"
+ },
+ {
+  "id": 9,
+  "name": "efwrw",
+  "description": "feswer",
+  "category": "accesorios",
+  "colours": "#000000",
+  "size": "xs",
+  "price": "22",
+  "discount": "22",
+  "imagen": "imagen-1653523197010.jpg"
  }
 ]

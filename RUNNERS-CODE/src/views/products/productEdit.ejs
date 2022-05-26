@@ -9,7 +9,7 @@
         <%- include('../partials/header') %>
 
             <main>
-                <form action="edit/<%= productToEdit.id %>?_method=PATCH" method="post" enctype="multipart/form-data" class="edit-product">
+                <form action="products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data" class="edit-product">
                     <div class="create-control-formulario">
                         <label for="CambioNombre">Cambio de nombre</label>
                         <input type="text" name="name-old" id="name-old" value="<%= productToEdit.name %>" placeholder="Nombre actual del producto">
@@ -27,21 +27,21 @@
                     <div class="cambios">
                         <label for="CambioCategoria">Cambio de categoria</label>
                         <input type="text" name="category-old" id="category-old" value="<%= productToEdit.category %>" placeholder="Categoria actual del producto">
-                            <div>
-                                <input type="radio" name="category" value="mujer"><label style="margin-left: 10px;"> Mujer</label>
-                            </div>
-                            <div>
-                                <input type="radio" name="category" value="hombre"><label style="margin-left: 10px;"> Hombre</label>
-                            </div>
-                            <div>
-                                <input type="radio" name="category" value="zapatillas"><label style="margin-left: 10px;"> Zapatillas</label>
-                            </div>
-                            <div>
-                                <input type="radio" name="category" value="accesorios"><label style="margin-left: 10px;"> Accesorios</label>
-                            </div>
-                            <div>
-                                <input type="radio" name="category" value="marcas"><label style="margin-left: 10px;"> Marcas</label>
-                            </div>
+                        <div>
+                            <input type="radio" name="category" value="mujer"><label style="margin-left: 10px;"> Mujer</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="category" value="hombre"><label style="margin-left: 10px;"> Hombre</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="category" value="zapatillas"><label style="margin-left: 10px;"> Zapatillas</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="category" value="accesorios"><label style="margin-left: 10px;"> Accesorios</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="category" value="marcas"><label style="margin-left: 10px;"> Marcas</label>
+                        </div>
                     </div>
                     <div class="cambios">
                         <label for="CambioTalles">Talles disponibles</label>

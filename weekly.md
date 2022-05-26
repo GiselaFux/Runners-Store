@@ -70,3 +70,53 @@ Realiza los partials y los inserta en los archivos .ejs
 ### 09 de mayo de 2022
 
 -Actualizo pagina de edicion de producto para el administrador
+
+## _SPRINT 4_
+
+#### Julieta Paredes
+ Trabaja sobre modificaciones en la página principal.Carruseles( tres tipos diferentes)
+
+### 16 de Mayo de 2022
+
+### Gisela Fux
+
+Creación de carpeta JSON dataBase con sus archivos: 
+•	Products.json ( con su array de objetos)
+•	Users.json ( con su array de objetos)
+
+En la carpeta Controllers:
+Agregó el archivo productsController;
+Con sus requerimientos y sus métodos(indexProducts, delete y storage).
+Hizo algunos de ellos
+Puso la ruta del controller y app.use en app.js
+Requerió path, fs, le dijo dónde buscarlos productos(json).
+Modificó el mainController.
+En las rutas:
+Hizo la ruta de products.js.
+Instaló Multer
+Requerió y definió la variable que será middleware.
+Agregó en los formularios enctype, para qué lea distintos archivos
+
+### 20 de Mayo de 2022
+### Gisela Fux
+Trabaja sobre archivo nuevo para todos los productos y realiza su hoja css.
+
+### 22 de Mayo de 2022
+### Gisela Fux   
+#### Julieta Paredes
+
+Reunión con Julieta Paredes para solucionar tema de rutas.
+Quedó funcionando.
+
+### 25 de Mayo de 2022
+#### Ezequiel Brunori
+Realizó Página de productos y Css.Modificó archivo Header para el correcto funcionamiento del css.Realizó el método de creación y edición de producto.
+
+### Gisela Fux #### Ezequiel Brunori
+Reunión  Ezequiel hizo otra página de productos  con su css .Trabajamos sobre el Productscontroller
+
+#### Julieta Paredes ### Patricio Contartese ### Gisela Fux 
+Reunión para trabajar sobre lo que falta.
+
+
+

@@ -32,8 +32,8 @@ router.post("/", upload.single('imagen'), productsController.store);
 router.get("/:id", productsController.detail);
 
 /*edición de un producto */
-router.get("/:id/edit", productsController.edit);
-router.patch("/:id", productsController.update);
+router.get("/edit/:id", productsController.edit);
+router.patch("/edit/:id", productsController.update);
 
 /*borrar un producto*/
 router.delete("/delete/:id", productsController.destroy);

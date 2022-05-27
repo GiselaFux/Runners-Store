@@ -1,17 +1,23 @@
 [
  {
-  "id": 1,
-  "name": "Pelotas de paddle",
-  "description": "Tubo con tres pelotas de alta calidad",
-  "category": "Accesorios",
-  "price": 500,
-  "discount": 0,
+  "id": 2,
+  "name": "Calza Mujer Negra",
+  "description": "Calza Mujer Reebok",
+  "category": "Mujer",
+  "size": [
+   "xs",
+   "s",
+   "m",
+   "l",
+   "xl"
+  ],
+  "price": 10000,
+  "discount": 10,
   "colours": "#000000",
   "imagen": [
-   "pelotasPaddle.jpg",
-   "pelotasPaddle.jpg",
-   "pelotasPaddle.jpg",
-   "pelotasPaddle.jpg"
+   "calzaNegraM1.jpg",
+   "calzaNegraM2.jpg",
+   "calzaNegraM3.jpg"
   ]
  },
  {
@@ -38,6 +44,7 @@
   "name": "Zapatillas Adidas",
   "description": "Zapatillas Adidas blancas con tiras en azul",
   "category": "Zapatillas",
+  "size": "38",
   "price": 25000,
   "discount": 0,
   "colours": "#000000",
@@ -71,41 +78,6 @@
   ]
  },
  {
-  "id": 6,
-  "name": "Short de River",
-  "description": "Pantalon de futbol",
-  "category": "Hombre",
-  "price": 8000,
-  "discount": 0,
-  "colours": "#000000",
-  "imagen": [
-   "imagen-1653501074525.jpg"
-  ]
- },
- {
-  "id": 13,
-  "name": "Calza Mujer Reebok",
-  "description": "calza estampada",
-  "category": "Mujer",
-  "price": "7500",
-  "colours": "#000000",
-  "imagen": [
-   "imagen-1653536813567.jpg"
-  ]
- },
- {
-  "id": 15,
-  "name": "Zapatillas Adidas",
-  "description": "Zapatillas Adidas color roja y negra",
-  "category": "Zapatillas",
-  "price": 30000,
-  "discount": 5,
-  "colours": "#951313",
-  "imagen": [
-   "imagen-1653611033447.jpg"
-  ]
- },
- {
   "id": 16,
   "name": "Remera profesional River",
   "description": "Remera del mejor equipo del mundo",
@@ -115,7 +87,70 @@
   "price": 28999,
   "discount": 5,
   "imagen": [
-   "imagen-1653622024402.jpg"
+   "imagen-1653622471266.jpg"
+  ]
+ },
+ {
+  "id": 17,
+  "name": "Short de River",
+  "description": "Short del mejor equipo del mundo",
+  "category": "Hombre",
+  "colours": "#000000",
+  "size": "m",
+  "price": 8999,
+  "discount": 0,
+  "imagen": [
+   "imagen-1653625134027.jpg"
+  ]
+ },
+ {
+  "id": 18,
+  "name": "Remera profesional River - Mujer",
+  "description": "Remera del mejor equipo del mundo",
+  "category": "Mujer",
+  "colours": "#000000",
+  "size": "xs",
+  "price": 22999,
+  "discount": 8,
+  "imagen": [
+   "imagen-1653622471266.jpg"
+  ]
+ },
+ {
+  "id": 19,
+  "name": "Zapatillas Adidas ",
+  "description": "Zapatillas de running",
+  "category": "Zapatillas",
+  "colours": "#000000",
+  "size": "38",
+  "price": 24999,
+  "discount": 5,
+  "imagen": [
+   "imagen-1653625277298.jpg"
+  ]
+ },
+ {
+  "id": 20,
+  "name": "Reloj Deportivo",
+  "description": "Excelente reloj para running",
+  "category": "Accesorios",
+  "price": 52999,
+  "discount": 10,
+  "colours": "#000000",
+  "imagen": [
+   "imagen-1653626765375.jpg"
+  ]
+ },
+ {
+  "id": 21,
+  "name": "Vinchas para running",
+  "description": "Excelente vinchas",
+  "category": "Accesorios",
+  "price": 4999,
+  "discount": 20,
+  "colours": "#000000",
+  "imagen": [
+   "imagen-1653626868869.jpg"
   ]
  }
 ]

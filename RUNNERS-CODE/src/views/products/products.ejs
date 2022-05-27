@@ -19,12 +19,11 @@
 
         <% productMujer.forEach(function(productMujer){ 
 				let finalPrice = (productMujer.price * ((100 - productMujer.discount) / 100)).toFixed(0)
-			%>
+			  %>
         <div class="col-12 col-sm-6 col-lg-3">
           <section class="product-box">
             <a href="/products/<%= productMujer.id %>">
               <figure class="product-box_image">
-                <!-- <img src="/img/<%= productMujer.imagen %>" alt="imagen de producto">-->
                 <img src="/img/<%= productMujer.imagen[0] %>" alt="imagen de producto">
               </figure>
               <article class="product-box_data">
@@ -37,11 +36,11 @@
                 </p>
                 <i class="fas fa-truck"></i>
                 <form action="#" method="get">
-                  <a href="/products/edit/<%= productMujer.id %>"><input type="button" name="edit-product" value="Editar producto" class="detail-add-trolle"></a>
-                  <form action="/products/delete/<%= productMujer.id %>?_method=DELETE" type="submit" method="POST">
+                  <a href="products/edit/<%= productMujer.id %>"><input type="button" name="edit-product" value="Editar producto" class="detail-add-trolle"></a>
+                </form>
+                  <form action="products/delete/<%= productMujer.id %>?_method=DELETE" type="submit" method="POST">
                     <button>Delete</button>
                   </form>
-                </form>
 
               </article>
             </a>
@@ -74,10 +73,10 @@
                 </p>
                 <i class="fas fa-truck"></i>
                 <form action="#" method="get">
-                  <a href="/products/edit/<%= productHombre.id %>"><input type="button" name="edit-product" value="Editar producto" class="detail-add-trolle"></a>
+                  <a href="products/edit/<%= productHombre.id %>"><input type="button" name="edit-product" value="Editar producto" class="detail-add-trolle"></a>
 
                 </form>
-                <form action="/products/delete/<%= productHombre.id %>?_method=DELETE" type="submit" method="POST">
+                <form action="products/delete/<%= productHombre.id %>?_method=DELETE" type="submit" method="POST">
                   <button type="submit">Delete</button>
                 </form>
               </article>
@@ -97,7 +96,7 @@
                     %>
         <div class="col-12 col-sm-6 col-lg-3">
           <section class="product-box">
-            <a href="/detail/<%= productZapatillas.id %>">
+            <a href="/products/<%= productZapatillas.id %>">
               <figure class="product-box_image">
                 <img src="/img/<%= productZapatillas.imagen[0] %>" alt="imagen de producto">
               </figure>
@@ -124,16 +123,16 @@
 
        <!-- Categoria Accesorios -->
 
-       <div class="col-12">
+        <div class="col-12">
         <h2 class="category-title">Accesorios</h2>
-      </div>
+        </div>
 
-      <% productAccesorios.forEach(function(productAccesorios){ 
+        <% productAccesorios.forEach(function(productAccesorios){ 
                       let finalPrice = (productAccesorios.price * ((100 - productAccesorios.discount) / 100)).toFixed(0)
                   %>
       <div class="col-12 col-sm-6 col-lg-3">
         <section class="product-box">
-          <a href="/detail/<%= productAccesorios.id %>">
+          <a href="/products/<%= productAccesorios.id %>">
             <figure class="product-box_image">
               <img src="/img/<%= productAccesorios.imagen[0] %>" alt="imagen de producto">
             </figure>

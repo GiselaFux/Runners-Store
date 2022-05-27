@@ -3,11 +3,10 @@
   "id": 1,
   "name": "Pelotas de paddle",
   "description": "Tubo con tres pelotas de alta calidad",
-  "category": "accesorios",
-  "colours": "amarillo",
-  "size": "normal",
-  "price": 300,
+  "category": "Accesorios",
+  "price": 500,
   "discount": 0,
+  "colours": "#000000",
   "imagen": [
    "pelotasPaddle.jpg",
    "pelotasPaddle.jpg",
@@ -16,28 +15,20 @@
   ]
  },
  {
-  "id": 2,
-  "name": "Remera",
-  "description": "Remera de hombre dry-fit Adidas",
-  "category": "hombre",
-  "colours": "negro",
-  "size": "L",
-  "price": 3000,
-  "discount": 0,
-  "imagen": [
-   "remera.jpg",
-   "remeraHNegra2.jpg"
-  ]
- },
- {
   "id": 3,
-  "name": "Calza Reebok",
-  "description": "Calza 7/8 running Reebok climacool",
-  "category": "mujer",
-  "colours": "negro",
-  "size": "xs",
-  "price": 7000,
-  "discount": 0,
+  "name": "Calza Mujer Reebok",
+  "description": "Calza Mujer Reebok",
+  "category": "Mujer",
+  "size": [
+   "xs",
+   "s",
+   "m",
+   "l",
+   "xl"
+  ],
+  "price": 10000,
+  "discount": 10,
+  "colours": "#000000",
   "imagen": [
    "CalzaReebook.jpg"
   ]
@@ -46,11 +37,10 @@
   "id": 4,
   "name": "Zapatillas Adidas",
   "description": "Zapatillas Adidas blancas con tiras en azul",
-  "category": "hombre",
-  "colours": "blanco-azul",
-  "size": 42,
-  "price": 23000,
+  "category": "Hombre",
+  "price": 25000,
   "discount": 0,
+  "colours": "#000000",
   "imagen": [
    "adidas3.jpg",
    "adidas.jpg",
@@ -62,11 +52,17 @@
   "id": 5,
   "name": "Calza Adidas",
   "description": "Calza Adidas 3/4 Climacool",
-  "category": "mujer",
-  "colours": "rojo",
-  "size": "normal",
-  "price": 8000,
-  "discount": 16,
+  "category": "Mujer",
+  "size": [
+   "xs",
+   "s",
+   "m",
+   "l",
+   "xl"
+  ],
+  "price": "8000",
+  "discount": "5",
+  "colours": "#000000",
   "imagen": [
    "calzaNegraM1.jpg",
    "calzaNegraM2.jpg",
@@ -78,45 +74,34 @@
   "id": 6,
   "name": "Short de River",
   "description": "Pantalon de futbol",
-  "category": "hombre",
+  "category": "Hombre",
+  "price": 8000,
   "colours": "#000000",
-  "size": "l",
-  "price": "8000",
-  "discount": "",
+  "discount": null,
   "imagen": [
    "imagen-1653501074525.jpg"
   ]
  },
  {
-  "id": 7,
-  "name": "vdg",
-  "description": "fggd",
+  "id": 13,
+  "name": "Calza Mujer Reebok",
+  "description": "calza estampada",
+  "category": "Mujer",
+  "price": "7500",
   "colours": "#000000",
-  "size": "xs",
-  "price": "",
-  "discount": "",
-  "imagen": "imagen-1653519608058.jpg"
+  "imagen": [
+   "imagen-1653536813567.jpg"
+  ]
  },
  {
-  "id": 8,
-  "name": "vdg",
-  "description": "fggd",
-  "category": "accesorios",
-  "colours": "#000000",
-  "size": "xs",
-  "price": "454",
-  "discount": "454",
-  "imagen": "imagen-1653519996576.jpg"
- },
- {
-  "id": 9,
-  "name": "efwrw",
-  "description": "feswer",
-  "category": "accesorios",
-  "colours": "#000000",
-  "size": "xs",
-  "price": "22",
-  "discount": "22",
-  "imagen": "imagen-1653523197010.jpg"
+  "id": 15,
+  "name": "Zapatillas Adidas",
+  "description": "Zapatillas Adidas color roja y negra",
+  "category":"Hombre",
+  "price": "30000",
+  "colours": "#951313",
+  "imagen": [
+   "imagen-1653611033447.jpg"
+  ]
  }
 ]

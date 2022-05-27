@@ -30,7 +30,6 @@
 
 
 
-
 ## _SPRINT 2_
 
 ### Comenzar a hacer:
@@ -57,6 +56,9 @@
 
 * Revisar código
 * El no saber cómo manejarnos por la falta de experiencia.
+
+
+
 
 ## _SPRINT 4_
 ### Comenzar a hacer:

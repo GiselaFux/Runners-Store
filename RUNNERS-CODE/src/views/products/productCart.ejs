@@ -1,89 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <%- include('../partials/head') %>
+<%- include('../partials/head') %>
 
 <body>
-    <%- include('../partials/header') %>
+  <%- include('../partials/header') %>
 
-        <main>
-            <div class="carrito-header">
-                <div class="carrito">
-                    <h2> MI CARRITO</h2>
-                    <h4>x Producto/s</h4>
-                </div>
-                <a href="/"> Seguir Comprando</a>
+  <main>
+    <div class="carrito-header">
+      <div class="carrito">
+        <h2> MI CARRITO</h2>
+        <h4>x Producto/s</h4>
+      </div>
+      <a href="/"> Seguir Comprando</a>
+    </div>
+
+    <div class="carrito-productos-nros">
+      <section class="productos-carrito">
+        <article>
+          <div class="carrito-c-producto">
+            <img src="img/<%=product.id>" width="15%">
+            <div class="carrito-prod-detail">
+              <li type="none">Adidas Forum Low</li>
+              <li type="none">Talle: 38</li>
+              <li type="none"><a href="/products/3">EDITAR</a></li>
             </div>
 
-            <div class="carrito-productos-nros">
-                <section class="productos-carrito">
-                    <article>
-                        <div class="carrito-c-producto">
-                            <img src="img/adidas.jpg" width="15%">
-                            <div class="carrito-prod-detail">
-                                <li type="none">Adidas Forum Low</li>
-                                <li type="none">Talle: 38</li>
-                                <li type="none"><a href="/productDetail">EDITAR</a></li>
-                            </div>
+            <p class="carrito-cant">CANTIDAD
+              <select class="carrito-select" name="cantidad">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </p>
 
-                            <p class="carrito-cant">CANTIDAD
-                                <select class="carrito-select" name="cantidad">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </p>
-
-                            <div>
-                                <li type="none">PRECIO</li>
-                                <li type="none">$ 29.999</li>
-                            </div>
-
-                        </div>
-                    </article>
-                </section>
-
-                <section class="carrito-box-nros">
-
-                    <div class="carrito-costo-envio">
-                        Calculá el costo de envío
-                        <input type="text" placeholder="Código postal" class="carrito-in-button"><button type="button"
-                            class="carrito-button-1">Calcular</button>
-                    </div>
-
-                    <div class="carrito-cod-promo">
-                        ¿Tenés algún código de promoción?
-                        <input type="text" placeholder="Ingresá el código" class="carrito-in-button"><button type="button"
-                            class="carrito-button-2">Validar</button>
-
-                    </div>
-
-
-                    <div class="carrito-importes-compra">
-                        <ul>
-                            <li type="none">Subtotal</li>
-                            <li type="none">Envío</li>
-                            <li type="none" class="carrito-total">Total</li>
-                        </ul>
-                        <ul>
-                            <li type="none">$ 25.999</li>
-                            <li type="none">$ 0 </li>
-                            <li type="none" class="carrito-total">$ 25.999</li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <div class="carrito-pay-but">
-                            <button type="button" class="carrito-pagar">PAGAR</button>
-                        </div>
-                    </div>
-                </section>
-
+            <div>
+              <li type="none">PRECIO</li>
+              <li type="none">$ 29.999</li>
             </div>
-        </main>
-        <%- include('../partials/footer') %>
+
+          </div>
+        </article>
+      </section>
+
+      <section class="carrito-box-nros">
+
+        <div class="carrito-costo-envio">
+          Calculá el costo de envío
+          <input type="text" placeholder="Código postal" class="carrito-in-button"><button type="button" class="carrito-button-1">Calcular</button>
+        </div>
+
+        <div class="carrito-cod-promo">
+          ¿Tenés algún código de promoción?
+          <input type="text" placeholder="Ingresá el código" class="carrito-in-button"><button type="button" class="carrito-button-2">Validar</button>
+
+        </div>
+
+
+        <div class="carrito-importes-compra">
+          <ul>
+            <li type="none">Subtotal</li>
+            <li type="none">Envío</li>
+            <li type="none" class="carrito-total">Total</li>
+          </ul>
+          <ul>
+            <li type="none">$ 25.999</li>
+            <li type="none">$ 0 </li>
+            <li type="none" class="carrito-total">$ 25.999</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="carrito-pay-but">
+            <button type="button" class="carrito-pagar">PAGAR</button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+  <%- include('../partials/footer') %>
 </body>
 
 </html>

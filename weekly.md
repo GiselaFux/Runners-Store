@@ -71,6 +71,9 @@ Realiza los partials y los inserta en los archivos .ejs
 
 -Actualizo pagina de edicion de producto para el administrador
 
+
+
+
 ## _SPRINT 4_
 
 #### Julieta Paredes
@@ -110,13 +113,29 @@ Quedó funcionando.
 
 ### 25 de Mayo de 2022
 #### Ezequiel Brunori
-Realizó Página de productos y Css.Modificó archivo Header para el correcto funcionamiento del css.Realizó el método de creación y edición de producto.
+- Realizó página de productos y Css.
+- Modificó archivo Header para el correcto funcionamiento del css. 
+- Realizó el método de creación, edición y detalle de producto.
 
 ### Gisela Fux #### Ezequiel Brunori
 Reunión  Ezequiel hizo otra página de productos  con su css .Trabajamos sobre el Productscontroller
 
 #### Julieta Paredes ### Patricio Contartese ### Gisela Fux 
 Reunión para trabajar sobre lo que falta.
+
+
+### 26 de Mayo de 2022
+#### Julieta Paredes
+- Se agrega ruta en controller carrito
+- Se cambia ruta en partial de header (en el icono de carrito)
+- Se cambia ruta del boton editar en products.ejs.
+- Se agregan botones de edición y delete en todos los productos en products.ejs
+- Se agregan [] en propiedad de newProduct-imagen (para que ingrese las imagenes dentro de un array, y asi las lea).
+- Se borran rutas del mainController que ya se encuentran en productsController
+- Se agrega ruta productCart al mainController, y se agrega ruta al main.js
+
+#### Julieta Paredes - Gisela Fux - Federico Correa
+- Nos reunimos para terminar el edit y delete.
 
 
 

@@ -12,12 +12,13 @@ const productsController = {
 
     // Root - Show all products
     indexProducts: (req, res) => {
-        let productMujer = products.filter((product) => product.category == "mujer");
-        let productHombre = products.filter((product) => product.category == "hombre");
-        let productAccesorios = products.filter((product) => product.category == "accesorios");
+        let productMujer = products.filter((product) => product.category == "Mujer");
+        let productHombre = products.filter((product) => product.category == "Hombre");
+        let productAccesorios = products.filter((product) => product.category == "Accesorios");
+        let productZapatillas = products.filter((product) => product.category == "Zapatillas");
 
         res.render('products', { products, productMujer, productHombre, productAccesorios, toThousand })
-        console.log(productMujer)
+        //console.log(productMujer)
     },
 
     // Detail - Detail from one product
@@ -25,13 +26,12 @@ const productsController = {
         let idProduct = req.params.id;
         let product = products.find((product) => product.id == idProduct);
         res.render('productDetail', { product })
-        console.log(product.imagen.length)
+        //console.log(product.imagen.length)
     },
 
     // Create - Form to create
     create: (req, res) => {
         res.render('productCreate')
-
     },
 
 
@@ -46,7 +46,9 @@ const productsController = {
         let newProduct = {
             id: products[products.length - 1].id + 1,
             ...req.body,
-            imagen: imagen,
+            price: Number(req.body.price),
+            discount: Number(req.body.discount),
+            imagen: [imagen],
         }
         products.push(newProduct);
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
@@ -56,33 +58,37 @@ const productsController = {
 
     // Update - Form to edit
     edit: (req, res) => {
-        let id = req.params.id;
-        let productToEdit = products.find((product) => product.id == id);
-        res.render("productEdit", { productToEdit });
+        let producto = products.find(producto => producto.id == req.params.id);
+        res.render("productEdit", {producto});
     },
+
     // Update - Method to update
     update: (req, res) => {
-        let id = req.params.id;
-        let productToEdit = products.find(product => product.id == id)
+        let idProduct = req.params.id;
+        let productToEdit = products.find(product => product.id == idProduct)
         let imagen;
         if (req.files[0] != undefined) {
             imagen = req.file[0].filename
         } else {
             imagen = productToEdit.imagen
         }
+
         productToEdit = {
             id: productToEdit.id,
             ...req.body,
+            price: Number(req.body.price),
+            discount: Number(req.body.discount),
             imagen: imagen
         };
-        let newProducts = products.map(product => {
+        console.log(productToEdit)
+        let newProduct = products.map(product => {
             if (product.id == productToEdit.id) {
-                return product = {...productToEdit };
+                return product = {...productToEdit};
             }
             return product
         })
-        fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '))
-        res.redirect('/products');
+        fs.writeFileSync(productsFilePath, JSON.stringify(newProduct, null, ' '))
+        res.redirect('/products');    
     },
 
 
@@ -92,11 +98,8 @@ const productsController = {
         let id = req.params.id;
         let finalProducts = products.filter(product => product.id != id)
         fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '))
-        res.redirect('products');
+        res.redirect("/products")
     },
-    //carrito de productos
-    productCart: (req, res) => {}
-
 };
 
 

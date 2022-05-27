@@ -37,7 +37,7 @@
   "id": 4,
   "name": "Zapatillas Adidas",
   "description": "Zapatillas Adidas blancas con tiras en azul",
-  "category": "Hombre",
+  "category": "Zapatillas",
   "price": 25000,
   "discount": 0,
   "colours": "#000000",
@@ -76,8 +76,8 @@
   "description": "Pantalon de futbol",
   "category": "Hombre",
   "price": 8000,
+  "discount": 0,
   "colours": "#000000",
-  "discount": null,
   "imagen": [
    "imagen-1653501074525.jpg"
   ]
@@ -97,11 +97,25 @@
   "id": 15,
   "name": "Zapatillas Adidas",
   "description": "Zapatillas Adidas color roja y negra",
-  "category":"Hombre",
-  "price": "30000",
+  "category": "Zapatillas",
+  "price": 30000,
+  "discount": 5,
   "colours": "#951313",
   "imagen": [
    "imagen-1653611033447.jpg"
+  ]
+ },
+ {
+  "id": 16,
+  "name": "Remera profesional River",
+  "description": "Remera del mejor equipo del mundo",
+  "category": "Hombre",
+  "colours": "#ff004c",
+  "size": "xs",
+  "price": 28999,
+  "discount": 5,
+  "imagen": [
+   "imagen-1653622024402.jpg"
   ]
  }
 ]

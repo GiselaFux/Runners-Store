@@ -16,8 +16,7 @@ const productsController = {
         let productHombre = products.filter((product) => product.category == "Hombre");
         let productAccesorios = products.filter((product) => product.category == "Accesorios");
         let productZapatillas = products.filter((product) => product.category == "Zapatillas");
-
-        res.render('products', { products, productMujer, productHombre, productAccesorios, toThousand })
+        res.render('products', { products, productMujer, productHombre, productZapatillas, productAccesorios, toThousand })
         //console.log(productMujer)
     },
 
@@ -50,6 +49,7 @@ const productsController = {
             discount: Number(req.body.discount),
             imagen: [imagen],
         }
+        console.log(newProduct)
         products.push(newProduct);
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
         res.redirect('/products');

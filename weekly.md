@@ -137,5 +137,23 @@ Reunión para trabajar sobre lo que falta.
 #### Julieta Paredes - Gisela Fux - Federico Correa
 - Nos reunimos para terminar el edit y delete.
 
+## _SPRINT 5_
+
+
+### Gisela Fux   29-05-22
+
+Agregó Middleware de error (404)en app.js que atraviesa toda la app.
+Instaló express-validator 
+Archivo de user.js en carpeta de Routers, con sus requerimiento, sus rutas, Multer, declaración de las rutas con sus app.use en app.js.
+Corrección de campos en user.json
+Agregó la carpeta Models con su archivo user.js con su funcionalidad create, delete. Exportó modulo y requerimiento en userController.
+Creación carpeta Middleware para validaciones de registro.
+
+
+
+
+
+
+
 
 

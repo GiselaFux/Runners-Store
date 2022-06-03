@@ -1,19 +1,258 @@
-[{
-        "id": 1,
-        "name": "firstName",
-        "apellido": "lastName",
-        "Email": "email",
-        "contraseña": "password",
-        "category": "Category",
-        "imagen": "imge"
-    },
-    {
-        "id": 2,
-        "name": "firstName",
-        "apellido": "lastName",
-        "Email": "email",
-        "contraseña": "password",
-        "category": "Category",
-        "imagen": "imge"
-    }
+[
+ {
+  "id": 1,
+  "name": "Juan",
+  "apellido": "Perez",
+  "fechaNacimiento": "12-10-78",
+  "DocumentoTipo": "D.N.I",
+  "Ndocumento": "28965567",
+  "Email": "juanPerez@gmail.com",
+  "contraseña": "1234Juan",
+  "genero": "masculino",
+  "imagen": "default.png"
+ },
+ {
+  "id": 2,
+  "name": "Marcela",
+  "apellido": "Brexia",
+  "fechaNacimiento": "12-1-00",
+  "DocumentoTipo": "D.N.I",
+  "Ndocumento": "43766556",
+  "Email": "marce23@gmail.com",
+  "contraseña": "marceLita23",
+  "genero": "femenino",
+  "imagen": "default.png"
+ },
+ {
+  "id": 4,
+  "nombre": "Mariano",
+  "apellido": "Moreno",
+  "fechaNacimiento": "3-12-99",
+  "DocumentoTipo": "D.N.I",
+  "Ndocumnto": "31856908",
+  "Email": "Mariano3@hotmail.com",
+  "contraseña": "mmm234",
+  "genero": "masculino",
+  "imagen": "default.jpg"
+ },
+ {
+  "id": 5,
+  "nombre": "Juana",
+  "apellido": "Dino",
+  "fechaNacimiento": "23-3-45",
+  "documentoTipo": "D.N.I",
+  "Ndocumento": "3768988",
+  "Email": "gg@gmail.com",
+  "contraseña": "123457D",
+  "genero": "femenino"
+ },
+ {
+  "id": 6,
+  "nombre": "Juana",
+  "apellido": "Dino",
+  "fechaNacimiento": "23-3-45",
+  "documentoTipo": "D.N.I",
+  "Ndocumento": "3768988",
+  "Email": "gg@gmail.com",
+  "contraseña": "123457D",
+  "genero": "femenino"
+ },
+ {
+  "id": 7,
+  "nombre": "Juana",
+  "apellido": "Dino",
+  "fechaNacimiento": "23-3-45",
+  "documentoTipo": "D.N.I",
+  "Ndocumento": "3768988",
+  "Email": "gg@gmail.com",
+  "contraseña": "123457D",
+  "genero": "femenino"
+ },
+ {
+  "id": 8,
+  "nombre": "Juana",
+  "apellido": "Dino",
+  "fechaNacimiento": "23-3-45",
+  "documentoTipo": "D.N.I",
+  "Ndocumento": "3768988",
+  "Email": "gg@gmail.com",
+  "contraseña": "123457D",
+  "genero": "femenino"
+ },
+ {
+  "id": 9,
+  "nombre": "Juana",
+  "apellido": "Dino",
+  "fechaNacimiento": "23-3-45",
+  "documentoTipo": "D.N.I",
+  "Ndocumento": "3768988",
+  "Email": "gg@gmail.com",
+  "contraseña": "123457D",
+  "genero": "femenino"
+ },
+ {
+  "id": 10,
+  "nombre": "Juana",
+  "apellido": "Dino",
+  "fechaNacimiento": "23-3-45",
+  "documentoTipo": "D.N.I",
+  "Ndocumento": "3768988",
+  "Email": "gg@gmail.com",
+  "contraseña": "123457D",
+  "genero": "femenino"
+ },
+ {
+  "id": 11,
+  "nombre": "Juana",
+  "apellido": "Dino",
+  "fechaNacimiento": "23-3-45",
+  "documentoTipo": "D.N.I",
+  "Ndocumento": "3768988",
+  "Email": "gg@gmail.com",
+  "contraseña": "123457D",
+  "genero": "femenino"
+ },
+ {
+  "id": 12,
+  "nombre": "Juana",
+  "apellido": "Dino",
+  "fechaNacimiento": "23-3-45",
+  "documentoTipo": "D.N.I",
+  "Ndocumento": "3768988",
+  "Email": "gg@gmail.com",
+  "contraseña": "123457D",
+  "genero": "femenino"
+ },
+ {
+  "id": 13,
+  "nombre": "Juana",
+  "apellido": "Dino",
+  "fechaNacimiento": "23-3-45",
+  "documentoTipo": "D.N.I",
+  "Ndocumento": "3768988",
+  "Email": "gg@gmail.com",
+  "contraseña": "123457D",
+  "genero": "femenino"
+ },
+ {
+  "id": 14,
+  "nombre": "Juana",
+  "apellido": "Dino",
+  "fechaNacimiento": "23-3-45",
+  "documentoTipo": "D.N.I",
+  "Ndocumento": "3768988",
+  "Email": "gg@gmail.com",
+  "contraseña": "123457D",
+  "genero": "femenino"
+ },
+ {
+  "id": 15,
+  "nombre": "Juana",
+  "apellido": "Dino",
+  "fechaNacimiento": "23-3-45",
+  "documentoTipo": "D.N.I",
+  "Ndocumento": "3768988",
+  "Email": "gg@gmail.com",
+  "contraseña": "123457D",
+  "genero": "femenino"
+ },
+ {
+  "id": 16,
+  "nombre": "Juana",
+  "apellido": "Dino",
+  "fechaNacimiento": "23-3-45",
+  "documentoTipo": "D.N.I",
+  "Ndocumento": "3768988",
+  "Email": "gg@gmail.com",
+  "contraseña": "123457D",
+  "genero": "femenino"
+ },
+ {
+  "id": 17,
+  "nombre": "Juana",
+  "apellido": "Dino",
+  "fechaNacimiento": "23-3-45",
+  "documentoTipo": "D.N.I",
+  "Ndocumento": "3768988",
+  "Email": "gg@gmail.com",
+  "contraseña": "123457D",
+  "genero": "femenino"
+ },
+ {
+  "id": 18,
+  "nombre": "Juana",
+  "apellido": "Dino",
+  "fechaNacimiento": "23-3-45",
+  "documentoTipo": "D.N.I",
+  "Ndocumento": "3768988",
+  "Email": "gg@gmail.com",
+  "contraseña": "123457D",
+  "genero": "femenino"
+ },
+ {
+  "id": 19,
+  "nombre": "Juana",
+  "apellido": "Dino",
+  "fechaNacimiento": "23-3-45",
+  "documentoTipo": "D.N.I",
+  "Ndocumento": "3768988",
+  "Email": "gg@gmail.com",
+  "contraseña": "123457D",
+  "genero": "femenino"
+ },
+ {
+  "id": 20,
+  "nombre": "Juana",
+  "apellido": "Dino",
+  "fechaNacimiento": "23-3-45",
+  "documentoTipo": "D.N.I",
+  "Ndocumento": "3768988",
+  "Email": "gg@gmail.com",
+  "contraseña": "123457D",
+  "genero": "femenino"
+ },
+ {
+  "id": 23,
+  "nombre": "Juana",
+  "apellido": "Dino",
+  "fechaNacimiento": "23-3-45",
+  "documentoTipo": "D.N.I",
+  "Ndocumento": "3768988",
+  "Email": "gg@gmail.com",
+  "contraseña": "123457D",
+  "genero": "femenino"
+ },
+ {
+  "id": 24,
+  "nombre": "Juana",
+  "apellido": "Dino",
+  "fechaNacimiento": "23-3-45",
+  "documentoTipo": "D.N.I",
+  "Ndocumento": "3768988",
+  "Email": "gg@gmail.com",
+  "contraseña": "123457D",
+  "genero": "femenino"
+ },
+ {
+  "id": 25,
+  "nombre": "Juana",
+  "apellido": "Dino",
+  "fechaNacimiento": "23-3-45",
+  "documentoTipo": "D.N.I",
+  "Ndocumento": "3768988",
+  "Email": "gg@gmail.com",
+  "contraseña": "123457D",
+  "genero": "femenino"
+ },
+ {
+  "id": 26,
+  "nombre": "María",
+  "apellido": "Jo",
+  "fechaNacimiento": "23-5-45",
+  "documentoTipo": "D.N.I",
+  "Ndocumento": "3768988",
+  "Email": "gg@gmail.com",
+  "contraseña": "123457D",
+  "genero": "femenino"
+ }
 ]

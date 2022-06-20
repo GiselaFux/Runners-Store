@@ -1,3 +1,4 @@
+const bcryptjs = require ("bcryptjs");
 const path = require('path');
 const fs= require('fs');
 const { body } = require('express-validator');
@@ -12,27 +13,60 @@ const userController= {
     },
     processRegister: (req,res) => {
         const resultValidation = validationResult(req);
-        
+
         if(resultValidation.error.length >0){
-            res.render('register',{
-                errors:resultValidation.mapped(),
-                oldData:req.body
+            return res.render('register',{
+                errors: resultValidation.mapped(),
+                oldData: req.body
             })
         }
 
+        let userInDB = User.findByField("email", req.body.Email);
+
+        if (userInDB) {
+            return res.render('register',{
+                errors: {
+                    msg: "Este email ya está registrado"
+                },
+                oldData: req.body
+            })
+        }
+
+
         let userToCreate = {
             ...req.body,
+            contraseña: bcryptjs.hashSync(req.body.contraseña, 10),
             avatar: req.file.filename
         }
 
         User.create(req.body)
         return res.send('ok, se guardó el usurio')
-        },
+    },
 
 
     login: (req,res) => {
         res.render('login')
     },
+
+    loginProcess: (req,res) => {
+        let userToLogin = User.findByField("Email", req.body.Email);
+
+        if (userToLogin){
+            let passOk = bcryptjs.compareSync(req.body.contraseña, userToLogin.contraseña)
+            if (passOk){
+                return res.send("Bienvenido de nuevo!") /*REDIRIGIR A PAGINA DE PERFIL DE USUARIO*/
+            };
+        }
+
+        return res.render("login",{
+            errors:{
+                Email: {
+                    msg: "No hay usuario registrado con este correo"
+                }
+            }
+        });
+    },
+
     profile:(req,res) => {
         res.render('login')
     }   

@@ -25,11 +25,14 @@ const upload = multer({ storage })
 
 router.get('/register', userController.register);
 
-/*procesar el egistro*/
+/*procesar el registro*/
 router.post('/register', upload.single('single'), userController.processRegister);
 
 /*formulario login*/
 router.get('/login',userController.login);
+
+/*procesar login*/
+router.post('/login',userController.loginProcess);
 
 /*perfil del usuario*/
 router.get('/profile/:userId', userController.profile);

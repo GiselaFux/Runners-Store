@@ -15,6 +15,11 @@
                 </div>
                 <div>
                     <input type="email" placeholder="Email*" required class="login-placeholder">
+                    <% if (locals.errors && errors.Email) { %>
+                        <div class="text-danger">
+                            <%= errors.Email.msg %>
+                        </div>
+                    <% } %>    
                     <input type="password" placeholder="Contraseña*" required class="login-placeholder">
                 </div>
                 <div class="login-check">

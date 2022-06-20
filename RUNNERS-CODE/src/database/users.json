@@ -234,25 +234,9 @@
   "genero": "femenino"
  },
  {
-  "id": 25,
-  "nombre": "Juana",
-  "apellido": "Dino",
-  "fechaNacimiento": "23-3-45",
-  "documentoTipo": "D.N.I",
-  "Ndocumento": "3768988",
-  "Email": "gg@gmail.com",
-  "contraseña": "123457D",
-  "genero": "femenino"
- },
- {
-  "id": 26,
-  "nombre": "María",
-  "apellido": "Jo",
-  "fechaNacimiento": "23-5-45",
-  "documentoTipo": "D.N.I",
-  "Ndocumento": "3768988",
-  "Email": "gg@gmail.com",
-  "contraseña": "123457D",
-  "genero": "femenino"
+  "id": 27,
+  "Name": "Juli",
+  "Ndocumento": "40359785",
+  "Email": "juli.paredes05@gmail.com"
  }
 ]

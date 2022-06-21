@@ -1,9 +1,11 @@
 const express = require("express");
 const session = require("express-session");
+const cookies = require("cookie-parser");
 const path = require("path");
 const app = express();
 const fs= require('fs');
 
+const userLoggedMiddleware = require("../RUNNERS-CODE/src/middlewares/userLoggedMiddleware")
 
 /*requerimiento method reconocimiento de put y delete*/
 const methodOverride = require("method-override")
@@ -17,6 +19,11 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
 }));
+
+app.use(cookies());
+
+app.use(userLoggedMiddleware);
+
 
 /*para poder trabajar con datos que se envían desde el formulario y capturarlo*/
 app.use(express.urlencoded({ extended: false }));

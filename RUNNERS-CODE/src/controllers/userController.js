@@ -8,6 +8,7 @@ const User = require('../models/User.js')
 
 const userController= {
     register: (req,res) => {      
+        res.cookie("testing", )
          return res.render('users/register')
 
     },
@@ -45,6 +46,7 @@ const userController= {
 
 
     login: (req,res) => {
+
         res.render('login')
     },
 
@@ -56,7 +58,12 @@ const userController= {
             if (passOk){
                 delete userToLogin.contraseña;
                 req.session.userLogged = userToLogin;
-                return res.send("Bienvenido de nuevo!") /*REDIRIGIR A PAGINA DE PERFIL DE USUARIO*/
+
+                if(req.body.remember_user){
+                    res.cookie("userEmail", req.body.Email, {maxAge: (1000 * 60) * 2 })
+                }
+
+                return res.redirect("Bienvenido de nuevo!") /*REDIRIGIR A PAGINA DE PERFIL DE USUARIO*/
             };
         }
 
@@ -76,6 +83,7 @@ const userController= {
     },
     
     logout: (req,res) => {
+        res.clearCookie("userEmail");
         req.session.destroy();
         return res.redirect("/")
     }

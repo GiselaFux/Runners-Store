@@ -54,6 +54,8 @@ const userController= {
         if (userToLogin){
             let passOk = bcryptjs.compareSync(req.body.contraseña, userToLogin.contraseña)
             if (passOk){
+                delete userToLogin.contraseña;
+                req.session.userLogged = userToLogin;
                 return res.send("Bienvenido de nuevo!") /*REDIRIGIR A PAGINA DE PERFIL DE USUARIO*/
             };
         }
@@ -68,8 +70,16 @@ const userController= {
     },
 
     profile:(req,res) => {
-        res.render('login')
-    }   
-    };
+        return res.render('login', {
+            user: req.session.userLogged
+        })
+    },
+    
+    logout: (req,res) => {
+        req.session.destroy();
+        return res.redirect("/")
+    }
+    
+};
 
     module.exports= userController;

@@ -1,4 +1,5 @@
 const express = require("express");
+const session = require("express-session");
 const path = require("path");
 const app = express();
 const fs= require('fs');
@@ -9,6 +10,14 @@ const methodOverride = require("method-override")
 
 /*redireccionamiento a la carpeta public*/
 app.use(express.static(path.join(__dirname, '/public')));
+
+/* Session */ 
+app.use(session({
+    secret: "Sesión secreta",
+    resave: false,
+    saveUninitialized: false,
+}));
+
 /*para poder trabajar con datos que se envían desde el formulario y capturarlo*/
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json())

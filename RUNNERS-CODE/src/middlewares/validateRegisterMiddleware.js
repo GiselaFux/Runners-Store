@@ -6,7 +6,7 @@ module.exports= [
     body('apellido').notEmpty().withMessage('Por favor,ingresar su apellido'),
     body('fechaNacimiento').notEmpty(),
     body('DocumentoTipo').notEmpty(),
-    body('Ndocumento').notEmpty(),withMessage('Ingrese el número sin puntos'),
+    body('Ndocumento').notEmpty().withMessage('Ingrese el número sin puntos'),
     body('genero').notEmpty(),
     body('Email').notEmpty().withMessage('Ingresar formto válido'),
     body('contraseña').notEmpty().isLength({min:5,max:8}).withMessage('ingresar contraseña adecuada'),

@@ -32,7 +32,7 @@ app.use(methodOverride("_method")); /*metodo para el reconocimiento del put y de
 
 // motor ejs
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "src/views/")); // Define la ubicaciónn de la carpeta de las Vistas
+app.set("views", path.join(__dirname, "src/views")); // Define la ubicaciónn de la carpeta de las Vistas
 
     /*requerimientos de rutas y use*/
 

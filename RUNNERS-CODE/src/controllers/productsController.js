@@ -16,7 +16,7 @@ const productsController = {
         let productHombre = products.filter((product) => product.category == "Hombre");
         let productAccesorios = products.filter((product) => product.category == "Accesorios");
         let productZapatillas = products.filter((product) => product.category == "Zapatillas");
-        res.render('products', { products, productMujer, productHombre, productZapatillas, productAccesorios, toThousand })
+        res.render('products/products', { products, productMujer, productHombre, productZapatillas, productAccesorios, toThousand })
         //console.log(productMujer)
     },
 
@@ -24,7 +24,7 @@ const productsController = {
     detail: (req, res) => {
         let idProduct = req.params.id;
         let product = products.find((product) => product.id == idProduct);
-        res.render('productDetail', { product })
+        res.render('products/productDetail', { product })
         //console.log(product.imagen.length)
     },
 

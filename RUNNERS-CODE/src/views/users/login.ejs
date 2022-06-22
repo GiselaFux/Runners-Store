@@ -10,9 +10,10 @@
             <div class="login-cuadro-ppal">
                 <h1>Iniciar Sesión</h1>
                 <div class="login-butt-group">
-                    <a href="/login"><button>Iniciar Sesión</button></a>
-                    <a href="/register"><button class="login-disabled">Registrarme</button></a>
+                    <a href="/users/login"><button>Iniciar Sesión</button></a>
+                    <a href="/users/register"><button class="login-disabled">Registrarme</button></a>
                 </div>
+                <form class="register-form" action="/users/login" method="POST" enctype="multipart/form-data">
                 <div>
                     <input type="email" placeholder="Email*" required class="login-placeholder">
                     <% if (locals.errors && errors.Email) { %>
@@ -28,6 +29,7 @@
                 </div>
 
                 <button class="login">INICIAR SESIÓN</button>
+                </form>
             </div>
 
 

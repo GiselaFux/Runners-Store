@@ -1,31 +1,29 @@
-const bcryptjs = require ("bcryptjs");
+const bcrypt = require ("bcryptjs");
 const path = require('path');
 const fs= require('fs');
-const { body } = require('express-validator');
 const { validationResult } = require('express-validator');
 /* requiero el modulo User de a carpeta models */
 const User = require('../models/User.js')
 
 const userController= {
     register: (req,res) => {      
-        res.cookie("testing", )
-         return res.render('users/register')
+     res.render('users/register')
 
     },
     processRegister: (req,res) => {
         const resultValidation = validationResult(req);
-
-        if(resultValidation.error.length >0){
-            return res.render('register',{
+            console.log(resultValidation)
+        if(resultValidation.errors.length >0){
+            return res.render('users/register',{
                 errors: resultValidation.mapped(),
                 oldData: req.body
             })
         }
 
-        let userInDB = User.findByField("email", req.body.Email);
+        let userInDB = User.findByField("Email", req.body.email);
 
         if (userInDB) {
-            return res.render('register',{
+            return res.render('users/register',{
                 errors: {
                     msg: "Este email ya está registrado"
                 },
@@ -36,27 +34,27 @@ const userController= {
 
         let userToCreate = {
             ...req.body,
-            contraseña: bcryptjs.hashSync(req.body.contraseña, 10),
-            avatar: req.file.filename
+            password: bcrypt.hashSync(req.body.password, 10),
+            //avatar: req.file.filename
         }
 
-        User.create(req.body)
+        User.create(userToCreate)
         return res.send('ok, se guardó el usurio')
     },
 
 
     login: (req,res) => {
 
-        res.render('login')
+        res.render('users/login')
     },
 
     loginProcess: (req,res) => {
-        let userToLogin = User.findByField("Email", req.body.Email);
+        let userToLogin = User.findByField("email", req.body.email);
 
         if (userToLogin){
-            let passOk = bcryptjs.compareSync(req.body.contraseña, userToLogin.contraseña)
+            let passOk = bcryptjs.compareSync(req.body.password, userToLogin.password)
             if (passOk){
-                delete userToLogin.contraseña;
+                delete userToLogin.password;
                 req.session.userLogged = userToLogin;
 
                 if(req.body.remember_user){
@@ -77,7 +75,7 @@ const userController= {
     },
 
     profile:(req,res) => {
-        return res.render('login', {
+        return res.render('users/login', {
             user: req.session.userLogged
         })
     },

@@ -10,10 +10,10 @@
                 <div class="register-cuadro-ppal">
                     <h1>Registrarme</h1>
                     <div class="register-butt-group">
-                        <a href="/login"> <button class="register-disabled">Iniciar Sesión</button></a>
-                        <a href="/register"> <button>Registrarme</button></a>
+                        <a href="/users/login"> <button class="register-disabled">Iniciar Sesión</button></a>
+                        <a href="/users/register"> <button>Registrarme</button></a>
                     </div>
-                    <form class="register-form" action="/register" method="POST" enctype="multipart/form-data">
+                    <form class="register-form" action="/users/register" method="POST" enctype="multipart/form-data">
                         <div class="register-datos">
                             <h3>Datos personales</h3>
                             <p class="register-p">
@@ -22,22 +22,22 @@
                             </p>
 
                             <p class="register-p"><label>Fecha de nacimiento</label>
-                                <input type="date" name="birth_date" id="birth_date" required class="register-placeholder">
+                                <input type="date" name="fechaNacimiento" id="fechaNacimiento" required class="register-placeholder">
                             </p>
 
                             <div style="display:flex">
 
                                 <p class="register-p"><label>Tipo*</label>
-                                    <select required class="register-placeholder" style="width:fit-content">
+                                    <select name= 'documentoTipo' id= 'documentoTipo' required class="register-placeholder" style="width:fit-content">
                                     <option>DNI</option>
                                 </select>
                                 </p>
                                 <p class="register-p"><label>Numero de documento*</label>
-                                    <input type="text" name="numero-doc" id="numero-doc" required class="register-placeholder">
+                                    <input type="text" name="nDocumento" id="nDocumento" required class="register-placeholder">
                                 </p>
                             </div>
                             <p class="register-p"><label>Género</label></p>
-                            <p class="register-p"><select required class="register-placeholder">
+                            <p class="register-p"><select name = 'genero' id = 'genero' required class="register-placeholder">
                                 <option>Masculino</option>
                                 <option>Femenino</option>
                             </select></p>
@@ -51,14 +51,10 @@
                             <input type="text" name="email" id="email" required class="register-placeholder" placeholder="Email*">
                             <br>
                             <label></label>
-                            <input type="text" name="email" id="email" required class="register-placeholder" placeholder="Confirmar email*">
+                            <input type="password" name="password" id="password" required class="register-placeholder" placeholder="Contraseña*">
                             <br>
                             <label></label>
-                            <input type="password" name="contraseña" id="contraseña" required class="register-placeholder" placeholder="Contraseña*">
-                            <br>
-                            <label></label>
-                            <input type="password" name="contraseña" id="contraseña" required class="register-placeholder" placeholder="Confirmar contraseña*">
-
+                           
                             <br>
                             <label><input type="checkbox" id="cbox1" value="first_checkbox"> Acepto las políticas de
                             privacidad,

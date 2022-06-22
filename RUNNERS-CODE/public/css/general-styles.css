@@ -21,6 +21,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    height: 133px;
 }
 
 .contenedorHeader {
@@ -35,7 +36,7 @@ header {
     background-color: #160812;
     margin-top: 0;
     margin-bottom: 0;
-    height: 35px;
+    height: 25px;
     font-size: small;
     color: white;
     font-weight: bold;
@@ -138,7 +139,7 @@ footer {
     filter: drop-shadow(0 0 0.75rem #5c5c5a);
     display: flex;
     align-items: center;
-    margin-top: auto;
+    margin-top: 13%;
 }
 
 .link-foot {
@@ -183,7 +184,7 @@ footer {
     }
 
     .logo {
-        width: 9rem;
+        width: 8rem;
         margin-left: 20px;
     }
 
@@ -274,10 +275,12 @@ footer {
 
     .link-foot {
         width: 90%;
+        justify-content:center;
+
     }
 
     .links-footer {
-        margin: 0 10px;
+        margin: 0 25px;
         font-size: medium;
     }
 
@@ -292,6 +295,10 @@ footer {
 @media (min-width: 1500px) {
     main {
         margin: 280px auto 0px;
+    }
+
+    .logo {
+        width: 9rem;
     }
 
     .buscador {

@@ -1,7 +1,7 @@
 <div class="contenedorHeader">
   <div class="promos-bancarias">Promociones bancarias + envío gratis</div>
   <header>
-    <a href="/"><img src="/img/LOGO RUNNERS STORE.png" class="logo"></a>
+    <a href="/"><img src="img/LOGO RUNNERS STORE.png" class="logo"></a>
     <nav>
       <div class="dropdown">
         <div class="bars">
@@ -12,6 +12,7 @@
             <li><a href="#">Zapatillas</a></li>
             <li><a href="#">Accesorios</a></li>
             <li><a href="#">Marcas</a></li>
+            <li><a href="#">Todos</a></li>
           </ul>
         </div>
       </div>
@@ -19,17 +20,16 @@
     <h3 class="search-bar"><input type="search" placeholder="   Buscar" class="buscador"><i class="fa-solid fa-magnifying-glass icon-glass"></i>
     </h3>
     <p class="icon-right"><a href="/productCart"><i class="fa-solid fa-cart-shopping icon"></i></a>
-      <% if (locals.isLogged) {
-      <a href="/login"><i class="fa-solid fa-circle-user icon"></i> Hola <%= locals.userLogged.nombre %></a>
-      <%> } <%>
+      <a href="/login"><i class="fa-solid fa-circle-user icon"></i></a>
     </p>
 
   </header>
   <div class="navegadorHorizonal">
-    <button><a href="./products" style="text-decoration:none">Mujer</a></button>
+    <button><a href="#" style="text-decoration:none">Mujer</a></button>
     <button><a href="#" style="text-decoration:none">Hombre</a></button>
     <button><a href="#" style="text-decoration:none">Zapatillas</a></button>
     <button><a href="#" style="text-decoration:none">Accesorios</a></button>
     <button><a href="#" style="text-decoration:none">Marcas</a></button>
+    <button><a href="#" style="text-decoration:none">Todos</a></button>
   </div>
 </div>

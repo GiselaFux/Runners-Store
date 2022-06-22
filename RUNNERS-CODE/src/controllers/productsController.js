@@ -100,6 +100,7 @@ const productsController = {
         fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '))
         res.redirect("/products")
     },
+
 };
 
 

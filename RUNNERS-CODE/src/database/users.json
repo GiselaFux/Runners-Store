@@ -22,5 +22,17 @@
   "password": "marceLita23",
   "genero": "femenino",
   "imagenUser": "default.png"
+ },
+ {
+  "id": 3,
+  "nombre": "JULIETA",
+  "apellido": "PAREDES",
+  "fechaNacimiento": "1997-05-07",
+  "documentoTipo": "DNI",
+  "nDocumento": "40397703",
+  "genero": "Femenino",
+  "Num-telefono": "1125487880",
+  "email": "paredesjulieta97@gmail.com",
+  "password": "$2a$10$RL6QKqf4y6WS0momEv1Dkegqpd7xIJ2gIVeai3LDpXKpx4K6rYn/q"
  }
 ]

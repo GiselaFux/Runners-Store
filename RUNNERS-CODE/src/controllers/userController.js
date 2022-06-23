@@ -44,7 +44,6 @@ const userController= {
 
 
     login: (req,res) => {
-
         res.render('users/login')
     },
 
@@ -65,7 +64,7 @@ const userController= {
             };
         }
 
-        return res.render("login",{
+        return res.render('users/login',{
             errors:{
                 Email: {
                     msg: "No hay usuario registrado con este correo"

@@ -1,9 +1,9 @@
-const bcrypt = require ("bcryptjs");
+const bcryptjs = require ("bcryptjs");
 const path = require('path');
 const fs= require('fs');
 const { validationResult } = require('express-validator');
 /* requiero el modulo User de a carpeta models */
-const User = require('../models/User')
+const User = require('../models/User.js')
 
 const userController= {
     register: (req,res) => {      
@@ -36,11 +36,11 @@ const userController= {
 
         let userToCreate = {
             ...req.body,
-            password: bcrypt.hashSync(req.body.password, 10),
+            password: bcryptjs.hashSync(req.body.password, 10),
             //avatar: req.file.filename
         }
 
-        let userCreated = User.create(userToCreate);
+        User.create(userToCreate);
 
         return res.redirect('/users/login')
     },
@@ -51,32 +51,42 @@ const userController= {
     },
 
     loginProcess: (req,res) => {
-        let userToLogin = User.findByField("email", req.body.email);
-
+        let userToLogin = User.findByField('email', req.body.email);
+        console.log(req.body.email)
+        console.log(userToLogin)
         if (userToLogin){
-            let passOk = bcrypt.compareSync(req.body.password, userToLogin.password);
+            let passOk = bcryptjs.compareSync(req.body.password, userToLogin.password)
             if (passOk){
-                //delete userToLogin.password;
-                //req.session.userLogged = userToLogin;
-                return res.redirect("users/userProfile")
-                //if(req.body.remember_user){
-                //    res.cookie("userEmail", req.body.Email, {maxAge: (1000 * 60) * 2 })
-            } else{
-                return res.render('users/login', {
-                    errors:{
-                        email: {
-                            msg: "No hay usuario registrado con este correo"
-                        }
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
+
+                if(req.body.remember_user){
+                  res.cookie("userEmail", req.body.email, {maxAge: (1000 * 60) * 2 })
+                }
+
+                return res.redirect('/users/userProfile') 
+            };
+            return res.render('users/login',{
+                errors:{
+                    email: {
+                        msg: "Las credenciales son invalidas"
                     }
-                });
-            }           
-          
+                }
+            });
         }
+
+        return res.render('users/login',{
+            errors:{
+                email: {
+                    msg: "No hay usuario registrado con este correo"
+                }
+            }
+        });
     },
-   
+
     profile: (req,res) => {
         return res.render('users/userProfile', {
-           // user: req.session.userLogged
+           user: req.session.userLogged
         })
     },
     

@@ -5,7 +5,7 @@ const path = require("path");
 const app = express();
 const fs= require('fs');
 
-const userLoggedMiddleware = require("../RUNNERS-CODE/src/middlewares/userLoggedMiddleware")
+const userLoggedMiddleware = require("./src/middlewares/userLoggedMiddleware")
 
 /*requerimiento method reconocimiento de put y delete*/
 const methodOverride = require("method-override")

@@ -13,15 +13,15 @@
         <a href="/users/login"><button>Iniciar Sesión</button></a>
         <a href="/users/register"><button class="login-disabled">Registrarme</button></a>
       </div>
-      <form class="register-form" method="POST" enctype="multipart/form-data">
+      <form class="register-form" action='/users/login' method="POST">
         <div>
-          <input type="email" name="email" placeholder="Email*" required class="login-placeholder">
+          <input type="email" name="email" placeholder="Email*" required class="login-placeholder"/>
           <% if (locals.errors && errors.email) { %>
           <div class="text-danger">
             <%= errors.email.msg %>
           </div>
           <% } %>
-          <input type="password" name="password" placeholder="Contraseña*" required class="login-placeholder">
+          <input type="password" name="password" placeholder="Contraseña*" required class="login-placeholder"/>
         </div>
         <div class="login-check">
           <p> <input type="checkbox" name="remember_user">Recordar mi usuario</p>

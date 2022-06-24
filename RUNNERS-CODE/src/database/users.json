@@ -1,17 +1,5 @@
 [
  {
-  "id": 1,
-  "nombre": "Juan",
-  "apellido": "Perez",
-  "fechaNacimiento": "12-10-78",
-  "documentoTipo": "D.N.I",
-  "nDocumento": "28965567",
-  "email": "juanPerez@gmail.com",
-  "password": "1234Juan",
-  "genero": "masculino",
-  "imagenUser": "default.png"
- },
- {
   "id": 2,
   "nombre": "Marcela",
   "apellido": "Brexia",
@@ -37,7 +25,38 @@
  },
  {
   "id": 4,
-  "email": "paredesjulieta97@gmail.com",
-  "password": "$2a$10$KC0yGRhlPtBDry3RUyOHj.PkMuNYLPcSbFCAWrSQqymMVuo7X4edu"
+  "nombre": "Maria",
+  "apellido": "Sosa",
+  "fechaNacimiento": "2022-06-14",
+  "documentoTipo": "DNI",
+  "nDocumento": "22554400",
+  "genero": "Femenino",
+  "Num-telefono": "135161658",
+  "email": "holahola@gmail.com",
+  "password": "abc123"
+ },
+ {
+  "id": 5,
+  "nombre": "JOSE",
+  "apellido": "LUANDO",
+  "fechaNacimiento": "2022-06-13",
+  "documentoTipo": "DNI",
+  "nDocumento": "215616815",
+  "genero": "Masculino",
+  "Num-telefono": "198161869",
+  "email": "jose@gmail.com",
+  "password": "hola123"
+ },
+ {
+  "id": 6,
+  "nombre": "GERMAN MARCELO",
+  "apellido": "Sosa",
+  "fechaNacimiento": "2022-06-06",
+  "documentoTipo": "DNI",
+  "nDocumento": "32135186",
+  "genero": "Masculino",
+  "Num-telefono": "3186955421",
+  "email": "marcelo@hola.com",
+  "password": "$2a$10$UnoHI3oWDsLZEcvd2c1q6.r73tsltxSpZVPAQRHNlfIJ57S1P5GpW"
  }
 ]

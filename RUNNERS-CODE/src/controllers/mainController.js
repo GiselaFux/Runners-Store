@@ -19,6 +19,7 @@ mainController = {
         res.render("../views/products/productCart", {producto});*/
         res.render(path.join(__dirname, '../views/products/productCart'))
     },
+
 };
 
 module.exports = mainController;

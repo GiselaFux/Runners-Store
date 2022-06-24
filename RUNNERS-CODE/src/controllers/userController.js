@@ -3,7 +3,7 @@ const path = require('path');
 const fs= require('fs');
 const { validationResult } = require('express-validator');
 /* requiero el modulo User de a carpeta models */
-const User = require('../models/User.js')
+const User = require('../models/User')
 
 const userController= {
     register: (req,res) => {      
@@ -20,12 +20,14 @@ const userController= {
             })
         }
 
-        let userInDB = User.findByField("Email", req.body.email);
+        let userInDB = User.findByField("email", req.body.email);
 
         if (userInDB) {
             return res.render('users/register',{
                 errors: {
-                    msg: "Este email ya está registrado"
+                    email:{
+                        msg: "Este email ya está registrado"
+                    }
                 },
                 oldData: req.body
             })
@@ -38,8 +40,9 @@ const userController= {
             //avatar: req.file.filename
         }
 
-        User.create(userToCreate)
-        return res.send('ok, se guardó el usurio')
+        let userCreated = User.create(userToCreate);
+
+        return res.redirect('/users/login')
     },
 
 
@@ -51,31 +54,29 @@ const userController= {
         let userToLogin = User.findByField("email", req.body.email);
 
         if (userToLogin){
-            let passOk = bcryptjs.compareSync(req.body.password, userToLogin.password)
+            let passOk = bcrypt.compareSync(req.body.password, userToLogin.password);
             if (passOk){
-                delete userToLogin.password;
-                req.session.userLogged = userToLogin;
-
-                if(req.body.remember_user){
-                    res.cookie("userEmail", req.body.Email, {maxAge: (1000 * 60) * 2 })
-                }
-
-                return res.render('users/userProfile') 
-            };
+                //delete userToLogin.password;
+                //req.session.userLogged = userToLogin;
+                return res.redirect("users/userProfile")
+                //if(req.body.remember_user){
+                //    res.cookie("userEmail", req.body.Email, {maxAge: (1000 * 60) * 2 })
+            } else{
+                return res.render('users/login', {
+                    errors:{
+                        email: {
+                            msg: "No hay usuario registrado con este correo"
+                        }
+                    }
+                });
+            }           
+          
         }
-
-        return res.render('users/login',{
-            errors:{
-                Email: {
-                    msg: "No hay usuario registrado con este correo"
-                }
-            }
-        });
     },
-
-    profile:(req,res) => {
+   
+    profile: (req,res) => {
         return res.render('users/userProfile', {
-            user: req.session.userLogged
+           // user: req.session.userLogged
         })
     },
     

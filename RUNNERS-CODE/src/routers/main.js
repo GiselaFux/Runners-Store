@@ -17,5 +17,4 @@ router.get('/', mainController.index)
 
 router.get('/productCart', mainController.productCart)
 
-
 module.exports = router;

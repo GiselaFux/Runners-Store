@@ -7,6 +7,8 @@
 //buscar a un usuario por su id----findByPk----
 //editar la información de un usuario
 // eliminar a un usuario de la bd-----todo esto seria CRUD
+
+
 const fs=require('fs')
 const path= require('path')
 
@@ -61,7 +63,8 @@ const User={
         return true
     }/**/
 }
-console.log(User.delete(26));
+
+console.log(User.delete());
 
 
 module.exports = User;

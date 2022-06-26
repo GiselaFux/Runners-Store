@@ -1,17 +1,10 @@
 [
  {
   "id": 2,
-  "name": "Calza Mujer Negra",
-  "description": "Calza Mujer Reebok",
+  "name": "Calza Mujer de prueba",
+  "description": "Calza Mujer prueba",
   "category": "Mujer",
-  "size": [
-   "xs",
-   "s",
-   "m",
-   "l",
-   "xl"
-  ],
-  "price": 10000,
+  "price": 100,
   "discount": 10,
   "colours": "#000000",
   "imagen": [
@@ -53,28 +46,6 @@
    "adidas.jpg",
    "adidas2.jpg",
    "adidas1.png"
-  ]
- },
- {
-  "id": 5,
-  "name": "Calza Adidas",
-  "description": "Calza Adidas 3/4 Climacool",
-  "category": "Mujer",
-  "size": [
-   "xs",
-   "s",
-   "m",
-   "l",
-   "xl"
-  ],
-  "price": "8000",
-  "discount": "5",
-  "colours": "#000000",
-  "imagen": [
-   "calzaNegraM1.jpg",
-   "calzaNegraM2.jpg",
-   "calzaNegraM3.jpg",
-   "calzaNegraM1.jpg"
   ]
  },
  {

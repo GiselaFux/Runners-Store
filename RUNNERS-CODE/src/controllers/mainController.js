@@ -15,9 +15,9 @@ mainController = {
     },
     
     productCart: function(req, res) {
-        /*let producto = products.find(producto => producto.id == req.params.id);
-        res.render("../views/products/productCart", {producto});*/
-        res.render(path.join(__dirname, '../views/products/productCart'))
+        let producto = products.find(producto => producto.id == req.params.id);
+        res.render("products/productCart", {producto});
+       // res.render(path.join(__dirname, '../views/products/productCart'))
     },
 
 };

@@ -5,23 +5,23 @@ module.exports= [
     body('nombre').notEmpty().withMessage('Por favor, colocar su nombre'),
     body('apellido').notEmpty().withMessage('Por favor,ingresar su apellido'),
     body('fechaNacimiento').notEmpty(),
-    body('DocumentoTipo').notEmpty(),
-    body('Ndocumento').notEmpty().withMessage('Ingrese el número sin puntos'),
+    body('documentoTipo').notEmpty(),
+    body('nDocumento').notEmpty().withMessage('Ingrese el número sin puntos'),
     body('genero').notEmpty(),
-    body('Email').notEmpty().withMessage('Ingresar formto válido'),
-    body('contraseña').notEmpty().isLength({min:5,max:8}).withMessage('ingresar contraseña adecuada'),
-    body('imagen').custom((value,{req})=>{
-        let file= req.file;
-        let acceptedExtensions =['jpg', '.png','.gif'];
-        if(!file){
-            throw new Error('Tienes que subir una imagen')
-        }else{
-            let fileExtension=path.extname(file.originalname);
-            if(!acceptedExtensions.includes(fileExtension)){
-                throw new Error('las extensiones de rchivo permitidas son ${acceptedExtensions.join(',')}');
-            }
-        }
-        return true;
-    })
+    body('email').notEmpty().withMessage('Ingresar formto válido'),
+    body('password').notEmpty().isLength({min:5,max:8}).withMessage('contraseña min 5 y max 8'),
+    //body('imagenUser').custom((value,{req})=>{
+     //   let file= req.file;
+    //    let acceptedExtensions =['jpg', '.png','.gif'];
+    //    if(!file){
+     //       throw new Error('Tienes que subir una imagen')
+    //    }else{
+     //       let fileExtension=path.extname(file.originalname);
+     //       if(!acceptedExtensions.includes(fileExtension)){
+     //           throw new Error('las extensiones de rchivo permitidas son ${acceptedExtensions.join(',')}');
+     //       }
+     //   }
+      //  return true;
+   // })
 ]
 

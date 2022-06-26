@@ -30,7 +30,7 @@ const productsController = {
 
     // Create - Form to create
     create: (req, res) => {
-        res.render('productCreate')
+        res.render('products/productCreate')
     },
 
 
@@ -59,7 +59,7 @@ const productsController = {
     // Update - Form to edit
     edit: (req, res) => {
         let producto = products.find(producto => producto.id == req.params.id);
-        res.render("productEdit", {producto});
+        res.render("products/productEdit", {producto});
     },
 
     // Update - Method to update

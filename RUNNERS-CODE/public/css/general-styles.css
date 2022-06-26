@@ -153,8 +153,8 @@ header {
     background-color: #e8e8e7;
     margin-top: 10px;
     padding-left: 0;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -194,7 +194,7 @@ header {
 .bars-login button:focus+ul {
     opacity: 1;
     pointer-events: all;
-    transform: translateY(0px);
+    transform: translateX(-50px);
 }
 
 

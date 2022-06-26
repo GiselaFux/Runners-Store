@@ -15,6 +15,6 @@ const upload = multer({ storage })
 const mainController = require('../controllers/mainController')
 router.get('/', mainController.index)
 
-router.get('/productCart', mainController.productCart)
+router.get('/productCart/:id', mainController.productCart)
 
 module.exports = router;

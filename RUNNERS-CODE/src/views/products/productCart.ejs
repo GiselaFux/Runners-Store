@@ -19,11 +19,11 @@
       <section class="productos-carrito">
         <article>
           <div class="carrito-c-producto">
-            <img src="/RUNNERS-CODE/public/img/<%=producto.id%>" width="15%">
+            <img src="/img/<%=producto.imagen[0]%>" class='carrito-img' width="15%">
             <div class="carrito-prod-detail">
-              <li type="none">Adidas Forum Low</li>
-              <li type="none">Talle: 38</li>
-              <li type="none"><a href="/products/3">EDITAR</a></li>
+              <li type="none">Producto: <%=producto.name%></li>
+              <li type="none">Talle: <%=producto.size%></li>
+              <li type="none"><a href="/products/<%=producto.id%>">EDITAR</a></li>
             </div>
 
             <p class="carrito-cant">CANTIDAD

@@ -47,6 +47,10 @@
     margin: 3%;
 }
 
+.carrito-img {
+    width: 20%;
+}
+
 .carrito-select {
     width: 70%;
     align-self: center;

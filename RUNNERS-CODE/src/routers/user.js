@@ -20,13 +20,14 @@ const upload = multer({ storage })
 
 const guestMiddleware = require("../middlewares/guestMiddleware");
 const autMiddleware = require("../middlewares/autMiddleware");
+const validations = require("../middlewares/validateRegisterMiddleware");
 
 /*formulariode registro*/
 
 router.get('/register', guestMiddleware, userController.register);
 
 /*procesar el registro*/
-router.post('/register', upload.single('single'), userController.processRegister);
+router.post('/register', upload.single('single'), validations, userController.processRegister);
 
 /*formulario login*/
 router.get('/login', guestMiddleware, userController.login);

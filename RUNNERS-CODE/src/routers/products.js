@@ -24,14 +24,15 @@ const upload = multer({ storage })
 router.get("/", productsController.indexProducts);
 
 /**creación de un producto y almacenado*/
-router.get("/create", productsController.create);
+router.get("/create", productsController.createView);
+
 router.post("/", upload.single('imagen'), productsController.store);
 
 /*detalle de un producto */
 router.get("/:id", productsController.detail);
 
 /*edición de un producto */
-router.get("/edit/:id", productsController.edit);
+router.get("/edit/:id", productsController.editView);
 router.put("/edit/:id", upload.any(), productsController.update);
 
 /*borrar un producto*/

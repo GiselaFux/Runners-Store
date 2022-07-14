@@ -1,11 +1,11 @@
 [
  {
   "id": 2,
-  "name": "Calza Mujer de prueba",
-  "description": "Calza Mujer prueba",
+  "name": "Calza Mujer de prueba 1 pato",
+  "description": "Calza Mujer prueba sdad",
   "category": "Mujer",
-  "price": 100,
-  "discount": 10,
+  "price": 10001,
+  "discount": 15,
   "colours": "#000000",
   "imagen": [
    "calzaNegraM1.jpg",

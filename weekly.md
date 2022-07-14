@@ -188,3 +188,6 @@ Creación de carpeta Sequelize y archivos de modelos
 - Configuración: se cambia nombre de database en "development".
 - Se agrega nro de puerto 3307.
 - Se agrega info en retro.md y weekly.md
+
+#### Patricio Contartese
+-Actualizacion del crud: Mostrar todos los productos , acceso al formulario de creacion y detalle de producto.

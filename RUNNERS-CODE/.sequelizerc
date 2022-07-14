@@ -2,8 +2,9 @@
 const path = require('path');
 //archivo de configuracion de sequelize-cli para migrations
 module.exports = {
-  'config': path.resolve('app','config', 'database.js'),
-  'models-path': path.resolve('app','models'),
-  'seeders-path': path.resolve('app','seeders'),
-  'migrations-path': path.resolve('app','database','migrations')
-}
+  config: path.resolve('database/config', 'config.js'),
+  'models-path': path.resolve('./database/models'),
+  'seeders-path': path.resolve('./database/seeders'),
+  'migrations-path': path.resolve('./database/migrations'),
+ }
+ 

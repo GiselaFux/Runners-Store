@@ -137,11 +137,12 @@ Reunión para trabajar sobre lo que falta.
 #### Julieta Paredes - Gisela Fux - Federico Correa
 - Nos reunimos para terminar el edit y delete.
 
+
 ## _SPRINT 5_
 
 
-### Gisela Fux   29-05-22
-
+### 29 de Mayo de 2022
+#### Gisela Fux  
 Agregó Middleware de error (404)en app.js que atraviesa toda la app.
 Instaló express-validator 
 Archivo de user.js en carpeta de Routers, con sus requerimiento, sus rutas, Multer, declaración de las rutas con sus app.use en app.js.
@@ -149,6 +150,35 @@ Corrección de campos en user.json
 Agregó la carpeta Models con su archivo user.js con su funcionalidad create, delete. Exportó modulo y requerimiento en userController.
 Creación carpeta Middleware para validaciones de registro.
 
+
+## _SPRINT 6_
+
+
+### 04 de Julio de 2022
+#### Reunión grupal  
+En la reunión Gise muestra en lo que estuvo trabajando:
+- Diagrama de base de datos.
+- Inicio de instalación y configuración de sequelize en proyecto.
+
+### 06 de Julio de 2022
+#### Reunión grupal  
+Armado de Diagrama de Entidades y Relaciones (DER). Script de estructura de la base de datos: sentencias de SQL para crear las tablas y sus relaciones.
+
+### 12 de Julio de 2022
+#### Reunión grupal 
+Creación de carpeta Sequelize y archivos de modelos
+
+### 14 de Julio de 2022
+#### Julieta Paredes
+- Finalización de configuración de sequelize y archivos de modelo.
+- Se cambian nombres de modelos a singular.
+- Se corrigen types de DataTypes en algunos modelos.
+- Se cambian nombres de las variables para coincidir con el nombre de los archivos.
+- Se agregan y eliminan columnas en modelos segun correspondan con la base de datos actualizada.
+- Se agregan columnas timestamps en archivos de modelo que correspondan.
+- Configuración: se cambia nombre de database en "development".
+- Se agrega nro de puerto 3307.
+- Se agrega info en retro.md y weekly.md
 
 
 

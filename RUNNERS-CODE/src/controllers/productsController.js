@@ -8,6 +8,7 @@ const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 /*constante de objeto literal donde ponemos la funcionalidad*/
 
 
+
 const productsController = {
 
     // Root - Show all products
@@ -30,12 +31,13 @@ const productsController = {
 
     // Create - Form to create
     create: (req, res) => {
-        res.render('products/productCreate')
+        res.render('products/create')
     },
 
 
     // Create -  Method to store
     store: (req, res) => {
+        
         let imagen;
         if (req.file != undefined) {
             imagen = req.file.filename;

@@ -80,5 +80,23 @@
 
 * Comunicar cosas o dudas a último momento.
 
+## _SPRINT 6_
+### Comenzar a hacer:
+
+Organizar el Sprint desde un principio.
+Reuniones más cortas y más periodicas.
+Organizarnos más con los temas que toma cada uno.
+
+### Continuar haciendo:
+
+Mantener buena comunicación.
+Tener buena voluntad grupal.
+Ser colaborativos.
+Tener iniciativa para solucionar inconvenietes
+
+### Hacer menos:
 
 
+### Dejar de hacer:
+
+Comunicar cosas o dudas a último momento.

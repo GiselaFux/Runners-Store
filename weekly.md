@@ -29,6 +29,7 @@ Instaló el ejs, armado de carpetas que faltaban y archivo weekly.
 ### 06 de Mayo de 2022
 
 ### Gisela Fux
+
 Realiza los partials y los inserta en los archivos .ejs
 
 ### 07 de Mayo de 2022
@@ -71,21 +72,19 @@ Realiza los partials y los inserta en los archivos .ejs
 
 -Actualizo pagina de edicion de producto para el administrador
 
-
-
-
 ## _SPRINT 4_
 
 #### Julieta Paredes
- Trabaja sobre modificaciones en la página principal.Carruseles( tres tipos diferentes)
+
+Trabaja sobre modificaciones en la página principal.Carruseles( tres tipos diferentes)
 
 ### 16 de Mayo de 2022
 
 ### Gisela Fux
 
-Creación de carpeta JSON dataBase con sus archivos: 
-•	Products.json ( con su array de objetos)
-•	Users.json ( con su array de objetos)
+Creación de carpeta JSON dataBase con sus archivos:
+• Products.json ( con su array de objetos)
+• Users.json ( con su array de objetos)
 
 En la carpeta Controllers:
 Agregó el archivo productsController;
@@ -101,31 +100,40 @@ Requerió y definió la variable que será middleware.
 Agregó en los formularios enctype, para qué lea distintos archivos
 
 ### 20 de Mayo de 2022
+
 ### Gisela Fux
+
 Trabaja sobre archivo nuevo para todos los productos y realiza su hoja css.
 
 ### 22 de Mayo de 2022
-### Gisela Fux   
+
+### Gisela Fux
+
 #### Julieta Paredes
 
 Reunión con Julieta Paredes para solucionar tema de rutas.
 Quedó funcionando.
 
 ### 25 de Mayo de 2022
+
 #### Ezequiel Brunori
+
 - Realizó página de productos y Css.
-- Modificó archivo Header para el correcto funcionamiento del css. 
+- Modificó archivo Header para el correcto funcionamiento del css.
 - Realizó el método de creación, edición y detalle de producto.
 
 ### Gisela Fux #### Ezequiel Brunori
-Reunión  Ezequiel hizo otra página de productos  con su css .Trabajamos sobre el Productscontroller
 
-#### Julieta Paredes ### Patricio Contartese ### Gisela Fux 
+Reunión Ezequiel hizo otra página de productos con su css .Trabajamos sobre el Productscontroller
+
+#### Julieta Paredes ### Patricio Contartese ### Gisela Fux
+
 Reunión para trabajar sobre lo que falta.
 
-
 ### 26 de Mayo de 2022
+
 #### Julieta Paredes
+
 - Se agrega ruta en controller carrito
 - Se cambia ruta en partial de header (en el icono de carrito)
 - Se cambia ruta del boton editar en products.ejs.
@@ -135,25 +143,27 @@ Reunión para trabajar sobre lo que falta.
 - Se agrega ruta productCart al mainController, y se agrega ruta al main.js
 
 #### Julieta Paredes - Gisela Fux - Federico Correa
+
 - Nos reunimos para terminar el edit y delete.
 
 ## _SPRINT 5_
 
-
-### Gisela Fux   29-05-22
+### Gisela Fux 29-05-22
 
 Agregó Middleware de error (404)en app.js que atraviesa toda la app.
-Instaló express-validator 
+Instaló express-validator
 Archivo de user.js en carpeta de Routers, con sus requerimiento, sus rutas, Multer, declaración de las rutas con sus app.use en app.js.
 Corrección de campos en user.json
 Agregó la carpeta Models con su archivo user.js con su funcionalidad create, delete. Exportó modulo y requerimiento en userController.
 Creación carpeta Middleware para validaciones de registro.
 
+## _SPRINT 6_
 
+### En grupo 06-07-22
 
+Armado de Diagrama de Entidades y Relaciones (DER).
+Script de estructura de la base de datos: sentencias de SQL para crear las tablas y sus relaciones.
 
+### En grupo 12-07-22
 
-
-
-
-
+Creación de carpeta Sequelize y archivos de modelos

@@ -1,26 +1,37 @@
 const path = require('path');
 const fs = require("fs");
-
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
 /*marca el camino al json donde estan los productos y la conversión de json para js)*/
-const productsFilePath = path.join(__dirname, "../database/products.json");
-const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+//const productsFilePath = path.join(__dirname, "../database/products.json");
+//const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 /*constante de objeto literal donde ponemos la funcionalidad*/
-const readProducts = () => {
-    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-    return products;
-}
+//const readProducts = () => {
+    //const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+    //return products;
+//}
+
 
 
 const productsController = {
+    'list': (req, res) => {
+    db.Products.findAll({
+        include: ['category_id']
+    })
+        .then(products => {
+            res.render('products/products', {products})
+        })
+},
 
     // Root - Show all products
     indexProducts: (req, res) => {
-        let productMujer = products.filter((product) => product.category == "Mujer");
-        let productHombre = products.filter((product) => product.category == "Hombre");
-        let productAccesorios = products.filter((product) => product.category == "Accesorios");
-        let productZapatillas = products.filter((product) => product.category == "Zapatillas");
-        res.render('products/products', { products, productMujer, productHombre, productZapatillas, productAccesorios, toThousand })
+        let productMujer = db.Products.filter((product) => product.category == "Mujer");
+        let productHombre = db.Products.filter((product) => product.category == "Hombre");
+        let productAccesorios = db.Products.filter((product) => product.category == "Accesorios");
+        let productZapatillas = db.Products.filter((product) => product.category == "Zapatillas");
+        res.render('products/products', { Products, productMujer, productHombre, productZapatillas, productAccesorios, toThousand })
         //console.log(productMujer)
     },
 
@@ -40,7 +51,7 @@ const productsController = {
 
     // Create -  Method to store
     store: (req, res) => {
-        const products = readProducts()
+        
         let imagen;
         if (req.file != undefined) {
             imagen = req.file.filename;
@@ -57,7 +68,7 @@ const productsController = {
         console.log(newProduct)
         products.push(newProduct);
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-        res.redirect('products/products');
+        res.redirect('/products');
     },
 
 
@@ -65,14 +76,13 @@ const productsController = {
     editView: (req, res) => {
         const id = req.params.id
         let producto = products.find(producto => producto.id == req.params.id);
-        const product = readProducts()
         res.render("products/productEdit", {producto});
     },
 
     // Update - Method to update
     update: (req, res) => {
         let idProduct = req.params.id;
-        const product = readProducts()
+         const product = readProducts()
         let productToEdit = products.find(product => product.id == idProduct)
         let imagen;
         if (req.files[0] != undefined) {
@@ -96,7 +106,7 @@ const productsController = {
             return product
         })
         fs.writeFileSync(productsFilePath, JSON.stringify(newProduct, null, ' '))
-        res.redirect('/products/${id}');    
+        res.redirect('/products');    
     },
 
 

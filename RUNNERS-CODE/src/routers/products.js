@@ -21,7 +21,7 @@ const upload = multer({ storage })
 
 
 //todos los productos
-router.get("/", productsController.indexProducts);
+router.get("/", productsController.list);
 
 /**creación de un producto y almacenado*/
 router.get("/create", productsController.createView);

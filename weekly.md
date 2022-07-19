@@ -191,3 +191,7 @@ Creación de carpeta Sequelize y archivos de modelos
 
 #### Patricio Contartese
 -Actualizacion del crud: Mostrar todos los productos , acceso al formulario de creacion y detalle de producto.
+
+### 18 de Julio de 2022
+#### Patricio Contartese
+-Vuelta al commit anterior, se usa el command "reset".

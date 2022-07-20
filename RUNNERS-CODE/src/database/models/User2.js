@@ -1,44 +1,43 @@
-const { DataTypes } = require("sequelize/types");
 
 module.exports= (sequelize, dataTypes) => {
 
   let alias='Users';
   let cols= {
     id:{
-    type: DataTypes.INTEGER,
+    type: dataTypes.INTEGER,
     primaryKey:true,
     autoIncrement:true
     },
     nombre:{
-    type: DataTypes.STRING,
+    type: dataTypes.STRING,
     allowNull:false
     },
     apellido:{
-    type: DataTypes.STRING,
+    type: dataTypes.STRING,
     allowNull:false
     },
     fechaNacimiento:{
-    type: DataTypes.DATE
+    type: dataTypes.DATE
     },
     documentoTipo:{
-    type: DataTypes.STRING
+    type: dataTypes.STRING
     },
     nDocumento:{
-    type: DataTypes.BIGINT
+    type: dataTypes.BIGINT
     },
     email:{
-    type: DataTypes.STRING,
+    type: dataTypes.STRING,
     allowNull:false
     },
     password:{
-    type: DataTypes.STRING,
+    type: dataTypes.STRING,
     allowNull:false
     },
     genero:{
-    type: DataTypes.STRING
+    type: dataTypes.STRING
     },
     categoryUsu_id: {
-    type: DataTypes.INTEGER
+    type: dataTypes.INTEGER
     }
   };
   let config ={

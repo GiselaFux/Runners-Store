@@ -1,23 +1,23 @@
-const { DataTypes } = require("sequelize/types");
+
 
 module.exports=(sequelize, dataTypes)=>{
     let alias='Colours';
     let cols={
         id: {
-            type: DataTypes.INTEGER,
+            type: dataTypes.INTEGER,
             primaryKey:true,
             autoIncrement: true,
             allowNull:false
         },
-        colours:{ 
-            type: DataTypes.STRING,
-            allowNull:false
-        },
         created_at:{
-            type: DataTypes.DATE,
+            type: dataTypes.DATE,
         },
         updated_at:{
-            type: DataTypes.DATE,
+            type: dataTypes.DATE,
+        },
+        colour:{ 
+            type: dataTypes.STRING,
+            allowNull:false
         },
     };
     let config = {
@@ -32,9 +32,9 @@ module.exports=(sequelize, dataTypes)=>{
     // Products
         Colour.belongsToMany(models.Products,{
             as:"product",
-            through:"ColoursProd",
-            foreignKey:"colours_id",
-            otherKey:"product_id",
+            through:"coloursprod",
+            foreignKey:"colour_id",
+            otherKey:"prod_id",
             timestamps:false
         });
     }

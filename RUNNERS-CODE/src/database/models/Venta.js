@@ -1,19 +1,18 @@
-const { DataTypes } = require("sequelize/types");
 
 module.exports = (sequelize, dataTypes) => {
     let alias = 'Ventas';
     let cols = {
         id:{
-            type: DataTypes.INTEGER,
+            type: dataTypes.INTEGER,
             primaryKey:true,
             autoIncrement:true,
             allowNull:false
         },
         release_date:{
-           type: DataTypes.DATE
+           type: dataTypes.DATE
         },
         total:{
-            type: DataTypes.DECIMAL(10,2)
+            type: dataTypes.DECIMAL(10,2)
         }
     };
     let config= {

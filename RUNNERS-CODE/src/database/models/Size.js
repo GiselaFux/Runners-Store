@@ -1,38 +1,42 @@
-const { DataTypes } = require("sequelize/types");
+
 
 module.exports=(sequelize, dataTypes)=>{
     let alias='Sizes';
     let cols= {
         id:{
-            type: DataTypes.INTEGER,
+            type: dataTypes.INTEGER,
+            primaryKey:true,
             autoIncrement:true,
             allowfull:false
         },
-        size:{
-            type: DataTypes.STRING,
-        },
-        size_description:{
-            type: DataTypes.STRING,
-        },
         created_at:{
-            type: DataTypes.DATE,
+            type: dataTypes.DATE,
         },
         updated_at:{
-            type: DataTypes.DATE,
+            type: dataTypes.DATE,
+        },
+        size:{
+            type: dataTypes.STRING,
+        },
+        size_description:{
+            type: dataTypes.STRING,
         },
 
     };
 
     let config={
         tableName:'sizes',
+        timestamps: false
     }
     const Size = sequelize.define(alias,cols,config);
-    Size.belongsToMany(models.Products,{
-        as:"product",
-        through:"SizesProd",
-        foreignKey:"size_id",
-        otherKey:"product_id",
-        timestamps:false
-    })
+    Size.associate =(models) =>{
+        Size.belongsToMany(models.Products,{
+            as:"product",
+            through:"sizesprod",
+            foreignKey:"sizes_id",
+            otherKey:"prod_id",
+            timestamps:false
+        })
+    }
     return Size;
 }

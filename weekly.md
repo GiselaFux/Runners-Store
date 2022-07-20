@@ -146,39 +146,46 @@ Reunión para trabajar sobre lo que falta.
 
 - Nos reunimos para terminar el edit y delete.
 
-
 ## _SPRINT 5_
 
-
 ### 29 de Mayo de 2022
-#### Gisela Fux  
+
+#### Gisela Fux
+
 Agregó Middleware de error (404)en app.js que atraviesa toda la app.
-Instaló express-validator 
+Instaló express-validator
 Archivo de user.js en carpeta de Routers, con sus requerimiento, sus rutas, Multer, declaración de las rutas con sus app.use en app.js.
 Corrección de campos en user.json
 Agregó la carpeta Models con su archivo user.js con su funcionalidad create, delete. Exportó modulo y requerimiento en userController.
 Creación carpeta Middleware para validaciones de registro.
 
-
 ## _SPRINT 6_
 
-
 ### 04 de Julio de 2022
-#### Reunión grupal  
+
+#### Reunión grupal
+
 En la reunión Gise muestra en lo que estuvo trabajando:
+
 - Diagrama de base de datos.
 - Inicio de instalación y configuración de sequelize en proyecto.
 
 ### 06 de Julio de 2022
-#### Reunión grupal  
+
+#### Reunión grupal
+
 Armado de Diagrama de Entidades y Relaciones (DER). Script de estructura de la base de datos: sentencias de SQL para crear las tablas y sus relaciones.
 
 ### 12 de Julio de 2022
-#### Reunión grupal 
+
+#### Reunión grupal
+
 Creación de carpeta Sequelize y archivos de modelos
 
 ### 14 de Julio de 2022
+
 #### Julieta Paredes
+
 - Finalización de configuración de sequelize y archivos de modelo.
 - Se cambian nombres de modelos a singular.
 - Se corrigen types de DataTypes en algunos modelos.
@@ -190,8 +197,15 @@ Creación de carpeta Sequelize y archivos de modelos
 - Se agrega info en retro.md y weekly.md
 
 #### Patricio Contartese
+
 -Actualizacion del crud: Mostrar todos los productos , acceso al formulario de creacion y detalle de producto.
 
 ### 18 de Julio de 2022
+
 #### Patricio Contartese
+
 -Vuelta al commit anterior, se usa el command "reset".
+
+#### Ezequiel Brunori
+
+-Continuamos trabajando en la Actualizacion del crud

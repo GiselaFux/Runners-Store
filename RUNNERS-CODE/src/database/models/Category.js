@@ -1,16 +1,15 @@
-const { DataTypes } = require("sequelize/types");
 
 module.exports= (sequelize, dataTypes)=>{
     let alias="Categories";
     let cols={
         id:{
-            type: DataTypes.INTEGER,
+            type: dataTypes.INTEGER,
             primaryKey:true,
             autoIncrement:true,
             allowNull: false,
         },
         category_description:{
-            type: DataTypes.STRING
+            type: dataTypes.STRING
         }
     };
 

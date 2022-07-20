@@ -1,20 +1,19 @@
-const { DataTypes } = require("sequelize/types");
 
 module.exports=(sequelize, dataTypes)=>{
     let alias='Medios_Pago';
     let cols={
         id:{
-            type: DataTypes.INTEGER,
+            type: dataTypes.INTEGER,
             primaryKey:true,
             autoIncrement:true,
             allowNull:false
         },
         metodoDePago:{
-            type: DataTypes.STRING,
+            type: dataTypes.STRING,
             allowNull:false
         },
         metodoDePagoDesc:{
-            type: DataTypes.INTEGER
+            type: dataTypes.INTEGER
         },
     };
     let config={

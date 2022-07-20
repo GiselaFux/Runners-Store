@@ -1,21 +1,24 @@
-const { DataTypes } = require("sequelize/types");
+
 
 module.exports=(sequelize, dataTypes)=>{
     let alias='ProductImagen';
     let cols={
         id:{
-            type: DataTypes.INTEGER,
+            type: dataTypes.INTEGER,
         primaryKey:true,
         autoIncrement:true,
         allowNull:false,
         },
-        imagen:{
-            type: DataTypes.STRING
+        image:{
+            type: dataTypes.STRING
+        },
+        product_id:{
+            type: dataTypes.INTEGER
         }
     };
 
     let config={
-        tableName:'Products-Imagen',
+        tableName:'images',
         timestamps:false
     }
 
@@ -23,8 +26,8 @@ module.exports=(sequelize, dataTypes)=>{
     ProductImagen.associate = (models) => {
         // Products
         ProductImagen.belongsTo(models.Products, {
-            as: "product",
-            foreignKey: "product_id",
+           as: "product",
+           foreignKey: "product_id",
         });
     }
     return ProductImagen;

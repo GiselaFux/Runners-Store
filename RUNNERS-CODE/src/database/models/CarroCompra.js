@@ -1,33 +1,31 @@
-const { DataTypes } = require("sequelize/types");
-
 module.exports=(sequelize, dataTypes) => {
     let alias="CarroCompras";
     let cols = {
         id:{
-            type: DataTypes.INTEGER,
+            type: dataTypes.INTEGER,
             primaryKey:true,
             autoIncrement:true,
             allowNull: false
         },
         created_at:{
-            type: DataTypes.DATE,
+            type: dataTypes.DATE,
         },
         updated_at:{
-            type: DataTypes.DATE,
+            type: dataTypes.DATE,
         },
         /*productsAmount:{
             type: dataTypes.INTEGER
         }*/
         precioTotal:{
-            type: DataTypes.INTEGER,
+            type: dataTypes.INTEGER,
             allowNull: false
         },
         cantidadProducts:{
-            type: DataTypes.INTEGER,
+            type: dataTypes.INTEGER,
             allowNull: false
         },
         usuario_id:{
-            type: DataTypes.INTEGER,
+            type: dataTypes.INTEGER,
             allowNull: false
         }
     };

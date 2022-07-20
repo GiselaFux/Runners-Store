@@ -6,7 +6,7 @@
     <body>
         <%- include('../partials/header') %>
             <main>
-                <form action="/products/create" method="POST" class="create-product" enctype="multipart/form-data">
+                <form action="/products" method="POST" class="create-product" enctype="multipart/form-data">
                     <div class="create-control-formulario">
                         <label for="nombre" class="create-label">Nombre producto: </label>
                         <input type="text" name="name" class="create-control" required>
@@ -22,42 +22,33 @@
                     <div class="create-control-formulario">
                         <label for="categoria" style="margin-bottom: 10px; display: block;" class="create-label">Categoría producto:</label>
                         <div>
-                            <input type="radio" name="category" value="Mujer"><label style="margin-left: 10px;"> Mujer</label>
+                            <input type="radio" name="category" value="1"><label style="margin-left: 10px;"> Mujer</label>
                         </div>
                         <div>
-                            <input type="radio" name="category" value="Hombre"><label style="margin-left: 10px;"> Hombre</label>
+                            <input type="radio" name="category" value="2"><label style="margin-left: 10px;"> Hombre</label>
                         </div>
                         <div>
-                            <input type="radio" name="category" value="Zapatillas"><label style="margin-left: 10px;"> Zapatillas</label>
+                            <input type="radio" name="category" value="3"><label style="margin-left: 10px;"> Zapatillas</label>
                         </div>
                         <div>
-                            <input type="radio" name="category" value="Accesorios"><label style="margin-left: 10px;"> Accesorios</label>
-                        </div>
-                        <div>
-                            <input type="radio" name="category" value="Marcas"><label style="margin-left: 10px;"> Marcas</label>
+                            <input type="radio" name="category" value="4"><label style="margin-left: 10px;"> Accesorios</label>
                         </div>
                     </div>
                     <div class="create-control-formulario">
-                        <label for="color-product" class="create-label">Color del producto:</label>
-                        <input type="color" name="colours">
+                        <select name="colours" id="" required >
+                            <option value="" class="create-label" disabled selected>- select color - </option>
+                            <% allColours.forEach(colour => { %>
+                            <option value="<%= colour.id %>"><%= colour.colour %></option>
+                            <% }); %>
+                        </select>
                     </div>
                     <div class="create-control-formulario">
-                        <label for="talle" class="create-label">Talle producto: </label>
-                        <select name="size">                
-                      <option>xs</option>                
-                      <option>s</option>                
-                      <option>m</option>                
-                      <option>l</option>                
-                      <option>xl</option>
-                      <option>36</option>                
-                      <option>37</option>                
-                      <option>38</option>                
-                      <option>39</option>                
-                      <option>40</option>
-                      <option>41</option>                
-                      <option>42</option>                
-                      <option>43</option>                                                 
-                    </select>
+                        <select name="sizes" id="" required >
+                            <option value="" class="create-label" disabled selected>- select talle - </option>
+                            <% allSizes.forEach(size => { %>
+                            <option value="<%= size.id %>"><%= size.size %></option>
+                            <% }); %>
+                        </select>
                     </div>
                     <div class="create-control-formulario">
                         <label for="precio-product" class="create-label">Precio del producto:</label>

@@ -8,50 +8,32 @@
             <main>
                 <section class="detail-main-picture">
                     <div>
-                        <img src="/img/<%= product.imagen[0] %>" class="detail-product_img">
+                        <img src="/img/<%= product.productImagenes[0].image %>" class="detail-product_img">
                     </div>
                 </section>
                 <section>
                     <ul class="detail-galeria">
-                        <% product.imagen.forEach((image,i) => {
+                        <% product.productImagenes.forEach((image,i) => {
                         if (i != 0) { %>
                             <li>
-                                <a href="#<%=i %>"><img src="/img/<%= image %>"></a>
+                                <a href="#<%=i %>"><img src="/img/<%= image.image %>"></a>
                             </li>
                             <% }}) %>
                     </ul>
-                    <% product.imagen.forEach((image,i) => {
+                    <% product.productImagenes.forEach((image,i) => {
                         if (i != 0) { %>
                         <div class="detail-modal" id=<%=i %>>
                             <h3>Foto1</h3>
                             <div class="detail-imagen">
-                                <a href="#<%=( i - 1) <=0 ? product.imagen.length - 1 : i - 1 %>" >&#60;</a>
-                                <a href="#<%=( i + 1)> (product.imagen.length) - 1? 1 : i + 1 %>" ><img src="/img/<%= image %>" class="detail-imagen-dos"></a>
-                                <a href="#<%=( i + 1)> (product.imagen.length) - 1? 1 : i + 1 %>" >></a>
+                                <a href="#<%=( i - 1) <=0 ? product.productImagenes.length - 1 : i - 1 %>" >&#60;</a>
+                                <a href="#<%=( i + 1)> (product.productImagenes.length) - 1? 1 : i + 1 %>" ><img src="/img/<%= image.image %>" class="detail-imagen-dos"></a>
+                                <a href="#<%=( i + 1)> (product.productImagenes.length) - 1? 1 : i + 1 %>" >></a>
 
                             </div>
                             <a class="detail-cerrar" href="">X</a>
                         </div>
                         <% }}) %>
-                            <!--                    <div class="detail-modal" id="2">
-                        <h3>Foto2</h3>
-                        <div class="detail-imagen">
-                            <a href="#1">&#60;</a>
-                            <a href="#3"><img src="/img/<%= product.imagen[2] %>" class="detail-imagen-dos"></a>
-                            <a href="#3">></a>
-                        </div>
-                        <a class="detail-cerrar" href="">X</a>
-                    </div>
-                    <div class="detail-modal" id="3">
-                        <h3>Foto3</h3>
-                        <div class="detail-imagen">
-                            <a href="#2">&#60;</a>
-                            <a href="#1"><img src="/img/<%= product.imagen[3] %>" class="detail-imagen-dos"></a>
-                            <a href="#1">></a>
-                        </div>
-                        <a class="detail-cerrar" href="">X</a>
-                    </div>
-                    -->
+
 
                 </section>
                 <section>
@@ -74,20 +56,18 @@
                     <div class="detail-color-head">
                         <form action="#" method="get">
                             <h4 class="detail-h4">Color:</h4>
-                            <select class="detail-color" name="color">
-                            <option value="#fdfefe">Blanco</option>
-                            <option value="#17202a">Negro</option>
-                            <option value=" #1b4f72">Azul</option>
+                            <select class="detail-color" name="colour">
+                                <% product.colours.forEach(colour => { %>
+                                <option value="<%= colour.id %>"><%= colour.colour %></option>
+                                <% }); %>
                         </select>
                         </form>
                         <form action="#" method="get">
                             <h4 class="detail-h4">Talle:</h4>
                             <select class="detail-talle" name="talle">
-                            <option value="38">38</option>
-                            <option value="40">40</option>
-                            <option value="41">41</option>
-                            <option value="42">42</option>
-                            <option value="43">43</option>
+                            <% product.sizes.forEach(size => { %>
+                            <option value="<%= size.id %>"><%= size.size %></option>
+                            <% }); %>
                         </select>
                         </form>
                         <form action="#" method="get">

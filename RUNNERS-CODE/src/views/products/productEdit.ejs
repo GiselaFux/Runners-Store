@@ -9,28 +9,27 @@
   <%- include('../partials/header') %>
 
   <main>
-    <form action="/products/edit/<%=producto.id%>?_method=PUT" method="POST" enctype="multipart/form-data" class="edit-product">
+    <form action="/products/edit/<%=product.id%>?_method=PUT" method="POST" enctype="multipart/form-data" class="edit-product">
 
       <div class="create-control-formulario">
         <label for="CambioNombre">Cambio de nombre</label>
-        <input type="text" name="name" id="name" value="<%= producto.name %>" placeholder="Nombre nuevo del producto">
+        <input type="text" name="name" id="name" value="<%= product.name %>" placeholder="Nombre nuevo del producto">
       </div>
       <div class="cambios">
         <label for="CambioDesc">Cambio de descripcion</label>
-        <input type="text" name="description" id="description" value="<%= producto.description %>" placeholder="Descripcion nueva del producto" style="width:400px">
+        <input type="text" name="description" id="description" value="<%= product.description %>" placeholder="Descripcion nueva del producto" style="width:400px">
       </div>
       <div class="cambios">
         <label for="CambioImagen">Cambio de imagen</label>
         <input type="file" name="imagen" accept=".png, .jpeg, .jpg" multiple>
       </div>
+      <label for="CambioCategoria">Categorias disponibles</label>
       <select name="category" id="category">
-        <option value="Mujer">Mujer</option>
-        <option value="Hombre">Hombre</option>
-        <option value="Zapatillas">Zapatillas</option>
-        <option value="Accesorios">Accesorios</option>
-        <option value="Marcas">Marcas</option>
-        <option value=""></option>
+        <% allCategories.forEach(category => { %>
+          <option value="<%= category.id %>" <% if (product.category.id == category.id) { %><%= 'selected' %><% }; %>><%= category.category_description %></option>
+          <% }); %>
       </select>
+
       <!--<div class="cambios">
         <label for="CambioCategoria">Cambio de categoria</label>
         <div>
@@ -51,31 +50,27 @@
       </div> -->
       <div class="cambios">
         <label for="CambioTalles">Talles disponibles</label>
-        <input type="checkbox" name="size" value="xs">XS
-        <input type="checkbox" name="size" value="s">S
-        <input type="checkbox" name="size" value="m">M
-        <input type="checkbox" name="size" value="l">L
-        <input type="checkbox" name="size" value="xl">XL
-        <input type="checkbox" name="size" value="36">36
-        <input type="checkbox" name="size" value="37">37
-        <input type="checkbox" name="size" value="38">38
-        <input type="checkbox" name="size" value="39">39
-        <input type="checkbox" name="size" value="40">40
-        <input type="checkbox" name="size" value="41">41
-        <input type="checkbox" name="size" value="42">42
-        <input type="checkbox" name="size" value="43">43
+        <select class="detail-talle" name="talle">
+        <% allSizes.forEach(size => { %>
+          <option value="<%= size.id %>" <% if (product.sizes.id == size.id) { %><%= 'selected' %><% }; %>><%= size.size %></option>
+          <% }); %>
+        </select>
       </div>
       <div class="cambios">
         <label for="CambioPrecio">Cambio de precio</label>
-        <input type="number" name="price" id="price" value="<%= producto.price %>" placeholder="Precio nuevo del producto">
+        <input type="number" name="price" id="price" value="<%= product.price %>" placeholder="Precio nuevo del producto">
       </div>
       <div class="cambios">
         <label for="CambioPrecio">Descuento</label>
-        <input type="number" name="discount" id="discount" value="<%= producto.discount %>" placeholder="Descuento del producto">
+        <input type="number" name="discount" id="discount" value="<%= product.discount %>" placeholder="Descuento del producto">
       </div>
       <div class="cambios">
         <label>Color</label>
-        <input type="color" name="colours" value="<%= producto.colours %>">
+        <select class="detail-color" name="colour">
+        <% allColours.forEach(colour => { %>
+          <option value="<%= colour.id %>" <% if (product.colours.id == colour.id) { %><%= 'selected' %><% }; %>><%= colour.colour %></option>
+          <% }); %>
+        </select>
       </div>
       <div>
         <button type="submit">Editar producto</button>

@@ -1,18 +1,19 @@
-const { DataTypes } = require("sequelize/types");
+
 
 module.exports=(sequelize,dataTypes)=>{
     let alias='Products';
     let cols={
         id:{
-            type: DataTypes.INTEGER,
+            type: dataTypes.INTEGER,
             primaryKey:true,
             autoIncrement:true
         },
+
         name:{
-            type: DataTypes.STRING
+            type: dataTypes.STRING
         },
         description:{
-            type: DataTypes.STRING
+            type: dataTypes.STRING
         },
         /*category:{
             type:dataTypes.STRING
@@ -22,33 +23,29 @@ module.exports=(sequelize,dataTypes)=>{
             Type:dataTypes.STRING
         },*/
         price:{
-            type: DataTypes.DECIMAL(10, 2)
+            type: dataTypes.DECIMAL(10, 2)
         },
         discount:{
-            type: DataTypes.INTEGER
+            type: dataTypes.INTEGER
         },
         category_id:{
-            type: DataTypes.INTEGER
+            type: dataTypes.INTEGER
         },
         /*colours:{
             type:dataTypes.STRING
         }*/
-        created_at:{
-            type: DataTypes.DATE
-        },
-        updated_at:{
-            type: DataTypes.DATE
-        },
+
         
     };
     let config= {
         tableName:"products",
+        timestamps: false
     }
     const Product= sequelize.define(alias,cols,config);
     Product.associate = (models) => {
         // Products_Imagen
-        Product.hasMany(models.Products_Imagen, {
-          as: "products-Imagen",
+        Product.hasMany(models.ProductImagen, {
+          as: "productImagenes",
           foreignKey: "product_id",
         });
         //Categories
@@ -59,8 +56,8 @@ module.exports=(sequelize,dataTypes)=>{
         //Colours
         Product.belongsToMany(models.Colours,{
             as:"colours",
-            through:"ColoursProd",
-            foreignKey:"product_id",
+            through:"coloursprod",
+            foreignKey:"prod_id",
             otherKey:"colour_id",
             timestamps:false
         });
@@ -70,11 +67,11 @@ module.exports=(sequelize,dataTypes)=>{
             foreignKey:"carroCompras_id"
         });
         //Size
-        Product.belongsToMany(models.Size,{
-            as:"size",
-            through:"SizesProd",
-            foreignKey:"product_id",
-            otherKey:"size_id",
+        Product.belongsToMany(models.Sizes,{
+            as:"sizes",
+            through:"sizesprod",
+            foreignKey:"prod_id",
+            otherKey:"sizes_id",
             timestamps:false
         })
     };

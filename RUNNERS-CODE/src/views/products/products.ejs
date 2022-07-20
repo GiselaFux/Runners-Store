@@ -24,7 +24,11 @@
           <section class="product-box">
             <a href="/products/<%= productMujer.id %>">
               <figure class="product-box_image">
-                <img src="/img/<%= productMujer.imagen[0] %>" alt="imagen de producto">
+                <% if (productMujer.productImagenes.length != 0) { %>
+                  <img src="/img/<%= productMujer.productImagenes[0].image %>" alt="imagen de producto">
+                      <% } else { %>
+                        <img src="/img/default-avatar.jpg" alt="imagen de producto">
+                      <% } %>             
               </figure>
               <article class="product-box_data">
                 <h2>$
@@ -61,7 +65,11 @@
           <section class="product-box">
             <a href="/products/<%= productHombre.id %>">
               <figure class="product-box_image">
-                <img src="/img/<%= productHombre.imagen[0] %>" alt="imagen de producto">
+                <% if (productHombre.productImagenes.length != 0) { %>
+                  <img src="/img/<%= productHombre.productImagenes[0].image %>" alt="imagen de producto">
+                  <% } else { %>
+                    <img src="/img/default-avatar.jpg" alt="imagen de producto">
+                  <% } %>
               </figure>
               <article class="product-box_data">
                 <h2>$
@@ -98,7 +106,11 @@
           <section class="product-box">
             <a href="/products/<%= productZapatillas.id %>">
               <figure class="product-box_image">
-                <img src="/img/<%= productZapatillas.imagen[0] %>" alt="imagen de producto">
+                <% if (productZapatillas.productImagenes.length != 0) { %>
+                  <img src="/img/<%= productZapatillas.productImagenes[0].image %>" alt="imagen de producto">
+                  <% } else { %>
+                    <img src="/img/default-avatar.jpg" alt="imagen de producto">
+                  <% } %>
               </figure>
               <article class="product-box_data">
                 <h2>$
@@ -134,7 +146,11 @@
         <section class="product-box">
           <a href="/products/<%= productAccesorios.id %>">
             <figure class="product-box_image">
-              <img src="/img/<%= productAccesorios.imagen[0] %>" alt="imagen de producto">
+              <% if (productAccesorios.productImagenes.length != 0) { %>
+                <img src="/img/<%= productAccesorios.productImagenes[0].image %>" alt="imagen de producto">
+                <% } else { %>
+                <img src="/img/default-avatar.jpg" alt="imagen de producto">
+                <% } %>
             </figure>
             <article class="product-box_data">
               <h2>$

@@ -1,4 +1,3 @@
-
 module.exports= (sequelize, dataTypes) => {
 
   let alias='Users';
@@ -38,6 +37,9 @@ module.exports= (sequelize, dataTypes) => {
     },
     categoryUsu_id: {
     type: dataTypes.INTEGER
+    },
+    image_id: {
+      type: dataTypes.INTEGER
     }
   };
   let config ={
@@ -49,10 +51,10 @@ module.exports= (sequelize, dataTypes) => {
     
   User.associate = (models) => {
     // Roles
-    User.belongsTo(models.CarroCompras, {
+    /*User.belongsTo(models.CarroCompras, {
       as: "carroCompra",
       foreignKey: "carroCompra_id",
-    });
+    });*/
     User.belongsToMany(models.Ventas,{
       as:"venta",
       through:"Venta_Usuario",
@@ -60,6 +62,16 @@ module.exports= (sequelize, dataTypes) => {
       otherKey:"venta_id",
       timestamps:false
     });
+    //Categories
+    User.belongsTo(models.CategoriesUsers,{
+      as:"categoryUsers",
+      foreignKey:"categoryUsu_id"
+    });
+    User.belongsTo(models.UserImage, {
+      as: "image",
+      foreignKey: "image_id",
+    });
+
   };
   return User;
 }

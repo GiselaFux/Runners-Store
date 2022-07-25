@@ -25,8 +25,7 @@ router.get("/", productsController.list);
 
 /**creación de un producto y almacenado*/
 router.get("/create", productsController.create);
-
-router.post("/", upload.single('imagen'), productsController.store);
+router.post("/", upload.array("image", 6), productsController.store);
 
 /*detalle de un producto */
 router.get("/:id", productsController.detail);

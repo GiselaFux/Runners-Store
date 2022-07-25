@@ -13,7 +13,7 @@
                         <a href="/users/login"> <button class="register-disabled">Iniciar Sesión</button></a>
                         <a href="/users/register"> <button>Registrarme</button></a>
                     </div>
-                    <form class="register-form" action="/users/register" method="POST"> <!--enctype="multipart/form-data">--> 
+                    <form class="register-form" action="/users/register" method="POST" enctype="multipart/form-data">
                         <div class="register-datos">
                             <h3>Datos personales</h3>
                             <p class="register-p">
@@ -25,6 +25,13 @@
                                 <% if (locals.errors && errors.apellido) { %>
                                     <p> <%= errors.apellido.msg %></p>                    
                                 <% } %>
+                            </p>
+                            <p>
+                                <label for="image">Ingrese imagen de perfil (opcional)</label>
+                                <input type="file" name="avatar" id="">
+                                  <% if (locals.errors && errors.avatar) { %>  
+                                    <p> <%= errors.avatar.msg %></p>  
+                                  <% } %>
                             </p>
 
                             <p class="register-p"><label>Fecha de nacimiento</label>

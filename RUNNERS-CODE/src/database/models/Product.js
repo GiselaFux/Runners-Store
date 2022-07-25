@@ -1,5 +1,3 @@
-
-
 module.exports=(sequelize,dataTypes)=>{
     let alias='Products';
     let cols={
@@ -45,7 +43,7 @@ module.exports=(sequelize,dataTypes)=>{
     Product.associate = (models) => {
         // Products_Imagen
         Product.hasMany(models.ProductImagen, {
-          as: "productImagenes",
+          as: "images",
           foreignKey: "product_id",
         });
         //Categories

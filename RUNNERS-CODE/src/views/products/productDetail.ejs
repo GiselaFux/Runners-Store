@@ -8,26 +8,26 @@
             <main>
                 <section class="detail-main-picture">
                     <div>
-                        <img src="/img/<%= product.productImagenes[0].image %>" class="detail-product_img">
+                        <img src="/img/<%= product.images[0].image %>" class="detail-product_img">
                     </div>
                 </section>
                 <section>
                     <ul class="detail-galeria">
-                        <% product.productImagenes.forEach((image,i) => {
+                        <% product.images.forEach((image,i) => {
                         if (i != 0) { %>
                             <li>
                                 <a href="#<%=i %>"><img src="/img/<%= image.image %>"></a>
                             </li>
                             <% }}) %>
                     </ul>
-                    <% product.productImagenes.forEach((image,i) => {
+                    <% product.images.forEach((image,i) => {
                         if (i != 0) { %>
                         <div class="detail-modal" id=<%=i %>>
                             <h3>Foto1</h3>
                             <div class="detail-imagen">
-                                <a href="#<%=( i - 1) <=0 ? product.productImagenes.length - 1 : i - 1 %>" >&#60;</a>
-                                <a href="#<%=( i + 1)> (product.productImagenes.length) - 1? 1 : i + 1 %>" ><img src="/img/<%= image.image %>" class="detail-imagen-dos"></a>
-                                <a href="#<%=( i + 1)> (product.productImagenes.length) - 1? 1 : i + 1 %>" >></a>
+                                <a href="#<%=( i - 1) <=0 ? product.images.length - 1 : i - 1 %>" >&#60;</a>
+                                <a href="#<%=( i + 1)> (product.images.length) - 1? 1 : i + 1 %>" ><img src="/img/<%= image.image %>" class="detail-imagen-dos"></a>
+                                <a href="#<%=( i + 1)> (product.images.length) - 1? 1 : i + 1 %>" >></a>
 
                             </div>
                             <a class="detail-cerrar" href="">X</a>

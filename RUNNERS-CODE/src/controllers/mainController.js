@@ -2,6 +2,7 @@ const path = require('path');
 const fs = require("fs");
 const productsFilePath = path.join(__dirname, "../database/products.json");
 const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+const db = require('../database/models');
 
 mainController = {
     index: function(req, res) {
@@ -15,10 +16,18 @@ mainController = {
     },
     
     productCart: function(req, res) {
-        let producto = products.find(producto => producto.id == req.params.id);
-        res.render("products/productCart", {producto});
-       // res.render(path.join(__dirname, '../views/products/productCart'))
-    },
+        db.Products.findByPk(req.params.id, {
+            include: [{association: 'colours' },{association: 'sizes' },{association: 'images' }]
+        })
+        /*.then(product => {
+            return res.json(product)
+          })*/
+    
+        .then(product => {
+            res.render('products/productCart', {product});
+        });
+    }
+
 
 };
 

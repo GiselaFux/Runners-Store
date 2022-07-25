@@ -17,7 +17,7 @@
                     </div>
                     <div class="create-control-formulario">
                         <label for="fotos" style="display: block; margin-bottom: 10px;" class="create-label">Imagenes Productos:</label>
-                        <input type="file" name="imagen" accept=".png, .jpeg, .jpg" multiple>
+                        <input type="file" name="image" id="image" accept=".png, .jpeg, .jpg" multiple>
                     </div>
                     <div class="create-control-formulario">
                         <label for="categoria" style="margin-bottom: 10px; display: block;" class="create-label">Categoría producto:</label>
@@ -35,13 +35,16 @@
                         </div>
                     </div>
                     <div class="create-control-formulario">
-                        <select name="colours" id="" required >
-                            <option value="" class="create-label" disabled selected>- select color - </option>
-                            <% allColours.forEach(colour => { %>
-                            <option value="<%= colour.id %>"><%= colour.colour %></option>
-                            <% }); %>
-                        </select>
-                    </div>
+                        <label>Color</label>
+                          <div class="checkbox-container">
+                            <% for (let i=0; i<allColours.length; i++) { %>
+                              <div class="checkbox-row">
+                                <input class="checkedOne" type="checkbox" id="<%= allColours[i].colour %>" name="colours" value="<%= allColours[i].id %>">
+                                <label for="<%= allColours[i].colour %>"><%= allColours[i].colour %></label>
+                              </div>
+                            <% } %>
+                          </div>
+                        </div>
                     <div class="create-control-formulario">
                         <select name="sizes" id="" required >
                             <option value="" class="create-label" disabled selected>- select talle - </option>

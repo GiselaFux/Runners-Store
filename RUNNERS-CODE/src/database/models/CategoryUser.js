@@ -1,5 +1,5 @@
 module.exports= (sequelize, dataTypes)=>{
-    let alias="Categories";
+    let alias="CategoriesUsers";
     let cols={
         id:{
             type: dataTypes.INTEGER,
@@ -13,7 +13,7 @@ module.exports= (sequelize, dataTypes)=>{
     };
 
     let config={
-        tableName:"categories",
+        tableName:"categoriesusers",
         timestamps: false
     };
 
@@ -21,9 +21,9 @@ module.exports= (sequelize, dataTypes)=>{
 
     Category.associate =(models) =>{
         //Products
-        Category.hasMany(models.Products,{
-            as:"products",
-            foreignKey:"category_id",
+        Category.hasMany(models.Users,{
+            as:"users",
+            foreignKey:"categoryUsu_id",
         })
     }
     return Category;

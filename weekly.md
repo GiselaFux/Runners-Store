@@ -209,3 +209,7 @@ Creación de carpeta Sequelize y archivos de modelos
 #### Ezequiel Brunori
 
 -Continuamos trabajando en la Actualizacion del crud
+
+#### Ezequiel Brunori
+
+-Actualización del CRUD productos y usuarios

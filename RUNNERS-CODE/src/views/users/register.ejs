@@ -18,12 +18,13 @@
                             <h3>Datos personales</h3>
                             <p class="register-p">
                                 <input type="text" name="nombre" id="nombre" placeholder="NOMBRE" required class="register-placeholder">
-                                <% if (locals.errors && errors.nombre) { %>
-                                    <p> <%= errors.nombre.msg %></p>                    
-                                <% } %>
+
                                 <input type="text" name="apellido" id="apellido" placeholder="APELLIDO" required class="register-placeholder">
+                                <% if (locals.errors && errors.nombre) { %>
+                                    <p align="left"> <%= errors.nombre.msg %></p>                    
+                                <% } %>
                                 <% if (locals.errors && errors.apellido) { %>
-                                    <p> <%= errors.apellido.msg %></p>                    
+                                    <p align="left"> <%= errors.apellido.msg %></p>                    
                                 <% } %>
                             </p>
                             <p>
@@ -44,7 +45,7 @@
                             <div style="display:flex">
 
                                 <p class="register-p"><label>Tipo*</label>
-                                    <select name= 'documentoTipo' id= 'documentoTipo' required class="register-placeholder" style="width:fit-content">
+                                <select name= 'documentoTipo' id= 'documentoTipo' required class="register-placeholder" style="width:fit-content">
                                     <option>DNI</option>
                                 </select>
                                 <% if (locals.errors && errors.documentoTipo) { %>
@@ -52,11 +53,12 @@
                                 <% } %>
                                 </p>
                                 <p class="register-p"><label>Numero de documento*</label>
-                                    <input type="text" name="nDocumento" id="nDocumento" required class="register-placeholder">
+                                <input type="text" name="nDocumento" id="nDocumento" required class="register-placeholder"><br> 
+                                                             
                                     <% if (locals.errors && errors.nDocumento) { %>
-                                        <p> <%= errors.nDocumento.msg %></p>                    
-                                    <% } %>
-                                </p>
+                                     <%= errors.nDocumento.msg %>                
+                                    <% } %> 
+                                </p>  
                             </div>
                             <p class="register-p"><label>Género</label></p>
                             <p class="register-p"><select name='genero' id = 'genero' required class="register-placeholder">
@@ -67,8 +69,6 @@
                                 <p> <%= errors.genero.msg %></p>                    
                             <% } %>
 
-                            <p class="register-p"> <label>Número de telefono</label></p>
-                            <p class="register-p"><input type="text" name="Num-telefono" id="Num-telefono" required class="register-placeholder"></p>
                         </div>
                         <div>
                             <h3>Datos de cuenta</h3>

@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require("fs");
 const db = require('../database/models');
+const { check, validationResult, body } = require("express-validator");
 
 /*marca el camino al json donde estan los productos y la conversión de json para js)*/
 const productsFilePath = path.join(__dirname, "../database/products.json");
@@ -53,15 +54,37 @@ const productsController = {
     },
 
     // Create -  Method to store
-    store: async (req, res) =>  {
+    store: async (req, res) =>  {      
+      const resultValidation = validationResult(req);
 
-        const newProduct = await db.Products.create({
+      // si hay errores
+      if (resultValidation.errors.length > 0) {
+        let sizesDB = db.Sizes.findAll();
+        let categoriesDB = db.Categories.findAll();
+        let coloursDB = db.Colours.findAll();
+        console.log(resultValidation)
+        Promise.all([sizesDB, categoriesDB, coloursDB])
+          .then(function ([allSizes, allCategories, allColours]) {
+            // devuelvo la vista con errores y la info necesaria
+            return res.render('products/productCreate', {
+              errors: resultValidation.mapped(), //convierto el array errors en obj.literal
+              oldData: req.body,
+              allSizes,
+              allCategories,
+              allColours,
+            });
+            
+          })
+          .catch((e) => res.send(e));
+      } else {   
+
+      const newProduct = await db.Products.create({
             name: req.body.name,
             description: req.body.description,
             price: req.body.price,
             discount: req.body.discount,
             category_id: req.body.category
-        });
+      });
               // IMAGES
       // con req.files accedemos a todos los file mandados y guardados en array. Solo queremos el nombre así que creamos nuevo array donde los pushearemos
       let images = [];
@@ -85,20 +108,20 @@ const productsController = {
       }
 
         // COLOURS
-        let colours = []
+      let colours = []
       
-        for (i = 0; i < req.body.colours.length; i++) {
+      for (i = 0; i < req.body.colours.length; i++) {
             colours.push(req.body.colours[i]);
-        }
+      }
   
-        for (i = 0; i < colours.length; i++) {
-          // ahora con uuid ya no son 2 iguales y creara tantas imagenes como haya en el array
-          await newProduct.addColours(colours[i]);
-        }
+      for (i = 0; i < colours.length; i++) {
+        // ahora con uuid ya no son 2 iguales y creara tantas imagenes como haya en el array
+        await newProduct.addColours(colours[i]);
+      }
 
-      return res.redirect('/products');
-    },
-
+      return res.redirect("/products");
+    }
+  },
     
 
     // Update - Form to edit
@@ -118,9 +141,34 @@ const productsController = {
     // Update - Method to update
 
     update: async (req, res) => {
-        // recuperamos el ID
-    let id = req.params.id;
-    let productToEdit = await db.Products.findByPk(id, {
+      const resultValidation = validationResult(req);
+      let id = req.params.id;
+  console.log(resultValidation)
+      // si hay errores
+      if (resultValidation.errors.length > 0) {
+        let allSizes = await db.Sizes.findAll();
+        let allCategories = await db.Categories.findAll();
+        let allColours = await db.Colours.findAll();
+        let product = await db.Products.findByPk(req.params.id,{include: ['sizes','colours','category','images']});
+  
+        // buscamos el producto
+        let productToEdit = await db.Products.findByPk(id, {
+          include: [{association: 'colours' },{association: 'sizes' },{association: 'images' },{association: 'category' }]
+        });
+  
+        // devuelvo la vista con errores y la info necesaria
+        return res.render("products/productEdit", {
+          errors: resultValidation.mapped(), //convierto el array errors en obj.literal
+          oldData: req.body,
+          productToEdit,
+          allSizes,
+          allCategories,
+          allColours,
+          product
+        });
+      } else {
+
+      let productToEdit = await db.Products.findByPk(id, {
         include: [{association: 'colours' },{association: 'sizes' },{association: 'images' }]
     })
     await productToEdit.update(
@@ -173,6 +221,7 @@ const productsController = {
         const numbersColours = colours.map((colour) => colour);
         await editedProduct.setColours(numbersColours);
     res.redirect('/products');    
+  }
 },
 
 

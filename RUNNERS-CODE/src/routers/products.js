@@ -4,6 +4,11 @@ const multer = require('multer')
 
 const path = require("path");
 
+/*middlewares validator*/
+
+const createProductValidation = require("../middlewares/createProductValidation");
+const editProductValidation = require("../middlewares/createProductValidation");
+
 // requerir controller
 const productsController = require("../controllers/productsController");
 
@@ -25,14 +30,14 @@ router.get("/", productsController.list);
 
 /**creación de un producto y almacenado*/
 router.get("/create", productsController.create);
-router.post("/", upload.array("image", 6), productsController.store);
+router.post("/", upload.array("image", 6),createProductValidation, productsController.store);
 
 /*detalle de un producto */
 router.get("/:id", productsController.detail);
 
 /*edición de un producto */
 router.get("/edit/:id", productsController.edit);
-router.put("/edit/:id", upload.any(), productsController.update);
+router.put("/edit/:id", upload.any(), editProductValidation, productsController.update);
 
 /*borrar un producto*/
 router.delete("/delete/:id", productsController.destroy);

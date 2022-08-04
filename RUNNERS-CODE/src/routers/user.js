@@ -22,6 +22,8 @@ const guestMiddleware = require("../middlewares/guestMiddleware");
 const autMiddleware = require("../middlewares/autMiddleware");
 const validations = require("../middlewares/validateRegisterMiddleware");
 
+
+
 /*formulariode registro*/
 
 router.get('/register', guestMiddleware, userController.register);

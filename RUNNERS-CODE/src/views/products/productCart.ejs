@@ -38,7 +38,7 @@
 
             <div>
               <li type="none">PRECIO</li>
-              <li type="none">$ 29.999</li>
+              <li type="none">$ <%=(product.price * ((100 - product.discount) / 100)).toFixed(0)%></li>
             </div>
 
           </div>
@@ -66,9 +66,9 @@
             <li type="none" class="carrito-total">Total</li>
           </ul>
           <ul>
-            <li type="none">$ 25.999</li>
+            <li type="none">$ <%=(product.price * ((100 - product.discount) / 100)).toFixed(0)%></li>
             <li type="none">$ 0 </li>
-            <li type="none" class="carrito-total">$ 25.999</li>
+            <li type="none" class="carrito-total">$ <%=(product.price * ((100 - product.discount) / 100)).toFixed(0)%></li>
           </ul>
         </div>
 

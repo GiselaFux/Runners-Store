@@ -43,7 +43,7 @@
                                 <%= product.name %>
                             </h3>
                             <p class="detail-price">$
-                                <%= product.price %>
+                                <%= (product.price * ((100 - product.discount) / 100)).toFixed(0)%>
                             </p>
                         </div>
                     </div>

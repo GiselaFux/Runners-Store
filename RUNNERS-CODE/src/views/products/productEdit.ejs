@@ -14,10 +14,16 @@
       <div class="create-control-formulario">
         <label for="CambioNombre">Cambio de nombre</label>
         <input type="text" name="name" id="name" value="<%= product.name %>" placeholder="Nombre nuevo del producto">
+        <% if (locals.errors && errors.name) { %>
+          <p style="color: red"> <%= errors.name.msg %> </p>               
+         <% } %> 
       </div>
       <div class="cambios">
         <label for="CambioDesc">Cambio de descripcion</label>
         <input type="text" name="description" id="description" value="<%= product.description %>" placeholder="Descripcion nueva del producto" style="width:400px">
+        <% if (locals.errors && errors.description) { %>
+          <p style="color: red"> <%= errors.description.msg %> </p>               
+         <% } %> 
       </div>
       <div class="cambios">
         <label for="CambioImagen">Cambio de imagen</label>
@@ -29,6 +35,9 @@
           <option value="<%= category.id %>" <% if (product.category.id == category.id) { %><%= 'selected' %><% }; %>><%= category.category_description %></option>
           <% }); %>
       </select>
+      <% if (locals.errors && errors.category) { %>
+        <p style="color: red"> <%= errors.category.msg %> </p>               
+       <% } %> 
 
       <!--<div class="cambios">
         <label for="CambioCategoria">Cambio de categoria</label>
@@ -56,10 +65,16 @@
                 <label for="<%= allSizes[i].size %>"><%= allSizes[i].size %></label>
             <% } %>
           </div>
+          <% if (locals.errors && errors.sizes) { %>
+            <p style="color: red"> <%= errors.sizes.msg %> </p>               
+           <% } %> 
       </div>
       <div class="cambios">
         <label for="CambioPrecio">Cambio de precio</label>
         <input type="number" name="price" id="price" value="<%= product.price %>" placeholder="Precio nuevo del producto">
+        <% if (locals.errors && errors.price) { %>
+          <p style="color: red"> <%= errors.price.msg %> </p>               
+         <% } %> 
       </div>
       <div class="cambios">
         <label for="CambioPrecio">Descuento</label>
@@ -73,6 +88,9 @@
               <label for="<%= allColours[i].colour %>"><%= allColours[i].colour %></label>
             <% } %>
         </div>
+        <% if (locals.errors && errors.colours) { %>
+          <p style="color: red"> <%= errors.colours.msg %> </p>               
+         <% } %> 
       </div>
       <div>
         <button type="submit">Editar producto</button>

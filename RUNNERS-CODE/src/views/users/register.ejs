@@ -13,13 +13,17 @@
                         <a href="/users/login"> <button class="register-disabled">Iniciar Sesión</button></a>
                         <a href="/users/register"> <button>Registrarme</button></a>
                     </div>
-                    <form class="register-form" action="/users/register" method="POST" enctype="multipart/form-data">
+                    <form class="register-form" id ="register-form" action="/users/register" method="POST" enctype="multipart/form-data">
                         <div class="register-datos">
                             <h3>Datos personales</h3>
                             <p class="register-p">
-                                <input type="text" name="nombre" id="nombre" placeholder="NOMBRE" required class="register-placeholder">
+                                <input type="text" name="nombre" id="nombre" placeholder="NOMBRE"  class="register-placeholder">
+                                <span class="div-name-errors"></span>
+                                <span class="div-name-characteres-errors"></span>
 
-                                <input type="text" name="apellido" id="apellido" placeholder="APELLIDO" required class="register-placeholder">
+                                <input type="text" name="apellido" id="apellido" placeholder="APELLIDO" class="register-placeholder">
+                                <span class="div-lastName-errors"></span>
+                                <span class="div-lastName-characteres-errors"></span>
                                 <% if (locals.errors && errors.nombre) { %>
                                     <p align="left"> <%= errors.nombre.msg %></p>                    
                                 <% } %>
@@ -29,14 +33,15 @@
                             </p>
                             <p>
                                 <label for="image">Ingrese imagen de perfil (opcional)</label>
-                                <input type="file" name="avatar" id="">
+                                <input type="file" name="avatar" id="image">
+                                <span class="div-image-errors"></span>
                                   <% if (locals.errors && errors.avatar) { %>  
                                     <p> <%= errors.avatar.msg %></p>  
                                   <% } %>
                             </p>
 
                             <p class="register-p"><label>Fecha de nacimiento</label>
-                                <input type="date" name="fechaNacimiento" id="fechaNacimiento" required class="register-placeholder">
+                                <input type="date" name="fechaNacimiento" id="fechaNacimiento" class="register-placeholder">
                                 <% if (locals.errors && errors.fechaNacimiento) { %>
                                     <p> <%= errors.fechaNacimiento.msg %></p>                    
                                 <% } %>
@@ -45,7 +50,7 @@
                             <div style="display:flex">
 
                                 <p class="register-p"><label>Tipo*</label>
-                                <select name= 'documentoTipo' id= 'documentoTipo' required class="register-placeholder" style="width:fit-content">
+                                <select name= 'documentoTipo' id= 'documentoTipo' class="register-placeholder" style="width:fit-content">
                                     <option>DNI</option>
                                 </select>
                                 <% if (locals.errors && errors.documentoTipo) { %>
@@ -53,7 +58,7 @@
                                 <% } %>
                                 </p>
                                 <p class="register-p"><label>Numero de documento*</label>
-                                <input type="text" name="nDocumento" id="nDocumento" required class="register-placeholder"><br> 
+                                <input type="text" name="nDocumento" id="nDocumento" class="register-placeholder"><br> 
                                                              
                                     <% if (locals.errors && errors.nDocumento) { %>
                                      <%= errors.nDocumento.msg %>                
@@ -61,7 +66,7 @@
                                 </p>  
                             </div>
                             <p class="register-p"><label>Género</label></p>
-                            <p class="register-p"><select name='genero' id = 'genero' required class="register-placeholder">
+                            <p class="register-p"><select name='genero' id = 'genero' class="register-placeholder">
                                 <option>Masculino</option>
                                 <option>Femenino</option>
                             </select></p>
@@ -73,13 +78,17 @@
                         <div>
                             <h3>Datos de cuenta</h3>
                             <label></label>
-                            <input type="text" name="email" id="email" required class="register-placeholder" placeholder="Email*">
+                            <input type="text" name="email" id="email" class="register-placeholder" placeholder="Email*">
+                            <span class="div-email-errors"></span>
+                            <span class="div-email-character-errors"></span>
                             <% if (locals.errors && errors.email) { %>
                                 <p> <%= errors.email.msg %></p>                    
                             <% } %>
                             <br>
                             <label></label>
-                            <input type="password" name="password" id="password" required class="register-placeholder" placeholder="Contraseña*">
+                            <input type="password" name="password" id="password" class="register-placeholder" placeholder="Contraseña*">
+                            <span class="div-password-errors"></span>
+                            <span class="div-password-character-errors"></span>
                             <% if (locals.errors && errors.password) { %>
                                 <p> <%= errors.password.msg %></p>                    
                             <% } %>
@@ -100,6 +109,8 @@
 
             </main>
             <%- include('../partials/footer') %>
+
+            <script src="/js/validatorRegister.js"></script>
     </body>
 
 </html>

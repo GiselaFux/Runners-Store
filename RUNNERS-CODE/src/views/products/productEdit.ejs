@@ -9,35 +9,38 @@
   <%- include('../partials/header') %>
 
   <main>
-    <form action="/products/edit/<%=product.id%>?_method=PUT" method="POST" enctype="multipart/form-data" class="edit-product">
+    <form action="/products/edit/<%=product.id%>?_method=PUT" id="productEdit" method="POST" enctype="multipart/form-data" class="edit-product">
 
       <div class="create-control-formulario">
         <label for="CambioNombre">Cambio de nombre</label>
-        <input type="text" name="name" id="name" value="<%= product.name %>" placeholder="Nombre nuevo del producto">
+        <input type="text" name="name" id="productName" value="<%= product.name %>" placeholder="Nombre nuevo del producto">
+        <span class="input-product-name-error"></span>
         <% if (locals.errors && errors.name) { %>
-          <p style="color: red"> <%= errors.name.msg %> </p>               
-         <% } %> 
+        <p style="color: red"> <%= errors.name.msg %> </p>
+        <% } %>
       </div>
       <div class="cambios">
         <label for="CambioDesc">Cambio de descripcion</label>
-        <input type="text" name="description" id="description" value="<%= product.description %>" placeholder="Descripcion nueva del producto" style="width:400px">
+        <input type="text" name="description" id="productDescription" value="<%= product.description %>" placeholder="Descripcion nueva del producto" style="width:400px">
+        <span class="input-product-description-error"></span>
         <% if (locals.errors && errors.description) { %>
-          <p style="color: red"> <%= errors.description.msg %> </p>               
-         <% } %> 
+        <p style="color: red"> <%= errors.description.msg %> </p>
+        <% } %>
       </div>
       <div class="cambios">
         <label for="CambioImagen">Cambio de imagen</label>
-        <input type="file" name="imagen" accept=".png, .jpeg, .jpg" multiple>
+        <input type="file" id="image" name="imagen" multiple>
+        <span class="input-product-image-error"></span>
       </div>
       <label for="CambioCategoria">Categorias disponibles</label>
       <select name="category" id="category">
         <% allCategories.forEach(category => { %>
-          <option value="<%= category.id %>" <% if (product.category.id == category.id) { %><%= 'selected' %><% }; %>><%= category.category_description %></option>
-          <% }); %>
+        <option value="<%= category.id %>" <% if (product.category.id == category.id) { %><%= 'selected' %><% }; %>><%= category.category_description %></option>
+        <% }); %>
       </select>
       <% if (locals.errors && errors.category) { %>
-        <p style="color: red"> <%= errors.category.msg %> </p>               
-       <% } %> 
+      <p style="color: red"> <%= errors.category.msg %> </p>
+      <% } %>
 
       <!--<div class="cambios">
         <label for="CambioCategoria">Cambio de categoria</label>
@@ -59,22 +62,22 @@
       </div> -->
       <div class="cambios">
         <label for="CambioTalles">Talles disponibles</label>
-          <div class="checkbox-container">
-            <% for (let i=0; i<allSizes.length; i++) { %>
-                <input type="checkbox" id="<%= allSizes[i].size %>" name="sizes" value="<%= allSizes[i].id %>">
-                <label for="<%= allSizes[i].size %>"><%= allSizes[i].size %></label>
-            <% } %>
-          </div>
-          <% if (locals.errors && errors.sizes) { %>
-            <p style="color: red"> <%= errors.sizes.msg %> </p>               
-           <% } %> 
+        <div class="checkbox-container">
+          <% for (let i=0; i<allSizes.length; i++) { %>
+          <input type="checkbox" id="<%= allSizes[i].size %>" name="sizes" value="<%= allSizes[i].id %>">
+          <label for="<%= allSizes[i].size %>"><%= allSizes[i].size %></label>
+          <% } %>
+        </div>
+        <% if (locals.errors && errors.sizes) { %>
+        <p style="color: red"> <%= errors.sizes.msg %> </p>
+        <% } %>
       </div>
       <div class="cambios">
         <label for="CambioPrecio">Cambio de precio</label>
         <input type="number" name="price" id="price" value="<%= product.price %>" placeholder="Precio nuevo del producto">
         <% if (locals.errors && errors.price) { %>
-          <p style="color: red"> <%= errors.price.msg %> </p>               
-         <% } %> 
+        <p style="color: red"> <%= errors.price.msg %> </p>
+        <% } %>
       </div>
       <div class="cambios">
         <label for="CambioPrecio">Descuento</label>
@@ -83,14 +86,14 @@
       <div class="cambios">
         <label>Color</label>
         <div class="checkbox-container">
-            <% for (let i=0; i<allColours.length; i++) { %>
-              <input type="checkbox" id="<%= allColours[i].colour %>" name="colours" value="<%= allColours[i].id %>" checked>
-              <label for="<%= allColours[i].colour %>"><%= allColours[i].colour %></label>
-            <% } %>
+          <% for (let i=0; i<allColours.length; i++) { %>
+          <input type="checkbox" id="<%= allColours[i].colour %>" name="colours" value="<%= allColours[i].id %>" checked>
+          <label for="<%= allColours[i].colour %>"><%= allColours[i].colour %></label>
+          <% } %>
         </div>
         <% if (locals.errors && errors.colours) { %>
-          <p style="color: red"> <%= errors.colours.msg %> </p>               
-         <% } %> 
+        <p style="color: red"> <%= errors.colours.msg %> </p>
+        <% } %>
       </div>
       <div>
         <button type="submit">Editar producto</button>
@@ -99,6 +102,7 @@
 
   </main>
   <%- include('../partials/footer') %>
+  <script src="/js/validatorEditProduct.js"></script>
 </body>
 
 </html>

@@ -44,7 +44,6 @@ app.use('/products', productsRouter)
 app.use('/users', userRouter);
 
 
-
 /*middleware error para toda la app*/
 app.use((req,res,next)=>{
     res.status(404).render('not found');

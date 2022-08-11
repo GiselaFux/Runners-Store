@@ -3,91 +3,96 @@
 
 <%- include('../partials/head') %>
 
-    <body>
-        <%- include('../partials/header') %>
-            <main>
-                <form action="/products" method="POST" class="create-product" enctype="multipart/form-data">
-                    <div class="create-control-formulario">
-                        <label for="nombre" class="create-label">Nombre producto: </label>
-                        <input type="text" name="name" class="create-control" required><br>
-                        <% if (locals.errors && errors.name) { %>
-                            <p style="color: red"> <%= errors.name.msg %> </p>               
-                           <% } %> 
-                    </div>
-                    <div class="create-control-formulario">
-                        <label for="descripcion-product" style="display: block; margin-bottom: 10px;" class="create-label">Descripción del producto: </label>
-                        <textarea style="width: 90%;" name="description" rows="10" cols="50"></textarea><br>
-                        <% if (locals.errors && errors.description) { %>
-                            <p style="color: red"><%= errors.description.msg %> </p>               
-                           <% } %> 
-                    </div>
-                    <div class="create-control-formulario">
-                        <label for="fotos" style="display: block; margin-bottom: 10px;" class="create-label">Imagenes Productos:</label>
-                        <input type="file" name="image" id="image" accept=".png, .jpeg, .jpg" multiple>
-                    </div>
-                    <div class="create-control-formulario">
-                        <label for="categoria" style="margin-bottom: 10px; display: block;" class="create-label">Categoría producto:</label>
-                        <div>
-                            <input type="radio" name="category" value="1"><label style="margin-left: 10px;"> Mujer</label>
-                        </div>
-                        <div>
-                            <input type="radio" name="category" value="2"><label style="margin-left: 10px;"> Hombre</label>
-                        </div>
-                        <div>
-                            <input type="radio" name="category" value="3"><label style="margin-left: 10px;"> Zapatillas</label>
-                        </div>
-                        <div>
-                            <input type="radio" name="category" value="4"><label style="margin-left: 10px;"> Accesorios</label>
-                        </div><br>
-                        <% if (locals.errors && errors.category) { %>
-                            <p style="color: red"> <%= errors.category.msg %> </p>               
-                           <% } %> 
-                    </div>
-                    <div class="create-control-formulario">
-                        <label>Color</label>
-                          <div class="checkbox-container">                           
-                            <% for (let i=0; i<allColours.length; i++) { %>
-                                <input type="checkbox" id="<%= allColours[i].colour %>" name="colours" value="<%= allColours[i].id %>">
-                                <label for="<%= allColours[i].colour %>"><%= allColours[i].colour %>
-                                </label>
-                                <% } %>
-                          </div> <br>
-                          <% if (locals.errors && errors.colours) { %>
-                            <p style="color: red"><%= errors.colours.msg %></p>                
-                           <% } %> 
-                    </div>
-                    <div class="create-control-formulario">
-                        <label for="Talles">Talles disponibles</label>
-                        <div>
-                            <% allSizes.forEach(size => { %>
-                                <input type="checkbox" id="<%= size.size %>" name="sizes" value="<%= size.id %>">
-                                <label for="<%= size.size %>"><%= size.size %></label>
-                            <% }) %>
-                        </div> <br>
-                        <% if (locals.errors && errors.sizes) { %>
-                            <p style="color: red"><%= errors.sizes.msg %></p>                
-                           <% } %> 
-                    </div>
-                    <div class="create-control-formulario">
-                        <label for="precio-product" class="create-label">Precio del producto:</label>
-                        <input type="number" name="price"><br>
-                        <% if (locals.errors && errors.price) { %>
-                            <p style="color: red"><%= errors.price.msg %></p>                
-                           <% } %> 
-                    </div>
-                    <div class="create-control-formulario">
-                        <label for="discount-product" class="create-label">Descuento del producto:</label>
-                        <input type="number" name="discount"><br>
-                        <% if (locals.errors && errors.discount) { %>
-                            <p style="color: red"><%= errors.discount.msg %></p>               
-                           <% } %> 
-                    </div>
-                    <div>
-                        <button type="reset">Borrar</button>
-                        <button type="submit">Guardar producto</button>
-                    </div>
-                </form>
-                <%- include('../partials/footer') %>
-    </body>
+<body>
+  <%- include('../partials/header') %>
+  <main>
+    <form action="/products" id="productCreate" method="POST" class="create-product" enctype="multipart/form-data">
+      <div class="create-control-formulario">
+        <label for="nombre" class="create-label <%= locals.errors && errors.name ? 'is-invalid' : null %>">Nombre producto: </label>
+        <input type="text" id="productName" name="name" class="create-control"><br>
+        <span class="input-product-name-error"></span>
+
+        <% if (locals.errors && errors.name) { %>
+        <p style="color: red"> <%= errors.name.msg %> </p>
+        <% } %>
+      </div>
+      <div class="create-control-formulario">
+        <label for="descripcion-product"  style="display: block; margin-bottom: 10px;" class="create-label">Descripción del producto: </label>
+        <textarea style="width: 90%;" id="productDescription" name="description" rows="10" cols="50"></textarea><br>
+        <span class="input-product-description-error"></span>
+        <% if (locals.errors && errors.description) { %>
+        <p style="color: red"><%= errors.description.msg %> </p>
+        <% } %>
+      </div>
+      <div class="create-control-formulario">
+        <label for="fotos" style="display: block; margin-bottom: 10px;" class="create-label">Imagenes Productos:</label>
+        <input type="file" name="image" id="image" accept=".png, .jpeg, .jpg" multiple>
+        <p class="input-product-image-error"></p>
+      </div>
+      <div class="create-control-formulario">
+        <label for="categoria" style="margin-bottom: 10px; display: block;" class="create-label">Categoría producto:</label>
+        <div>
+          <input type="radio" name="category" value="1"><label style="margin-left: 10px;"> Mujer</label>
+        </div>
+        <div>
+          <input type="radio" name="category" value="2"><label style="margin-left: 10px;"> Hombre</label>
+        </div>
+        <div>
+          <input type="radio" name="category" value="3"><label style="margin-left: 10px;"> Zapatillas</label>
+        </div>
+        <div>
+          <input type="radio" name="category" value="4"><label style="margin-left: 10px;"> Accesorios</label>
+        </div><br>
+        <% if (locals.errors && errors.category) { %>
+        <p style="color: red"> <%= errors.category.msg %> </p>
+        <% } %>
+      </div>
+      <div class="create-control-formulario">
+        <label>Color</label>
+        <div class="checkbox-container">
+          <% for (let i=0; i<allColours.length; i++) { %>
+          <input type="checkbox" id="<%= allColours[i].colour %>" name="colours" value="<%= allColours[i].id %>">
+          <label for="<%= allColours[i].colour %>"><%= allColours[i].colour %>
+          </label>
+          <% } %>
+        </div> <br>
+        <% if (locals.errors && errors.colours) { %>
+        <p style="color: red"><%= errors.colours.msg %></p>
+        <% } %>
+      </div>
+      <div class="create-control-formulario">
+        <label for="Talles">Talles disponibles</label>
+        <div>
+          <% allSizes.forEach(size => { %>
+          <input type="checkbox" id="<%= size.size %>" name="sizes" value="<%= size.id %>">
+          <label for="<%= size.size %>"><%= size.size %></label>
+          <% }) %>
+        </div> <br>
+        <% if (locals.errors && errors.sizes) { %>
+        <p style="color: red"><%= errors.sizes.msg %></p>
+        <% } %>
+      </div>
+      <div class="create-control-formulario">
+        <label for="precio-product" class="create-label">Precio del producto:</label>
+        <input type="number" name="price"><br>
+        <% if (locals.errors && errors.price) { %>
+        <p style="color: red"><%= errors.price.msg %></p>
+        <% } %>
+      </div>
+      <div class="create-control-formulario">
+        <label for="discount-product" class="create-label">Descuento del producto:</label>
+        <input type="number" name="discount"><br>
+        <% if (locals.errors && errors.discount) { %>
+        <p style="color: red"><%= errors.discount.msg %></p>
+        <% } %>
+      </div>
+      <div>
+        <button type="reset">Borrar</button>
+        <button type="submit">Guardar producto</button>
+      </div>
+    </form>
+    <%- include('../partials/footer') %>
+    <script src="/js/validatorCreateProduct.js"></script>
+</body>
 
 </html>

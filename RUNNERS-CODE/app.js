@@ -44,6 +44,15 @@ app.use('/products', productsRouter)
 app.use('/users', userRouter);
 
 
+// API
+const apiUsersRouter = require("./src/routers/api/apiUsersRoutes");
+const apiProductsRouter = require("./src/routers/api/apiProductsRoutes");
+// API
+app.use("/api/users", apiUsersRouter);
+
+app.use("/api/products", apiProductsRouter);
+
+
 /*middleware error para toda la app*/
 app.use((req,res,next)=>{
     res.status(404).render('not found');

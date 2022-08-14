@@ -46,4 +46,6 @@ router.put("/edit/:id", upload.any(), editProductValidation, productsController.
 router.delete("/delete/:id",autMiddleware, productsController.destroy);
 
 
+
+
 module.exports = router;

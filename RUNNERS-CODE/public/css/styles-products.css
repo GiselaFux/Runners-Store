@@ -10,7 +10,10 @@
     margin-right:auto;
     margin-left:auto
 }
-
+/*para  que redireccionar x categoría, no quede debajo del header*/
+div[id]{
+    scroll-margin-top: 270px;
+}
 .products-title {
     font-size: 2.4em;
     font-weight: 400;

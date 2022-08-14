@@ -233,7 +233,10 @@ const productsController = {
             }
         })
         .then(res.redirect("/products"))
-    }
+    },
+
+    
+   
 
 };
 

@@ -20,7 +20,7 @@
         <% productMujer.forEach(function(productMujer){ 
 				let finalPrice = (productMujer.price * ((100 - productMujer.discount) / 100)).toFixed(0)
 			  %>
-        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="col-12 col-sm-6 col-lg-3" id="mujer">
           <section class="product-box">
             <a href="/products/<%= productMujer.id %>">
               <figure class="product-box_image">
@@ -54,14 +54,14 @@
 
         <!-- Categoria Hombre -->
 
-        <div class="col-12">
+        <div class="col-12" >
           <h2 class="category-title">Hombre</h2>
         </div>
 
         <% productHombre.forEach(function(productHombre){ 
                     let finalPrice = (productHombre.price * ((100 - productHombre.discount) / 100)).toFixed(0)
                 %>
-        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="col-12 col-sm-6 col-lg-3" id="hombre">
           <section class="product-box">
             <a href="/products/<%= productHombre.id %>">
               <figure class="product-box_image">
@@ -102,7 +102,7 @@
         <% productZapatillas.forEach(function(productZapatillas){ 
                         let finalPrice = (productZapatillas.price * ((100 - productZapatillas.discount) / 100)).toFixed(0)
                     %>
-        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="col-12 col-sm-6 col-lg-3" id="zapatillas">
           <section class="product-box">
             <a href="/products/<%= productZapatillas.id %>">
               <figure class="product-box_image">
@@ -142,7 +142,7 @@
         <% productAccesorios.forEach(function(productAccesorios){ 
                       let finalPrice = (productAccesorios.price * ((100 - productAccesorios.discount) / 100)).toFixed(0)
                   %>
-      <div class="col-12 col-sm-6 col-lg-3">
+      <div class="col-12 col-sm-6 col-lg-3" id="accesorios">
         <section class="product-box">
           <a href="/products/<%= productAccesorios.id %>">
             <figure class="product-box_image">

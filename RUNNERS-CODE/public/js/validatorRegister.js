@@ -161,11 +161,7 @@ window.onload = function () {
           image.classList.add('input-error')
         }
         
-      } else {
-        e.preventDefault()
-        textUserRegisterImage.innerHTML =' Debes adjuntar una imagen'
-        image.classList.add('input-error')
-      }
+      } 
     })
   }
 

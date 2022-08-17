@@ -6,8 +6,14 @@ const db = require('../database/models');
 
 mainController = {
     index: function(req, res) {
-        res.render(path.join(__dirname, '../views/index'))
+        db.Products.findAll({
+            include: [{association: 'colours' },{association: 'sizes' },{association: 'images' }]
+        })
+        .then(products => {
+            res.render(path.join(__dirname, '../views/index'), {products});
+        });
     },
+
     login: function(req, res) {
         res.render(path.join(__dirname, '../views/users/login'))
     },

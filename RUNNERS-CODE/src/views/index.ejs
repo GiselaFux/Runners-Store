@@ -5,51 +5,97 @@
 <%- include('partials/head') %>
 
     <%- include('partials/header') %>
+    <body>
+        <main>
+        
+         <div class="carrusel">
+           <div class="carrusel-items">
+            <div class="carrusel-item">
+                <img src="img/logo.png" alt="logo">
+            </div>
+            <div class="carrusel-item">
+               <img src="img/CalzaReebook.jpg" alt="logo">
+            </div>
+            <div class="carrusel-item">
+               <img src="img/vuelta_hotel_eden21_rrss.jpg" alt="logo">
+            </div>
+            <div class="carrusel-item">
+              <img src="img/zapaAdidasHombre2.jpg" alt="logo">
+            </div>
+            <div class="carrusel-item">
+              <img src="img/imagen-1653534412055.jpg" alt="logo">
+            </div>
+            <div class="carrusel-item">
+              <img src="img/remera.jpg" alt="logo">
+            </div>
+            <div class="carrusel-item">
+                <img src="img/CalzaOfertaAdidas2.jpg" alt="logo">
+              </div>
+           </div>
+           </div>
 
-        <body>
-            <main>
-                <img src="img/logo.png" alt="logo" id="carr1" class="index-imgCarrusel">
-
-                <div class="index-botones">
-                    <div class="index-boton"></div>
-                    <div class="index-boton"></div>
-                    <div class="index-boton"></div>
-                    <div class="index-boton"></div>
-                </div>
+      
                 <div class="index-nuevaTemporada">
                     <h3>NUEVA TEMPORADA</h3>
                     <a href="/products/products"><input type="text" name="redirecciónPall" placeholder="Ver más"></a>
-                    <div class=" index-prodNuevaTem ">
+                    <div class="index-prodNuevaTem">
+                        <% for (let i=0; i<4; i++) { %>
                         <p>
-                            <a href="/products/1"><img src="img/pelotasPaddle.jpg" alt="imagen1" class="index-imgNuevaTemp"></a> Pelotas De Paddle
-                        </p>
+                            <a href="/products/<%= products[i].id %>"><img src="/img/<%= products[i].images[0].image %>" alt="imagen1" class="index-imgNuevaTemp"></a> <%= products[i].name %>
 
-                        <p>
-                            <a href="/products/2"><img src=" img/remera.jpg" alt="imagen2" class="index-imgNuevaTemp"></a>
-                            Remera Adidas Hombre
                         </p>
-
-                        <p>
-                            <a href="/products/3"><img src=" img/calzaNegraM3.jpg" alt="imagen3" class="index-imgNuevaTemp"></a> Calza Reebok Mujer
-                        </p>
-
-                        <p>
-                            <a href="/products/4 "><img src="img/adidas3.jpg " alt="imagen4 " class="index-imgNuevaTemp "></a>
-                            Zapatillas Adidas Hombre
-                        </p>
+                        <% } %>
                     </div>
 
                 </div>
+
                 <div class="index-prodOfertas ">
                     <h4>PRODUCTOS DE PROMOCIÓN</h4>
-                    <div>
-                        <img src="img/CalzaOfertaAdidas2.jpg " alt="calzaOferta " class="index-img ">
-                        <p>Calza Adidas 3/4 Climacool</p>
-                        <p>Antes<span style="text-decoration:line-through ">$8000</span> Ahora
-                            <span class="index-promoPrecio ">$6400</span>
-                        </p>
-                    </div>
-                </div>
+                    <div class="contenedor-cards">
+                        <div class="card">
+                            <div class="face front">
+                        <img src="img/CalzaOfertaAdidas2.jpg" alt="calza roja">
+                        <h3>Calza Adidas Oferta</h3>
+                            </div>
+                            <div class="face back">
+                                <h3>Calza Adidas </h3>
+                                <p>Calza 3/4<br> Marca Adidas<br> Color:Roja<br><span class="precioViejo">Precio: $10000</span><br><span class="precioNuevo">Oferta: $7000</span></p>
+                                <div class="link">
+                                    <a href="products/products.ejs">Ver más...</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card">
+                            <div class="face front">
+                        <img src="img/pelotasPaddle.jpg" alt="pelotas Paddle">
+                        <h3>Pelotas Paddle Oferta</h3>
+                            </div>
+                            <div class="face back">
+                                <h3>Pelotas Paddle </h3>
+                                <p>Tubo pelostas paddle<br> Marca Sixzero<br> Color:amarillo<br><span class="precioViejo">Precio: $4000</span><br><span class="precioNuevo">Oferta: $3500</span></p>
+                                <div class="link">
+                                    <a href="/RUNNERS-CODE/src/views/products/products.ejs">Ver más...</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card">
+                            <div class="face front">
+                        <img src="img/zapaAdidasHombre2.jpg" alt="zapatillas Hombre">
+                        <h3>Zapatillas Adidas Oferta</h3>
+                            </div>
+                            <div class="face back">
+                                <h3>Zapatillas Adidas </h3>
+                                <p>Zapatillas Hombre<br> Marca Adidas<br> Color:Negras<br><span class="precioViejo">Precio: $27000</span><br><span class="precioNuevo">Oferta: $24999</span></p>
+                                <div class="link">
+                                    <a href="/RUNNERS-CODE/src/views/products/products.ejs">Ver más...</a>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                   
+    
                 <div class="index-suscripcion ">
                     <form class="index-form ">
                         <label for="email ">Suscríbete al Newsletter</label>
@@ -65,5 +111,5 @@
 
             <%- include('partials/footer') %>
         </body>
-
+        <script src="js/index.js"></script>
 </html>

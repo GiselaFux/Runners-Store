@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, Routes} from 'react-router-dom'
+
+import PanelTotales from "./components/PanelTotales"
+import PanelDetalles from "./components/PanelDetalles"
+import PanelCategorias from "./components/PanelCategorias"
+import PanelProductos from "./components/PanelProductos"
+import PanelUsuarios from './components/PanelUsuarios';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <div className="App">
+        <Routes>
+            <Route exact path="/" element={<PanelTotales />} />
+            <Route exact path="/categories" element={<PanelCategorias />} />
+            <Route exact path="/products" element={<PanelProductos />} />
+            <Route exact path="/users" element={<PanelUsuarios />} />
+            <Route exact path="/details" element={<PanelDetalles />} />
+        </Routes>
+      </div>
+    </React.Fragment>
   );
 }
 

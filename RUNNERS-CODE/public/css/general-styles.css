@@ -276,6 +276,15 @@ footer {
         margin-left: -50px;
     }
 
+    .buscador_hijo {
+        display: flex;
+        background-color: #e8e8e7;
+        padding: 5px;
+        border-radius: 5px;
+        width: 90%;
+        border: solid #e8e8e7 2px;
+        margin-left: 0;
+    }
 
     .icon-glass {
         position: absolute;

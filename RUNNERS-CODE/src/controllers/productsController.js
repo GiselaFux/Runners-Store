@@ -27,6 +27,50 @@ const productsController = {
             })
     },
 
+    'listMujer': (req, res) => {
+      db.Products.findAll({
+          include: [{association: 'images' },{association: 'category' }]
+          
+      })            
+        .then(products => {
+              let productMujer = products.filter((product) => product.category.category_description == "Mujer");
+              res.render('products/productsMujer', { products, productMujer, toThousand })
+      })
+    },
+
+    'listHombre': (req, res) => {
+      db.Products.findAll({
+          include: [{association: 'images' },{association: 'category' }]
+          
+      })            
+        .then(products => {
+              let productHombre = products.filter((product) => product.category.category_description == "Hombre");
+              res.render('products/productsHombre', { products, productHombre, toThousand })
+      })
+    },
+
+    'listZapas': (req, res) => {
+      db.Products.findAll({
+          include: [{association: 'images' },{association: 'category' }]
+          
+      })            
+        .then(products => {
+          let productZapatillas = products.filter((product) => product.category.category_description == "Zapatillas");
+              res.render('products/productsZapas', { products, productZapatillas, toThousand })
+      })
+    },
+
+    'listAccesorios': (req, res) => {
+      db.Products.findAll({
+          include: [{association: 'images' },{association: 'category' }]
+          
+      })            
+        .then(products => {
+          let productAccesorios = products.filter((product) => product.category.category_description == "Accesorios");
+              res.render('products/productsAccesorios', { products, productAccesorios, toThousand })
+      })
+    },
+
     // Detail - Detail from one product
 
     detail: (req, res) => {
@@ -234,10 +278,19 @@ const productsController = {
         })
         .then(res.redirect("/products"))
     },
-
-    
-   
-
+    searchProduct: async (req, res) => {
+      // const {Op} = require("sequelize");
+      const Op = db.Sequelize.Op;
+  
+      let search = await db.Products.findAll({
+        where: {
+          name: { [Op.like]: `%${req.body.buscar}%` },
+        }, 
+          include: ["images", "colours","sizes"],
+      });
+  
+      return res.render("products/productsSearch", { productos: search,toThousand });
+    },   
 };
 
 

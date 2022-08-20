@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const multer = require('multer')
+const multer = require('multer');
+const autMiddleware = require("../middlewares/autMiddleware");
 
 /*agrego la variable de multer para decir donde guardar las imagenes y el nombre*/
 let storage = multer.diskStorage({
@@ -15,6 +16,6 @@ const upload = multer({ storage })
 const mainController = require('../controllers/mainController')
 router.get('/', mainController.index)
 
-router.get('/productCart/:id', mainController.productCart)
+router.get('/productCart/:id',autMiddleware, mainController.productCart)
 
 module.exports = router;

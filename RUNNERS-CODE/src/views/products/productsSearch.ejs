@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<%- include('../partials/head') %>
+
+<body>
+  <%- include('../partials/header') %>
+  <main>
+    <!-- Productos Buscados -->
+
+    
+    <div class="container products-wrapper">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="category-title"> Productos Encontrados = <%= productos.length%></h2>
+        </div>
+
+        <% productos.forEach(function(producto){ 
+				let finalPrice = (producto.price * ((100 - producto.discount) / 100)).toFixed(0)
+			  %>
+        <div class="col-12 col-sm-6 col-lg-3" id="mujer">
+          <section class="product-box">
+            <a href="/products/<%= producto.id %>">
+              <figure class="product-box_image">
+                <% if (producto.images.length != 0) { %>
+                  <img src="/img/<%= producto.images[0].image %>" alt="imagen de producto">
+                      <% } else { %>
+                        <img src="/img/default-avatar.jpg" alt="imagen de producto">
+                      <% } %>             
+              </figure>
+              <article class="product-box_data">
+                <h2>$
+                  <%= toThousand(finalPrice) %>
+                </h2>
+                <span><%= producto.discount %> %OFF</span>
+                <p>
+                  <%= producto.name %>
+                </p>
+                <i class="fas fa-truck"></i>
+                <form action="#" method="get">
+                  <a href="edit/<%= producto.id %>"><input type="button" name="edit-product" value="Editar producto" class="detail-add-trolle"></a>
+                </form>
+                  <form action="delete/<%= producto.id %>?_method=DELETE" type="submit" method="POST">
+                    <button>Delete</button>
+                  </form>
+
+              </article>
+            </a>
+          </section>
+        </div>
+        <% }) %>
+
+      </div>
+    </div>
+  </main>
+  <%- include('../partials/footer') %>
+</body>
+
+</html>

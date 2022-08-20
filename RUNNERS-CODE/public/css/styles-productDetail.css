@@ -180,7 +180,25 @@ form.detail-color-head {
     transition: all 500ms;
 }
 
+.volver {
+    height: 40px;
+    border-radius: 30px;
+    border: solid 1px #808b96;
+    text-align: center;
+    margin: 15px auto;
+    padding: 5px;
+    color: #f6f5f5;
+    font-weight: bold;
+    background: #c21d17;
+    cursor: pointer;
+    transition: all 500ms;
+}
+
 .detail-add-trolley:hover {
+    background-color: #160812;
+}
+
+.volver:hover {
     background-color: #160812;
 }
 
@@ -200,6 +218,10 @@ form.detail-color-head {
     }
     .detail-add-trolley {
         width: 30%;
+        font-size: 20px;
+    }
+    .volver {
+        width: 15%;
         font-size: 20px;
     }
 }

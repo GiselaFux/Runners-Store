@@ -31,6 +31,18 @@ const autMiddleware = require("../middlewares/autMiddleware");
 //todos los productos
 router.get("/", productsController.list);
 
+//productos categoria mujeres
+router.get("/productsMujer", productsController.listMujer);
+
+//productos categoria hombres
+router.get("/productsHombre", productsController.listHombre);
+
+//productos categoria zapatillas
+router.get("/productsZapas", productsController.listZapas);
+
+//productos categoria accesorios
+router.get("/productsAccesorios", productsController.listAccesorios);
+
 /**creación de un producto y almacenado*/
 router.get("/create",autMiddleware,productsController.create);
 router.post("/", upload.array("image", 6),createProductValidation, productsController.store);
@@ -45,7 +57,7 @@ router.put("/edit/:id", upload.any(), editProductValidation, productsController.
 /*borrar un producto*/
 router.delete("/delete/:id",autMiddleware, productsController.destroy);
 
-
-
+/*buscar un producto*/
+router.post('/search', productsController.searchProduct)
 
 module.exports = router;

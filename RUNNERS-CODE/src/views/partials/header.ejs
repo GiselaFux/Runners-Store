@@ -7,17 +7,19 @@
         <div class="bars">
           <button><i class="fa-solid fa-bars"></i></button>
           <ul>
-            <li><a href="#mujer">Mujer</a></li>
-            <li><a href="#hombre">Hombre</a></li>
-            <li><a href="#zapatillas">Zapatillas</a></li>
-            <li><a href="#accesorios">Accesorios</a></li>
+            <li><a href="">Mujer</a></li>
+            <li><a href="">Hombre</a></li>
+            <li><a href="">Zapatillas</a></li>
+            <li><a href="">Accesorios</a></li>
             <li><a href="#">Marcas</a></li>
             <li><a href="#">Todos</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <h3 class="search-bar" ><input type="search" name="buscador" placeholder="Buscar" class="buscador"><i class="fa-solid fa-magnifying-glass icon-glass"></i>
+    <h3 class="search-bar buscar"> <form action="/products/search" method="POST" class="buscador">
+      <input type="search" name="buscar" placeholder="Buscar" class="buscador_hijo"><i class="fa-solid fa-magnifying-glass icon-glass"></i>
+    </form>
     </h3>
 
     <p>
@@ -38,16 +40,16 @@
       </div>
     </nav>
 
-    <a href="./productCart"><i class="fa-solid fa-cart-shopping icon"></i></a>
+    <a href="./products/productCart"><i class="fa-solid fa-cart-shopping icon"></i></a>
 
     </p>
 
   </header>
   <div class="navegadorHorizonal">
-    <button><a href="/products/#mujer" style="text-decoration:none">Mujer</a></button>
-    <button><a href="/products/#hombre" style="text-decoration:none">Hombre</a></button>
-    <button><a href="/products/#zapatillas" style="text-decoration:none">Zapatillas</a></button>
-    <button><a href="/products/#accesorios" style="text-decoration:none">Accesorios</a></button>
+    <button><a href="/products/productsMujer" style="text-decoration:none">Mujer</a></button>
+    <button><a href="/products/productsHombre" style="text-decoration:none">Hombre</a></button>
+    <button><a href="/products/productsZapas" style="text-decoration:none">Zapatillas</a></button>
+    <button><a href="/products/productsAccesorios" style="text-decoration:none">Accesorios</a></button>
     <button><a href="/products" style="text-decoration:none">Marcas</a></button>
     <button><a href="/products" style="text-decoration:none">Todos</a></button>
   </div>

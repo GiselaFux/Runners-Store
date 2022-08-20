@@ -1,6 +1,8 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
+import '../assets/css/ultimosSubidos.css'
+
 function UltimoProducto(){
     const [products, setProducts] = useState([0])
 
@@ -29,13 +31,14 @@ function UltimoProducto(){
     return (
         <React.Fragment>
             <div>
-                <div>
-                    <h2>Último Producto</h2>
-                <h4>Nombre: {ultimoP.name}</h4>
-                <h4>Categoría: {ultimoP.category_id}</h4>
-                <h4>Detalle: {ultimoP.description}</h4>
-                <h4>Precio: ${ultimoP.price}</h4>
-               </div> 
+                <h2>ÚLTIMO PRODUCTO</h2>
+                <p className='imageLast'>{ultimoP.images}</p>
+                <p className='data'>
+                    <h4>Nombre: {ultimoP.name}</h4>
+                    <h4>Categoría: {ultimoP.category_id}</h4>
+                    <h4>Detalle: {ultimoP.description}</h4>
+                    <h4>Precio: ${ultimoP.price}</h4>
+                </p>
             </div>
         </React.Fragment>
     )

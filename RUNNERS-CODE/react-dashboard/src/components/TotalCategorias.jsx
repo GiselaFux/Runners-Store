@@ -26,7 +26,7 @@ function TotalCategorias(){
 
     return(
 
-            <Card title="Total de categorias" cuantity= {categories.count} /> 
+            <Card title="TOTAL DE CATEGORIAS" cuantity= {categories.count} /> 
 
     )
 }

@@ -1,0 +1,71 @@
+/*Estilos generales*/
+
+* {
+    margin: 0px;
+
+}
+
+body {
+    font-family: "Roboto";
+}
+
+main {
+    margin: 180px auto 0px;
+    text-align: center;
+}
+
+
+/*Estilos header*/
+
+.bottomMenu {
+    background-color: #c21d17;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 133px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    filter: drop-shadow(0 0 0.75rem #330807);
+    z-index: 1;
+}
+
+.logo {
+    width: 7rem;
+}
+
+li {
+    list-style: none;
+    text-decoration: none;
+}
+
+ul{
+    text-decoration: none;
+    display: flex;
+}
+
+li span {
+    color: black;
+    text-decoration-line: none;
+    box-shadow: none;
+    padding: 1rem 2rem;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+.link{
+  text-decoration: none;
+}
+
+@media(min-width:760px) {
+    .logo {
+        width: 8rem;
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .logo {
+        width: 9rem;
+    }
+}

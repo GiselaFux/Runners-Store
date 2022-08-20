@@ -8,7 +8,7 @@ let db = require("../../database/models");
 module.exports={
     list:(req, res)=>{
       db.Products.findAll({
-        include: [{association: "category"}]
+        include: [{association: "images"}, {association: "category"}]
       })
       .then(products=>{
         return res.json({total:products.length,

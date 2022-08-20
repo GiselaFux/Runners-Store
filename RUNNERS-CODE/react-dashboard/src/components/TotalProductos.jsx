@@ -9,7 +9,7 @@ function TotalProductos(){
 
     useEffect(()=>{
         console.log('Se visualizan los datos');
-        fetch('http://localhost:3000/api/products')
+        fetch('http://localhost:3001/api/products')
         .then(response => response.json())
         .then(data => {
             setProducts(data.total)
@@ -26,7 +26,7 @@ function TotalProductos(){
     },[products])
 
     return(
-        <Card title="Total de productos" cuantity={products} /> 
+        <Card title="TOTAL DE PRODUCTOS" cuantity={products} /> 
     )
 }
 

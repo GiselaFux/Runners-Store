@@ -3,13 +3,13 @@ import Card from './Card';
 import { useState, useEffect } from 'react';
 
 
-function ProductsCard(){
+function TotalProductos(){
 
     const [products, setProducts] = useState([0])
 
     useEffect(()=>{
         console.log('Se visualizan los datos');
-        fetch('http://localhost:3001/api/products/')
+        fetch('http://localhost:3000/api/products')
         .then(response => response.json())
         .then(data => {
             setProducts(data.total)
@@ -26,8 +26,8 @@ function ProductsCard(){
     },[products])
 
     return(
-            <Card title="Total de productos" cuantity={products} /> 
+        <Card title="Total de productos" cuantity={products} /> 
     )
 }
 
-export default ProductsCard
+export default TotalProductos

@@ -8,7 +8,7 @@ function TotalUsuarios(){
 
     useEffect(()=>{
         console.log('Se visualizan los datos');
-        fetch('http://localhost:3001/api/users')
+        fetch('http://localhost:3000/api/users')
         .then(response => response.json())
         .then(data => {
             setUsers(data.total)

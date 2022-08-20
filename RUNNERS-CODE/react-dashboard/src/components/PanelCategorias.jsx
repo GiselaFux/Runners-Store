@@ -11,7 +11,7 @@ function PanelCategorias(){
         fetch('http://localhost:3001/api/products')
         .then(response => response.json())
         .then(data => {
-            setCategories(data.data.countByCategory)
+            setCategories(data.data.category.countById)
         })
         .catch(error => console.error(error));
     },[])

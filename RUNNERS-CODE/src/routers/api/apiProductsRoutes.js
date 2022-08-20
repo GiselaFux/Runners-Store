@@ -9,6 +9,7 @@ const apiProductsController = require("../../controllers/apis/apiProductsControl
 router.get("/", apiProductsController.list);
 
 
+
 // DETALLE PRODUCTO
 router.get("/:id", apiProductsController.detail);
 

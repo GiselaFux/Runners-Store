@@ -1,6 +1,7 @@
 import React from 'react';
 import TotalProductos from './TotalProductos';
 import TotalUsuarios from './TotalUsuarios';
+import TotalCategorias from './TotalCategorias';
 
 
 function PanelTotales() {
@@ -8,7 +9,7 @@ function PanelTotales() {
         <div>
             <TotalProductos />
             <TotalUsuarios />
-            TOTAL CATEGORIAS
+            <TotalCategorias />
         </div>
     )
 }

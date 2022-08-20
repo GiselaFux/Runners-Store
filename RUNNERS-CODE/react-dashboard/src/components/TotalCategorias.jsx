@@ -11,7 +11,7 @@ function TotalCategorias(){
         fetch('http://localhost:3001/api/products')
         .then(response => response.json())
         .then(data => {
-            setCategories(data.data)
+            setCategories(data.data.category.category_description)
         })
         .catch(error => console.error(error));
     },[])
@@ -26,7 +26,7 @@ function TotalCategorias(){
 
     return(
 
-            <Card title="Total de categorias" cuantity= {Object.keys(categories).length} /> 
+            <Card title="Total de categorias" cuantity= {categories.count} /> 
 
     )
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import UltimoProducto from './UltimoProducto';
 import UltimoUsuario from './UltimoUsuario';
 
-function PanelDetalles() {
+function PanelUltimos() {
     return (
         <div>
             <h2>DETALLES PROD Y USER</h2>
@@ -16,4 +16,4 @@ function PanelDetalles() {
 
 
 
-export default PanelDetalles;
+export default PanelUltimos;

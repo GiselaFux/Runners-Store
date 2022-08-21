@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { useState, useEffect } from 'react';
 
 import '../assets/css/tables.css'
@@ -56,6 +55,7 @@ function PanelProductos(){
                     <td >
                             {us.discount}%
                     </td>
+                
                     </tr>)
                     })}  
             </table>

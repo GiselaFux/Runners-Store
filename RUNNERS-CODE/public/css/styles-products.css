@@ -1,6 +1,7 @@
 .products-wrapper {
     margin-top: 30px;
     margin-bottom: 30px;
+
 }
 
 .container {
@@ -9,6 +10,7 @@
     padding-left:15px;
     margin-right:auto;
     margin-left:auto
+    
 }
 /*para  que redireccionar x categoría, no quede debajo del header*/
 div[id]{
@@ -29,11 +31,6 @@ div[id]{
     justify-content: space-around;
 }
 
-.col-12 {
-    -ms-flex:0 0 100%;
-    flex:0 0 100%;
-    max-width:100%
-}
 
 .col-sm-6 {
     -ms-flex:0 0 50%;
@@ -47,9 +44,10 @@ div[id]{
 }
 
 .product-box {
-    background-color: #ffffff;
+    background-color: #e8e8e7;
     border-radius: 5px;
     overflow: hidden;
+    padding: 10px;
     transition: 300ms;
     margin: 20px 0;
 }
@@ -64,6 +62,7 @@ div[id]{
 
 .product-box_data {
     padding: 15px;
+
     position: relative;
     display: flex;
     align-items: center;
@@ -76,62 +75,33 @@ div[id]{
 }
 
 .product-box_data span {
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: 300;
     color: var(--green);
-    margin: 0 0 0 10px;
 }
 
-.product-box_data p {
+.product-box_data p{
     font-size: 1.5em;
+    text-decoration: none;
     width: 100%;
     color: var(--gray);
-    margin: 0;
-    height: 0;
     transition: 300ms;
     overflow: hidden;
 }
 
-.product-box_data i {
-    color: green;
-    font-size: 1.8em;
-    width: 35px;
-    height: 35px;
-    text-align: center;
-    border: solid 1px;
-    border-radius: 50%;
-    position: absolute;
-    top: -15px;
-    right: 15px;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 300ms;
-}
 
 .product-box:hover p {
     height: 40px;
     margin-top: 15px;
 }
 
-.product-box:hover i {
-    transform: rotate(360deg);
-    box-shadow: 0 0 5px var(--green);
-}
-
-.product-box:hover i {
-    transform: rotate(360deg);
-    box-shadow: 0 0 5px var(--green);
-}
 
 img {
     width: 100%;
 }
   
 .product-detail-price {
-    font-size: 5.5em;
-    margin: 10px 0;
+    font-size: 5em;
 }
 
 .small {
@@ -144,9 +114,17 @@ img {
 }
 
 .category-title {
-    text-align: initial;
+    background-color: rgba(194, 29, 23, 0.9);
+    -ms-flex:0 0 80%;
+    flex:0 0 80%;
+    justify-content: center;
+    align-items: center;
+    color: #e8e8e7;
     margin-left: 10px;
-    font-size: 2.4em;
+    font-size: 2em;
     font-weight: bold;
 }
 
+p.busqueda-title{
+    font-size: 20px;
+}

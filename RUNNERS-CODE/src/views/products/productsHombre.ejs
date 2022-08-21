@@ -10,44 +10,43 @@
     <div class="container products-wrapper">
       <div class="row">
         <!-- Categoria Hombre -->
-        <div class="col-12">
-          <h2 class="category-title">Hombre</h2>
+        <div class="category-title">
+          <h2>Hombre</h2>
         </div>
 
         <% productHombre.forEach(function(productHombre){ 
           let finalPrice = (productHombre.price * ((100 - productHombre.discount) / 100)).toFixed(0)
-      %>
-<div class="col-12 col-sm-6 col-lg-3" id="hombre">
-<section class="product-box">
-  <a href="/products/<%= productHombre.id %>">
-    <figure class="product-box_image">
-      <% if (productHombre.images.length != 0) { %>
-        <img src="/img/<%= productHombre.images[0].image %>" alt="imagen de producto">
-        <% } else { %>
-          <img src="/img/default-avatar.jpg" alt="imagen de producto">
-        <% } %>
-    </figure>
-    <article class="product-box_data">
-      <h2>$
-        <%= toThousand(finalPrice) %>
-      </h2>
-      <span><%= productHombre.discount %> %OFF</span>
-      <p>
-        <%= productHombre.name %>
-      </p>
-      <i class="fas fa-truck"></i>
-      <form action="#" method="get">
-        <a href="edit/<%= productHombre.id %>"><input type="button" name="edit-product" value="Editar producto" class="detail-add-trolle"></a>
+        %>
+      <div class="col-12 col-sm-6 col-lg-3" id="hombre">
+        <section class="product-box">
+          <a href="/products/<%= productHombre.id %>">
+            <figure class="product-box_image">
+              <% if (productHombre.images.length != 0) { %>
+                <img src="/img/<%= productHombre.images[0].image %>" alt="imagen de producto">
+                <% } else { %>
+                  <img src="/img/default-avatar.jpg" alt="imagen de producto">
+                <% } %>
+            </figure>
+            <article class="product-box_data">
+              <p >
+                <%= productHombre.name %>
+              </p>
+              <h2>$
+                <%= toThousand(finalPrice) %>
+              </h2>
+              <span><%= productHombre.discount %> %OFF</span>
+              <form action="#" method="get">
+                <a href="edit/<%= productHombre.id %>"><input type="button" name="edit-product" value="Editar producto" class="detail-add-trolle"></a>
 
-      </form>
-      <form action="delete/<%= productHombre.id %>?_method=DELETE" type="submit" method="POST">
-        <button type="submit">Delete</button>
-      </form>
-    </article>
-  </a>
-</section>
-</div>
-<% }) %>
+              </form>
+              <form action="delete/<%= productHombre.id %>?_method=DELETE" type="submit" method="POST">
+                <button type="submit">Delete</button>
+              </form>
+            </article>
+          </a>
+        </section>
+      </div>
+      <% }) %>
       </div>
     </div>
   </main>

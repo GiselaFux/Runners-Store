@@ -11,7 +11,7 @@ function TotalCategorias(){
         fetch('/api/products')
         .then(response => response.json())
         .then(data => {
-            setCategories(data.data.category.category_description)
+            setCategories(data.data.category.countByCategory_Description)
         })
         .catch(error => console.error(error));
     },[])

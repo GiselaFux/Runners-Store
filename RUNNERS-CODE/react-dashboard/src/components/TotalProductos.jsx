@@ -26,6 +26,7 @@ function TotalProductos(){
     },[products])
 
     return(
+        
         <Card title="TOTAL DE PRODUCTOS" cuantity={products} /> 
     )
 }

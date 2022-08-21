@@ -10,8 +10,8 @@
     <div class="container products-wrapper">
       <div class="row">
         <!-- Categoria Accesorios -->
-        <div class="col-12">
-          <h2 class="category-title">Accesorios</h2>
+        <div class="category-title">
+          <h2>Accesorios</h2>
         </div>
 
         <% productAccesorios.forEach(function(productAccesorios){ 
@@ -35,7 +35,6 @@
   <p>
     <%= productAccesorios.name %>
   </p>
-  <i class="fas fa-truck"></i>
   <form action="#" method="get">
     <a href="edit/<%= productAccesorios.id %>"><input type="button" name="edit-product" value="Editar producto" class="detail-add-trolle"></a>
   </form>

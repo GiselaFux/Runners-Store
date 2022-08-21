@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-import logo from '../assets/img/logo.png'
 
 import '../assets/css/bottomMenu.css'
 
@@ -9,14 +8,6 @@ function BottomMenu (){
     return (
         <React.Fragment>
             <div className='bottomMenu'>
-                <div>
-                    <Link to="/">
-                        <div>
-                            <img src={logo} alt="1rem" className='logo'/>
-                        </div>
-                    </Link>
-                </div>
-
                 <ul> 
                     <li>
                         <Link className="link" to="/categories">
@@ -34,12 +25,6 @@ function BottomMenu (){
                         <Link className="link" to="/detailsusers">
                         <i class="fas fa-table"></i>
                             <span>Usuarios</span>
-                        </Link>
-                    </li> 
-                    <li>
-                        <Link className="link" to="/lastupdate">
-                        <i class="fas fa-table"></i>
-                            <span>Detalles</span>
                         </Link>
                     </li> 
                 

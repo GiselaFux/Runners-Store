@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
+
 import TotalProductos from './TotalProductos';
 import TotalUsuarios from './TotalUsuarios';
 import TotalCategorias from './TotalCategorias';
@@ -14,15 +16,21 @@ function FirstPage() {
             <main>
                 <div className='totales'>          
                     <div className='cardTotales'>
-                        <p><TotalProductos /></p>
+                        <Link className="link" to="/detailsproducts">
+                            <p><TotalProductos /></p>
+                        </Link>
                     </div>
 
                     <div className='cardTotales'>
-                    <p> <TotalUsuarios /></p>
+                        <Link className="link" to="/detailsusers">
+                            <p><TotalUsuarios /></p>
+                        </Link>
                     </div>
                     
                     <div className='cardTotales'>
-                        <p><TotalCategorias /></p>
+                        <Link className="link" to="/categories">
+                            <p><TotalCategorias /></p>
+                        </Link>
                     </div>
                 </div>
 

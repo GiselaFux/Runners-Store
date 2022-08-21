@@ -17,8 +17,26 @@ main {
 
 /*Estilos header*/
 
+.TopBar {
+    background-color: rgba(194, 29, 23, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 133px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    filter: drop-shadow(0 0 0.75rem #330807);
+    z-index: 1;
+}
+
+.TopBar h1 {
+    color: #e8e8e7;
+    font-size: 50px;
+}
+
 .bottomMenu {
-    background-color: #c21d17;
+    background-color:  rgba(194, 29, 23, 0.75);
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -45,7 +63,7 @@ ul{
 }
 
 li span {
-    color: black;
+    color: #e8e8e7;
     text-decoration-line: none;
     box-shadow: none;
     padding: 1rem 2rem;

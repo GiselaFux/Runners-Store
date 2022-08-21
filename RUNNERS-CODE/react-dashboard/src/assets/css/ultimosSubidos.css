@@ -1,9 +1,9 @@
 
 .flip-card {
     background-color: transparent;
-    width: 300px;
-    height: 200px;
-    border: 1px solid #f1f1f1;
+    width: 400px;
+    height: 400px;
+    border: 1px solid #e8e8e7;
     perspective: 1000px; 
   }
 
@@ -32,7 +32,7 @@
   
 
   .flip-card-front {
-    background-color: #bbb;
+    background-color: #e8e8e7;
     color: black;
   }
   .flip-card-front h2{

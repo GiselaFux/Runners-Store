@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { Route, Routes} from 'react-router-dom'
 
+import TopBar from "./components/TopBar"
 import BottomMenu from "./components/BottomMenu"
 import FirstPage from "./components/FirstPage"
 
@@ -16,6 +17,7 @@ function App() {
   return (
     <React.Fragment>
       <div className="App">
+        <TopBar/>
         <Routes>
             <Route exact path="/" element={<FirstPage />} />
             <Route path="/categories" element={<PanelCategorias />} />

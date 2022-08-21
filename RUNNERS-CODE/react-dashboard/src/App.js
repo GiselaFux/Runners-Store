@@ -18,13 +18,13 @@ function App() {
       <div className="App">
         <Routes>
             <Route exact path="/" element={<FirstPage />} />
-            <Route exact path="/categories" element={<PanelCategorias />} />
-            <Route exact path="/detailsproducts" element={<PanelProductos />} />
-            <Route exact path="/detailsusers" element={<PanelUsuarios />} />
+            <Route path="/categories" element={<PanelCategorias />} />
+            <Route path="/detailsproducts" element={<PanelProductos />} />
+            <Route path="/detailsusers" element={<PanelUsuarios />} />
         </Routes>
-        <div>
+
         <BottomMenu/>
-        </div>
+
       </div>
     </React.Fragment>
   );

@@ -1,13 +1,14 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
+import '../assets/css/ultimosSubidos.css'
 
 function UltimoUsuario(){
     const [users, setUsers] = useState([0])
 
     useEffect(()=>{
         console.log('Se visualizan los datos');
-        fetch('http://localhost:3001/api/users')
+        fetch('/api/users')
         .then(response => response.json())
         .then(data => {
             setUsers(data.data)
@@ -29,13 +30,22 @@ function UltimoUsuario(){
 
     return (
         <React.Fragment>
-            <div> 
-            <h2>Último Usuario</h2>
-                <h4>Nombre: {ultimoU.nombre}</h4>
-                <h4>Apellido: {ultimoU.apellido}</h4>
-                <h4>Correo: {ultimoU.email}</h4>
-                <h4>Categoria de Usuario: {ultimoU.categoryUsu_id}</h4>
+        <div className='flip-card'>
+            <div className='flip-card-inner'>
+                <div className='flip-card-front'>
+                    <h2>ÚLTIMO USUARIO</h2>
+                    
+                </div>
+
+                <div className='flip-card-back'>
+                    <p>Nombre: {ultimoU.nombre}</p>
+                    <p>Apellido: {ultimoU.apellido}</p>
+                    <p>Correo: {ultimoU.email}</p>
+                    <p>Categoria de Usuario: {ultimoU.categoryUsu_id}</p>
+                </div>
+                
             </div>
+        </div>
         </React.Fragment>
     )
 }

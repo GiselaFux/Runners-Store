@@ -8,7 +8,7 @@ function TotalCategorias(){
 
     useEffect(()=>{
         console.log('Se visualizan datos');
-        fetch('http://localhost:3001/api/products')
+        fetch('/api/products')
         .then(response => response.json())
         .then(data => {
             setCategories(data.data.category.category_description)

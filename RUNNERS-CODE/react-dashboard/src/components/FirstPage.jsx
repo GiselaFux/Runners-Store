@@ -10,31 +10,33 @@ import '../assets/css/firstPage.css'
 
 function FirstPage() {
     return (
-        <main>
-            <div className='totales'>          
-                <div className='cardTotales'>
-                    <p><TotalProductos /></p>
+        <React.Fragment>
+            <main>
+                <div className='totales'>          
+                    <div className='cardTotales'>
+                        <p><TotalProductos /></p>
+                    </div>
+
+                    <div className='cardTotales'>
+                    <p> <TotalUsuarios /></p>
+                    </div>
+                    
+                    <div className='cardTotales'>
+                        <p><TotalCategorias /></p>
+                    </div>
                 </div>
 
-                <div className='cardTotales'>
-                <p> <TotalUsuarios /></p>
+                <div className='ultimos'>  
+                    <div>
+                        <UltimoProducto />
+                    </div>
+                    <div>
+                        <UltimoUsuario />   
+                    </div>     
                 </div>
-                
-                <div className='cardTotales'>
-                    <p><TotalCategorias /></p>
-                </div>
-            </div>
-
-            <div className='ultimos'>  
-                <div className='cardUltimos'>
-                    <UltimoProducto />
-                </div>
-                <div className='cardUltimos'>
-                    <UltimoUsuario />   
-                </div>     
-            </div>
-        </main>
-    )
+            </main>
+        </React.Fragment>
+    );
 }
 
 export default FirstPage;

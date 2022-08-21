@@ -24,6 +24,14 @@ app.use(cookies());
 
 app.use(userLoggedMiddleware);
 
+//Para las APIs del dashboard
+app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    next();
+});
 
 /*para poder trabajar con datos que se envían desde el formulario y capturarlo*/
 app.use(express.urlencoded({ extended: false }));
@@ -44,7 +52,7 @@ app.use('/products', productsRouter)
 app.use('/users', userRouter);
 
 
-// API
+// API LISTA DE PRODUCTOS Y USUARIOS
 const apiUsersRouter = require("./src/routers/api/apiUsersRoutes");
 const apiProductsRouter = require("./src/routers/api/apiProductsRoutes");
 // API
@@ -59,6 +67,4 @@ app.use((req,res,next)=>{
     next()
 })
 
-app.listen(3000, () => {
-    console.log("Servidor corriendo en el puerto 3000")
-});
+app.listen(3000, () => {console.log("Servidor corriendo en el puerto 3000")});

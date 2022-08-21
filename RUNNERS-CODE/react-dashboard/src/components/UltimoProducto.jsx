@@ -8,7 +8,7 @@ function UltimoProducto(){
 
     useEffect(()=>{
         console.log('se montó al componente');
-        fetch('http://localhost:3001/api/products')
+        fetch('/api/products')
         .then(response => response.json())
         .then(data => {
             setProducts(data.data)
@@ -30,15 +30,19 @@ function UltimoProducto(){
 
     return (
         <React.Fragment>
-            <div>
-                <h2>ÚLTIMO PRODUCTO</h2>
-                <p className='imageLast'>{ultimoP.images}</p>
-                <p className='data'>
-                    <h4>Nombre: {ultimoP.name}</h4>
-                    <h4>Categoría: {ultimoP.category_id}</h4>
-                    <h4>Detalle: {ultimoP.description}</h4>
-                    <h4>Precio: ${ultimoP.price}</h4>
-                </p>
+            <div className='flip-card'>
+                <div className='flip-card-inner'>
+                    <div className='flip-card-front'>
+                        <h2>ÚLTIMO PRODUCTO</h2>
+                        
+                    </div>
+                    <div className='flip-card-back'>
+                        <p>Nombre: {ultimoP.name}</p>
+                        <p>Categoría: {ultimoP.category_id}</p>
+                        <p>Detalle: {ultimoP.description}</p>
+                        <p>Precio: ${ultimoP.price}</p>
+                    </div>
+                </div>
             </div>
         </React.Fragment>
     )

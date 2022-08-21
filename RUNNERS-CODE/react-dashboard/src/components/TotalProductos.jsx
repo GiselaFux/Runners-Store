@@ -9,7 +9,7 @@ function TotalProductos(){
 
     useEffect(()=>{
         console.log('Se visualizan los datos');
-        fetch('http://localhost:3001/api/products')
+        fetch('/api/products')
         .then(response => response.json())
         .then(data => {
             setProducts(data.total)

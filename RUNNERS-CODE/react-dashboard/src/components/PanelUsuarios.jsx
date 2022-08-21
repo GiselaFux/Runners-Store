@@ -6,7 +6,7 @@ function PanelUsuarios(){
 
     useEffect(()=>{
         console.log('Se visualizan los datos');
-        fetch('http://localhost:3001/api/users')
+        fetch('/api/users')
         .then(response => response.json())
         .then(data => {
             setUsers(data.data)

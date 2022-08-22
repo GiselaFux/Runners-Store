@@ -10,10 +10,10 @@ function PanelCategorias(){
 
     useEffect(()=>{
         console.log('Se visualizan los datos');
-        fetch('/api/products')
+        fetch('/api/categories')
         .then(response => response.json())
         .then(data => {
-            setCategories(data.data.category.category_description)
+            setCategories(data.data.countById)
         })
         .catch(error => console.error(error));
     },[])

@@ -1,0 +1,43 @@
+.textos-error{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.textos-error h2 {
+    color: #c21d17;
+    font-size: 30px;
+    
+}
+.imageContent{
+    margin-top: 15rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-error {
+    background-color: #c21d17;
+    border: 1px #c21d17 solid;
+    filter: drop-shadow(0 0 0.2rem #330807);
+    border-radius: 20px;
+    padding: 10px 25px;
+    color: white;
+    width: 270px;
+    font-size: 18px;
+    margin: 25px 0;
+}
+
+.btn-error:hover {
+    background-color: #e8e8e7;
+    color: #c21d17;
+}
+
+.btn-error a{
+    text-decoration: none;
+    color: #e8e8e7;
+}
+
+.btn-error a:hover{
+    color: #c21d17;
+}

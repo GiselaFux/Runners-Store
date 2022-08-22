@@ -6,6 +6,8 @@ const app = express();
 const fs= require('fs');
 
 const userLoggedMiddleware = require("./src/middlewares/userLoggedMiddleware")
+const error404 = require("./src/middlewares/errorMiddleware");
+
 
 /*requerimiento method reconocimiento de put y delete*/
 const methodOverride = require("method-override")
@@ -55,16 +57,18 @@ app.use('/users', userRouter);
 // API LISTA DE PRODUCTOS Y USUARIOS
 const apiUsersRouter = require("./src/routers/api/apiUsersRoutes");
 const apiProductsRouter = require("./src/routers/api/apiProductsRoutes");
+const apiCategoriesRouter = require("./src/routers/api/apiCategoriesRoutes");
 // API
 app.use("/api/users", apiUsersRouter);
 
 app.use("/api/products", apiProductsRouter);
 
+app.use("/api/categories", apiCategoriesRouter);
 
-/*middleware error para toda la app*/
-app.use((req,res,next)=>{
-    res.status(404).render('not found');
-    next()
-})
 
 app.listen(3000, () => {console.log("Servidor corriendo en el puerto 3000")});
+
+
+/*ERROR 404*/
+
+app.use(error404)

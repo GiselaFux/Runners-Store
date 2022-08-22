@@ -8,10 +8,10 @@ function TotalCategorias(){
 
     useEffect(()=>{
         console.log('Se visualizan datos');
-        fetch('/api/products')
+        fetch('/api/categories')
         .then(response => response.json())
         .then(data => {
-            setCategories(data.data.category.countByCategory_Description)
+            setCategories(data.total)
         })
         .catch(error => console.error(error));
     },[])
@@ -26,7 +26,7 @@ function TotalCategorias(){
 
     return(
 
-            <Card title="TOTAL DE CATEGORIAS" cuantity= {categories.count} /> 
+            <Card title="TOTAL DE CATEGORIAS" cuantity={categories} /> 
 
     )
 }

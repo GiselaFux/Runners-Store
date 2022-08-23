@@ -35,13 +35,16 @@
                 <%= toThousand(finalPrice) %>
               </h2>
               <span><%= productHombre.discount %> %OFF</span>
-              <form action="#" method="get">
-                <a href="edit/<%= productHombre.id %>"><input type="button" name="edit-product" value="Editar producto" class="detail-add-trolle"></a>
 
-              </form>
-              <form action="delete/<%= productHombre.id %>?_method=DELETE" type="submit" method="POST">
-                <button type="submit">Delete</button>
-              </form>
+              <div class="buttons">
+                <form action="#" method="get">
+                  <a href="edit/<%= productHombre.id %>"><i class="fa-solid fa-pen"></i><input type="button" name="edit-product" value="Editar producto" class="detail-add-trolle" style="display:none;"></a>
+
+                </form>
+                <form action="delete/<%= productHombre.id %>?_method=DELETE" type="submit" method="POST">
+                  <button type="submit"><i class="fa-solid fa-xmark"></i></button>
+                </form>
+              </div>
             </article>
           </a>
         </section>

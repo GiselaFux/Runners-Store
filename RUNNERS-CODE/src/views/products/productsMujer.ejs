@@ -28,19 +28,22 @@
                       <% } %>             
               </figure>
               <article class="product-box_data">
+                <p>
+                  <%= productMujer.name %>
+                </p>
                 <h2>$
                   <%= toThousand(finalPrice) %>
                 </h2>
                 <span><%= productMujer.discount %> %OFF</span>
-                <p>
-                  <%= productMujer.name %>
-                </p>
-                <form action="#" method="get">
-                  <a href="edit/<%= productMujer.id %>"><input type="button" name="edit-product" value="Editar producto" class="detail-add-trolle"></a>
-                </form>
-                  <form action="delete/<%= productMujer.id %>?_method=DELETE" type="submit" method="POST">
-                    <button>Delete</button>
+
+                <div class="buttons">
+                  <form action="#" method="get">
+                    <a href="edit/<%= productMujer.id %>"><i class="fa-solid fa-pen"></i><input type="button" name="edit-product" value="Editar producto" class="detail-add-trolle " style="display:none;"></a>
                   </form>
+                    <form action="delete/<%= productMujer.id %>?_method=DELETE" type="submit" method="POST">
+                      <button><i class="fa-solid fa-xmark"></i></button>
+                    </form>
+                </div>
 
               </article>
             </a>

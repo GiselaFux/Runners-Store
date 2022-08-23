@@ -9,13 +9,14 @@
     align-items: center;
     font-size: 14px;
     border: solid 2px #e8e8e7;
+    background-color: #e8e8e7;
     border-radius: 15px;
-    margin: 10em 5em;
+    margin: 10em 6em;
 }
 
 .edit-product {
     width: 90%;
-    margin: 15px auto;
+    margin: 15px;
     text-align: left;
 }
 .cambios {
@@ -44,4 +45,10 @@
 .boton-edit:hover {
     background-color: #e8e8e7;
     color: #c21d17;
+}
+
+@media (min-width: 800px) {
+    .edit-cuadro-ppal{
+        margin: 10em 30em;
+    }
 }

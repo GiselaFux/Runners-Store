@@ -10,10 +10,10 @@ function PanelCategorias(){
 
     useEffect(()=>{
         console.log('Se visualizan los datos');
-        fetch('/api/categories')
+        fetch('/api/categories/count')
         .then(response => response.json())
         .then(data => {
-            setCategories(data.data.countById)
+            setCategories(data.data.category_description)
         })
         .catch(error => console.error(error));
     },[])
@@ -26,11 +26,7 @@ function PanelCategorias(){
         return()=> console.log('Se dejaron de visualizar los datos')
     },[categories])
 
-    let todas = Object.keys(categories)
-    console.log(todas)
-
-    let cant = Object.values(categories)
-    console.log(cant)
+  
 
 
     return(
@@ -44,14 +40,14 @@ function PanelCategorias(){
                         <th>Cantidad</th>
                     </tr>
                 </thead>
-                {todas.map((cat , i)=>{
+                {categories.map((cat , i)=>{
                     return(
                         <tr key={i}>
                     <td >
                             {cat}
                     </td> 
                     <td >
-                            {cant[i]}
+                            {[i]}
                     </td> 
                     </tr>)
                     })}   

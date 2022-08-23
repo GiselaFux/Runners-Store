@@ -9,7 +9,8 @@ const apiCategoriesController = require("../../controllers/apis/apiCategoriesCon
 // TODOS LOS PRODUCTOS
 router.get("/", apiCategoriesController.list);
 
-
+//count
+router.get("/count",  apiCategoriesController.contarCat)
 
 // DETALLE PRODUCTO
 router.get("/:id", apiCategoriesController.detail);

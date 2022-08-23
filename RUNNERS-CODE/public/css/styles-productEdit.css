@@ -47,6 +47,17 @@
     color: #c21d17;
 }
 
+.input-product-description-error, .input-product-name-error, .input-product-image-error {
+    color:red;
+    font-weight: bold;
+  
+  }
+  
+  .is-valid{
+    background-color: #c4f0c4;
+    border: 4px solid #229422;
+  }
+
 @media (min-width: 800px) {
     .edit-cuadro-ppal{
         margin: 10em 30em;

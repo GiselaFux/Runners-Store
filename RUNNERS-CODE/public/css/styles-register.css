@@ -64,6 +64,13 @@
     border: 1px solid #160812;
 }
 
+.div-name-errors, .div-lastName-errors, .div-image-errors, .div-email-errors, .div-password-errors {
+    color:red;
+    font-weight: bold;
+  
+  }
+  
+
 
 @media (min-width: 760px) {
 

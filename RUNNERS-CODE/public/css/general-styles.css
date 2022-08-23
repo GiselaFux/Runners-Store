@@ -214,6 +214,7 @@ footer {
     display: flex;
     align-items: center;
     margin-top: 13%;
+    bottom: 0;
 }
 
 .link-foot {

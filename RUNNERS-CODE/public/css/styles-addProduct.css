@@ -55,3 +55,11 @@
     border: 1px solid #160812;
 }
 
+.input-product-name-error, .input-product-description-error, .input-product-image-error {
+    color:red;
+    font-weight: bold;
+  
+  }
+  
+
+

@@ -19,7 +19,7 @@
           <input type="email" name="email" id="emailLogin" placeholder="Email*" class="<%= locals.errors && errors.email ? 'is-invalid' : null %>"/>
           <span class="email-validation"></span>
           <% if (locals.errors && errors.email) { %>
-          <div class="text-danger">
+          <div class="errors">
             <%= errors.email.msg %>
           </div>
           <% } %>

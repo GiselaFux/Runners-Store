@@ -72,6 +72,13 @@
     flex-direction: column;
 }
 
+.errors{
+    width: 100%;
+    color: red;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
 
 @media (min-width: 760px) {
     .login-cuadro-ppal {
@@ -102,5 +109,6 @@
     .login-check {
         font-size: medium;
     }
+
 
 }

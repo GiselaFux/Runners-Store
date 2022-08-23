@@ -1,14 +1,20 @@
 /* estilos del main */
-
-.detail-main-picture {
-    text-align: center;
-    margin-top: 15px;
-    width: 65%;
-    background-color: antiquewhite;
-    margin: auto;
+.detail-imagenes-descripcion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
 }
 
-.detail-product_img {
+.detail-main-picture {
+    justify-content: left;
+    text-align: center;
+    margin-top: 15px;
+    width: 100%;
+    background: rgb(194, 29, 23, .2);
+}
+
+.detail-main-picture img{
     width: 60%;
     margin: 5px;
 }
@@ -17,13 +23,11 @@
 /* arma slide de fotos*/
 
 .detail-galeria {
-    width: 90%;
-    margin: auto;
+    width: 100%;
     list-style: none;
     padding: 5px 20px;
     box-sizing: border-box;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
 }
 
@@ -32,7 +36,7 @@
 }
 
 .detail-galeria img {
-    width: 110px;
+    width: 40px;
 }
 
 .detail-modal {
@@ -50,16 +54,12 @@
     z-index: 15;
 }
 
-.detail-modal h3 {
-    text-align: center;
-    margin: 15px 0;
-}
-
 .detail-imagen {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 15%;
 }
 
 .detail-imagen a {
@@ -100,128 +100,213 @@
 
 
 /* termina slide de fotos */
-
-.detail-products {
+.detail-product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    margin: 20px 0;
+    width: 90%;
 }
+.detail-product-description {
+    font-size: 12px;
+    text-align: justify;
+    width: 100%;
+}
+
+.detail-product-description summary{
+    border-top: 1px solid #160812;
+    border-bottom: 1px solid #160812;
+    font-size:14px
+}
+
 
 .detail-product-head {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    margin: 12px;
-}
-
-.detail-product-name {
+    width: 90%;
     font-weight: bold;
-    width: 50%;
-    font-size: 24px;
+    margin: 8% 0;
 }
 
-.detail-price {
-    text-align: center;
-    font-weight: bold;
-    width: 50%;
-    font-size: 24px;
-}
-
-.detail-product-description {
-    font-size: 18px;
-    margin: 0 15%;
-    text-align: initial;
-}
-
-details summary {
-    border-top: 1px solid #160812;
-    border-bottom: 1px solid #160812;
-    margin: 0 12px;
-    font-size: 18px;
-    font-weight: bold;
-    width: 70%;
-    margin: auto;
-}
-
-form.detail-color-head {
+.detail-color-head {
     display: flex;
     flex-direction: column;
-    justify-items: center;
-    margin: 10px;
+    margin: 2% 0;
 }
 
+
 .detail-color {
-    width: 15%;
     background-color: #f8f9f9;
+    width: 80px;
 }
 
 .detail-talle {
-    width: 15%;
     background-color: #f8f9f9;
-}
-
-.detail-h4 {
-    margin-bottom: 5px;
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: bold;
+    width: 80px;
 }
 
 .detail-add-trolley {
-    height: 40px;
+    width: 60%;
     border-radius: 30px;
     border: solid 1px #808b96;
-    text-align: center;
-    margin: 15px auto;
+    margin: auto;
     padding: 5px;
     color: #f6f5f5;
     font-weight: bold;
     background: #c21d17;
     cursor: pointer;
     transition: all 500ms;
-}
-
-.volver {
-    height: 40px;
-    border-radius: 30px;
-    border: solid 1px #808b96;
-    text-align: center;
-    margin: 15px auto;
-    padding: 5px;
-    color: #f6f5f5;
-    font-weight: bold;
-    background: #c21d17;
-    cursor: pointer;
-    transition: all 500ms;
+    margin-top: 8%;
 }
 
 .detail-add-trolley:hover {
-    background-color: #160812;
+    background-color: #f8f9f9;
+    color: #c21d17;
+}
+.detail-fotos-detalles{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.volver:hover {
-    background-color: #160812;
+/*RECOMENDADOS*/
+.detail-container-slider{
+    width: 250px;
+    height: 125px;
+    margin: auto;
+    margin-bottom: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
 }
+
+input[type=radio]{
+    display: none;
+}
+
+.detail-container-promo{
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+    max-height: 600px;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-prod-ofertas{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.detail-ofertas{
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.detail-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#item-2:checked ~ .detail-prod-ofertas #promo1,
+#item-1:checked ~ .detail-prod-ofertas #promo3,
+#item-3:checked ~ .detail-prod-ofertas #promo2{
+    transform: translateX(-60%) scale(0.5);
+    opacity: 0.6;
+    z-index: 0;
+}
+
+#item-3:checked ~ .detail-prod-ofertas #promo1,
+#item-1:checked ~ .detail-prod-ofertas #promo2,
+#item-2:checked ~ .detail-prod-ofertas #promo3{
+    transform: translateX(60%) scale(0.5);
+    opacity: 0.6;
+    z-index: 0;
+}
+
+#item-1:checked ~ .detail-prod-ofertas #promo1,
+#item-2:checked ~ .detail-prod-ofertas #promo2,
+#item-3:checked ~ .detail-prod-ofertas #promo3{
+    transform: translateX(0) scale(1);
+    z-index: 1;
+}
+
+.detail-prod-ofertas label p{
+    background-color: #e5e7e9;
+    opacity: 0.8;
+    font-size: 12px;
+} 
+
+.detail-promoPrecio {
+    color: red;
+}
+
+.detail-promoPrecio:hover {
+    color: rgb(237, 19, 19);
+    font-size: larger;
+    font-weight: 700;
+}
+
 
 @media(min-width:760px) {
-    .detail-product-name {
-        font-size: 36px;
+    .detail-imagenes-descripcion{
+        margin-left: 20%;
+        width: 50%;
     }
-    
-    .detail-price {
-        font-size: 36px;
+
+
+    .detail-fotos-detalles{
+        flex-direction: row;
     }
-    .detail-h4 {
-        font-size: 24px;
+
+    .detail-product-description {
+        font-size: 16px;
     }
-    details summary {
-        font-size: 24px;
+
+    .detail-product-description summary{
+        font-size:18px
     }
-    .detail-add-trolley {
-        width: 30%;
-        font-size: 20px;
+
+    .detail-product{
+        width: 50%;
+        text-align: left;
+        margin-left: 10%;
     }
-    .volver {
-        width: 15%;
-        font-size: 20px;
+
+    .detail-product-head h3, .detail-product-head p{
+        margin: 8% 0
     }
+
+    .detail-product-head {
+        flex-direction: column;
+        justify-content: left;
+    }
+
+    .detail-color-head{
+        width: 100%;
+    }
+
+    .detail-container-slider{
+        width: 400px;
+        height: 200px;
+    }
+
+    .detail-prod-ofertas label p{
+        font-size: 18px;
+    } 
+
 }

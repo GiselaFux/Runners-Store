@@ -6,78 +6,78 @@
     <body>
         <%- include('../partials/header') %>
             <main>
-                <section class="detail-main-picture">
-                    <div>
-                        <img src="/img/<%= product.images[0].image %>" class="detail-product_img">
-                    </div>
-                </section>
-                <section>
-                    <ul class="detail-galeria">
-                        <% product.images.forEach((image,i) => {
-                        if (i != 0) { %>
-                            <li>
-                                <a href="#<%=i %>"><img src="/img/<%= image.image %>"></a>
-                            </li>
+                <div class="detail-fotos-detalles">
+                    <section class="detail-imagenes-descripcion">
+                        <div class="detail-main-picture">
+                            <img src="/img/<%= product.images[0].image %>">
+                        </div>
+                    
+                        <div>
+                            <ul class="detail-galeria">
+                                <% product.images.forEach((image,i) => {
+                                if (i != 0) { %>
+                                    <li>
+                                        <a href="#<%=i %>"><img src="/img/<%= image.image %>"></a>
+                                    </li>
+                                    <% }}) %>
+                            </ul>
+                            <% product.images.forEach((image,i) => {
+                                if (i != 0) { %>
+                                <div class="detail-modal" id=<%=i %>>
+                                    <div class="detail-imagen">
+                                        <a href="#<%=( i - 1) <=0 ? product.images.length - 1 : i - 1 %>" >&#60;</a>
+                                        <a href="#<%=( i + 1)> (product.images.length) - 1? 1 : i + 1 %>" ><img src="/img/<%= image.image %>" class="detail-imagen-dos"></a>
+                                        <a href="#<%=( i + 1)> (product.images.length) - 1? 1 : i + 1 %>" >></a>
+                                    </div>
+                                    <a class="detail-cerrar" href="">X</a>
+                                </div>
                             <% }}) %>
-                    </ul>
-                    <% product.images.forEach((image,i) => {
-                        if (i != 0) { %>
-                        <div class="detail-modal" id=<%=i %>>
-                            <h3>Foto1</h3>
-                            <div class="detail-imagen">
-                                <a href="#<%=( i - 1) <=0 ? product.images.length - 1 : i - 1 %>" >&#60;</a>
-                                <a href="#<%=( i + 1)> (product.images.length) - 1? 1 : i + 1 %>" ><img src="/img/<%= image.image %>" class="detail-imagen-dos"></a>
-                                <a href="#<%=( i + 1)> (product.images.length) - 1? 1 : i + 1 %>" >></a>
-
-                            </div>
-                            <a class="detail-cerrar" href="">X</a>
                         </div>
-                        <% }}) %>
 
+                        <section>
+                            <details class="detail-product-description">
+                                <summary>Descripción del producto</summary>
+                                <p>
+                                    <%= product.description %>
+                                </p>
+                            </details>
+                        </section>
+                    </section>
 
-                </section>
-                <section>
-                    <div class="detail-product">
+                    <section class="detail-product">
                         <div class="detail-product-head">
-                            <h3 class="detail-product-name">
-                                <%= product.name %>
-                            </h3>
-                            <p class="detail-price">$
-                                <%= (product.price * ((100 - product.discount) / 100)).toFixed(0)%>
-                            </p>
+                            <h3><%= product.name %></h3>
+                            <p>$<%= (product.price * ((100 - product.discount) / 100)).toFixed(0)%></p>
                         </div>
-                    </div>
-                    <details>
-                        <summary>Descripción del producto</summary>
-                        <p class="detail-product-description">
-                            <%= product.description %>
-                        </p>
-                    </details>
-                    <div class="detail-color-head">
-                        <form action="#" method="get">
-                            <h4 class="detail-h4">Color:</h4>
-                            <select class="detail-color" name="colour">
-                                <% product.colours.forEach(colour => { %>
-                                <option value="<%= colour.id %>"><%= colour.colour %></option>
-                                <% }); %>
-                        </select>
-                        </form>
-                        <form action="#" method="get">
-                            <h4 class="detail-h4">Talle:</h4>
-                            <select class="detail-talle" name="talle">
-                            <% product.sizes.forEach(size => { %>
-                            <option value="<%= size.id %>"><%= size.size %></option>
-                            <% }); %>
-                        </select>
-                        </form>
-                        <form action="#" method="get">
-                            <a href="/productCart/<%=product.id %>"><input type="button" name="add-trolley" value="AGREGAR AL CARRITO" class="detail-add-trolley"></a>
-                        </form>
-                        <form action="#" method="get">
-                            <a href="/products"><input type="button" name="volver" value="Volver" class="volver"></a>
-                        </form>
-                    </div>
-                </section>
+
+                        <div class="detail-color-head">                         
+                                <form action="#" method="get">
+                                    <h4>Color</h4>
+                                    <select class="detail-color" name="colour">
+                                        <% product.colours.forEach(colour => { %>
+                                        <option value="<%= colour.id %>"><%= colour.colour %></option>
+                                        <% }); %>
+                                    </select>
+                                </form>
+
+                                <form action="#" method="get">
+                                    <h4>Talle</h4>
+                                    <select class="detail-talle" name="talle">
+                                        <% product.sizes.forEach(size => { %>
+                                        <option value="<%= size.id %>"><%= size.size %></option>
+                                        <% }); %>
+                                    </select>
+                                </form>
+
+                                <form action="#" method="get">
+                                    <a href="/productCart/<%=product.id %>"><input type="button" name="add-trolley" value="AGREGAR AL CARRITO" class="detail-add-trolley"></a>
+                                </form>
+                                <form action="#" method="get">
+                                    <a href="/products"><input type="button" name="volver" value="Volver" class="detail-add-trolley"></a>
+                                </form>
+                            </div>
+                    </section>
+            </div>
             </main>
             <%- include('../partials/footer') %>
     </body>

@@ -56,12 +56,15 @@
     color: #c21d17;
 }
 
-.login-placeholder {
+.login-placeholder, .login-placeholder input {
     padding: 10px;
     width: 250px;
     border-radius: 5px;
-    border: 1px solid #160812;
     margin: 5px 0;
+}
+
+.login-placeholder input{
+    border: 1px solid #160812;
 }
 
 .login-check {
@@ -78,11 +81,9 @@
 
     .login-check {
         display: flex;
-        flex-direction: row;
         align-items: center;
         font-size: small;
     }
-
 
 }
 
@@ -93,15 +94,12 @@
         margin: 35px 300px;
     }
 
-    .login-placeholder {
+    .login-placeholder, .login-placeholder input {
         display: flex;
         flex-direction: column;
     }
 
     .login-check {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
         font-size: medium;
     }
 

@@ -9,10 +9,12 @@
   <%- include('../partials/header') %>
 
   <main>
+    <div class="edit-cuadro-ppal">
+      <h2 style="margin-top: 15px;">EDITAR PRODUCTO</h2>
     <form action="/products/edit/<%=product.id%>?_method=PUT" id="productEdit" method="POST" enctype="multipart/form-data" class="edit-product">
 
       <div class="create-control-formulario">
-        <label for="CambioNombre">Cambio de nombre</label>
+        <label class="edit-label" for="CambioNombre">NOMBRE</label>
         <input type="text" name="name" id="productName" value="<%= product.name %>" placeholder="Nombre nuevo del producto">
         <span class="input-product-name-error"></span>
         <% if (locals.errors && errors.name) { %>
@@ -20,7 +22,7 @@
         <% } %>
       </div>
       <div class="cambios">
-        <label for="CambioDesc">Cambio de descripcion</label>
+        <label class="edit-label" for="CambioDesc">DESCRIPCIÓN</label>
         <input type="text" name="description" id="productDescription" value="<%= product.description %>" placeholder="Descripcion nueva del producto" style="width:400px">
         <span class="input-product-description-error"></span>
         <% if (locals.errors && errors.description) { %>
@@ -28,11 +30,11 @@
         <% } %>
       </div>
       <div class="cambios">
-        <label for="CambioImagen">Cambio de imagen</label>
+        <label class="edit-label" for="CambioImagen">IMAGEN</label>
         <input type="file" id="image" name="imagen" multiple>
         <span class="input-product-image-error"></span>
       </div>
-      <label for="CambioCategoria">Categorias disponibles</label>
+      <label class="edit-label" for="CambioCategoria">CATEGORÍA</label>
       <select name="category" id="category">
         <% allCategories.forEach(category => { %>
         <option value="<%= category.id %>" <% if (product.category.id == category.id) { %><%= 'selected' %><% }; %>><%= category.category_description %></option>
@@ -61,7 +63,7 @@
         </div>
       </div> -->
       <div class="cambios">
-        <label for="CambioTalles">Talles disponibles</label>
+        <label class="edit-label" for="CambioTalles">TALLES DISPONIBLES</label>
         <div class="checkbox-container">
           <% for (let i=0; i<allSizes.length; i++) { %>
           <input type="checkbox" id="<%= allSizes[i].size %>" name="sizes" value="<%= allSizes[i].id %>">
@@ -73,14 +75,14 @@
         <% } %>
       </div>
       <div class="cambios">
-        <label for="CambioPrecio">Cambio de precio</label>
+        <label class="edit-label" for="CambioPrecio">PRECIO</label>
         <input type="number" name="price" id="price" value="<%= product.price %>" placeholder="Precio nuevo del producto">
         <% if (locals.errors && errors.price) { %>
         <p style="color: red"> <%= errors.price.msg %> </p>
         <% } %>
       </div>
       <div class="cambios">
-        <label for="CambioPrecio">Descuento</label>
+        <label class="edit-label" for="CambioPrecio">DESCUENTO</label>
         <input type="number" name="discount" id="discount" value="<%= product.discount %>" placeholder="Descuento del producto">
       </div>
       <div class="cambios">
@@ -96,11 +98,12 @@
         <% } %>
       </div>
       <div>
-        <button type="submit">Editar producto</button>
+        <button class="boton-edit" type="submit">EDITAR PRODUCTO</button>
       </div>
     </form>
-
+    </div>
   </main>
+  
   <%- include('../partials/footer') %>
   <script src="/js/validatorEditProduct.js"></script>
 </body>

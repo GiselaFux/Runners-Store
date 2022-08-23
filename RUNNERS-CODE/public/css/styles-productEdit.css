@@ -2,16 +2,46 @@
     margin: 0%;
 }
 
+.edit-cuadro-ppal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    border: solid 2px #e8e8e7;
+    border-radius: 15px;
+    margin: 10em 5em;
+}
+
 .edit-product {
-    padding: 20px 15px;
-    background-color: #8080802e;
-    width: 70%;
+    width: 90%;
     margin: 15px auto;
-    border: 2px solid;
     text-align: left;
-    height: 550px;
 }
 .cambios {
     margin: 40px;
     margin-left: 0px;
+}
+
+.edit-label{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+.boton-edit {
+    background-color: #c21d17;
+    border: 1px #c21d17 solid;
+    filter: drop-shadow(0 0 0.2rem #330807);
+    border-radius: 20px;
+    padding: 10px 25px;
+    color: white;
+    width: 270px;
+    font-size: 18px;
+    margin: 25px 0;
+}
+
+.boton-edit:hover {
+    background-color: #e8e8e7;
+    color: #c21d17;
 }

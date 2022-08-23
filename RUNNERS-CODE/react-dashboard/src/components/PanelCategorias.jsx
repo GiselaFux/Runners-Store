@@ -13,14 +13,14 @@ function PanelCategorias(){
         fetch('/api/categories/count')
         .then(response => response.json())
         .then(data => {
-            setCategories(data.data.category_description)
+            setCategories(data.data)
         })
         .catch(error => console.error(error));
     },[])
 
     useEffect(()=>{
         console.log('Se actualizaron los datos');
-    },[categories])
+    },[])
 
     useEffect(()=>{
         return()=> console.log('Se dejaron de visualizar los datos')
@@ -44,10 +44,10 @@ function PanelCategorias(){
                     return(
                         <tr key={i}>
                     <td >
-                            {cat}
+                            {cat.category_description}
                     </td> 
                     <td >
-                            {[i]}
+                            {cat.total}
                     </td> 
                     </tr>)
                     })}   

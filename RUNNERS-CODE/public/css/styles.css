@@ -1,40 +1,125 @@
-/*Estilo main*/
+/*Carrusel ppal*/
+#carrusel-caja {
+    -moz-animation: automatizacion 15s infinite linear;
+    -o-animation: automatizacion 15s infinite linear;
+    -webkit-animation: automatizacion 15s infinite linear;
+    animation: automatizacion 15s infinite linear;
 
-.carrusel{
-    background-color: black;
-    width: 100vw;
-    height: 40vh;
-    display:flex;
-    justify-content: center;
+    -webkit-transition: all 0.75s ease;
+    -moz-transition: all 0.75s ease;
+    -ms-transition: all 0.75s ease;
+    -o-transition: all 0.75s ease;
+    transition: all 0.75s ease;
+
+    height: 200px;
+    width: 300%;
+
     align-items: center;
-    margin:25px;
 }
-.carrusel-items{
-    background-color: #c21d17;
-    width: 100vw;
-    height: 40vh;
-    display:flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    overflow-x: hidden;/*scroll*/
-    overflow-y: hidden;
-    padding:30px 0px;
+
+#carrusel-contenido {
+    margin: 0 auto;
+    overflow: hidden;
 }
-.carrusel-item{
-    background-color: aqua;
-   min-width: 250px;
-    max-width: 250px;
-    height: 250px;
-    outline: 2px solid black;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
+.imagenes{
+    height:30%;
+    width: 100%;
 }
-.carrusel-item img{
-    width:100%;
-    height:100%;
-    object-fit: cover;
+
+.carrusel-elemento {
+    float: left;
+    width: 33.333%;
 }
-.carrusel-item:hover{
-    transform:scale(1.2)
+
+@-moz-keyframes automatizacion {
+    0% {
+        margin-left: 0;
+    }
+
+    30% {
+        margin-left: 0;
+    }
+
+    35% {
+        margin-left: -100%;
+    }
+
+    65% {
+        margin-left: -100%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    95% {
+        margin-left: -200%;
+    }
+
+    100% {
+        margin-left: 0;
+    }
+}
+
+@-webkit-keyframes automatizacion {
+    0% {
+        margin-left: 0;
+    }
+
+    30% {
+        margin-left: 0;
+    }
+
+    35% {
+        margin-left: -100%;
+    }
+
+    65% {
+        margin-left: -100%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    95% {
+        margin-left: -200%;
+    }
+
+    100% {
+        margin-left: 0;
+    }
+}
+
+@keyframes automatizacion {
+    0% {
+        margin-left: 0;
+    }
+
+    30% {
+        margin-left: 0;
+    }
+
+    35% {
+        margin-left: -100%;
+    }
+
+    65% {
+        margin-left: -100%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    95% {
+        margin-left: -200%;
+    }
+
+    100% {
+        margin-left: 0;
+    }
 }
 
 
@@ -208,6 +293,15 @@ input[type=radio]{
 
 
 @media(min-width:760px) {
+    #carrusel-caja{
+        height: 500px;
+    }
+
+    .imagenes{
+        height: 475px;
+        width: auto;
+    }
+
     .index-nuevaTemp{
         padding: 60px;
         margin: 0 20%;

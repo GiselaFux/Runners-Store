@@ -16,13 +16,18 @@
         </div>
       </div>
     </nav>
-    <h3 class="search-bar buscar"> <form action="/products/search" method="POST" class="buscador">
-      <input type="search" name="buscar" placeholder="Buscar" class="buscador_hijo"><i class="fa-solid fa-magnifying-glass icon-glass"></i>
-    </form>
+    <h3 class="search-bar buscar">
+      <form action="/products/search" method="POST" class="buscador">
+        <input type="search" name="buscar" placeholder="Buscar" class="buscador_hijo"><i class="fa-solid fa-magnifying-glass icon-glass"></i>
+      </form>
     </h3>
 
-    <p>
+    <div class="bars-login">
+      <button class="plus"><a href="/products/create"><i class="fa-solid fa-circle-plus icon"></a></i></button>
+    </div>
+
     <nav>
+
       <div class="dropdown-login">
         <div class="bars-login">
           <button><i class="fa-solid fa-circle-user icon"></i></button>
@@ -39,9 +44,9 @@
       </div>
     </nav>
 
-    <a href="./products/productCart"><i class="fa-solid fa-cart-shopping icon"></i></a>
-
-    </p>
+    <div class="bars-login">
+      <button><i class="fa-solid fa-cart-shopping icon"></i></button>
+    </div>
 
   </header>
   <div class="navegadorHorizonal">

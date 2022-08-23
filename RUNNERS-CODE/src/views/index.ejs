@@ -34,60 +34,72 @@
            </div>
            </div>
 
-      
-                <div class="index-nuevaTemporada">
-                    <h3>NUEVA TEMPORADA</h3>
+                <h2 style="margin-top: 80px">NUEVA TEMPORADA</h2>
+                <section class="index-nuevaTemp">
+                    <% for (let i=0; i<4; i++) { %>
+                    <article>
+                        <a href="/products/<%= products[i].id %>"><img src="/img/<%= products[i].images[0].image %>" alt="imagen1" class="index-imgNuevaTemp"></a> 
+                        <div class="info-box">
+                            <p><%= products[i].name %></p>
+                            <h2>$<%= toThousand(products[i].price) %></h2>
+                        </div>
+                    </article>
+                    <% } %>
+                </section>
 
-                    <div class="index-prodNuevaTem">
-                        <% for (let i=0; i<4; i++) { %>
-                        <p>
-                            <a href="/products/<%= products[i].id %>"><img src="/img/<%= products[i].images[0].image %>" alt="imagen1" class="index-imgNuevaTemp"></a> <%= products[i].name %>
-
-                        </p>
-                        <% } %>
-                    </div>
-
-                </div>
-
-                <div class="index-prodOfertas ">
-                    <h4>PRODUCTOS DE PROMOCIÓN</h4>
-                    <div class="contenedor-cards">
-                        <% for (let i=0; i<3; i++) {
+                <h2 style="margin-top: 80px">PRODUCTOS DE PROMOCIÓN</h2>
+                <div class="container-slider">
+                    <div class="container-promo">
+                        <input type="radio" name="slider-promo" id="item-1" checked>
+                        <input type="radio" name="slider-promo" id="item-2">
+                        <input type="radio" name="slider-promo" id="item-3">
+                        
+                        <% for (let i=0; i<1; i++) {
                             let PriceOffert = (products[i].price * ((100 - products[i].discount) / 100)).toFixed(0)
                             %>
-                        <div class="card">
-                            <div class="face front">
-                            
-                            <img src="/img/<%= products[i].images[0].image %>" alt="calza roja">
-                            <h3>Calza Adidas Oferta</h3>
-                        </div>
-                        <div class="face back">
-                            <h3><%= products[i].name %> </h3>
-                            <p><br> Color: <%= products[i].colours[0].colour %><br> <%= products[i].name %><br><span class="precioViejo">Precio: <%= toThousand(products[i].price) %></span><br><span class="precioNuevo">Oferta: <%= toThousand(PriceOffert) %></span></p>
-                            <div class="link">
-                                <a href="/products/<%= products[i].id %>">Ver más...</a>
+                            <div class="prod-ofertas">
+                                <label class="ofertas" for="item-1" id="promo1">
+                                    <img src="/img/<%= products[i].images[0].image %>" alt="calzaOferta " class="index-img ">
+                                    <p><%= products[i].name %></p>
+                                    <p>Antes<span style="text-decoration:line-through ">$<%= toThousand(products[i].price) %></span><br> 
+                                        Ahora<span class="index-promoPrecio "> $<%= toThousand(PriceOffert) %></span>
+                                    </p>
+                                </label>
+                                <label class="ofertas" for="item-2" id="promo2">
+                                    <img src="/img/<%= products[1].images[0].image %>" alt="calzaOferta " class="index-img ">
+                                    <p><%= products[i].name %></p>
+                                    <p>Antes<span style="text-decoration:line-through ">$<%= toThousand(products[i].price) %></span><br> 
+                                        Ahora<span class="index-promoPrecio "> $<%= toThousand(PriceOffert) %></span>
+                                    </p>
+                                </label>
+                                <label class="ofertas" for="item-3" id="promo3">
+                                    <img src="/img/<%= products[2].images[0].image %>" alt="calzaOferta " class="index-img ">
+                                    <p><%= products[i].name %></p>
+                                    <p>Antes<span style="text-decoration:line-through ">$<%= toThousand(products[i].price) %></span><br> 
+                                        Ahora<span class="index-promoPrecio "> $<%= toThousand(PriceOffert) %></span>
+                                    </p>
+                                </label>
                             </div>
-                        </div>
-                        
+                        <% } %>
                     </div>
-                    <% } %>
+                    
                 </div>
                    
     
-                <div class="index-suscripcion ">
-                    <form class="index-form ">
-                        <label for="email ">Suscríbete al Newsletter</label>
-                        <input type="email " name="email " id="name ">
+
+                <div class="index-suscripcion">
+                    <form class="index-form">
+                      <label for="email" style="margin-bottom:7%">Suscríbete al Newsletter</label>
+                      <input type="email " name="email " id="name ">
                     </form>
                     <p>
-                        <h6>Recibí las últimas novedades y obtén el 15% de descuento en tu<span type="text-decoration: underline ">
-                        próxima
-                        compra!</span></h6>
+                    <h4>Recibí las últimas novedades y obtén el 15% de descuento en tu<span style="text-decoration: underline ">
+                        próxima compra!</span></h4>
                     </p>
                 </div>
-            </main>
+        </main>
 
             <%- include('partials/footer') %>
-        </body>
+    </body>
         <script src="js/index.js"></script>
 </html>

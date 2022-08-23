@@ -53,10 +53,11 @@ header {
     display: none;
 }
 
-.fa-cart-shopping {
+.fa-cart-shopping, .fa-circle-plus {
     color: #160812;
     font-size: 25px;
 }
+
 
 .navegadorHorizonal {
     display: none;
@@ -140,7 +141,7 @@ header {
     
 }
 
-.bars-login button {
+.bars-login button{
     background: none;
     border: none;
     color: #160812;
@@ -197,7 +198,13 @@ header {
     transform: translateX(-50px);
 }
 
-
+.bars-login:hover button, .bars-login-plus:hover button{
+    background-color: #e8e8e7;
+    border-radius: 5px;
+}
+.bars-login button:hover i, .bars-login-plus button:hover i{
+    color: #c21d17;
+}
 
 /*Estilo Footer*/
 
@@ -296,16 +303,12 @@ footer {
         border-left: solid 2px #160812;
     }
 
-    .fa-cart-shopping {
+    .fa-cart-shopping, .fa-circle-plus {
         font-size: 35px;
     }
 
-    .bars-login button {
+    .bars-login button{
         font-size: 35px
-    }
-
-    .fa-cart-shopping {
-        margin-right: 20px;
     }
 
     div .navegadorHorizonal {
@@ -386,7 +389,7 @@ footer {
         margin-left: -90px;
     }
 
-    .fa-cart-shopping {
+    .fa-cart-shopping, .fa-circle-plus {
         font-size: 45px;
     }
 

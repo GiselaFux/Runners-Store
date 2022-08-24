@@ -8,8 +8,7 @@
     width:100%;
     padding-right:15px;
     padding-left:15px;
-    margin-right:auto;
-    margin-left:auto
+
     
 }
 /*para  que redireccionar x categoría, no quede debajo del header*/
@@ -21,13 +20,12 @@ div[id]{
     font-weight: 400;
 }
 
-.row {
+div.row {
     display:-ms-flexbox;
     display:flex;
     flex-wrap:wrap;
-    margin-right:-15px;
-    margin-left:-15px;
-    justify-content: space-around;
+
+    justify-content: center;
 }
 
 
